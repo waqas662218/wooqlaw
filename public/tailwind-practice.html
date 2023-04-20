@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="accordion-flush" data-accordion="collapse" data-active-classes="text-gray-900" data-inactive-classes="bg-gray-100">
+    <h2 id="accordion-flush-heading-1">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+        <span>Online/Virtual</span>
+        <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <div class="time flex gap-5 border border-gray-200">   
+            <!-- morning -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4705 8.42332L13.4483 7.52406V10.4939C13.4483 11.0008 13.0246 11.4103 12.5001 11.4103C11.9757 11.4103 11.552 11.0008 11.552 10.4939V7.52406L10.5298 8.42045C10.1416 8.76126 9.54309 8.73262 9.1905 8.35745C8.83791 7.98228 8.86754 7.40378 9.25569 7.06297L11.8631 4.77187C12.2246 4.45397 12.7757 4.45397 13.1401 4.77187L15.7475 7.06297C16.1357 7.40378 16.1624 7.98228 15.8127 8.35745C15.4631 8.73262 14.8616 8.75839 14.4735 8.42045L14.4705 8.42332ZM15.629 10.9865C15.7772 11.0466 15.8838 11.1755 15.9135 11.3273L16.5001 14.4174L19.6972 14.9845C19.8542 15.0131 19.9875 15.1162 20.0498 15.2594C20.112 15.4026 20.0942 15.5658 20.0024 15.6947L19.1372 16.909H16.0172C15.4542 15.5658 14.0912 14.6179 12.5001 14.6179C10.909 14.6179 9.54606 15.5658 8.98309 16.909H5.86309L4.99791 15.6976C4.90606 15.5687 4.88828 15.4055 4.9505 15.2623C5.01272 15.1191 5.14606 15.016 5.30309 14.9873L8.50013 14.4174L9.0868 11.3273C9.11643 11.1755 9.22309 11.0466 9.37124 10.9865C9.51939 10.9264 9.68828 10.9435 9.82161 11.0323L12.5001 12.8165L15.1757 11.0323C15.309 10.9435 15.4779 10.9264 15.6261 10.9865H15.629ZM3.9668 18.5128C3.9668 18.1319 4.28383 17.8254 4.67791 17.8254H20.3224C20.7164 17.8254 21.0335 18.1319 21.0335 18.5128C21.0335 18.8937 20.7164 19.2001 20.3224 19.2001H4.67791C4.28383 19.2001 3.9668 18.8937 3.9668 18.5128Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Morning
+                    </h2>
+                </div>
+                <div class="item-1">
+                    <input type="radio" id="opt3a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt3b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-3">
+                    <input type="radio" id="opt3c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-4">
+                    <input type="radio" id="opt3d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-5">
+                    <input type="radio" id="opt3e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-6">
+                    <input type="radio" id="opt3f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-7">
+                    <input type="radio" id="opt3g" class="peer hidden" required="" name="appointment">
+                    <label for="opt3g"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- afternoon -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9063 0.773338C12.0678 0.841141 12.184 0.986432 12.2163 1.15755L12.8588 4.64132L16.3426 5.2806C16.5137 5.31289 16.659 5.42912 16.7268 5.59056C16.7946 5.75199 16.7752 5.93603 16.6751 6.08132L14.6637 9.00007L16.6751 11.9156C16.7752 12.0609 16.7946 12.2449 16.7268 12.4063C16.659 12.5678 16.5137 12.684 16.3426 12.7163L12.8588 13.3588L12.2163 16.8426C12.184 17.0137 12.0678 17.159 11.9063 17.2268C11.7449 17.2946 11.5609 17.2752 11.4156 17.1751L8.50007 15.1637L5.58455 17.1751C5.43926 17.2752 5.25522 17.2946 5.09379 17.2268C4.93235 17.159 4.81612 17.0137 4.78383 16.8426L4.14132 13.3588L0.657554 12.7163C0.486432 12.684 0.341141 12.5678 0.273338 12.4063C0.205536 12.2449 0.224908 12.0609 0.324997 11.9156L2.33648 9.00007L0.324997 6.08455C0.224908 5.93926 0.205536 5.75522 0.273338 5.59379C0.341141 5.43235 0.486432 5.31612 0.657554 5.28383L4.14132 4.64132L4.78383 1.15755C4.81612 0.986432 4.93235 0.841141 5.09379 0.773338C5.25522 0.705536 5.43926 0.724908 5.58455 0.824997L8.50007 2.83648L11.4156 0.824997C11.5609 0.724908 11.7449 0.705536 11.9063 0.773338ZM5.40051 9.00007C5.40051 8.17801 5.72707 7.38963 6.30835 6.80835C6.88963 6.22707 7.67801 5.90051 8.50007 5.90051C9.32212 5.90051 10.1105 6.22707 10.6918 6.80835C11.2731 7.38963 11.5996 8.17801 11.5996 9.00007C11.5996 9.82212 11.2731 10.6105 10.6918 11.1918C10.1105 11.7731 9.32212 12.0996 8.50007 12.0996C7.67801 12.0996 6.88963 11.7731 6.30835 11.1918C5.72707 10.6105 5.40051 9.82212 5.40051 9.00007ZM12.6328 9.00007C12.6328 7.904 12.1974 6.85282 11.4224 6.07778C10.6473 5.30274 9.59613 4.86733 8.50007 4.86733C7.404 4.86733 6.35282 5.30274 5.57778 6.07778C4.80274 6.85282 4.36733 7.904 4.36733 9.00007C4.36733 10.0961 4.80274 11.1473 5.57778 11.9224C6.35282 12.6974 7.404 13.1328 8.50007 13.1328C9.59613 13.1328 10.6473 12.6974 11.4224 11.9224C12.1974 11.1473 12.6328 10.0961 12.6328 9.00007Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Afternoon
+                    </h2>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- evening -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.9705 7.30868L12.9483 8.22452V5.19993C12.9483 4.68368 12.5246 4.2666 12.0001 4.2666C11.4757 4.2666 11.052 4.68368 11.052 5.19993V8.22452L10.0298 7.3116C9.64161 6.96452 9.04309 6.99368 8.6905 7.37577C8.33791 7.75785 8.36754 8.34702 8.75569 8.6941L11.3631 11.0274C11.7246 11.3512 12.2757 11.3512 12.6401 11.0274L15.2475 8.6941C15.6357 8.34702 15.6624 7.75785 15.3127 7.37577C14.9631 6.99368 14.3616 6.96743 13.9735 7.3116L13.9705 7.30868ZM15.4135 11.182C15.3838 11.0274 15.2772 10.8962 15.129 10.8349C14.9809 10.7737 14.812 10.7912 14.6786 10.8816L12.0001 12.6987L9.32457 10.8816C9.19124 10.7912 9.02235 10.7737 8.8742 10.8349C8.72606 10.8962 8.61939 11.0274 8.58976 11.182L8.00013 14.3291L4.80309 14.9095C4.64606 14.9387 4.51272 15.0437 4.4505 15.1895C4.38828 15.3354 4.40606 15.5016 4.49791 15.6329L5.36309 16.8666H8.48309C9.04606 15.4987 10.409 14.5333 12.0001 14.5333C13.5912 14.5333 14.9542 15.4987 15.5172 16.8666H18.6372L19.5024 15.6329C19.5942 15.5016 19.612 15.3354 19.5498 15.1895C19.4875 15.0437 19.3542 14.9387 19.1972 14.9095L16.0001 14.3291L15.4105 11.182H15.4135ZM3.4668 18.4999C3.4668 18.8879 3.78383 19.1999 4.17791 19.1999H19.8224C20.2164 19.1999 20.5335 18.8879 20.5335 18.4999C20.5335 18.112 20.2164 17.7999 19.8224 17.7999H4.17791C3.78383 17.7999 3.4668 18.112 3.4668 18.4999Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Evening
+                    </h2>
+                </div>
+                <div class="flex flex-col items-center p-2 gap-2 bg-gray-100 rounded-full border">
+                    <span class="font-medium text-base text-gray-400">No slot Available</span>
+                </div>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-gray-900" data-inactive-classes="bg-gray-100">
+    <h2 id="accordion-flush-heading-2">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-" aria-expanded="true" aria-controls="accordion-flush-body-2">
+        <span>Online/Virtual</span>
+        <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <div class="time flex gap-5 border border-gray-200">   
+            <!-- morning -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4705 8.42332L13.4483 7.52406V10.4939C13.4483 11.0008 13.0246 11.4103 12.5001 11.4103C11.9757 11.4103 11.552 11.0008 11.552 10.4939V7.52406L10.5298 8.42045C10.1416 8.76126 9.54309 8.73262 9.1905 8.35745C8.83791 7.98228 8.86754 7.40378 9.25569 7.06297L11.8631 4.77187C12.2246 4.45397 12.7757 4.45397 13.1401 4.77187L15.7475 7.06297C16.1357 7.40378 16.1624 7.98228 15.8127 8.35745C15.4631 8.73262 14.8616 8.75839 14.4735 8.42045L14.4705 8.42332ZM15.629 10.9865C15.7772 11.0466 15.8838 11.1755 15.9135 11.3273L16.5001 14.4174L19.6972 14.9845C19.8542 15.0131 19.9875 15.1162 20.0498 15.2594C20.112 15.4026 20.0942 15.5658 20.0024 15.6947L19.1372 16.909H16.0172C15.4542 15.5658 14.0912 14.6179 12.5001 14.6179C10.909 14.6179 9.54606 15.5658 8.98309 16.909H5.86309L4.99791 15.6976C4.90606 15.5687 4.88828 15.4055 4.9505 15.2623C5.01272 15.1191 5.14606 15.016 5.30309 14.9873L8.50013 14.4174L9.0868 11.3273C9.11643 11.1755 9.22309 11.0466 9.37124 10.9865C9.51939 10.9264 9.68828 10.9435 9.82161 11.0323L12.5001 12.8165L15.1757 11.0323C15.309 10.9435 15.4779 10.9264 15.6261 10.9865H15.629ZM3.9668 18.5128C3.9668 18.1319 4.28383 17.8254 4.67791 17.8254H20.3224C20.7164 17.8254 21.0335 18.1319 21.0335 18.5128C21.0335 18.8937 20.7164 19.2001 20.3224 19.2001H4.67791C4.28383 19.2001 3.9668 18.8937 3.9668 18.5128Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Morning
+                    </h2>
+                </div>
+                <div class="item-1">
+                    <input type="radio" id="opt3a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt3b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-3">
+                    <input type="radio" id="opt3c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-4">
+                    <input type="radio" id="opt3d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-5">
+                    <input type="radio" id="opt3e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-6">
+                    <input type="radio" id="opt3f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-7">
+                    <input type="radio" id="opt3g" class="peer hidden" required="" name="appointment">
+                    <label for="opt3g"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- afternoon -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9063 0.773338C12.0678 0.841141 12.184 0.986432 12.2163 1.15755L12.8588 4.64132L16.3426 5.2806C16.5137 5.31289 16.659 5.42912 16.7268 5.59056C16.7946 5.75199 16.7752 5.93603 16.6751 6.08132L14.6637 9.00007L16.6751 11.9156C16.7752 12.0609 16.7946 12.2449 16.7268 12.4063C16.659 12.5678 16.5137 12.684 16.3426 12.7163L12.8588 13.3588L12.2163 16.8426C12.184 17.0137 12.0678 17.159 11.9063 17.2268C11.7449 17.2946 11.5609 17.2752 11.4156 17.1751L8.50007 15.1637L5.58455 17.1751C5.43926 17.2752 5.25522 17.2946 5.09379 17.2268C4.93235 17.159 4.81612 17.0137 4.78383 16.8426L4.14132 13.3588L0.657554 12.7163C0.486432 12.684 0.341141 12.5678 0.273338 12.4063C0.205536 12.2449 0.224908 12.0609 0.324997 11.9156L2.33648 9.00007L0.324997 6.08455C0.224908 5.93926 0.205536 5.75522 0.273338 5.59379C0.341141 5.43235 0.486432 5.31612 0.657554 5.28383L4.14132 4.64132L4.78383 1.15755C4.81612 0.986432 4.93235 0.841141 5.09379 0.773338C5.25522 0.705536 5.43926 0.724908 5.58455 0.824997L8.50007 2.83648L11.4156 0.824997C11.5609 0.724908 11.7449 0.705536 11.9063 0.773338ZM5.40051 9.00007C5.40051 8.17801 5.72707 7.38963 6.30835 6.80835C6.88963 6.22707 7.67801 5.90051 8.50007 5.90051C9.32212 5.90051 10.1105 6.22707 10.6918 6.80835C11.2731 7.38963 11.5996 8.17801 11.5996 9.00007C11.5996 9.82212 11.2731 10.6105 10.6918 11.1918C10.1105 11.7731 9.32212 12.0996 8.50007 12.0996C7.67801 12.0996 6.88963 11.7731 6.30835 11.1918C5.72707 10.6105 5.40051 9.82212 5.40051 9.00007ZM12.6328 9.00007C12.6328 7.904 12.1974 6.85282 11.4224 6.07778C10.6473 5.30274 9.59613 4.86733 8.50007 4.86733C7.404 4.86733 6.35282 5.30274 5.57778 6.07778C4.80274 6.85282 4.36733 7.904 4.36733 9.00007C4.36733 10.0961 4.80274 11.1473 5.57778 11.9224C6.35282 12.6974 7.404 13.1328 8.50007 13.1328C9.59613 13.1328 10.6473 12.6974 11.4224 11.9224C12.1974 11.1473 12.6328 10.0961 12.6328 9.00007Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Afternoon
+                    </h2>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- evening -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.9705 7.30868L12.9483 8.22452V5.19993C12.9483 4.68368 12.5246 4.2666 12.0001 4.2666C11.4757 4.2666 11.052 4.68368 11.052 5.19993V8.22452L10.0298 7.3116C9.64161 6.96452 9.04309 6.99368 8.6905 7.37577C8.33791 7.75785 8.36754 8.34702 8.75569 8.6941L11.3631 11.0274C11.7246 11.3512 12.2757 11.3512 12.6401 11.0274L15.2475 8.6941C15.6357 8.34702 15.6624 7.75785 15.3127 7.37577C14.9631 6.99368 14.3616 6.96743 13.9735 7.3116L13.9705 7.30868ZM15.4135 11.182C15.3838 11.0274 15.2772 10.8962 15.129 10.8349C14.9809 10.7737 14.812 10.7912 14.6786 10.8816L12.0001 12.6987L9.32457 10.8816C9.19124 10.7912 9.02235 10.7737 8.8742 10.8349C8.72606 10.8962 8.61939 11.0274 8.58976 11.182L8.00013 14.3291L4.80309 14.9095C4.64606 14.9387 4.51272 15.0437 4.4505 15.1895C4.38828 15.3354 4.40606 15.5016 4.49791 15.6329L5.36309 16.8666H8.48309C9.04606 15.4987 10.409 14.5333 12.0001 14.5333C13.5912 14.5333 14.9542 15.4987 15.5172 16.8666H18.6372L19.5024 15.6329C19.5942 15.5016 19.612 15.3354 19.5498 15.1895C19.4875 15.0437 19.3542 14.9387 19.1972 14.9095L16.0001 14.3291L15.4105 11.182H15.4135ZM3.4668 18.4999C3.4668 18.8879 3.78383 19.1999 4.17791 19.1999H19.8224C20.2164 19.1999 20.5335 18.8879 20.5335 18.4999C20.5335 18.112 20.2164 17.7999 19.8224 17.7999H4.17791C3.78383 17.7999 3.4668 18.112 3.4668 18.4999Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Evening
+                    </h2>
+                </div>
+                <div class="flex flex-col items-center p-2 gap-2 bg-gray-100 rounded-full border">
+                    <span class="font-medium text-base text-gray-400">No slot Available</span>
+                </div>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </div>   
+
+  <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-gray-900" data-inactive-classes="bg-gray-100">
+    <h2 id="accordion-flush-heading-3">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="true" aria-controls="accordion-flush-body-3">
+        <span>Online/Virtual</span>
+        <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <div class="time flex gap-5 border border-gray-200">   
+            <!-- morning -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4705 8.42332L13.4483 7.52406V10.4939C13.4483 11.0008 13.0246 11.4103 12.5001 11.4103C11.9757 11.4103 11.552 11.0008 11.552 10.4939V7.52406L10.5298 8.42045C10.1416 8.76126 9.54309 8.73262 9.1905 8.35745C8.83791 7.98228 8.86754 7.40378 9.25569 7.06297L11.8631 4.77187C12.2246 4.45397 12.7757 4.45397 13.1401 4.77187L15.7475 7.06297C16.1357 7.40378 16.1624 7.98228 15.8127 8.35745C15.4631 8.73262 14.8616 8.75839 14.4735 8.42045L14.4705 8.42332ZM15.629 10.9865C15.7772 11.0466 15.8838 11.1755 15.9135 11.3273L16.5001 14.4174L19.6972 14.9845C19.8542 15.0131 19.9875 15.1162 20.0498 15.2594C20.112 15.4026 20.0942 15.5658 20.0024 15.6947L19.1372 16.909H16.0172C15.4542 15.5658 14.0912 14.6179 12.5001 14.6179C10.909 14.6179 9.54606 15.5658 8.98309 16.909H5.86309L4.99791 15.6976C4.90606 15.5687 4.88828 15.4055 4.9505 15.2623C5.01272 15.1191 5.14606 15.016 5.30309 14.9873L8.50013 14.4174L9.0868 11.3273C9.11643 11.1755 9.22309 11.0466 9.37124 10.9865C9.51939 10.9264 9.68828 10.9435 9.82161 11.0323L12.5001 12.8165L15.1757 11.0323C15.309 10.9435 15.4779 10.9264 15.6261 10.9865H15.629ZM3.9668 18.5128C3.9668 18.1319 4.28383 17.8254 4.67791 17.8254H20.3224C20.7164 17.8254 21.0335 18.1319 21.0335 18.5128C21.0335 18.8937 20.7164 19.2001 20.3224 19.2001H4.67791C4.28383 19.2001 3.9668 18.8937 3.9668 18.5128Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Morning
+                    </h2>
+                </div>
+                <div class="item-1">
+                    <input type="radio" id="opt3a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt3b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-3">
+                    <input type="radio" id="opt3c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-4">
+                    <input type="radio" id="opt3d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-5">
+                    <input type="radio" id="opt3e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-6">
+                    <input type="radio" id="opt3f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt3f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-7">
+                    <input type="radio" id="opt3g" class="peer hidden" required="" name="appointment">
+                    <label for="opt3g"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- afternoon -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9063 0.773338C12.0678 0.841141 12.184 0.986432 12.2163 1.15755L12.8588 4.64132L16.3426 5.2806C16.5137 5.31289 16.659 5.42912 16.7268 5.59056C16.7946 5.75199 16.7752 5.93603 16.6751 6.08132L14.6637 9.00007L16.6751 11.9156C16.7752 12.0609 16.7946 12.2449 16.7268 12.4063C16.659 12.5678 16.5137 12.684 16.3426 12.7163L12.8588 13.3588L12.2163 16.8426C12.184 17.0137 12.0678 17.159 11.9063 17.2268C11.7449 17.2946 11.5609 17.2752 11.4156 17.1751L8.50007 15.1637L5.58455 17.1751C5.43926 17.2752 5.25522 17.2946 5.09379 17.2268C4.93235 17.159 4.81612 17.0137 4.78383 16.8426L4.14132 13.3588L0.657554 12.7163C0.486432 12.684 0.341141 12.5678 0.273338 12.4063C0.205536 12.2449 0.224908 12.0609 0.324997 11.9156L2.33648 9.00007L0.324997 6.08455C0.224908 5.93926 0.205536 5.75522 0.273338 5.59379C0.341141 5.43235 0.486432 5.31612 0.657554 5.28383L4.14132 4.64132L4.78383 1.15755C4.81612 0.986432 4.93235 0.841141 5.09379 0.773338C5.25522 0.705536 5.43926 0.724908 5.58455 0.824997L8.50007 2.83648L11.4156 0.824997C11.5609 0.724908 11.7449 0.705536 11.9063 0.773338ZM5.40051 9.00007C5.40051 8.17801 5.72707 7.38963 6.30835 6.80835C6.88963 6.22707 7.67801 5.90051 8.50007 5.90051C9.32212 5.90051 10.1105 6.22707 10.6918 6.80835C11.2731 7.38963 11.5996 8.17801 11.5996 9.00007C11.5996 9.82212 11.2731 10.6105 10.6918 11.1918C10.1105 11.7731 9.32212 12.0996 8.50007 12.0996C7.67801 12.0996 6.88963 11.7731 6.30835 11.1918C5.72707 10.6105 5.40051 9.82212 5.40051 9.00007ZM12.6328 9.00007C12.6328 7.904 12.1974 6.85282 11.4224 6.07778C10.6473 5.30274 9.59613 4.86733 8.50007 4.86733C7.404 4.86733 6.35282 5.30274 5.57778 6.07778C4.80274 6.85282 4.36733 7.904 4.36733 9.00007C4.36733 10.0961 4.80274 11.1473 5.57778 11.9224C6.35282 12.6974 7.404 13.1328 8.50007 13.1328C9.59613 13.1328 10.6473 12.6974 11.4224 11.9224C12.1974 11.1473 12.6328 10.0961 12.6328 9.00007Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Afternoon
+                    </h2>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4a" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4a"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4b" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4b"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4c" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4c"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4d" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4d"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4e" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4e"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="item-2">
+                    <input type="radio" id="opt4f" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt4f"
+                        class="group inline-flex w-full cursor-pointer items-center justify-between rounded-full bg-gray-100 py-1.5 pl-1.5 pr-3 hover:bg-gray-200 peer-checked:bg-violet-700 peer-checked:text-white">
+                        <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                            <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- evening -->
+            <div class="flex flex-col gap-6 p-3">
+                <div class="morning flex gap-2 justify-center items-center">
+                    <span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.9705 7.30868L12.9483 8.22452V5.19993C12.9483 4.68368 12.5246 4.2666 12.0001 4.2666C11.4757 4.2666 11.052 4.68368 11.052 5.19993V8.22452L10.0298 7.3116C9.64161 6.96452 9.04309 6.99368 8.6905 7.37577C8.33791 7.75785 8.36754 8.34702 8.75569 8.6941L11.3631 11.0274C11.7246 11.3512 12.2757 11.3512 12.6401 11.0274L15.2475 8.6941C15.6357 8.34702 15.6624 7.75785 15.3127 7.37577C14.9631 6.99368 14.3616 6.96743 13.9735 7.3116L13.9705 7.30868ZM15.4135 11.182C15.3838 11.0274 15.2772 10.8962 15.129 10.8349C14.9809 10.7737 14.812 10.7912 14.6786 10.8816L12.0001 12.6987L9.32457 10.8816C9.19124 10.7912 9.02235 10.7737 8.8742 10.8349C8.72606 10.8962 8.61939 11.0274 8.58976 11.182L8.00013 14.3291L4.80309 14.9095C4.64606 14.9387 4.51272 15.0437 4.4505 15.1895C4.38828 15.3354 4.40606 15.5016 4.49791 15.6329L5.36309 16.8666H8.48309C9.04606 15.4987 10.409 14.5333 12.0001 14.5333C13.5912 14.5333 14.9542 15.4987 15.5172 16.8666H18.6372L19.5024 15.6329C19.5942 15.5016 19.612 15.3354 19.5498 15.1895C19.4875 15.0437 19.3542 14.9387 19.1972 14.9095L16.0001 14.3291L15.4105 11.182H15.4135ZM3.4668 18.4999C3.4668 18.8879 3.78383 19.1999 4.17791 19.1999H19.8224C20.2164 19.1999 20.5335 18.8879 20.5335 18.4999C20.5335 18.112 20.2164 17.7999 19.8224 17.7999H4.17791C3.78383 17.7999 3.4668 18.112 3.4668 18.4999Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                    <h2 class="font-medium text-base">
+                        Evening
+                    </h2>
+                </div>
+                <div class="flex flex-col items-center p-2 gap-2 bg-gray-100 rounded-full border">
+                    <span class="font-medium text-base text-gray-400">No slot Available</span>
+                </div>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </div>      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <title>appointment-date</title>
+</head>
+<body>   
+<div class="flex items-center">
+    <span class="">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 15L1.5 8L8.5 1" stroke="#111928" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </span>
+    <ul class="flex flex-nowrap overflow-x-auto gap-1 p-1" id="appointment-date-tab" data-tabs-toggle="#appointment-date" role="tablist">
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="friday-tab" data-tabs-target="#friday" type="button" role="tab" aria-controls="friday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt-11" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt-11" class="time_date flex flex-col mb-1  px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-100 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                        <h2 class="font-semibold text-base items-center ">Fri</h2>
+                        <h2 class="font-medium text-sm">01 May</h2>
+                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                    </label>
+                </div>      
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="saturday-tab" data-tabs-target="#saturday" type="button" role="tab" aria-controls="saturday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt-12" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt-12"
+                        class="time_date flex flex-col mb-1  px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-100 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                        <h2 class="font-semibold text-base items-center ">Sat</h2>
+                        <h2 class="font-medium text-sm">02 May</h2>
+                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                    </label>
+                </div>  
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="sunday-tab" data-tabs-target="#sunday" type="button" role="tab" aria-controls="sunday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt-13" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt-13"
+                        class="time_date flex flex-col mb-1 px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-50 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+
+                        <h2 class="font-semibold text-base items-center ">Sun</h2>
+                        <h2 class="font-medium text-sm">03 May</h2>
+                        <span class="flex rounded bg-red-500 w-2 h-2"></span>
+
+                    </label>
+                </div>      
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="monday-tab" data-tabs-target="#monday" type="button" role="tab" aria-controls="monday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt_14" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt_14"
+                        class="time_date flex flex-col mb-1 px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-100 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                        <h2 class="font-semibold text-base items-center text-center">Mon</h2>
+                        <h2 class="font-medium text-sm">04 May</h2>
+                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                </div>        
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="tuesday-tab" data-tabs-target="#tuesday" type="button" role="tab" aria-controls="tuesday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt_15" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt_15"
+                        class="time_date flex flex-col mb-1 px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-100 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+
+                        <h2 class="font-semibold text-base items-center text-center">Tue</h2>
+                        <h2 class="font-medium text-sm">05 May</h2>
+                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                </div>      
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="wednesday-tab" data-tabs-target="#wednesday" type="button" role="tab" aria-controls="wednesday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt_16" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt_16"
+                        class="time_date flex flex-col mb-1 px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-50 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                        <h2 class="font-semibold text-base items-center text-center">Wed</h2>
+                        <h2 class="font-medium text-sm">06 May</h2>
+                        <span class="flex rounded bg-red-500 w-2 h-2"></span>
+                </div>      
+            </button>
+        </li>
+        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+            <button id="thursday-tab" data-tabs-target="#thursday" type="button" role="tab" aria-controls="thursday" aria-selected="false">
+                <div class="item-1">
+                    <input type="radio" id="opt_17" value="" class="peer hidden" required="" name="appointment" />
+                    <label for="opt_17"
+                        class="time_date flex flex-col mb-1 px-5 py-3 cursor-pointer w-24 h-20 rounded-lg items-center justify-center bg-gray-100 hover:bg-violet-700 peer-hover:text-white peer-checked:bg-violet-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                        <h2 class="font-semibold text-base items-center text-center">Thu</h2>
+                        <h2 class="font-medium text-sm">07 May</h2>
+                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                </div>     
+            </button>
+        </li> 
+    </ul>
+    <span class="">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 1L8.5 8L1.5 15" stroke="#111928" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </span>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+</html>
