@@ -877,9 +877,6 @@ select {
 .h-11 {
   height: 2.75rem;
 }
-.h-14 {
-  height: 3.5rem;
-}
 .h-16 {
   height: 4rem;
 }
@@ -906,9 +903,6 @@ select {
 }
 .h-4 {
   height: 1rem;
-}
-.h-44 {
-  height: 11rem;
 }
 .h-5 {
   height: 1.25rem;
@@ -1088,9 +1082,6 @@ select {
 }
 .cursor-pointer {
   cursor: pointer;
-}
-.cursor-vertical-text {
-  cursor: vertical-text;
 }
 .columns-md {
   -moz-columns: 28rem;

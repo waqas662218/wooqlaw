@@ -303,44 +303,34 @@
 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-0 focus:border-none" placeholder="Write text here ..."></textarea>
 
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-3 w-full">
           <span class="font-medium text-sm">Payment Summary</span>
-            <div class="flex flex-col p-2 gap-2 justify-between">
+            <div class="flex flex-col p-2 gap-2 w-full justify-between bg-gray-50 border-gray-300 rounded-xl">
                 <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500 justify-between">
                 <div>Discount</div>
                 <span>Rs 725.00</span>
                 </div>
-             
-                <div class="flex items-start p-2 gap-2">
-                  <div class="flex items-center px-2.5 py-1 gap-2.5">
-                  <div>
-                  <div class="flex font-medium text-sm">Subtotal</div>
-                  <span class="flex font-normal text-sm text-gray-500">(This invoice includes sales tax of Rs382.5) </span>
+                <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm  justify-between">
+                  <div class="flex flex-col">
+                  <div>Subtotal</div>
+                  <span class=" text-gray-500">(This invoice includes <br> sales tax of Rs382.5) </span>
                 </div>
-                <div class="flex font-medium text-sm">Rs 3750.00</div>
+                  <span>Rs 3750.00</span>
                   </div>
-            </div>
-            <div class="flex items-start p-2 gap-2">
-              <div class="flex px-2.5 py-1 gap-2.5 text-red-500">
-              <div>
-              <div class="flex font-medium text-sm">Arrears</div>
-            </div>
-            <div class="flex font-medium text-sm">Rs 2,000.00</div>
+               
+            <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500 justify-between">
+              <div>Arrears</div>
+              <span>Rs 2,000.00</span>
               </div>
-        </div>
-        <div class="flex items-start p-2 gap-2">
-          <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm justify-between">
-          <div>
-          <div class="">Net Payments</div>
-        </div>
-        <div class="">Rs 5,750.00</div>
-          </div>
-          </div>
+              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base text-re-500 justify-between">
+                <div>Net Payments</div>
+                <span>Rs 5,750.00</span>
+                </div>
           </div>
           </div>
     </div>
     </div>
- 
+ </div>
     <hr class="w-full mx-auto bg-gray-100 border">
     <!-- payment details -->
     <div class="flex md:flex-row flex-col justify-between items-start gap-20 w-full">
