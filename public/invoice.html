@@ -16,15 +16,15 @@
 </head>
 
 <body class="bg-gray-200 mt-10">
-  <div class="invoice flex flex-col items-center p-6 gap-10 max-w-4xl mx-auto bg-white">
-    <div class="flex flex-col items-start gap-6">
+  <div class="invoice flex flex-col items-center p-6 gap-10 max-w-4xl  mx-auto bg-white">
+    <div class="flex flex-col items-start gap-6 w-full">
       <span class="flex items-center font-medium text-xl">
         #INV00023
       </span>
-      <div class="flex flex-col items-start gap-6">
-        <div class="flex flex-col items-start gap-3.5">
-          <div class="bill flex md:flex-row flex-col item-start gap-6">
-            <div class="bill-by flex flex-col items-start gap-2 w-96">
+      <div class="flex flex-col items-start gap-6 w-full">
+        <div class="flex flex-col items-start gap-3.5 w-full">
+          <div class="bill flex md:flex-row flex-col item-start md:gap-6 gap-2 w-full">
+            <div class="bill-by flex flex-col items-start gap-2 w-full">
               <label class="text-sm font-medium text-gray-900">Bill by</label>
               <select class="flex flex-col items-start p-3 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-full">
                 <option selected class="flex items-center font-normal text-sm text-gray-500">Select lawyer</option>
@@ -33,7 +33,7 @@
                 <option value="FR">Muhammad Khurshid</option>
               </select>
             </div>
-            <div class="bill-to flex flex-col items-start gap-2 w-96">
+            <div class="bill-to flex flex-col items-start gap-2 w-full">
               <label class="text-sm font-medium text-gray-900">Bill to</label>
               <select class="flex flex-col items-start p-3 gap-2.5 bg-gray-50 border-gray-300 border rounded-lg w-full">
                 <option selected class="flex items-center font-normal text-sm text-gray-500">Select lawyer</option>
@@ -44,12 +44,12 @@
             </div>
           </div>
           <!-- invoice date -->
-          <div class="flex md:flex-row flex-col items-start gap-6">
-            <div class="invoive-date flex flex-col items-start gap-2">
+          <div class="flex md:flex-row flex-col items-start md:gap-6 gap-2 w-full">
+            <div class="invoive-date flex flex-col items-start gap-2 w-full">
               <span class="flex items-center font-normal text-sm">Invoice date</span>
-              <div class="relative w-96">
+              <div class="relative w-full">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                       d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
@@ -62,9 +62,9 @@
               </div>
             </div>
             <!-- Due-date -->
-            <div class="invoive-date flex flex-col items-start gap-2">
+            <div class="invoive-date flex flex-col items-start gap-2 w-full">
               <span class="flex items-center font-normal text-sm">Due date</span>
-              <div class="relative w-96">
+              <div class="relative w-full">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -82,34 +82,37 @@
           <span class="flex items-center font-medium text-xl">Items</span>
         </div>
         <!-- table -->
-        <div class="relative overflow-x-auto shadow-md">
+        <div class="relative overflow-x-auto w-full shadow-md">
           <table class="md:w-full w-20 md:text-sm text-2xs text-left text-gray-500">
             <thead class="md:text-xs text-2xs text-gray-700 uppercase bg-gray-100 ">
-              <tr>
-                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+              <tr class=" md:grid md:grid-cols-12 w-full">
+                <th scope="col" class="px-6  py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-3">
                   Details
                 </th>
-                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                <th scope="col" class="px-1 py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-2">
                   Unit
                 </th>
-                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                <th scope="col" class="px-1 py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-2">
                   Amount
                 </th>
-                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                <th scope="col" class="px-1  py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-2">
                   Discount
                 </th>
-                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                <th scope="col" class="px-1  py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-2">
                   Total
+                </th>
+                <th scope="col" class="px-1  py-3 font-medium md:text-sm text-2xs text-gray-500 col-span-1">
+                
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr class="bg-gray-50">
-                <td scope="row" class="px-4 py-3">
-                  <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                    <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
+              <tr class=" bg-gray-50 md:grid  md:grid-cols-12 w-full">
+                <td scope="row" class="px-1 py-2 col-span-3">
+                  <div class="flex flex-col p-2 border border-gray-300 rounded-lg w-full">
+                    <label for="countries" class="md:text-sm text-xs font-normal text-gray-500 w-full">Select from service</label>
                     <select id="countries"
-                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                      class="bg-gray-50 font-normal border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
                       <option selected>Property Law</option>
                       <option value="US">Saiqa haleema</option>
                       <option value="CA">Qasim Muneer</option>
@@ -117,144 +120,193 @@
                     </select>
                   </div>
                 </td>
-                <td class="px-4 py-3">
-                  <div
-                    class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+                <td class="px-1 py-2 col-span-2">
+                  <div class="flex flex-col text-gray-900 border border-gray-300 rounded-lg">
                     <select id="countries"
-                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                      <option selected>Fixed</option>
+                      class="bg-gray-50 border-none font-normal text-gray-500 text-xs rounded-lg outline-none focus:ring-0 focus:border-none">
+                      <option>Fixed</option>
                     </select>
                     <input type="text" id="phone"
-                      class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                      class="bg-gray-50 border-none  text-gray-900 font-normal text-sm focus:ring-0 focus:border-none block"
                       required>
                   </div>
                 </td>
-                <td class="px-6 py-4">
-                  <div class="relative">
-                    <label for="default_outlined"
-                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-                    <input type="text" id="default_outlined"
-                      class="block w-20  text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                      placeholder=" " />
-                  </div>
+                <td class="px-1 py-2 col-span-2">
+                  <div class="border border-gray-300 p-2 rounded-lg">
+                    <label for="phone" class="block md:text-xs text-2xs font-normal text-gray-500">PKR</label>
+                    <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block" placeholder="" pattern="" required>
+                </div>
                 </td>
-                <td class="px-6 py-4">
-                  <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+                <td class="px-1 py-2 col-span-2">
+                  <div class="flex flex-col text-gray-900 border border-gray-300 rounded-lg">
                     <select id="countries"
-                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                      <option selected>Fixed</option>
+                      class="bg-gray-50 border-none font-normal text-gray-500 md:text-xs text-2xs rounded-lg outline-none focus:ring-0 focus:border-none">
+                      <option>%</option>
                     </select>
                     <input type="text" id="phone"
-                      class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                      class="bg-gray-50 border-none text-gray-900 font-normal md:text-sm text-xs focus:ring-0 focus:border-none block"
                       required>
                   </div>
                 </td>
-                <td class="px-6 py-4">
-          <div class="relative">
-            <input type="text" id="default_outlined"
-              class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" " />
-            <label for="default_outlined"
-              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-          </div>
+                <td class="px-1 py-2 col-span-2">
+                  <div class="border border-gray-300 p-2 rounded-lg">
+                      <label for="phone" class="block md:text-xs text-2xs font-normal text-gray-500">PKRs</label>
+                      <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block" placeholder="" pattern="" required>
+                  </div>
+                </td>
+                <td class="flex px-1 py-1 col-span-1 items-center">
+                  <a href="#"class="flex items-center justify-center w-8 h-8 bg-gray-200 border rounded-lg">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.83333 10.3907C5.83333 11.3111 5.08714 12.0573 4.16667 12.0573C3.24619 12.0573 2.5 11.3111 2.5 10.3907C2.5 9.47019 3.24619 8.724 4.16667 8.724C5.08714 8.724 5.83333 9.47019 5.83333 10.3907Z" fill="#7E3AF2"/>
+                      <path d="M11.6667 10.3907C11.6667 11.3111 10.9205 12.0573 10 12.0573C9.07953 12.0573 8.33333 11.3111 8.33333 10.3907C8.33333 9.47019 9.07953 8.724 10 8.724C10.9205 8.724 11.6667 9.47019 11.6667 10.3907Z" fill="#7E3AF2"/>
+                      <path d="M17.5 10.3907C17.5 11.3111 16.7538 12.0573 15.8333 12.0573C14.9129 12.0573 14.1667 11.3111 14.1667 10.3907C14.1667 9.47019 14.9129 8.724 15.8333 8.724C16.7538 8.724 17.5 9.47019 17.5 10.3907Z" fill="#7E3AF2"/>
+                      </svg>               
+                  </a>
                 </td>
              </tr>
-        <tr class="bg-gray-50">
-          <td scope="row" class="px-4 py-3">
-            <div
-              class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-              <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
-              <select id="countries"
-                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                <option selected>Property Law</option>
-                <option value="US">Saiqa haleema</option>
-                <option value="CA">Qasim Muneer</option>
-                <option value="FR">Muhammad Khurshid</option>
-              </select>
+        <tr class="  bg-gray-50 md:grid grid-cols-12 w-full">
+          <td scope="row" class="px-1 py-2 col-span-3">
+            <div class="flex flex-col border border-gray-300 py-3 px-1 gap-2 rounded-lg">
+              <label for="phone" class="block text-xs font-normal text-gray-500">Free Text</label>
+              <label for="phone" class="block  text-sm font-normal text-gray-900">Agent fee for valuation</label>          
             </div>
           </td>
-          <td class="px-4 py-3">
-            <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+          <td class="px-1 py-2 col-span-2">
+            <div class="flex flex-col font-normal text-gray-900 border border-gray-300 rounded-lg">
               <select id="countries"
-                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                <option selected>Fixed</option>
+                class="bg-gray-50 border-none text-gray-500 md:text-xs text-2xs rounded-lg outline-none focus:ring-0 focus:border-none">
+                <option selected>Per Hour</option>
               </select>
               <input type="text" id="phone"
-                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block"
                 required>
             </div>
           </td>
-          <td class="px-6 py-4">
-            <div class="relative">
-              <input type="text" id="default_outlined"
-                class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " />
-              <label for="default_outlined"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-            </div>
+          <td class="px-1 py-2 col-span-2">
+            <div class="border border-gray-300 p-2 rounded-lg w-full">
+              <label for="phone" class="block md:text-xs text-2xs font-normal text-gray-500 w-full">PKR</label>
+              <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block w-full" placeholder="" pattern="" required>
+          </div>
           </td>
-          <td class="px-6 py-4">
+          <td class="px-1 py-2 col-span-2">
             <div
-              class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+              class="flex flex-col font-normal text-gray-900 border border-gray-300 rounded-lg">
               <select id="countries"
-                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                <option selected>Fixed</option>
+                class="bg-gray-50 border-none text-gray-500 md:text-xs text-2xs rounded-lg outline-none focus:ring-0 focus:border-none">
+                <option selected>Amount</option>
               </select>
               <input type="text" id="phone"
-                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full"
                 required>
             </div>
           </td>
-          <td class="px-6 py-4">
-            <div class="relative">
-              <input type="text" id="default_outlined"
-                class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " />
-              <label for="default_outlined"
-                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-            </div>
+          <td class="px-1 py-2 col-span-2">
+            <div class="border border-gray-300 p-2 rounded-lg">
+              <label for="phone" class="block md:text-xs text-2xs font-normal text-gray-500">PKR</label>
+              <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block w-full" placeholder="" pattern="" required>
+          </div>
+          </td>
+          <td class="flex px-1 py-2 col-span-1 items-center">
+            <a href="#"class="flex items-center justify-center w-8 h-8 bg-gray-200 border rounded-lg">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.83333 10.3907C5.83333 11.3111 5.08714 12.0573 4.16667 12.0573C3.24619 12.0573 2.5 11.3111 2.5 10.3907C2.5 9.47019 3.24619 8.724 4.16667 8.724C5.08714 8.724 5.83333 9.47019 5.83333 10.3907Z" fill="#7E3AF2"/>
+                <path d="M11.6667 10.3907C11.6667 11.3111 10.9205 12.0573 10 12.0573C9.07953 12.0573 8.33333 11.3111 8.33333 10.3907C8.33333 9.47019 9.07953 8.724 10 8.724C10.9205 8.724 11.6667 9.47019 11.6667 10.3907Z" fill="#7E3AF2"/>
+                <path d="M17.5 10.3907C17.5 11.3111 16.7538 12.0573 15.8333 12.0573C14.9129 12.0573 14.1667 11.3111 14.1667 10.3907C14.1667 9.47019 14.9129 8.724 15.8333 8.724C16.7538 8.724 17.5 9.47019 17.5 10.3907Z" fill="#7E3AF2"/>
+                </svg>               
+            </a>
           </td>
         </tr>
       </tbody>
     </table>
-       <div class="felx justify-between px-4 gap-5">
-          <button id="dropdown" data-dropdown-toggle="dropdown"class="flex text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-            type="button">Add new item <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg></button>
-          <!-- Dropdown menu -->
-          <div id="dropdown"
-            class="z-10 hidden items-center bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-              </li>
-            </ul>
+  </div>
+    <!-- button -->
+    <div class="flex justify-center mx-auto">
+      <div
+          x-data="{
+              open: false,
+              toggle() {
+                  if (this.open) {
+                      return this.close()
+                  }
+  
+                  this.$refs.button.focus()
+  
+                  this.open = true
+              },
+              close(focusAfter) {
+                  if (! this.open) return
+  
+                  this.open = false
+  
+                  focusAfter && focusAfter.focus()
+              }
+          }"
+          x-on:keydown.escape.prevent.stop="close($refs.button)"
+          x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+          x-id="['dropdown-button']"
+          class="relative"
+      >
+          <!-- Button -->
+          <button
+          
+              x-ref="button"
+              x-on:click="toggle()"
+              :aria-expanded="open"
+              :aria-controls="$id('dropdown-button')"
+              type="button"
+              class="flex items-center gap-2 bg-blue-700 text-white px-5 py-2.5 rounded-md shadow"
+          >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.50004 5.89067C8.50004 5.61452 8.27618 5.39067 8.00004 5.39067C7.7239 5.39067 7.50004 5.61452 7.50004 5.89067L7.50004 7.39068H6.00004C5.7239 7.39068 5.50004 7.61454 5.50004 7.89068C5.50004 8.16683 5.7239 8.39068 6.00004 8.39068H7.50004V9.89067C7.50004 10.1668 7.7239 10.3907 8.00004 10.3907C8.27618 10.3907 8.50004 10.1668 8.50004 9.89067L8.50004 8.39068H10C10.2762 8.39068 10.5 8.16682 10.5 7.89068C10.5 7.61454 10.2762 7.39068 10 7.39068H8.50004V5.89067Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00004 0.723999C4.042 0.723999 0.833374 3.93263 0.833374 7.89067C0.833374 11.8487 4.042 15.0573 8.00004 15.0573C11.9581 15.0573 15.1667 11.8487 15.1667 7.89067C15.1667 3.93263 11.9581 0.723999 8.00004 0.723999ZM1.83337 7.89067C1.83337 4.48491 4.59428 1.724 8.00004 1.724C11.4058 1.724 14.1667 4.48491 14.1667 7.89067C14.1667 11.2964 11.4058 14.0573 8.00004 14.0573C4.59428 14.0573 1.83337 11.2964 1.83337 7.89067Z" fill="white"/>
+            </svg>
+            
+            
+          Add new item
+  
+              <!-- Heroicon: chevron-down -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+          </button>
+  
+          <!-- Panel -->
+          <div
+              x-ref="panel"
+              x-show="open"
+              x-transition.origin.top.left
+              x-on:click.outside="close($refs.button)"
+              :id="$id('dropdown-button')"
+              style="display: none;"
+              class="absolute left-0 mt-2 w-40 rounded-md bg-white shadow-md"
+          >
+              <a href="#" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-50 disabled:text-gray-500">
+                Select from service
+              </a>
+  
+              <a href="#" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-50 disabled:text-gray-500">
+                Free Text
+              </a>
           </div>
-        </div>
-       </div>
+      </div>
+  </div>
+
     </div>
   </div>
   <!-- item from services -->
-  <div class="services flex flex-col items-start gap-6">
-    <div class="flex justify-between items-start gap-3.5">
-      <div class="flex md:flex-row flex-col items-start gap-3.5">
-        <div class="flex flex-col items-start gap-1 md:gap-3">
+  <div class="services flex flex-col items-start gap-6 w-full">
+    <div class="flex justify-between items-start gap-3.5 w-full">
+      <div class="flex md:flex-row flex-col items-start gap-3.5 w-full">
+        <div class="flex flex-col items-start gap-1 md:gap-3 w-full">
           <span class="font-medium text-sm text-gray-900">Invoice Note</span>
-          <div class="flex items-start px-5 py-3 gap-2.5  bg-gray-50 border-gray-300 rounded-lg w-96 h-44">
-            <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span>
-          </div>
+         
+<textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-0 focus:border-none" placeholder="Write text here ..."></textarea>
+
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-3 w-full">
           <span class="font-medium text-sm">Payment Summary</span>
-          <div class="flex items-center p-2 gap-2  bg-gray-50 border-gray-300 rounded-xl w-96 h-52">
-            <div class="flex flex-col items-start w-48 h-44">
+          <div class="flex items-center p-2 gap-2  bg-gray-50 border-gray-300 rounded-xl w-full h-52">
+            <div class="flex flex-col items-start w-full h-44">
               <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Discount</div>
               <div class="flex flex-col items-start px-2.5 py-1 gap-0.5">
                 <span class="font-medium text-sm">Subtotal</span>
@@ -277,13 +329,12 @@
         </div>
       </div>
     </div>
-
     <hr class="w-full mx-auto bg-gray-100 border">
     <!-- payment details -->
-    <div class="flex md:flex-row flex-col justify-between items-start gap-5 w-full">
-      <div class="flex flex-col items-start gap-2 w-full">
+    <div class="flex md:flex-row flex-col justify-between items-start gap-20 w-full">
+      <div class="flex flex-col gap-2 w-full">
         <label class="flex items-center gap-2 font-normal text-xs text-gray-900 ">Payment details</label>
-        <select class="flex flex-col items-start px-2.5 py-2 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-96">
+        <select class="flex flex-col items-start px-2.5 py-2 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-full">
           <option selected class="flex items-center font-normal text-sm text-gray-500 bg-gray-50 border-gray-300">
             Payment method</option>
           <option value="">link-1</option>
@@ -291,22 +342,22 @@
           <option value="">Eassy-paisa</option>
         </select>
       </div>
-      <div class="flex flex-col gap-4">
-        <div class="flex items-end gap-6">
-          <span class="flex items-center font-medium text-base">Payment</span>
+      <div class="flex flex-col gap-4 w-full">
+        <div class="flex items-end md:gap-6 gap-20 w-full">
+          <span class="flex items-center font-medium text-base ">Payment</span>
           <div class="flex flex-col items-start gap-3 w-40 h-16">
             <span class="font-light text-xs text-gray-900">Amount</span>
             <div
-              class="flex items-center px-4 py-2 gap-3 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
+              class="flex items-center px-4 py-2 gap-3 w-full h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
               Rs 00.00</div>
           </div>
         </div>
-        <div class="flex items-end gap-6">
+        <div class="flex items-end md:gap-6 gap-20 w-full">
           <span class="flex items-center font-medium text-base">Payment</span>
           <div class="flex flex-col items-start gap-2 w-40 h-16">
             <span class="font-light text-xs text-gray-900">Amount</span>
             <div
-              class="flex items-center px-4 py-2 gap-2.5 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
+              class="flex items-center px-4 py-2 gap-2.5 w-full h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
               Rs 00.00</div>
           </div>
         </div>
@@ -314,11 +365,9 @@
     </div>
     <hr class="w-full mx-auto bg-gray-100 border">
     <!-- terms and conditions -->
-    <div class="flex flex-col items-start gap-3 w-96 md:w-full">
+    <div class="flex flex-col items-start gap-3 w-full">
       <span class="font-medium text-sm text-gray-900">Terms & Conditions</span>
-      <div class="flex items-start px-5 py-3 gap-2.5 bg-gray-200 border-gray-300 rounded-lg w-full h-28">
-        <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span>
-      </div>
+        <textarea id="message" rows="4" class="flex items-center font-normal text-sm p-2.5 rounded-lg w-full bg-gray-50 border-gray-300 text-gray-900 focus:ring-0 focus:border-none" placeholder="Write text here ..."></textarea>
     </div>
   </div>
   </div>
