@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <title>Invoice</title>
 </head>
+
 <body class="bg-gray-200 mt-10">
   <div class="invoice flex flex-col items-center p-6 gap-10 max-w-4xl mx-auto bg-white">
     <div class="flex flex-col items-start gap-6">
@@ -21,7 +23,7 @@
       </span>
       <div class="flex flex-col items-start gap-6">
         <div class="flex flex-col items-start gap-3.5">
-          <div class="bill flex item-start gap-6">
+          <div class="bill flex md:flex-row flex-col item-start gap-6">
             <div class="bill-by flex flex-col items-start gap-2 w-96">
               <label class="text-sm font-medium text-gray-900">Bill by</label>
               <select class="flex flex-col items-start p-3 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-full">
@@ -42,237 +44,285 @@
             </div>
           </div>
           <!-- invoice date -->
-          <div class="flex items-start gap-6">
+          <div class="flex md:flex-row flex-col items-start gap-6">
             <div class="invoive-date flex flex-col items-start gap-2">
               <span class="flex items-center font-normal text-sm">Invoice date</span>
               <div class="relative w-96">
-              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-            </div>
-            <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
-            </div>
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <input datepicker type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Select date">
+              </div>
             </div>
             <!-- Due-date -->
-             <div class="invoive-date flex flex-col items-start gap-2">
+            <div class="invoive-date flex flex-col items-start gap-2">
               <span class="flex items-center font-normal text-sm">Due date</span>
               <div class="relative w-96">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
                 </div>
-                <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                <input datepicker type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Select date">
               </div>
             </div>
-          </div>   
-          <span class="flex items-center font-medium text-xl">Items</span>        
+          </div>
+          <span class="flex items-center font-medium text-xl">Items</span>
         </div>
         <!-- table -->
         <div class="relative overflow-x-auto shadow-md">
-          <table class="w-full text-sm text-left text-gray-500">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
-                  <tr>
-                      <th scope="col" class="px-6 py-3 font-medium text-sm text-gray-500">
-                        Details
-                      </th>
-                      <th scope="col" class="px-6 py-3 font-medium text-sm text-gray-500">
-                        Unit
-                      </th>
-                      <th scope="col" class="px-6 py-3 font-medium text-sm text-gray-500">
-                        Amount
-                      </th>
-                      <th scope="col" class="px-6 py-3 font-medium text-sm text-gray-500">
-                        Discount
-                      </th>
-                      <th scope="col" class="px-6 py-3 font-medium text-sm text-gray-500">
-                        Total
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr class="bg-gray-50">
-                      <td scope="row" class="px-4 py-3">
-                    <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                        <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
-                    <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                    <option selected>Property Law</option>
-                    <option value="US">Saiqa haleema</option>
-                    <option value="CA">Qasim Muneer</option>
-                    <option value="FR">Muhammad Khurshid</option>
-                  </select>
-                </div>
-                      </td>
-                    <td class="px-4 py-3">
-                      <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                        <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                        <option selected>Fixed</option>
-                      </select>
-                      <input type="text" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-2.5" required>
-                    </div>
-                      </td>
-                      <td class="px-6 py-4">
-                        <div class="relative">
-                          <input type="text" id="default_outlined" class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                          <label for="default_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-                      </div>
-                      </td>
-                      <td class="px-6 py-4">
-                        <div class="flex flex-col font-medium text-gray-900 border border-g whitespace-nowrap">
-                          <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                          <option selected>Fixed</option>
-                        </select>
-                        <input type="text" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-2.5" required>
-                      </div>
-                  </div>
-                      </td>
-                       <td class="px-6 py-4">
-                        <div class="relative">
-                          <input type="text" id="default_outlined" class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                          <label for="default_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-                      </div>
-                      </td>
-                  </tr>
-                  <tr class="bg-gray-50">
-                    <td scope="row" class="px-4 py-3">
+          <table class="md:w-full w-20 md:text-sm text-2xs text-left text-gray-500">
+            <thead class="md:text-xs text-2xs text-gray-700 uppercase bg-gray-100 ">
+              <tr>
+                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                  Details
+                </th>
+                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                  Unit
+                </th>
+                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                  Amount
+                </th>
+                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                  Discount
+                </th>
+                <th scope="col" class="md:px-6 px-3 md:py-3 py-1 font-medium md:text-sm text-2xs text-gray-500">
+                  Total
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-gray-50">
+                <td scope="row" class="px-4 py-3">
                   <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                      <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
-                  <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                  <option selected>Property Law</option>
-                  <option value="US">Saiqa haleema</option>
-                  <option value="CA">Qasim Muneer</option>
-                  <option value="FR">Muhammad Khurshid</option>
-                </select>
-              </div>
-                    </td>
-                  <td class="px-4 py-3">
-                    <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                  <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                  <option selected>Fixed</option>
-                </select>
-                <input type="text" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-2.5" required>
-              </div>
-                    </td>
-                    <td class="px-6 py-4">
-                      <div class="relative">
-                        <input type="text" id="default_outlined" class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                        <label for="default_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-                    </div>
-                    </td>
-                    <td class="px-6 py-4">
-                      <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
-                        
-                    <select id="countries" class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
-                      <option selected>fixed</option>                    
-                  </select>
-                  <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-2.5" required>
-                </div>
-                    </td>
-                    <td class="px-6 py-4">
-                      <div class="relative">
-                        <input type="text" id="default_outlined" class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                        <label for="default_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
-                    </div>                   
-                   </td>
-                </tr>
-              <td>
-                <button id="dropdownDivider" data-dropdown-toggle="dropdownDivider" class="text-white bg-blue-700 justify-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown divider <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                <!-- Dropdown menu -->
-                <div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-    </ul>
-    <div class="py-2">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
+                    <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
+                    <select id="countries"
+                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                      <option selected>Property Law</option>
+                      <option value="US">Saiqa haleema</option>
+                      <option value="CA">Qasim Muneer</option>
+                      <option value="FR">Muhammad Khurshid</option>
+                    </select>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <div
+                    class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+                    <select id="countries"
+                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                      <option selected>Fixed</option>
+                    </select>
+                    <input type="text" id="phone"
+                      class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                      required>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="relative">
+                    <label for="default_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
+                    <input type="text" id="default_outlined"
+                      class="block w-20  text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" " />
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+                    <select id="countries"
+                      class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                      <option selected>Fixed</option>
+                    </select>
+                    <input type="text" id="phone"
+                      class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                      required>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+          <div class="relative">
+            <input type="text" id="default_outlined"
+              class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" " />
+            <label for="default_outlined"
+              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
+          </div>
+                </td>
+             </tr>
+        <tr class="bg-gray-50">
+          <td scope="row" class="px-4 py-3">
+            <div
+              class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+              <label for="countries" class="text-sm font-normal text-gray-900 ">Select from service</label>
+              <select id="countries"
+                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                <option selected>Property Law</option>
+                <option value="US">Saiqa haleema</option>
+                <option value="CA">Qasim Muneer</option>
+                <option value="FR">Muhammad Khurshid</option>
+              </select>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+              <select id="countries"
+                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                <option selected>Fixed</option>
+              </select>
+              <input type="text" id="phone"
+                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                required>
+            </div>
+          </td>
+          <td class="px-6 py-4">
+            <div class="relative">
+              <input type="text" id="default_outlined"
+                class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+              <label for="default_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
+            </div>
+          </td>
+          <td class="px-6 py-4">
+            <div
+              class="flex flex-col p-2 font-medium text-gray-900 border border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg">
+              <select id="countries"
+                class="bg-gray-50 border-none px-0 text-gray-900 text-sm rounded-lg outline-none focus:ring-0 focus:border-none">
+                <option selected>Fixed</option>
+              </select>
+              <input type="text" id="phone"
+                class="bg-gray-50 border-none text-gray-900 text-sm focus:ring-0 focus:border-none block w-full p-0"
+                required>
+            </div>
+          </td>
+          <td class="px-6 py-4">
+            <div class="relative">
+              <input type="text" id="default_outlined"
+                class="block px-2.5 pb-2.5 pt-4 w-20 text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+              <label for="default_outlined"
+                class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">PKR</label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+       <div class="felx justify-between px-4 gap-5">
+          <button id="dropdown" data-dropdown-toggle="dropdown"class="flex text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+            type="button">Add new item <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg></button>
+          <!-- Dropdown menu -->
+          <div id="dropdown"
+            class="z-10 hidden items-center bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+       </div>
     </div>
+  </div>
+  <!-- item from services -->
+  <div class="services flex flex-col items-start gap-6">
+    <div class="flex justify-between items-start gap-3.5">
+      <div class="flex md:flex-row flex-col items-start gap-3.5">
+        <div class="flex flex-col items-start gap-1 md:gap-3">
+          <span class="font-medium text-sm text-gray-900">Invoice Note</span>
+          <div class="flex items-start px-5 py-3 gap-2.5  bg-gray-50 border-gray-300 rounded-lg w-96 h-44">
+            <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <span class="font-medium text-sm">Payment Summary</span>
+          <div class="flex items-center p-2 gap-2  bg-gray-50 border-gray-300 rounded-xl w-96 h-52">
+            <div class="flex flex-col items-start w-48 h-44">
+              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Discount</div>
+              <div class="flex flex-col items-start px-2.5 py-1 gap-0.5">
+                <span class="font-medium text-sm">Subtotal</span>
+                <span class="font-normal text-sm text-gray-500">(This invoice includes sales tax of Rs382.5) </span>
               </div>
-            
-                  </td>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-    </div>
-    </div>
-    <!-- item from services -->
-    <div class="services flex flex-col items-start gap-6">
-      <div class="flex justify-between items-start gap-3.5">
-        <div class="flex items-start gap-3.5">
-        <div class="flex flex-col items-start gap-3">
-        <span class="font-medium text-sm text-gray-900">Invoice Note</span>
-        <div class="flex items-start px-5 py-3 gap-2.5  bg-gray-50 border-gray-300 rounded-lg w-96 h-44">
-          <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span>
+              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Arrears</div>
+              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Net Payments</div>
+            </div>
+            <div class="flex flex-col justify-center items-end w-48 h-44">
+              <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Rs
+                725.00</div>
+              <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 h-14 font-normal text-sm">
+                Rs 3750.00
+              </div>
+              <div class="flex justify-end items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Rs
+                2,000.00</div>
+              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Rs 5,750.00</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex flex-col items-center gap-3">
-        <span class="font-medium text-sm">Payment Summary</span>
-        <div class="flex items-center p-2 gap-2  bg-gray-50 border-gray-300 rounded-xl w-96 h-52">
-          <div class="flex flex-col items-start w-48 h-44">
-            <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Discount</div>
-            <div class="flex flex-col items-start px-2.5 py-1 gap-0.5">
-              <span class="font-medium text-sm">Subtotal</span>
-              <span class="font-normal text-sm text-gray-500">(This invoice includes sales tax of Rs382.5) </span>
-            </div>
-            <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Arrears</div>
-            <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Net Payments</div>
-          </div>
-          <div class="flex flex-col justify-center items-end w-48 h-44">
-            <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Rs 725.00</div>
-            <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 h-14 font-normal text-sm">
-              Rs 3750.00
-            </div>
-            <div class="flex justify-end items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Rs 2,000.00</div>
-            <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Rs 5,750.00</div>
-          </div>
-        </div>
-      </div>
-      </div>
     </div>
-    
+
     <hr class="w-full mx-auto bg-gray-100 border">
     <!-- payment details -->
-    <div class="flex justify-between items-start gap-5 w-full">
+    <div class="flex md:flex-row flex-col justify-between items-start gap-5 w-full">
       <div class="flex flex-col items-start gap-2 w-full">
-          <label class="flex items-center gap-2 font-normal text-xs text-gray-900 ">Payment details</label>
-          <select class="flex flex-col items-start px-2.5 py-2 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-96">
-            <option selected class="flex items-center font-normal text-sm text-gray-500 bg-gray-50 border-gray-300">Payment method</option>
-            <option value="">link-1</option>
-            <option value="">online-App</option>
-            <option value="">Eassy-paisa</option>
-          </select>
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="flex items-end gap-6">
-            <span class="flex items-center font-medium text-base">Payment</span>
-            <div class="flex flex-col items-start gap-3 w-40 h-16">
-              <span class="font-light text-xs text-gray-900">Amount</span>
-             <div class="flex items-center px-4 py-2 gap-3 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">Rs 00.00</div>
-            </div>
-          </div>
-          <div class="flex items-end gap-6">
-            <span class="flex items-center font-medium text-base">Payment</span>
-            <div class="flex flex-col items-start gap-2 w-40 h-16">
-              <span class="font-light text-xs text-gray-900">Amount</span>
-             <div class="flex items-center px-4 py-2 gap-2.5 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">Rs 00.00</div>
-            </div>
+        <label class="flex items-center gap-2 font-normal text-xs text-gray-900 ">Payment details</label>
+        <select class="flex flex-col items-start px-2.5 py-2 gap-2.5 bg-gray-50 border-gray-300 rounded-lg w-96">
+          <option selected class="flex items-center font-normal text-sm text-gray-500 bg-gray-50 border-gray-300">
+            Payment method</option>
+          <option value="">link-1</option>
+          <option value="">online-App</option>
+          <option value="">Eassy-paisa</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-end gap-6">
+          <span class="flex items-center font-medium text-base">Payment</span>
+          <div class="flex flex-col items-start gap-3 w-40 h-16">
+            <span class="font-light text-xs text-gray-900">Amount</span>
+            <div
+              class="flex items-center px-4 py-2 gap-3 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
+              Rs 00.00</div>
           </div>
         </div>
-      </div>
-      <hr class="w-full mx-auto bg-gray-100 border">
-      <!-- terms and conditions -->
-      <div class="flex flex-col items-start gap-3 w-full">
-        <span class="font-medium text-sm text-gray-900">Terms & Conditions</span>
-        <div class="flex items-start px-5 py-3 gap-2.5 bg-gray-200 border-gray-300 rounded-lg w-full h-28">
-         <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span> 
+        <div class="flex items-end gap-6">
+          <span class="flex items-center font-medium text-base">Payment</span>
+          <div class="flex flex-col items-start gap-2 w-40 h-16">
+            <span class="font-light text-xs text-gray-900">Amount</span>
+            <div
+              class="flex items-center px-4 py-2 gap-2.5 w-40 h-9 font-normal text-sm text-gray-500 bg-gray-50 border-gray-300 rounded-lg">
+              Rs 00.00</div>
+          </div>
         </div>
       </div>
+    </div>
+    <hr class="w-full mx-auto bg-gray-100 border">
+    <!-- terms and conditions -->
+    <div class="flex flex-col items-start gap-3 w-96 md:w-full">
+      <span class="font-medium text-sm text-gray-900">Terms & Conditions</span>
+      <div class="flex items-start px-5 py-3 gap-2.5 bg-gray-200 border-gray-300 rounded-lg w-full h-28">
+        <span class="flex items-center font-normal text-sm text-gray-500">Write text here ...</span>
       </div>
+    </div>
+  </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
 </body>
+
 </html>
