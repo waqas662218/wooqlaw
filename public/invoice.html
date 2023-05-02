@@ -154,7 +154,7 @@
                       <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block" placeholder="" pattern="" required>
                   </div>
                 </td>
-                <td class="flex px-1 py-1 col-span-1 items-center">
+                <td class="flex px-1 py-1 col-span-1 items-center justify-center">
                   <a href="#"class="flex items-center justify-center w-8 h-8 bg-gray-200 border rounded-lg">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.83333 10.3907C5.83333 11.3111 5.08714 12.0573 4.16667 12.0573C3.24619 12.0573 2.5 11.3111 2.5 10.3907C2.5 9.47019 3.24619 8.724 4.16667 8.724C5.08714 8.724 5.83333 9.47019 5.83333 10.3907Z" fill="#7E3AF2"/>
@@ -206,7 +206,7 @@
               <input type="tel" id="phone" class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-0 block w-full" placeholder="" pattern="" required>
           </div>
           </td>
-          <td class="flex px-1 py-2 col-span-1 items-center">
+          <td class="flex px-1 py-2 col-span-1 items-center justify-center">
             <a href="#"class="flex items-center justify-center w-8 h-8 bg-gray-200 border rounded-lg">
               <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.83333 10.3907C5.83333 11.3111 5.08714 12.0573 4.16667 12.0573C3.24619 12.0573 2.5 11.3111 2.5 10.3907C2.5 9.47019 3.24619 8.724 4.16667 8.724C5.08714 8.724 5.83333 9.47019 5.83333 10.3907Z" fill="#7E3AF2"/>
@@ -303,32 +303,44 @@
 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-0 focus:border-none" placeholder="Write text here ..."></textarea>
 
         </div>
-        <div class="flex flex-col items-center gap-3 w-full">
+        <div class="flex flex-col items-center gap-3">
           <span class="font-medium text-sm">Payment Summary</span>
-          <div class="flex items-center p-2 gap-2  bg-gray-50 border-gray-300 rounded-xl w-full h-52">
-            <div class="flex flex-col items-start w-full h-44">
-              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Discount</div>
-              <div class="flex flex-col items-start px-2.5 py-1 gap-0.5">
-                <span class="font-medium text-sm">Subtotal</span>
-                <span class="font-normal text-sm text-gray-500">(This invoice includes sales tax of Rs382.5) </span>
-              </div>
-              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Arrears</div>
-              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Net Payments</div>
+            <div class="flex flex-col p-2 gap-2 justify-between">
+                <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500 justify-between">
+                <div>Discount</div>
+                <span>Rs 725.00</span>
+                </div>
+             
+                <div class="flex items-start p-2 gap-2">
+                  <div class="flex items-center px-2.5 py-1 gap-2.5">
+                  <div>
+                  <div class="flex font-medium text-sm">Subtotal</div>
+                  <span class="flex font-normal text-sm text-gray-500">(This invoice includes sales tax of Rs382.5) </span>
+                </div>
+                <div class="flex font-medium text-sm">Rs 3750.00</div>
+                  </div>
             </div>
-            <div class="flex flex-col justify-center items-end w-48 h-44">
-              <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 font-medium text-sm text-emerald-500">Rs
-                725.00</div>
-              <div class="flex items-center justify-end px-2.5 py-1 gap-2.5 h-14 font-normal text-sm">
-                Rs 3750.00
-              </div>
-              <div class="flex justify-end items-center px-2.5 py-1 gap-2.5 font-medium text-sm text-red-500">Rs
-                2,000.00</div>
-              <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-base">Rs 5,750.00</div>
+            <div class="flex items-start p-2 gap-2">
+              <div class="flex px-2.5 py-1 gap-2.5 text-red-500">
+              <div>
+              <div class="flex font-medium text-sm">Arrears</div>
             </div>
-          </div>
+            <div class="flex font-medium text-sm">Rs 2,000.00</div>
+              </div>
         </div>
-      </div>
+        <div class="flex items-start p-2 gap-2">
+          <div class="flex items-center px-2.5 py-1 gap-2.5 font-medium text-sm justify-between">
+          <div>
+          <div class="">Net Payments</div>
+        </div>
+        <div class="">Rs 5,750.00</div>
+          </div>
+          </div>
+          </div>
+          </div>
     </div>
+    </div>
+ 
     <hr class="w-full mx-auto bg-gray-100 border">
     <!-- payment details -->
     <div class="flex md:flex-row flex-col justify-between items-start gap-20 w-full">
@@ -343,7 +355,7 @@
         </select>
       </div>
       <div class="flex flex-col gap-4 w-full">
-        <div class="flex items-end md:gap-6 gap-20 w-full">
+        <div class="flex justify-end items-end md:gap-6 gap-20 w-full">
           <span class="flex items-center font-medium text-base ">Payment</span>
           <div class="flex flex-col items-start gap-3 w-40 h-16">
             <span class="font-light text-xs text-gray-900">Amount</span>
@@ -352,7 +364,7 @@
               Rs 00.00</div>
           </div>
         </div>
-        <div class="flex items-end md:gap-6 gap-20 w-full">
+        <div class="flex justify-end items-end md:gap-6 gap-20 w-full">
           <span class="flex items-center font-medium text-base">Payment</span>
           <div class="flex flex-col items-start gap-2 w-40 h-16">
             <span class="font-light text-xs text-gray-900">Amount</span>

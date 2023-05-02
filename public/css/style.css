@@ -1089,6 +1089,9 @@ select {
 .cursor-pointer {
   cursor: pointer;
 }
+.cursor-vertical-text {
+  cursor: vertical-text;
+}
 .columns-md {
   -moz-columns: 28rem;
        columns: 28rem;
@@ -1098,15 +1101,6 @@ select {
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.grid-rows-6 {
-  grid-template-rows: repeat(6, minmax(0, 1fr));
-}
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -1700,10 +1694,6 @@ select {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2288,18 +2278,6 @@ select {
 }
 
 @media (min-width: 768px) {
-
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
 
   .md\:flex {
     display: flex;
