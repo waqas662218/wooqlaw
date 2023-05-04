@@ -1215,6 +1215,9 @@ select {
 .gap-9 {
   gap: 2.25rem;
 }
+.gap-14 {
+  gap: 3.5rem;
+}
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0px * var(--tw-space-x-reverse));
