@@ -1279,9 +1279,6 @@ select {
 .divide-dashed > :not([hidden]) ~ :not([hidden]) {
   border-style: dashed;
 }
-.self-stretch {
-  align-self: stretch;
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1328,12 +1325,6 @@ select {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
-.rounded-tl-xl {
-  border-top-left-radius: 0.75rem;
-}
-.rounded-tr-xl {
-  border-top-right-radius: 0.75rem;
-}
 .border {
   border-width: 1px;
 }
@@ -1342,12 +1333,6 @@ select {
 }
 .border-b {
   border-bottom-width: 1px;
-}
-.border-l {
-  border-left-width: 1px;
-}
-.border-r {
-  border-right-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
@@ -2473,6 +2458,14 @@ select {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-center {
