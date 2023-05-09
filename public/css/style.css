@@ -1015,9 +1015,6 @@ select {
 .w-40 {
   width: 10rem;
 }
-.w-44 {
-  width: 11rem;
-}
 .w-48 {
   width: 12rem;
 }
@@ -1085,11 +1082,17 @@ select {
 .shrink-0 {
   flex-shrink: 0;
 }
+.shrink {
+  flex-shrink: 1;
+}
 .grow {
   flex-grow: 1;
 }
 .grow-0 {
   flex-grow: 0;
+}
+.basis-auto {
+  flex-basis: auto;
 }
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
@@ -1214,6 +1217,9 @@ select {
 .gap-9 {
   gap: 2.25rem;
 }
+.gap-px {
+  gap: 1px;
+}
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -1285,6 +1291,9 @@ select {
 .divide-dashed > :not([hidden]) ~ :not([hidden]) {
   border-style: dashed;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1331,6 +1340,10 @@ select {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
 .border {
   border-width: 1px;
 }
@@ -1339,6 +1352,9 @@ select {
 }
 .border-b {
   border-bottom-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 .border-t {
   border-top-width: 1px;
@@ -2077,10 +2093,6 @@ select {
 .outline-white {
   outline-color: #fff;
 }
-.drop-shadow {
-  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .drop-shadow-sm {
   --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2454,6 +2466,10 @@ select {
     max-width: 80rem;
   }
 
+  .md\:grow {
+    flex-grow: 1;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2512,6 +2528,11 @@ select {
 
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .md\:px-5 {
