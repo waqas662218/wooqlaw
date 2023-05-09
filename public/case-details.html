@@ -20,7 +20,7 @@
 
 <body class="bg-gray-50 mt-10">
   <section class="case-details">
-    <div x-data x-tabs>
+    <div x-data x-tabs class="max-w-3xl mx-auto">
       <ul class="flex flex-nowrap mb-2 gap-px text-xs md:text-sm font-medium overflow-auto rounded-t-xl" x-tabs:list>
         <li class="basis-auto shrink-0 grow-0 md:grow">
           <a x-tabs:tab :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -79,7 +79,7 @@
               </a>
             </div>
             <!-- contact-details -->
-            <div class="flex md:flex-row flex-col items-start p-0 gap-2 w-full">
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 items-start gap-2 w-full">
               <div class="flex flex-col items-center gap-2 w-full">
                 <div class="flex flex-col items-start px-3 py-2 bg-gray-100 rounded-lg w-full">
                   <span class="flex items-center font-medium text-base text-gray-900">Following has access
@@ -149,7 +149,7 @@
               </div>
             </div>
           </div>
-          <div class="flex md:flex-row flex-col items-start w-full justify-between">
+          <div class="grid md:grid-cols-1 lg:grid-cols-2 items-start w-full justify-between">
             <div class="flex flex-col items-start p-3 gap-2.5 bg-white rounded-lg w-full">
               <div class="flex justify-between gap-2.5 w-full">
                 <span class="font-medium text-lg">Custom Fields</span>
@@ -370,10 +370,10 @@
         </div>
       </div>
       <div x-tabs:panels> 
-          pinned
+         
       </div>
       <div x-tabs:panels>
-          notes
+         
         </div>
       </div>
     </div>
