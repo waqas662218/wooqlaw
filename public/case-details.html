@@ -57,14 +57,12 @@
               <path
                 d="M2.66602 12.5C2.66602 17.214 2.66602 19.5711 4.13048 21.0355C5.59495 22.5 7.95197 22.5 12.666 22.5H14.166L14.1659 22.2409C14.1651 20.6325 14.1644 19.4754 14.4841 18.4914C15.1271 16.5125 16.6786 14.9611 18.6574 14.3181C19.6414 13.9984 20.7985 13.999 22.4069 13.9999L22.666 14V12.5C22.666 7.78595 22.666 5.42893 21.2015 3.96447C19.7371 2.5 17.3801 2.5 12.666 2.5C7.95197 2.5 5.59495 2.5 4.13048 3.96447C2.66602 5.42893 2.66602 7.78595 2.66602 12.5Z" />
             </svg>
-
-
             <span>Notes</span>
           </a>
         </li>
       </ul>
-      <div class="details w-full relative" x-tabs:panels>
-        <div x-tabs:panels>
+      <div class="content w-full relative" x-tabs:panels>
+        <div x-tabs:panel>
         <div class="flex flex-col items-start gap-4 p-3 bg-gray-50 border rounded-b-xl">
           <div class="flex flex-col items-start p-3 gap-4 bg-white shadow-sm rounded-s-xl w-full">
             <div class="flex justify-between items-center gap-2.5 w-full">
@@ -79,7 +77,7 @@
               </a>
             </div>
             <!-- contact-details -->
-            <div class="grid md:grid-cols-1 lg:grid-cols-2 items-start gap-2 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-2 w-full">
               <div class="flex flex-col items-center gap-2 w-full">
                 <div class="flex flex-col items-start px-3 py-2 bg-gray-100 rounded-lg w-full">
                   <span class="flex items-center font-medium text-base text-gray-900">Following has access
@@ -149,7 +147,7 @@
               </div>
             </div>
           </div>
-          <div class="grid md:grid-cols-1 lg:grid-cols-2 items-start w-full justify-between">
+          <div class="grid grid-cols-1 lg:grid-cols-2 items-start w-full justify-between">
             <div class="flex flex-col items-start p-3 gap-2.5 bg-white rounded-lg w-full">
               <div class="flex justify-between gap-2.5 w-full">
                 <span class="font-medium text-lg">Custom Fields</span>
@@ -347,7 +345,6 @@
                       </svg>
                     </a>
                   </div>
-
                 </div>
                 <div class="flex justify-center items-center px-3 py-2 gap-2 bg-gray-50 rounded-lg w-full">
                   <a href="">
@@ -369,11 +366,11 @@
           </div>
         </div>
       </div>
-      <div x-tabs:panels> 
-         
+      <div x-tabs:panel> 
+         Pinned
       </div>
-      <div x-tabs:panels>
-         
+      <div x-tabs:panel>
+         Notes
         </div>
       </div>
     </div>
