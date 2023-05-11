@@ -1220,6 +1220,9 @@ select {
 .gap-px {
   gap: 1px;
 }
+.gap-8 {
+  gap: 2rem;
+}
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -1750,6 +1753,10 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -2362,6 +2369,14 @@ select {
 
 @media (min-width: 768px) {
 
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -2467,6 +2482,10 @@ select {
     flex-grow: 1;
   }
 
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2509,6 +2528,10 @@ select {
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
   }
 
   .md\:border {
