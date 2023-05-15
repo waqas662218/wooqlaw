@@ -772,6 +772,9 @@ select {
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-11 {
+  margin-bottom: 2.75rem;
+}
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -861,12 +864,6 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mt-11 {
-  margin-top: 2.75rem;
-}
-.mb-11 {
-  margin-bottom: 2.75rem;
 }
 .block {
   display: block;
@@ -1085,11 +1082,17 @@ select {
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-lg {
+  max-width: 32rem;
+}
 .max-w-screen-2xl {
   max-width: 1536px;
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-md {
+  max-width: 28rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1909,6 +1912,10 @@ select {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -2473,6 +2480,10 @@ select {
     width: 1.75rem;
   }
 
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:w-96 {
     width: 24rem;
   }
@@ -2618,6 +2629,16 @@ select {
     padding-right: 0.625rem;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -2641,11 +2662,6 @@ select {
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .md\:font-medium {
