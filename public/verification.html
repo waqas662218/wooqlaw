@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Verification</title>
 </head>
+
 <body class="bg-gray-300 mt-5">
-    <div class="flex flex-col max-w-lg mx-auto items-center shadow rounded-lg">
-        <div class="flex font-bold text-5xl text-violet-700">Verification</div>
+    <div class="flex flex-col max-w-lg mx-auto items-center bg-white shadow rounded-lg py-24 gap-12 relative">
+        <div class="flex max-w-md mt-24 absolute left-0">
+            <svg width="419" height="476" viewBox="0 0 419 476" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 8.16794C72.1344 23.9334 229.567 -84.7755 272.27 201.203C302.534 403.88 361.663 464.826 398.598 474.532H419C413.595 476.332 406.62 476.641 398.598 474.532H16C7.16343 474.532 0 467.369 0 458.532V8.16794Z" fill="url(#paint0_linear_181369_165200)" fill-opacity="0.38"/>
+                <defs>
+                <linearGradient id="paint0_linear_181369_165200" x1="245.5" y1="494.495" x2="-21.9565" y2="173.392" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E7D9FF"/>
+                <stop offset="1" stop-color="#FEFEFE"/>
+                </linearGradient>
+                </defs>
+                </svg>                
+        </div>
+        <div class="flex font-bold text-4xl md:text-5xl text-violet-700">
+            Verification
+        </div>
+        <div class="flex flex-col gap-12 relative">
+        <div class="content text-center justify-center font-medium text-base md:text-lg ">
+            Enter 6 digit code we sent you
+            <br> to mobile number 
+            <a class="font-medium text-base md:text-lg text-violet-700" href="#">0333484847</a>  
+        </div>
+        <div class="flex flex-col gap-8 items-center">
+             <form action="#">
+                    <div class="flex my-4 space-x-2 sm:space-x-4 md:my-6  border-violet-900">
+                        <div>
+                            <label for="code-1" class="sr-only">First code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-2')" id="code-1" class="block w-10 md:w-12 h-10 md:h-12 py-1 md:py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-2" class="sr-only">Second code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-3')" id="code-2" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-3" class="sr-only">Third code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-2', 'code-4')" id="code-3" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700  sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-4" class="sr-only">Fourth code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-3', 'code-5')" id="code-4" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-5" class="sr-only">Fivth code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-4', 'code-6')" id="code-5" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-6" class="sr-only">Sixth code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-5', 'code-6')" id="code-6" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                    </div>     
+                </form>
+        <div class="flex font-medium text-lg text-center">
+        <span>OTP Code will expire in 
+            <a class="text-violet-700" href="">2:30</a>
+        </span>
     </div>
+        </div>
+        <div class="flex flex-col items-center font-medium text-base md:text-lg gap-6">
+        <button class="btn flex justify-center items-center w-60 md:w-80 h-10 bg-violet-700 text-white rounded-md">
+            Continue
+        </button>
+        <a class=" text-violet-700" href="#">
+            Back
+        </a>
+    </div>
+</div>
+    </div>   
+    <script>
+        function focusNextInput(el, prevId, nextId) {
+    if (el.value.length === 0) {
+        document.getElementById(prevId).focus();
+    } else {
+        document.getElementById(nextId).focus();
+    }
+}
+    </script>
 </body>
 </html>
