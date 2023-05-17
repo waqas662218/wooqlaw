@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Verification-1</title>
+</head>
+<body>
+    <div class="flex flex-col max-w-lg mx-auto bg-gray-50 items-center shadow rounded-lg py-24 gap-12">
+        <div class="flex font-bold text-4xl md:text-5xl text-violet-700">
+            Verification
+        </div>
+        <div class="flex flex-col gap-12 relative">
+        <div class="content text-center justify-center font-medium text-base md:text-lg ">
+            Enter 5 digit code we sent you
+            <br> to mobile number 
+            <a class="font-medium text-base md:text-lg text-violet-700" href="#">03340660661</a>  
+        </div>
+        <div class="flex flex-col gap-8 items-center">
+             <form action="#">
+                    <div class="flex my-4 space-x-2 sm:space-x-4 md:my-6  border-violet-900">
+                        <div>
+                            <label for="code-1" class="sr-only">First code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-2')" id="code-1" class="block w-10 md:w-12 h-10 md:h-12 py-1 md:py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-2" class="sr-only">Second code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-3')" id="code-2" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-3" class="sr-only">Third code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-2', 'code-4')" id="code-3" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700  sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-4" class="sr-only">Fourth code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-3', 'code-5')" id="code-4" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label for="code-5" class="sr-only">Fivth code</label>
+                            <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-4', 'code-6')" id="code-5" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-white border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
+                        </div>
+                    </div>     
+                </form>
+        </div>
+        <div class="flex flex-col items-center font-normal text-xs md:text-sm gap-6">
+        <button class=" btn flex justify-center items-center w-60 md:w-80 h-10 bg-violet-700 text-white rounded-md">
+            Verifiy
+        </button>
+       <span class="font-medium text-sm md:text-base">Did’t get the code? 
+        <a class="text-violet-700" href="#">Resend Code</a>
+       </span>
+    </div>
+</div>
+    </div>   
+    <script>
+        function focusNextInput(el, prevId, nextId) {
+    if (el.value.length === 0) {
+        document.getElementById(prevId).focus();
+    } else {
+        document.getElementById(nextId).focus();
+    }
+}
+    </script>
+</body>
+</html>    
