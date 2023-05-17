@@ -44,7 +44,7 @@
                     </div>
                         <div class="w-full flex flex-col gap-2 mx-auto rounded-lg text-gray-800" style="max-width: 500px" x-data="app()" x-init="generatePassword()">
                              <div class="last-name flex flex-col gap-1">
-                        <span>Password</span>
+                        <span class="font-normal text-xs md:text-sm">Password</span>
                             <div class="relative mb-2">
                                 <input :type="showPasswordField?'password':'text'" id="password" x-model="password" class="w-full pl-3 pr-10 py-2 border-none rounded-md focus:outline-none focus:border-none" placeholder="" @input="checkStrength()">
                                 <button class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-indigo-500 transition-colors" @click.prevent="showPasswordField=!showPasswordField"><i class="mdi" :class="`mdi-${showPasswordField?'eye-outline':'eye-off-outline'}`"></i></button>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div class="last-name flex flex-col gap-1">
-                        <span>Confirm Password</span>
+                        <span class="font-normal text-xs md:text-sm">Confirm Password</span>
                         <input type="text" id="default-input"
                             class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
                     </div>
