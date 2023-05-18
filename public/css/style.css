@@ -1737,6 +1737,9 @@ select {
 .p-8 {
   padding: 2rem;
 }
+.p-20 {
+  padding: 5rem;
+}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
