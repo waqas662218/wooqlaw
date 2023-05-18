@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,79 +14,90 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <title>welcome-wooqlaw</title>
 </head>
+
 <body>
     <div class="grid md:grid-cols-2 max-w-5xl mx-auto justify-center items-center bg-gray-50 shadow rounded-lg gap-20 w-full h-full bg-no-repeat bg-left-bottom"
-    style="background-image:url(../public/images/wooqlaw-svg-desktop.svg);">
-    <div class="grid col-span-1 relative items-center mt-16 ml-24 w-36 md:w-full">
-        <div class="flex absolute">
-            <img class="" src="images/wooqlaw-svg-2.svg" alt="">
+        style="background-image:url(../public/images/wooqlaw-svg-desktop.svg);">
+        <div class="grid col-span-1 relative items-center mt-16 ml-24 w-36 md:w-full">
+            <div class="flex absolute">
+                <img class="" src="images/wooqlaw-svg-2.svg" alt="">
+            </div>
         </div>
-    </div>
-    <div class="grid md:flex-row col-span-1 gap-10 justify-center py-10 md:py-20">
-        <div class="flex flex-col font-bold text-3xl md:text-4xl gap-1 md:items-start w-full">
-            <span class="">Welcome</span>
-            <span class="font-medium text-sm md:text-base">Kindly fill in your details below</span>
-        </div>
-        <div class="flex flex-col gap-3 items-center">
-            <div class="flex flex-col gap-10">
-                <div class=" flex flex-col font-normal text-xs md:text-sm w-full gap-4">
-                    <div class="last-name flex flex-col gap-1">
-                        <span>Full Name</span>
-                        <input type="text" id="default-input"
-                            class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-1 focus:border-none block w-72 md:w-full p-2.5 ">
-                    </div>
-                    <div class="last-name flex flex-col gap-1">
-                        <span>Mobile No</span>
-                        <input type="text" id="default-input"
-                            class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
-                    </div>
-                        <div class="w-full flex flex-col gap-2 mx-auto rounded-lg text-gray-800" style="max-width: 500px" x-data="app()" x-init="generatePassword()">
-                             <div class="last-name flex flex-col gap-1">
-                        <span class="font-normal text-xs md:text-sm">Password</span>
-                            <div class="relative mb-2">
-                                <input :type="showPasswordField?'password':'text'" id="password" x-model="password" class="w-full pl-3 pr-10 py-2 border-none rounded-md focus:outline-none focus:border-none" placeholder="" @input="checkStrength()">
-                                <button class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-indigo-500 transition-colors" @click.prevent="showPasswordField=!showPasswordField"><i class="mdi" :class="`mdi-${showPasswordField?'eye-outline':'eye-off-outline'}`"></i></button>
-                            </div>
-                            <div class="flex -mx-1">
-                                <template x-for="(v,i) in 5">
-                                    <div class="w-1/5 px-1">
-                                        <div class="h-2 rounded-xl transition-colors" :class="i<passwordScore?(passwordScore<=2?'bg-red-400':(passwordScore<=4?'bg-yellow-400':'bg-green-500')):'bg-gray-200'"></div>
-                                    </div>
-                                </template>
-                            </div>
+        <div class="grid md:flex-row col-span-1 gap-10 justify-center py-10 md:py-20">
+            <div class="flex flex-col font-bold text-3xl md:text-4xl gap-1 md:items-start w-full">
+                <span class="">Welcome</span>
+                <span class="font-medium text-sm md:text-base">Kindly fill in your details below</span>
+            </div>
+            <div class="flex flex-col gap-3 items-center">
+                <div class="flex flex-col gap-10">
+                    <div class=" flex flex-col font-normal text-xs md:text-sm w-full gap-4">
+                        <div class="last-name flex flex-col gap-1">
+                            <span>Full Name</span>
+                            <input type="text" id="default-input"
+                                class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-1 focus:border-none block w-72 md:w-full p-2.5 ">
                         </div>
                         <div class="last-name flex flex-col gap-1">
-                        <span class="font-normal text-xs md:text-sm">Confirm Password</span>
-                        <input type="text" id="default-input"
-                            class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
+                            <span>Mobile No</span>
+                            <input type="text" id="default-input"
+                                class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
+                        </div>
+                        <div class="w-full flex flex-col gap-2 mx-auto rounded-lg text-gray-800"
+                            style="max-width: 500px" x-data="app()" x-init="generatePassword()">
+                            <div class="last-name flex flex-col gap-1">
+                                <span class="font-normal text-xs md:text-sm">Password</span>
+                                <div class="relative mb-2">
+                                    <input :type="showPasswordField?'password':'text'" id="password" x-model="password"
+                                        class="w-full pl-3 pr-10 py-2 border-none rounded-md focus:outline-none focus:border-none"
+                                        placeholder="" @input="checkStrength()">
+                                    <button
+                                        class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-indigo-500 transition-colors"
+                                        @click.prevent="showPasswordField=!showPasswordField"><i class="mdi"
+                                            :class="`mdi-${showPasswordField?'eye-outline':'eye-off-outline'}`"></i></button>
+                                </div>
+                                <div class="flex -mx-1">
+                                    <template x-for="(v,i) in 5">
+                                        <div class="w-1/5 px-1">
+                                            <div class="h-2 rounded-xl transition-colors"
+                                                :class="i<passwordScore?(passwordScore<=2?'bg-red-400':(passwordScore<=4?'bg-yellow-400':'bg-green-500')):'bg-gray-200'">
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="last-name flex flex-col gap-1">
+                                <span class="font-normal text-xs md:text-sm">Confirm Password</span>
+                                <input type="text" id="default-input"
+                                    class="border-0 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
+                            </div>
+                        </div>
                     </div>
+                    <button
+                        class="flex text-white bg-violet-700 items-center rounded-lg w-72 md:w-80 h-9 justify-center">
+                        <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Continue
+                            <span>
+                                <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.3051 0.681488L15.7861 5.16245C15.8825 5.25892 15.9323 5.3865 15.9323 5.48608C15.9323 5.58565 15.8837 5.74087 15.7864 5.83802L11.3055 10.319C11.111 10.5135 10.7958 10.5135 10.6016 10.319C10.4074 10.1245 10.4071 9.80927 10.6016 9.6151L14.233 5.98365H0.497885C0.222679 5.98365 0 5.76097 0 5.51377C0 5.23857 0.222679 5.01589 0.497885 5.01589H14.2333L10.6018 1.38444C10.4073 1.18995 10.4073 0.87473 10.6018 0.680555C10.7963 0.48638 11.1122 0.486691 11.3051 0.681488Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </button>
+                    <a class="flex font-medium text-xs md:text-sm text-violet-700 justify-center" href="#">GO BACK</a>
                 </div>
             </div>
-                <button
-                    class="flex text-white bg-violet-700 items-center rounded-lg w-72 md:w-80 h-9 justify-center">
-                    <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Continue
-                        <span>
-                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11.3051 0.681488L15.7861 5.16245C15.8825 5.25892 15.9323 5.3865 15.9323 5.48608C15.9323 5.58565 15.8837 5.74087 15.7864 5.83802L11.3055 10.319C11.111 10.5135 10.7958 10.5135 10.6016 10.319C10.4074 10.1245 10.4071 9.80927 10.6016 9.6151L14.233 5.98365H0.497885C0.222679 5.98365 0 5.76097 0 5.51377C0 5.23857 0.222679 5.01589 0.497885 5.01589H14.2333L10.6018 1.38444C10.4073 1.18995 10.4073 0.87473 10.6018 0.680555C10.7963 0.48638 11.1122 0.486691 11.3051 0.681488Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </a>
-                </button>
-            <a class="flex font-medium text-xs md:text-sm text-violet-700 justify-center" href="#">GO BACK</a>
         </div>
     </div>
-</div>
-</div>
-<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+    </style>
 </body>
 <script>
-    function app(){
+    function app() {
         return {
             showPasswordField: true,
             passwordScore: 0,
@@ -97,14 +109,14 @@
                 symbols: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
             },
             charsLength: 12,
-            checkStrength: function() {
-                if(!this.password) return this.passwordScore = 0;
+            checkStrength: function () {
+                if (!this.password) return this.passwordScore = 0;
                 this.passwordScore = zxcvbn(this.password).score + 1;
             },
-            generatePassword: function() {
+            generatePassword: function () {
                 console.log(document.getElementById('charsSymbols').checked);
                 this.password = this.shuffleArray(
-                    ((document.getElementById('charsLower').checked?this.chars.lower:'')+(document.getElementById('charsUpper').checked?this.chars.upper:'')+(document.getElementById('charsNumeric').checked?this.chars.numeric:'')+(document.getElementById('charsSymbols').checked?this.chars.symbols:'')).split('')
+                    ((document.getElementById('charsLower').checked ? this.chars.lower : '') + (document.getElementById('charsUpper').checked ? this.chars.upper : '') + (document.getElementById('charsNumeric').checked ? this.chars.numeric : '') + (document.getElementById('charsSymbols').checked ? this.chars.symbols : '')).split('')
                 ).join('').substring(0, this.charsLength);
                 this.checkStrength();
             },
@@ -117,5 +129,6 @@
             }
         }
     }
-    </script>
+</script>
+
 </html>
