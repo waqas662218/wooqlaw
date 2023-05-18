@@ -12,12 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <title>signup-details</title>
 </head>
 <body class="mt-5">
     <div class="grid md:grid-cols-2 max-w-5xl mx-auto bg-gray-50 shadow rounded-lg bg w-full h-full bg-no-repeat bg-left-bottom"
         style="background-image: url(../public/images/wooqlaw-svg-desktop.svg);">
-        <div class="grid col-span-1 justify-center py-6 md:py-12">
+        <div class="grid col-span-1 justify-center py-2 md:py-10">
             <div class="signup flex flex-col items-center py-10 md:py-5 gap-1">
                 <span class="font-bold text-3xl md:text-4xl">Sign up!</span>
                 <span class="font-normal text-sm md:text-base">Kindly fill in your details</span>
@@ -37,7 +40,8 @@
                 </div>
             </div>
         </div>
-        <div class="grid md:flex-row col-span-1 gap-3 justify-center py-8">
+        <div class="grid md:flex-row col-span-1  gap-4 justify-center py-8">
+            <div class="flex flex-col gap-6 justify-center">
             <div class="full-name flex flex-col gap-1 font-normal text-sm">
                 <span>Full Name</span>
                 <input type="text" id="default-input"
@@ -64,18 +68,27 @@
                     <option value="khi">Karachi</option>
                 </select>
             </div>
-            <div class="flex flex-col gap-1 font-normal text-sm">
-                <label for="password" class="block text-sm font-medium text-gray-900">Password</label>
-                <input type="password" id="password"
-                    class="bg-white border border-gray-300 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5"
-                    placeholder="•••••••••" required>
-            </div>
-            <div class="flex flex-col gap-1 font-normal text-sm">
-                <label for="confirm_password" class="block text-sm font-medium text-gray-900 ">Confirm password</label>
-                <input type="password" id="confirm_password"
-                    class="bg-white border border-gray-300 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5"
-                    placeholder="•••••••••" required>
-            </div>
+            <div class="w-full flex flex-col gap-2 mx-auto rounded-lg text-gray-800" style="max-width: 500px" x-data="app()" x-init="generatePassword()">
+                <div class="last-name flex flex-col gap-1">
+           <span class="font-normal text-xs md:text-sm">Password</span>
+               <div class="relative mb-2">
+                   <input :type="showPasswordField?'password':'text'" id="password" x-model="password" class=" border border-gray-300 w-full pl-3 pr-10 py-2  rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="" @input="checkStrength()">
+                   <button class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-indigo-500 transition-colors" @click.prevent="showPasswordField=!showPasswordField"><i class="mdi" :class="`mdi-${showPasswordField?'eye-outline':'eye-off-outline'}`"></i></button>
+               </div>
+               <div class="flex -mx-1">
+                   <template x-for="(v,i) in 5">
+                       <div class="w-1/5 px-1">
+                           <div class="h-2 rounded-xl transition-colors" :class="i<passwordScore?(passwordScore<=2?'bg-red-400':(passwordScore<=4?'bg-yellow-400':'bg-green-500')):'bg-gray-200'"></div>
+                       </div>
+                   </template>
+               </div>
+           </div>
+           <div class="last-name flex flex-col gap-1">
+           <span class="font-normal text-xs md:text-sm">Confirm Password</span>
+           <input type="text" id="default-input"
+               class="border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
+       </div>
+   </div>
             <button class="flex text-white bg-violet-700 items-center rounded-lg w-72 md:w-96 h-9 justify-center">
                 <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Continue
                     <span>
@@ -87,8 +100,10 @@
                     </span>
                 </a>
             </button>
-            <div class="flex flex-col items-center justify-center">
-                <a class="flex font-medium text-xs md:text-sm text-violet-700" href="#">GO BACK</a>
+        </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+                <a x-data x-on:click="location.href='wooqlaw16.html';"
+                 class="flex font-medium text-xs md:text-sm text-violet-700" href="#">GO BACK</a>
                 <div class="flex justify-center gap-1">
                     <span class="font-medium text-sm md:text-base">
                         Have an account?
@@ -98,5 +113,27 @@
             </div>
         </div>
     </div>
+    <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
 </body>
+<script>
+    function app(){
+        return {
+            showPasswordField: true,
+            passwordScore: 0,
+            password: '',
+            chars: {
+                lower: 'abcdefghijklmnopqrstuvwxyz',
+                upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                numeric: '0123456789',
+                symbols: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+            },
+            charsLength: 12,
+            checkStrength: function() {
+                if(!this.password) return this.passwordScore = 0;
+                this.passwordScore = zxcvbn(this.password).score + 1;
+            },
+
+        }
+    }
+    </script>
 </html>
