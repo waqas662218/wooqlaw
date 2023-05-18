@@ -16,14 +16,14 @@
 </head>
 
 <body>
-    <div class="grid md:grid-cols-2 max-w-5xl mx-auto justify-center items-center shadow rounded-lg bg-white gap-20 w-full h-full bg-no-repeat bg-left-bottom"
+    <div class="grid md:grid-cols-2 max-w-5xl mx-auto justify-center items-center shadow rounded-lg bg-gray-50 gap-16 md:gap-20 w-full h-screen bg-no-repeat bg-left-bottom"
         style="background-image:url(../public/images/wooqlaw-svg-desktop.svg);">
         <div class="grid col-span-1 relative items-center mt-16 ml-20 w-36 md:w-full">
             <div class="flex absolute justify-center">
                 <img class="" src="images/wooqlaw-svg-2.svg" alt="">
             </div>
         </div>
-        <div class="grid md:flex-row col-span-1 gap-10 justify-center py-10 md:py-20">
+        <div class="grid md:flex-row col-span-1 gap-10 justify-center ">
             <div class="flex flex-col font-bold text-3xl gap-1 text-center md:items-start md:text-4xl w-full">
                 <span class="">Sign up!</span>
                 <span class="font-medium text-base">Let’s get started with a few simple steps</span>
@@ -31,12 +31,12 @@
             <div class="flex flex-col gap-3 items-center">
                 <div class="flex flex-col gap-10">
                     <div class=" flex flex-col font-normal text-xs md:text-sm w-full gap-4">
-                        <div class="last-name">
+                        <div class="last-name flex flex-col gap-1">
                             <span>Last Firm Name</span>
                             <input type="text" id="default-input"
                                 class="border border-gray-300 text-gray-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-full p-2.5 ">
                         </div>
-                        <div class="city">
+                        <div class="city flex flex-col gap-1">
                             <label for="city" class="text-xs md:text-sm font-medium text-gray-900">City</label>
                             <select id="city"
                                 class="flex flex-col items-start p-3 gap-2.5 bg-white border-gray-300 rounded-lg w-72 md:w-full">
@@ -67,5 +67,4 @@
         </div>
     </div>
 </body>
-
 </html>
