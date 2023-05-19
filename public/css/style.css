@@ -1188,6 +1188,10 @@ select {
   scroll-margin-top: 1.5rem;
   scroll-margin-bottom: 1.5rem;
 }
+.scroll-my-0 {
+  scroll-margin-top: 0px;
+  scroll-margin-bottom: 0px;
+}
 .columns-md {
   -moz-columns: 28rem;
        columns: 28rem;
