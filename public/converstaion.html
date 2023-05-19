@@ -12,133 +12,203 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <title>signup-details</title>
 </head>
 
-<body class="mt-10">
-    <div class="flex flex-col max-w-2xl mx-auto gap-5 shadow rounded-md">
-        <div class="flex gap-3 shadow">
-            <div class="relative">
-                <img class="w-12 h-12 rounded-full" src="images/kamran-saeed.svg" alt="">
+<body>
+    <div class="flex flex-col max-w-xl mx-auto bg-gray-50 gap-1 h- md:gap-3 shadow rounded-md">
+        <div class="flex justify-between p-1 md:p-2 items-center shadow rounded-lg bg-white">
+            <div class="flex gap-2 md:gap-3 items-center">
+            <a href="#">
+                <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.54402 11.7819L0.181094 6.90309C0.0528984 6.7397 0 6.58652 0 6.45632C0 6.32611 0.0528746 6.15072 0.159363 6.03277L4.52229 1.15396C4.74037 0.909026 5.10227 0.90106 5.33007 1.13561C5.55941 1.36858 5.56687 1.75778 5.34719 2.00134L1.36392 6.45632L5.36705 10.9343C5.58672 11.1768 5.57926 11.5669 5.34992 11.8C5.12305 12.0346 4.76086 12.027 4.54402 11.7819Z" fill="black"/>
+                    </svg>                    
+            </a>
+            <a class="relative flex shrink-0" href="#">
+                <img class="w-12 h-12 rounded-full" src="images/kamran-saeed.svg" alt="kamramSaeed">
                 <span class="top-0 left-9 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white rounded-full"></span>
-            </div>
-            <div class="flex items-center gap-32">
-                <div class="content flex flex-col gap-1">
+            </a>
+            <div class="flex items-center gap-8 md:gap-32">
+                <div class="content flex flex-col gap-0.5 md:gap-1">
                     <div class="flex gap-2 items-center ">
-                        <h2 class="font-semibold text-base">Kamran Saeed</h2>
-                        <a class=" rounded-full w-10 h-4 bg-green-500 text-center  text-white font-medium text-2xs"
+                        <h2 class="font-semibold  text-sm md:text-base">Kamran Saeed</h2>
+                        <a class="flex rounded-full w-10 h-4 bg-green-500 items-center justify-center text-white font-medium text-3xs md:text-2xs"
                             href="">online</a>
                     </div>
-                    <span class="font-medium text-sm text-gray-600">Discussion on court documents with client</span>
+                    <span class="font-medium text-xs md:text-sm text-gray-600">Discussion on court documents with client</span>
+                </div> 
+            </div>
+        </div>
+        <div class="flex gap-1 justify-center items-center">
+            <a class="flex items-center w-7 h-7 bg-gray-100 rounded-sm pl-1" href="#">
+                <svg aria-hidden="true" class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a> 
+            <a class="flex items-center w-7 h-7 rounded-sm pl-1" href="#">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.0711 17.7921C14.2744 17.7921 15.2497 18.7679 15.2497 19.9707C15.2497 21.1734 14.2744 22.1492 13.0711 22.1492C11.8679 22.1492 10.8926 21.1734 10.8926 19.9707C10.8926 18.7679 11.8679 17.7921 13.0711 17.7921ZM13.0711 10.5302C14.2744 10.5302 15.2497 11.506 15.2497 12.7088C15.2497 13.9115 14.2744 14.8873 13.0711 14.8873C11.8679 14.8873 10.8926 13.9115 10.8926 12.7088C10.8926 11.506 11.8679 10.5302 13.0711 10.5302ZM13.0711 7.62542C11.8679 7.62542 10.8926 6.6496 10.8926 5.44685C10.8926 4.24364 11.8679 3.26828 13.0711 3.26828C14.2744 3.26828 15.2497 4.24364 15.2497 5.44685C15.2497 6.6496 14.2744 7.62542 13.0711 7.62542Z" fill="black"/>
+                    </svg>                    
+            </a>
+        </div>
+        </div>
+        <!-- conversation -->
+        <div class="flex flex-col p-2 gap-6 scroll-my-6">
+             <!-- kamran saeed -->
+            <div class="flex gap-1 md:gap-3">
+                <div class="img">
+                    <img class="w-8 h-8" src="images/kamran-saeed.svg" alt="">
                 </div>
-                <div class="flex w-6 h-6 bg-gray-100 rounded-sm pl-1 ">
-                    <a class="flex items-center " href="#">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-3 md:gap-7">
+                        <span class=" font-normal text-2xs md:text-xs text-gray-500">Kamran Saeed</span>
+                        <span class="font-normal text-2xs md:text-xs text-gray-600">01:45 AM</span>
+                    </div>
+                    <div class="flex bg-violet-500 font-medium text-xs md:text-sm rounded-r-full rounded-tl-full w-52 md:w-96 h-10 md:h-14 pl-2 md:pl-5 pr-3 md:pr-8 py-1 md:py-2.5 items-center text-white">
+                        <span> Hi I am Josephin, can you help me to find best chat app?.</span>
+                    </div>
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="flex bg-violet-500 font-medium text-xs md:text-sm rounded-r-full rounded-bl-full w-52 md:w-60 h-8 md:h-10 pt-1 md:pt-2 pl-4 md:pl-5  text-white">
+                            it should from elite auther 😇
+                        </div>
+                        <a class="flex items-center font-medium text-2xs md:text-xs justify-center p-1 h-3 md:h-5 w-3 md:w-5 bg-green-500 text-white rounded-sm" href="#">
+                            R
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Nimra jalil kiyani -->
+            <div class="flex justify-end gap-1 md:gap-2">
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-3 md:gap-7 justify-end">
+                        <span class=" font-normal text-2xs md:text-xs text-gray-500">Nimra Jalil KIyani</span>
+                        <span class="font-normal text-2xs md:text-xs text-gray-600">01:45 AM</span>
+                    </div>
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <div class="flex bg-gray-200 font-medium text-xs md:text-sm rounded-l-full rounded-tr-full w-52 md:w-96 h-16 pl-5 pr-2 md:pr-8 items-center">
+                            <span>Sure, chitchat is best theme for chating project, you can it check
+                                <span class=" text-violet-700">here.</span>
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-end gap-1 md:gap-2">
+                            <a  class="flex items-center justify-center font-medium text-2xs md:text-xs p-1 h-3 md:h-5 w-3 md:w-5 bg-gray-900 text-white rounded-sm" href="#">
+                                D
+                            </a>   
+                            <div class="flex bg-gray-200 rounded-l-full justify-end rounded-br-full w-24 md:w-32 h-14 md:h-16 py-1.5 pr-4 md:pr-8 pl-5 text-white">
+                                <a class="flex items-center justify-center rounded-full w-11 h-11 bg-gray-300 " href="">
+                                    <svg width="20" height="20" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.8125 10.5312V13.1979C14.8125 13.5515 14.672 13.8907 14.422 14.1407C14.1719 14.3908 13.8328 14.5313 13.4792 14.5313H4.14583C3.79221 14.5313 3.45307 14.3908 3.20302 14.1407C2.95298 13.8907 2.8125 13.5515 2.8125 13.1979V10.5312"
+                                            stroke="#223645" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M5.47852 7.19794L8.81185 10.5313L12.1452 7.19794" stroke="#223645"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M8.8125 10.5313V2.53125" stroke="#223645" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="w-8 h-8" src="images/nimra.png" alt="">
+                </div>
+            </div>
+            <!-- kamran saeed-->
+            <div class="flex gap-2 md:gap-3">
+                <div class="img">
+                    <img class="w-8 h-8" src="images/kamran-saeed.svg" alt="kamran saeed">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-3 md:gap-7">
+                        <span class=" font-normal text-2xs md:text-xs text-gray-500">Kamran Saeed</span>
+                        <span class="font-normal text-2xs md:text-xs text-gray-600">01:45 AM</span>
+                    </div>
+                    <div class="flex bg-violet-500 font-medium text-xs md:text-sm rounded-r-full rounded-tl-full h-10 md:h-12 pl-3 md:pl-5 pr-3 md:pr-8 py-1 md:py-2.5 items-center text-white">
+                       <span>I think it's best for my project.</span>
+                    </div>
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div
+                            class="flex bg-gray-200 rounded-r-full rounded-bl-full gap-2 w-44 p-1 md:p-2 justify-center text-white">
+                            <a href="#"> <img src="images/li1.png" alt="#"></a>
+                            <a href="#"><img src="images/li2.png" alt="#"></a>
+                            <a href="#"><img src="images/li3.png" alt="#"></a>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                        <a class="flex p-1 h-4 md:h-5 w-4 md:w-5 justify-center items-center bg-gray-200 rounded-md"
+                            href="#">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.04761 6.7969C8.74968 7.6402 8.18574 8.36382 7.44076 8.85872C6.69579 9.35362 5.81015 9.59299 4.9173 9.54075C4.02445 9.48852 3.17276 9.14752 2.49058 8.56913C1.8084 7.99073 1.33268 7.20629 1.13511 6.33401C0.93754 5.46173 1.02883 4.54886 1.39521 3.73297C1.7616 2.91709 2.38323 2.24238 3.16644 1.81053C3.94964 1.37868 4.85199 1.21307 5.73751 1.33868C6.62302 1.46428 7.44372 1.87428 8.07594 2.5069L10.198 4.50524" stroke="#6D28D9" stroke-width="0.916667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </a>
+                             <a class="flex p-1 h-4 md:h-5 w-4 md:w-5 justify-center items-center bg-red-600 font-medium text-3xs md:text-2xs text-white rounded-md" href="#">
+                            F
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- nimra -->
+            <div class="flex justify-end gap-1 md:gap-2">
+                <div class="flex flex-col gap-1 md:gap-2">
+                    <div class="flex gap-3 md:gap-7 justify-end">
+                        <span class=" font-normal text-2xs md:text-xs text-gray-500">Nimra Jalil KIyani</span>
+                        <span class="font-normal text-2xs md:text-xs text-gray-600">01:45 AM</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <div
+                            class="flex bg-gray-200 font-medium text-xs md:text-sm rounded-l-full rounded-tr-full justify-center pl-3 md:pl-5 pr-3 md:pr-8 py-1 md:py-2.5 items-center">
+                            <a class="#" href="">Thank you!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="w-8 h-8" src="images/nimra.png" alt="">
                 </div>
             </div>
         </div>
-        <div class="flex gap-3">
-            <div class="img">
-                <img class="w-8 h-8" src="images/kamran-saeed.svg" alt="">
-            </div>
-            <div class="flex flex-col gap-2">
-            <div class="flex gap-7">
-                <span class=" font-normal text-xs text-gray-500">Kamran Saeed</span>
-                <span class="font-normal text-xs text-gray-600">01:45 AM</span>
-            </div>
-            <div class="flex bg-violet-500 rounded-r-full rounded-tl-full  w-96 h-14 pl-5 pr-8 py-2.5 items-center text-white">
-                <a class="" href=""> Hi I am Josephin, can you help me to find best chat app?.</a>
-            </div>
-            <div class="flex items-center gap-2">
-            <div class="flex bg-violet-500 rounded-r-full rounded-bl-full w-60 h-9 pt-2 pl-5  text-white">
-                it should from elite auther 😇
-            </div>
-            <span class="flex items-center justify-center p-1 h-5 w-5 bg-green-500 text-white rounded-md">R</span>
+        <!-- comment -->
+        <div class="flex h-12 md:h-16 p-1 md:p-2 w-full justify-between items-center gap-1 md:gap-2 border bg-white rounded-lg">
+            <div class="flex gap-1 md:gap-2">
+            <a class="flex rounded-full shrink-0 w-8 md:w-10 h-8 md:h-10 bg-gray-100 justify-center items-center" href="#">
+                <svg class="w-4 md:w-5 h-4 md:h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 13.75C11.4531 13.75 12.4688 13.0664 13.0625 12.4258C13.4102 12.0469 14.0039 12.0195 14.3867 12.3711C14.7656 12.7227 14.7891 13.3164 14.4375 13.6953C13.582 14.6289 12.0977 15.625 10 15.625C7.90234 15.625 6.41797 14.6289 5.5625 13.6953C5.21094 13.3164 5.19922 12.7227 5.61328 12.3711C5.99609 12.0195 6.58984 12.0469 6.9375 12.4258C7.53125 13.0664 8.54688 13.75 10 13.75ZM8.14062 8.125C8.14062 8.81641 7.57812 9.375 6.89062 9.375C6.19922 9.375 5.64062 8.81641 5.64062 8.125C5.64062 7.43359 6.19922 6.875 6.89062 6.875C7.57812 6.875 8.14062 7.43359 8.14062 8.125ZM11.8906 8.125C11.8906 7.43359 12.4492 6.875 13.1406 6.875C13.8281 6.875 14.3906 7.43359 14.3906 8.125C14.3906 8.81641 13.8281 9.375 13.1406 9.375C12.4492 9.375 11.8906 8.81641 11.8906 8.125ZM20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10ZM10 1.875C5.51172 1.875 1.875 5.51172 1.875 10C1.875 14.4883 5.51172 18.125 10 18.125C14.4883 18.125 18.125 14.4883 18.125 10C18.125 5.51172 14.4883 1.875 10 1.875Z"
+                        fill="#71717A" />
+                </svg>
+            </a>
+            <a class="flex rounded-full shrink-0  w-8 md:w-10 h-8 md:h-10 bg-gray-100 justify-center items-center" href="#">
+                <svg class="w-4 md:w-5 h-4 md:h-5"  viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.3175 9.99952C20.3175 10.6389 19.7949 11.1534 19.1453 11.1534H11.3309V18.8457C11.3309 19.4827 10.8059 20 10.1587 20C9.5116 20 8.98657 19.4851 8.98657 18.8457V11.1534H1.17216C0.52503 11.1534 0 10.637 0 10C0 9.3649 0.52503 8.84567 1.17216 8.84567H8.98657V1.15337C8.98657 0.516346 9.5116 0 10.1587 0C10.8059 0 11.3309 0.516346 11.3309 1.15337V8.84567H19.1453C19.7949 8.84567 20.3175 9.3649 20.3175 9.99952Z"
+                        fill="#71717A" />
+                </svg>
+            </a>
         </div>
-        </div>
-        </div>
-        <div class="flex justify-end gap-2">
-            <div class="flex flex-col">
-        <div class="flex gap-7 justify-end">
-            <span class=" font-normal text-xs text-gray-500">Kamran Saeed</span>
-            <span class="font-normal text-xs text-gray-600">01:45 AM</span>
-        </div>
-        <div class="flex flex-col gap-3">
-        <div class="flex bg-gray-200 font-medium text-sm rounded-l-full rounded-tr-full  w-96 h-14 pl-5 pr-8 py-2.5 items-center">
-            <a class="#" href="">Sure, chitchat is best theme for chating project, you can it check <span class=" text-violet-700">here.</span> 
-             </a>
-        </div>
-        <div class="flex items-center justify-end gap-2">
-            <span class="flex items-center justify-center p-1 h-5 w-5 bg-black text-white rounded-md">D</span>
-            <div class="flex bg-gray-100 rounded-l-full rounded-br-full w-32 h-16 pt-2 pl-5  text-white">
-                <a class="flex items-center justify-center rounded-full w-11 h-11 bg-gray-300 " href="">
-                    <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.8125 10.5312V13.1979C14.8125 13.5515 14.672 13.8907 14.422 14.1407C14.1719 14.3908 13.8328 14.5313 13.4792 14.5313H4.14583C3.79221 14.5313 3.45307 14.3908 3.20302 14.1407C2.95298 13.8907 2.8125 13.5515 2.8125 13.1979V10.5312" stroke="#223645" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5.47852 7.19794L8.81185 10.5313L12.1452 7.19794" stroke="#223645" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8.8125 10.5313V2.53125" stroke="#223645" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                    
-                </a> 
-            </div>
+            <textarea id="chat" rows="1"
+                class="block py-2 w-full text-xs md:text-sm border-none rounded-full shadow bg-gray-100 text-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Write your message..."></textarea>
+                <div class="flex gap-1 md:gap-2">
+                <a class="flex rounded-full shrink-0  w-8 md:w-10 h-8 md:h-10 bg-gray-100 justify-center items-center" href="#">
+                    <svg class="w-4 md:w-5 h-4 md:h-5" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.0874 7.59253C12.5567 7.59253 12.1298 8.01566 12.1298 8.50601V10.1234C12.1298 13.0793 9.55622 15.4579 6.51179 15.1613C3.86239 14.9043 1.91523 12.5395 1.91523 9.89402V8.50601C1.91523 8.01566 1.4863 7.59253 0.957617 7.59253C0.428932 7.59253 0 8.01566 0 8.50601V9.77736C0 13.3217 2.55364 16.4841 6.06491 16.9626V18.3486H4.11376C3.61899 18.3486 3.19206 18.7717 3.19206 19.2621C3.19206 19.7525 3.61899 20.2468 4.11376 20.2468H9.85946C10.4261 20.2468 10.853 19.8236 10.853 19.2977C10.853 18.7717 10.4261 18.3486 9.89537 18.3486H7.98014V17.0132C11.4036 16.5494 14.045 13.6389 14.045 10.1234V8.50601C14.045 8.01566 13.6181 7.59253 13.0874 7.59253ZM7.02252 13.9196C9.13726 13.9196 10.853 12.2192 10.853 10.1234V3.79627C10.853 1.736 9.13726 0 7.02252 0C4.90779 0 3.19206 1.70041 3.19206 3.79627V10.1234C3.19206 12.2192 4.90779 13.9196 7.02252 13.9196ZM5.10729 3.79627C5.10729 2.74834 5.96515 1.89813 7.02252 1.89813C8.07989 1.89813 8.93776 2.74834 8.93776 3.79627V10.1234C8.93776 11.1713 8.07989 12.0215 7.02252 12.0215C5.96515 12.0215 5.10729 11.1713 5.10729 10.1234V3.79627Z" fill="#71717A"/>
+                        </svg>                        
+                </a>
+                <a class="flex rounded-full shrink-0  w-8 md:w-10 h-8 md:h-10 bg-violet-700 justify-center items-center" href="#">
+                    <svg class="w-4 md:w-5 h-4 md:h-5" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.946 8.70979L1.98699 0.155484C1.80611 0.0779649 1.61543 0 1.42654 0C1.04237 0 0.664707 0.155885 0.388489 0.447741C-0.0221989 0.922659 -0.116857 1.56821 0.150451 2.10327L4.27693 10.0196L0.150585 17.9364C-0.116724 18.4719 -0.0220519 19.117 0.388667 19.5523C0.664351 19.8439 1.04179 20 1.42582 20C1.61517 20 1.80589 19.9624 1.98672 19.8844L21.946 11.3294C22.4708 11.1053 22.8107 10.5894 22.8107 10.0192C22.7702 9.44935 22.4717 8.93255 21.946 8.70979ZM2.98138 2.90831L17.081 8.95037H6.13027L2.98138 2.90831ZM6.13027 11.0888H17.0765L2.98049 17.13L6.13027 11.0888Z" fill="white"/>
+                        </svg>   
+                </a>
         </div>
     </div>
     </div>
-        <div class="img">
-            <img class="w-8 h-8" src="images/nimra.png" alt="">
-        </div>
-    </div>
-   
-    <div class="flex gap-3">
-        <div class="img">
-            <img class="w-8 h-8" src="images/kamran-saeed.svg" alt="">
-        </div>
-        <div class="flex flex-col gap-2">
-        <div class="flex gap-7">
-            <span class=" font-normal text-xs text-gray-500">Kamran Saeed</span>
-            <span class="font-normal text-xs text-gray-600">01:45 AM</span>
-        </div>
-        <div class="flex bg-violet-500 rounded-r-full rounded-tl-full   h-14 pl-5 pr-8 py-2.5 items-center text-white">
-            <a class="" href=""> I think it's best for my project.</a>
-        </div>
-        <div class="flex items-center gap-2">
-        <div class="flex bg-gray-200 rounded-r-full rounded-bl-full gap-2 items-center w-44 h-9 pt-2 pl-5  text-white">
-           <img src="images/li1.png" alt="#">
-           <img src="images/li2.png" alt="#">
-           <img src="images/li3.png" alt="#">
-        </div>
-        <span class="flex items-center justify-center p-1 h-5 w-5 bg-red-600 text-white rounded-md">F</span>
-    </div>
-    </div>
-    </div>
-    <div class="flex justify-end gap-2">
-        <div class="flex flex-col">
-    <div class="flex gap-7 justify-end">
-        <span class=" font-normal text-xs text-gray-500">Kamran Saeed</span>
-        <span class="font-normal text-xs text-gray-600">01:45 AM</span>
-    </div>
-    <div class="flex flex-col gap-3">
-    <div class="flex bg-gray-200 font-medium text-sm rounded-l-full rounded-tr-full justify-center pl-5 pr-8 py-2.5 items-center">
-        <a class="#" href="">Thank you!</a>
-    </div>
-   
-</div>
-</div>
-    <div class="img">
-        <img class="w-8 h-8" src="images/nimra.png" alt="">
-    </div>
-</div>
-<div class="flex flex-col">
-    <div class="roun w-10 h-10 bg-gray-100"></div>
-</div>
-    </div>
-
-
 </body>
-
 </html>
