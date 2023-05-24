@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <title>wooqlaw-digital-revolution</title>
+</head>
+
+<body>
+    <section class="flex z-20 relative">
+        <img src="images/hero-bg gradient.png" alt="">
+        <div class="container flex flex-col items-center max-w-full mx-auto px-4 md:p-4 absolute bg-no-repeat">
+            <div class="container flex flex-col justify-center items-center">
+                <div class="flex flex-col gap-1 md:gap-20 items-center">
+                    <div class="flex flex-col gap-4 md:gap-10 items-center">
+                        <div class="flex flex-col gap-4 items-center">
+                            <div class="flex flex-col items-center gap-3 md:gap-12">
+                                <span>
+                                    <img class="" src="images/wooqlaw-header.png" alt="">
+                                </span>
+                                <div class="flex flex-col gap-5">
+                                    <div
+                                        class="flex justify-center font-bold text-lg md:text-4xl text-violet-700 shadow-xl">
+                                        Now
+                                        is The Time for Change
+                                    </div>
+                                    <div
+                                        class="flex flex-col font-medium text-base md:text-2xl text-gray-800 text-center">
+                                        wooqlaw® is here to bring digital revolution in
+                                        <span>Pakistan’s legal landscape!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex font-normal text-sm md:text-xl text-center text-gray-800 max-w-2xl">
+                                wooqlaw® enables lawyers to create a unique online presence for prospective clients
+                                locally
+                                and internationally, with the best available legal case management system; an AI powered
+                                legal research
+                                engine for judgements and law database; and a readymade custom website for your
+                                business.
+                            </div>
+                        </div>
+                        <img src="images/wooqlaw-dashboard.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-center gap-2 md:gap-4">
+                        <h2 class="font-semibold text-lg md:text-3xl">Get started with wooqlaw® today!</h2>
+                        <button
+                            class="font-semibold text-sm md:text-base text-white bg-violet-700 rounded-md w-72 h-14">Sign
+                            up with wooqlaw®</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-full justify-between items-center  bg-gray-50">
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col justify-between items-center mt-2 md:mt-10">
+                        <span class="font-bold text-xl md:text-3xl text-violet-700">
+                            How it works for lawyers?
+                        </span>
+                    </div>
+                    <div class="grid col-span-1 md:grid-cols-2 justify-between gap-3 md:gap-20">
+                        <!-- 1 -->
+                        <div class="flex flex-col justify-center items-center gap-2">
+                            <div class="flex justify-center items-center max-w-md gap-1 md:gap-3">
+                                <span class="flex font-bold text-3xl md:text-6xl items-center text-violet-700">
+                                    1.
+                                </span>
+                                <div class="flex flex-col gap-1 w-72 md:max-w-2xl">
+                                    <h3 class="font-semibold text-sm md:text-xl">
+                                        Create your wooqlaw® business profile
+                                    </h3>
+                                    <h5 class="font-medium text-xs md:text-base text-gray-600">
+                                        Get yourself registered on wooqlaw® and create your updated profile
+                                    </h5>
+                                </div>
+                            </div>
+                            <img class="w-80 md:max-w-lg " src="images/Step1.png" alt="">
+                        </div>
+                        <!-- 2 -->
+                        <div class="grid col-span-1 flex-row md:flex-col justify-center mt-0 md:mt-24 gap-2">
+                            <div class="flex max-w-md gap-1 md:gap-3">
+                                <span class="flex font-bold text-3xl md:text-6xl items-center text-violet-700">
+                                    2.
+                                </span>
+                                <div class="flex flex-col gap-1 w-72 md:max-w-2xl">
+                                    <h3 class="font-semibold text-base md:text-xl">
+                                        Be found by the potential clients
+                                    </h3>
+                                    <h5 class="font-medium text-xs md:text-base text-gray-600">
+                                        Enable your profile in CMS to enlist yourself on wooqlaw® hiring portal and get
+                                        in reach of thousands of clients in Pakistan & across the globe
+                                    </h5>
+                                </div>
+                            </div>
+                            <img class="w-80 md:max-w-md" src="images/potential-clients.png" alt="">
+                        </div>
+                        <!-- 3 -->
+                        <div class="flex flex-col justify-center items-center gap-2">
+                            <div class="flex max-w-md gap-1 md:gap-3">
+                                <span class="flex font-bold text-3xl md:text-6xl items-center text-violet-700">
+                                    3.
+                                </span>
+                                <div class="flex flex-col gap-1 w-72 md:max-w-2xl">
+                                    <h3 class="font-semibold text-base md:text-xl">
+                                        Build your online reputation
+                                    </h3>
+                                    <h5 class="font-medium text-xs md:text-base text-gray-600">
+                                        Post important events e.g. reported cases, articles, images and videos on your
+                                        wooqlaw® profile
+                                    </h5>
+                                </div>
+                            </div>
+                            <img class="w-80 md:max-w-md" src="images/saiqa haleema profile.png" alt="">
+                        </div>
+                        <!-- 4 -->
+                        <div class="flex flex-col justify-center items-center mt-0 md:mt-28 gap-2">
+                            <div class="flex max-w-md gap-1 md:gap-3">
+                                <span class="flex font-bold text-3xl md:text-6xl items-center text-violet-700">
+                                    4.
+                                </span>
+                                <div class="flex flex-col gap-1 w-72 md:max-w-2xl">
+                                    <h3 class="font-semibold text-base md:text-xl">
+                                        Your digital legal assistant
+                                    </h3>
+                                    <h5 class="font-medium text-xs md:text-base text-gray-600">
+                                        Manage your contact, cases, calendar, inquiries & appointments using wooqlaw®
+                                        case managment system from anywhere, anytime!
+                                    </h5>
+                                </div>
+                            </div>
+                            <img class="w-80 md:max-w-md" src="images/legal assistant.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col shadow-xl bg-violet-700 justify-center items-center gap-2 md:gap-5 p-2 md:p-4 rounded-2xl max-w-5xl h-20 md:h-28">
+                <a class="font-semibold text-base md:text-3xl text-white" href="#">Get started with wooqlaw® today!</a>
+                <button
+                    class="flex font-semibold h-10 p-4 items-center text-xs md:text-base text-violet-700 bg-white rounded-lg">Sign
+                    up with wooqlaw®</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 bg-gray-100 justify-center items-center mt-5 w-full">
+                <div class="flex flex-col justify-center items-center gap-2 md:gap-10">
+                    <div class="flex flex-col gap-2 md:gap-9 justify-center ">
+                        <span>
+                            <img class="w-60 md:max-w-xs" src="images/wooqlaw-hire.png" alt="">
+                        </span>
+                        <div class="flex flex-col gap-1 md:gap-5">
+                            <span class="font-bold text-sm md:text-4xl w-60 md:max-w-lg">
+                                Connecting lawyers with prospective
+                                clients online
+                            </span>
+                            <span class="font-medium text-xs md:text-2xl w-60 md:max-w-lg h-16 md:h-24">
+                                Join wooqlaw® for free to become part of Pakistan’s most advanced online lawyer’s
+                                directory
+                            </span>
+                        </div>
+                    </div>
+                    <img class="flex w-80 md:max-w-lg" src="images/wooqlaw hire-pic.png" alt="">
+                </div>
+                <div class="flex flex-col col-span-1 gap-2 mt-10 justify-center items-center pb-4">
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4  max-w-md bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">Win new clients and grow your law firm with
+                            your verified online profile listing</span>
+                    </div>
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4 max-w-md  bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">Post important events e.g. reported cases,
+                            articles, images and videos on your wooqlaw® profile</span>
+                    </div>
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4 max-w-md bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">Build your online reputation with client’s
+                            recommendations and reviews</span>
+                    </div>
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4 max-w-md bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">
+                            Be found as per client’s preferred criteria by location, law area, gender, name,
+                            experience, court and your availability
+
+                        </span>
+                    </div>
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4 max-w-md bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">
+                            Help prospective local & international clients find you when they need you from
+                            anywhere, at the time when they need you the most
+                        </span>
+                    </div>
+                    <div
+                        class="flex items-center px-2 md:px-4 py-3 md:py-7 gap-2 md:gap-4 max-w-md bg-white shadow-xl rounded-xl">
+                        <span>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_181768_157226)">
+                                    <path
+                                        d="M15.2375 21.2375C14.5563 21.9187 13.4437 21.9187 12.7625 21.2375L8.7625 17.2375C8.08125 16.5562 8.08125 15.4437 8.7625 14.7625C9.44375 14.0813 10.5563 14.0813 11.2375 14.7625L14 17.525L20.7625 10.7625C21.4438 10.0813 22.5562 10.0813 23.2375 10.7625C23.9187 11.4437 23.9187 12.5563 23.2375 13.2375L15.2375 21.2375ZM32 16C32 24.8375 24.8375 32 16 32C7.1625 32 0 24.8375 0 16C0 7.1625 7.1625 0 16 0C24.8375 0 32 7.1625 32 16ZM16 3C8.81875 3 3 8.81875 3 16C3 23.1812 8.81875 29 16 29C23.1812 29 29 23.1812 29 16C29 8.81875 23.1812 3 16 3Z"
+                                        fill="#6D28D9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_181768_157226">
+                                        <rect width="32" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span class="font-medium text-sm md:text-xl">
+                            Connect with your clients securely and conveniently via in-app messaging, video calls
+                            and online payments
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full p-2" style="background-image: url(images/bg-woqlaw.png);">
+                <div class="grid col-span-1 md:grid-cols-2 gap-3 justify-center items-center text-center ">
+                    <div class="flex max-w-2xl ">
+                        <img class="flex" src="images/bg-wooqlaw-1.png" alt="">
+                    </div>
+                    <div class="flex flex-col col-span-1 gap-2 md:gap-8 justify-center items-center w-80 md:max-w-2xl">
+                        <span class="flex font-bold text-sm md:text-4xl">Direct Inquiries to
+                            Your wooqlaw® inbox!</span>
+                        <span class="flex text-center font-medium text-sm md:text-xl text-gray-600">“Business
+                            opportunities come to you directly – receive new leads in the form of client offline
+                            inquiries based on their preferences, real-time chat or via an appointment booking according
+                            to your schedule and availability</span>
+                        <button
+                            class="flex items-center justify-center font-semibold text-base bg-violet-700 text-white shadow-lg w-80 md:w-80 rounded-lg h-14">Sign
+                            up with wooqlaw®</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-10 justify-center items-center">
+                <div class="flex flex-col max-w-full justify-center items-center gap-3 md:gap-20 mt-5">
+                    <div class="flex flex-col justify-center items-center gap-7 px-2 max-w-4xl">
+                        <span>
+                            <img class="w-72 md:w-96" src="images/wooqlaw-cms.png" alt="cms">
+                        </span>
+                        <span class="font-medium text-sm md:text-xl text-center">
+                            Most Advance Case Managment System with Real Time Connectivity
+                            to Your wooqlaw Profile on wooqlaw Hireing Portal.
+                        </span>
+                        <span class="font-semibold text-xs md:text-base text-center">
+                            wooqlaw® CMS is your legal assistant anywhere, anytime. It is the most advanced, intuitive,
+                            feature-laden and highly customisable case management system for managing your online
+                            profile,
+                            website, cases as well as incorporating an essential legal research tool for judgements and
+                            law.
+                            It provides support to individual lawyers, law firms of any size, and corporate clients by
+                            managing contacts, cases, appointments, documents, billing, intake, custom intake forms,
+                            voice
+                            notes, voice to text, video calling, SMS, email, reminders, client and office expense
+                            management
+                            and much more.
+                        </span>
+                    </div>
+                    <div class="flex md:flex-row flex-col justify-center ">
+                        <div class="flex flex-col w-80 md:max-w-md mx-auto gap-4 p-2">
+                            <div
+                                class="flex items-center border-l border-violet-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-violet-700">
+                                Manage your Contacts
+                            </div>
+                            <div
+                                class="flex items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Create & manage your cases
+                            </div>
+                            <div
+                                class="flex items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Book & manage your appointments
+                            </div>
+                            <div
+                                class="flex  items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Create events and set reminders
+                            </div>
+                            <div
+                                class="flex items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Communicate with your clients
+                            </div>
+                            <div
+                                class="flex items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Manage your diary with your calendar
+                            </div>
+                            <div
+                                class="flex  items-center border-l border-gray-700 pl-4 py-2 gap-4 font-medium text-sm md:text-xl text-gray-600">
+                                Timeline to keep an eye on your stream
+                            </div>
+                        </div>
+                        <img class="md:max-w-3xl" src="images/gmail-msg.png" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center mt-4 md:mt-16 gap-4 md:gap-20 p-1 max-w-full">
+                    <span class="flex font-bold text-lg md:text-4xl">Get lot more with wooqlaw® upgrade packages</span>
+                    <div class="grid grid-cols-6 justify-center items-center p-4 gap-4 md:gap-10">
+                        <div class="flex flex-col items-center">
+                            <img src="images/wooqlaw12.png" alt="">
+                            <span
+                                class="flex justify-center items-center font-normal text-2xs md:text-sm">Wooqlaw</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Profile</span>
+
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/video--intro.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Video</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Intro</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/wooqlaw-social.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">wooqlaw</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Social</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/client-reviews.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Client</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Reviews</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/published-case.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Published</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Cases</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/appointment-booking.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Appointment</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Booking</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/case-management.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Case</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Managment</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/contact-management.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Contact</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Managment</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/document-management.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Document</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Managment</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/quick-management.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Quick</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm"> Notes</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/calander.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Calendar&</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Events</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/integration.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Intergrations& </span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Plugins</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/messaging.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Correspondecne</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">&Messaging</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/timeline.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Timeline</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Follow</span>
+
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/finance&billing.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Finance&</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Billing</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="images/online payment.png" alt="">
+                            <span class="font-normal text-2xs md:text-sm">Online</span>
+                            <span class="flex items-center font-normal text-2xs md:text-sm">Payment</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile logo and app -->
+                <div class="flex md:flex-row flex-col items-center justify-center gap-20">
+                    <div class="flex items-center">
+                        <span class="flex w-72 md:max-w-xl relative">
+                            <img src="images/yellow.png" alt="">
+                        </span>
+                        <span class="flex justify-center items-center w-72 md:max-w-2xl absolute">
+                            <img src="images/mob logo.png" alt="">
+                        </span>
+                    </div>
+                    <span class="flex md:flex-row flex-col">
+                        <img class="w-72 md:max-w-lg" src="images/wooqlaw app logo.png" alt="">
+                    </span>
+                </div>
+                <!-- register your self with wooqlaw -->
+                <div class="flex mt-3 md:mt-36">
+                    <img src="images/register wooqlaw.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
