@@ -1130,9 +1130,6 @@ select {
 .w-96 {
   width: 24rem;
 }
-.w-auto {
-  width: auto;
-}
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1821,9 +1818,6 @@ select {
 }
 .p-8 {
   padding: 2rem;
-}
-.p-10 {
-  padding: 2.5rem;
 }
 .px-0 {
   padding-left: 0px;
