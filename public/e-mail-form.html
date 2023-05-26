@@ -11,58 +11,89 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
     <title>E-mail-form</title>
 </head>
 
 <body class="bg-gray-100">
     <section class="bg-gray-50 py-3 sm:py-5">
-        <div class="px-4 mx-auto max-w-screen-2xl lg:px-12 bg-white">
-            <div class="relative overflow-hidden bg-white shadow-md sm:rounded-lg">  
-                <div class="bg-white shadow-md sm:rounded-lg overflow-hidden">
-                    <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-                        <div class="flex items-center space-x-3 w-full md:w-auto">
-                            <button type="button" class="w-full md:w-auto flex items-center justify-center py-2 px-3 text-sm font-medium text-white focus:outline-none bg-primary-700 rounded-lg  hover:bg-primary-800" type="button">
-                                <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                                </svg>
-                                Create New
-                            </button>
+        <div class="px-4 mx-auto max-w-screen-2xl lg:px-12 bg-white w-full md:w-auto">
+            <div class="relative overflow-hidden bg-white shadow-md sm:rounded-lg w-full md:w-auto">  
+                <div class="bg-white shadow-md sm:rounded-lg overflow-hidden w-full md:w-auto">
+                    <div class="w-full md:w-auto flex flex-col justify-between md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0 p-4">
+                        <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                            <div x-data>
+                                <div x-menu >
+                                    <button class="w-full md:w-auto flex items-center justify-center py-2 px-4 gap-2 text-sm font-medium text-white bg-violet-700 rounded-lg border border-gray-200 hover:bg-violet-800" type="button" x-menu:button>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5H1Z" fill="white"/>
+                                            <path d="M5 1V5M5 5V9M5 5H9M5 5H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="font-medium text-xs">Create new</span> 
+                                    </button>
+                                    <div x-cloak class="z-10 absolute left-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                            Payment
+                                        </a>
+                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                            Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                        <div x-data >
+                            <div x-menu>
+                                <button class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100" type="button" x-menu:button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
+                                    </svg>
+                                    Filter
+                                    <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                    </svg>
+                                </button>
+                                
+                                <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                    <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                        Payment
+                                    </a>
+                                    <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
-                            </svg>
-                            Filter
-                            <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                            </svg>
-                        </button>
-                        <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow">
+                        <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
                             <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose brand</h6>
                             <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
                                 <li class="flex items-center">
-                                    <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600">
-                                    <label for="apple" class="ml-2 text-sm font-medium text-gray-900">Apple (56)</label>
+                                    <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Apple (56)</label>
                                 </li>
                                 <li class="flex items-center">
-                                    <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600">
-                                    <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900">Microsoft (16)</label>
+                                    <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Microsoft (16)</label>
                                 </li>
                                 <li class="flex items-center">
-                                    <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600">
-                                    <label for="razor" class="ml-2 text-sm font-medium text-gray-900">Razor (49)</label>
+                                    <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="razor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Razor (49)</label>
                                 </li>
                                 <li class="flex items-center">
-                                    <input id="nikon" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600">
-                                    <label for="nikon" class="ml-2 text-sm font-medium text-gray-900">Nikon (12)</label>
+                                    <input id="nikon" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="nikon" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Nikon (12)</label>
                                 </li>
                                 <li class="flex items-center">
-                                    <input id="benq" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600">
-                                    <label for="benq" class="ml-2 text-sm font-medium text-gray-900">BenQ (74)</label>
+                                    <input id="benq" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                    <label for="benq" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">BenQ (74)</label>
                                 </li>
                             </ul>
                         </div>
-                    </div>    
+                        </div>
+                        </div>  
             </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left text-gray-500">
@@ -130,7 +161,7 @@
                                     <div class="flex items-center">
                                         <img src="images/Avatar3.png" alt="iMac Front Image" class="w-auto h-8 mr-3 rounded-full">
                                         <div class="flex flex-col ">
-                                            <span class="font-medium text-xs">
+                                            <span class="font-medium text-xs truncate w-96">
                                                 This will be subject of email: This will be body of email which span go only certain characters then.
                                             </span>
                                             <span>
@@ -158,22 +189,21 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Today, 10:23 PM</td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                                    <button id="dropdown-button-0" type="button" data-dropdown-toggle="dropdown-0" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-white hover:bg-violet-700">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="dropdown-0" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44">
-                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button-0">
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                    <div x-data >
+                                        <div x-menu>
+                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                                <svg class="w-5 h-5 " aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                </svg>
+                                            </button>
+                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                                    Payment
+                                                </a>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                    Download
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -222,8 +252,8 @@
                                             </svg>
                                     <div class="flex items-center">
                                         <img src="images/Avatar2.png" alt="iMac Front Image" class="w-auto h-8 mr-3 rounded-full">
-                                        <div class="flex flex-col font-medium text-xs">
-                                            <span>
+                                        <div class="flex flex-col">
+                                            <span class="font-medium text-xs truncate w-96">
                                                 This will be subject of email: This will be body of email which will go only certain characters then.
                                             </span>
                                             <span>
@@ -251,22 +281,22 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Today, 10:23 PM</td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                                    <button id="dropdown-button-0" type="button" data-dropdown-toggle="dropdown-0" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-white hover:bg-violet-700">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="dropdown-0" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button-0">
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                    <div x-data >
+                                        <div x-menu>
+                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                </svg>
+                                            </button>
+                                            
+                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                                    Payment
+                                                </a>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                    Download
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -321,22 +351,22 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Yesterday</td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                                    <button id="dropdown-button-0" type="button" data-dropdown-toggle="dropdown-0" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-white hover:bg-violet-700">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="dropdown-0" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44">
-                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button-0">
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                    <div x-data >
+                                        <div x-menu>
+                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                </svg>
+                                            </button>
+                                            
+                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                                    Payment
+                                                </a>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                    Download
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -385,8 +415,8 @@
                                             </svg>
                                     <div class="flex items-center">
                                         <img src="images/Avatar 1.png" alt="iMac Front Image" class="w-auto h-8 mr-3 rounded-full">
-                                        <div class="flex flex-col font-medium text-xs">
-                                            <span>
+                                        <div class="flex flex-col">
+                                            <div class="font-medium text-xs truncate w-80">
                                                 This will be subject of email: This will be body of email which will go only certain characters then.
                                             </span>
                                             <span>
@@ -408,22 +438,22 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Mon 7, May 2023</td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                                    <button id="dropdown-button-0" type="button" data-dropdown-toggle="dropdown-0" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 rounded-lg hover:text-white hover:bg-violet-700">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="dropdown-0" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button-0">
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                    <div x-data >
+                                        <div x-menu>
+                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                </svg>
+                                            </button>
+                                            
+                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                                    Payment
+                                                </a>
+                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                    Download
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
@@ -433,9 +463,7 @@
                 </div>
             </div>
         </div>
-      </section>  
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
- 
+      </section>   
 </body>
 
 </html>
