@@ -17,11 +17,11 @@
     <title>E-mail-form</title>
 </head>
 
-<body class="bg-gray-100">
-    <section class="bg-gray-50 py-3 sm:py-5">
-        <div class="px-4 mx-auto max-w-screen-2xl lg:px-12 bg-white w-full md:w-auto">
-            <div class="relative overflow-hidden bg-white shadow-md sm:rounded-lg w-full md:w-auto">  
-                <div class="bg-white shadow-md sm:rounded-lg overflow-hidden w-full md:w-auto">
+<body>
+    <section class="e-mail-form">
+        <div class="flex flex-col items-start mx-auto max-w-7xl rounded-b-xl  shadow bg-white w-full">
+            <div class="relative overflow-hidden bg-white shadow-md sm:rounded-lg w-full">  
+                <div class="bg-white shadow-md overflow-hidden w-full">
                     <div class="w-full md:w-auto flex flex-col justify-between md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0 p-4">
                         <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                             <div x-data>
@@ -101,7 +101,7 @@
                         </div>
                         </div>  
             </div>
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto pb-16">
                     <table class="w-full text-sm text-left text-gray-500">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
@@ -442,19 +442,19 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Mon 7, May 2023</td>
                                 <td class="px-4 py-2">
-                                    <div x-data >
-                                        <div class="relative" x-menu>
-                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                    <div x-data="">
+                                        <div class="relative" x-menu="">
+                                            <button class="rounded-md bg-gray-100 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button="" aria-haspopup="true" aria-labelledby="alpine-menu-label-2" id="alpine-menu-button-2" aria-expanded="true" type="button" aria-controls="alpine-menu-items-2">
                                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
                                                 </svg>
                                             </button>
                                             
-                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                            <div class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none" x-ref="popover" x-menu:items="" x-transition.origin.top.right="" aria-orientation="vertical" role="menu" id="alpine-menu-items-2" aria-labelledby="alpine-menu-button-2" tabindex="0">
+                                                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-3" tabindex="-1" role="menuitem">                                                                      
                                                     Payment
                                                 </a>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-4" tabindex="-1" role="menuitem">
                                                     Download
                                                 </a>
                                             </div>
@@ -464,10 +464,10 @@
                             </tr>
                         </tbody>
                     </table>
+                  
                 </div>
             </div>
         </div>
       </section>   
 </body>
-
 </html>

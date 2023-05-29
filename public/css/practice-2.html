@@ -18,23 +18,25 @@
 <body>
     
 
-    <div x-data="">
-        <div x-menu="">
-            <button class="rounded-md bg-gray-100 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button="" aria-haspopup="true" aria-labelledby="alpine-menu-label-2" id="alpine-menu-button-2" aria-expanded="false" type="button">
-                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                </svg>
-            </button>
-            
-            <div class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none" x-ref="popover" x-menu:items="" x-transition.origin.top.right="" aria-orientation="vertical" role="menu" id="alpine-menu-items-2" aria-labelledby="alpine-menu-button-2" tabindex="0" style="display: none;">
-                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-3" tabindex="-1" role="menuitem">                                                                      
-                    Payment
-                </a>
-                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-4" tabindex="-1" role="menuitem">
-                    Download
-                </a>
+    <td class="px-4 py-3 flex items-center justify-end">
+        <button id="benq-ex2710q-dropdown-button" data-dropdown-toggle="benq-ex2710q-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100" type="button">
+            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+            </svg>
+        </button>
+        <div id="benq-ex2710q-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="benq-ex2710q-dropdown-button">
+                <li>
+                    <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                </li>
+            </ul>
+            <div class="py-1">
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
             </div>
         </div>
-    </div>
+    </td>
 </body>
 </html>
