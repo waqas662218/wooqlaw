@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>E-mail-form</title>
+</head>
+<body>
+    
+
+    <div x-data="">
+        <div x-menu="">
+            <button class="rounded-md bg-gray-100 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button="" aria-haspopup="true" aria-labelledby="alpine-menu-label-2" id="alpine-menu-button-2" aria-expanded="false" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                </svg>
+            </button>
+            
+            <div class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none" x-ref="popover" x-menu:items="" x-transition.origin.top.right="" aria-orientation="vertical" role="menu" id="alpine-menu-items-2" aria-labelledby="alpine-menu-button-2" tabindex="0" style="display: none;">
+                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-3" tabindex="-1" role="menuitem">                                                                      
+                    Payment
+                </a>
+                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-4" tabindex="-1" role="menuitem">
+                    Download
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
