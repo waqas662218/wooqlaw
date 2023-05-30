@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+
     <link href="./css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    
     <title>E-mail-form</title>
 </head>
 
@@ -24,83 +29,71 @@
                 <div class="bg-white shadow-md overflow-hidden w-full">
                     <div class="w-full md:w-auto flex flex-col justify-between md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center md:space-x-3 flex-shrink-0 p-4">
                         <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                            <div x-data>
-                                <div x-menu >
-                                    <button class="w-full md:w-auto flex items-center justify-center py-2 px-4 gap-2 text-sm font-medium text-white bg-violet-700 rounded-lg border border-gray-200 hover:bg-violet-800" type="button" x-menu:button>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 5H1Z" fill="white"/>
-                                            <path d="M5 1V5M5 5V9M5 5H9M5 5H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <span class="font-medium text-xs">Create new</span> 
-                                    </button>
-                                    <div x-cloak class="z-10 absolute left-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                            <div x-data="">
+                                <button class="inline-flex rounded-lgw-full md:w-auto items-center justify-center py-2 px-4 gap-2 text-sm font-medium text-white bg-violet-700 rounded-lg border border-gray-200 hover:bg-violet-800" 
+                                x-tooltip.placement.bottom-start="{
+                                    content: () => $refs.template.innerHTML,
+                                    allowHTML: true,
+                                    appendTo: $root,
+                                    interactive: true
+                                }">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 5H1Z" fill="white"/>
+                                    <path d="M5 1V5M5 5V9M5 5H9M5 5H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="font-medium text-xs">Create new</span> 
+                                </button>
+                                   
+                                    <template x-ref="template">
+                                        <div class="w-40 rounded-md bg-white shadow-md">
+                                            <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
+                                                Payment
+                                            </a>
+                                            <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
+                                                Download
+                                            </a>
+                                        </div>
+                                    </template>
+                                    </div>
+                                </div>
+                    <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                        <div x-data="">
+                            <button class="inline-flex w-full md:w-auto items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100" 
+                            x-tooltip.placement.bottom-start="{
+                                content: () => $refs.template.innerHTML,
+                                allowHTML: true,
+                                appendTo: $root,
+                                interactive: true
+                            }">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span>
+                                Filter
+                            </span>    
+                           <span>
+                                <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
+                            </span>
+                            
+                            </button>
+                               
+                                <template x-ref="template">
+                                    <div class="w-40 rounded-md bg-white shadow-md">
+                                        <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
                                             Payment
                                         </a>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                        <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
                                             Download
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            </div>
-                    <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                        <div x-data >
-                            <div x-menu>
-                                <button class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100" type="button" x-menu:button>
-                                    <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-                                <span>
-                                    Filter
-                                </span>    
-                               <span>
-                                    <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                                    </svg>
-                                </span>
-                                </button>
-                                
-                                <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                    <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
-                                        Payment
-                                    </a>
-                                    <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
-                                        Download
-                                    </a>
+                                </template>
                                 </div>
                             </div>
                         </div>
-                        <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
-                            <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose brand</h6>
-                            <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                                <li class="flex items-center">
-                                    <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Apple (56)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Microsoft (16)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="razor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Razor (49)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="nikon" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="nikon" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Nikon (12)</label>
-                                </li>
-                                <li class="flex items-center">
-                                    <input id="benq" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                    <label for="benq" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">BenQ (74)</label>
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
-                        </div>  
-            </div>
                 <div class="overflow-x-auto pb-20">
                     <table class="w-full text-sm text-left text-gray-500">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
@@ -195,23 +188,29 @@
                                     </div>
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Today, 10:23 PM</td>
-                                <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                                    <div x-data >
-                                        x-tooltip.placement.bottom-start="{}"
-                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
-                                                <svg class="w-5 h-5 " aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                                </svg>
-                                            </button>
-                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                <td class="px-4 py-2">
+                                    <div x-data="">
+                                        <button class="inline-flex rounded-md bg-gray-100 h-8 w-8 mx-auto items-center justify-center text-sm font-medium text-gray-900 focus:outline-none hover:bg-gray-200 hover:text-primary-700 focus:z-10 focus:ring-0" 
+                                        x-tooltip.placement.bottom-start="{
+                                            content: () => $refs.template.innerHTML,
+                                            allowHTML: true,
+                                            appendTo: $root,
+                                            interactive: true
+                                        }">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                        </svg>
+                                        </button>
+                                        <template x-ref="template">
+                                            <div class="w-40 rounded-md bg-white shadow-md">
+                                                <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
                                                     Payment
                                                 </a>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
                                                     Download
                                                 </a>
                                             </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </td>
                             </tr>
@@ -289,23 +288,28 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Today, 10:23 PM</td>
                                 <td class="px-4 py-2">
-                                    <div x-data >
-                                        <div x-menu>
-                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
-                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                                </svg>
-                                            </button>
-                                            
-                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                    <div x-data="">
+                                        <button class="inline-flex rounded-md bg-gray-100 h-8 w-8 mx-auto items-center justify-center text-sm font-medium text-gray-900 focus:outline-none hover:bg-gray-200 hover:text-primary-700 focus:z-10 focus:ring-0" 
+                                        x-tooltip.placement.bottom-start="{
+                                            content: () => $refs.template.innerHTML,
+                                            allowHTML: true,
+                                            appendTo: $root,
+                                            interactive: true
+                                        }">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                        </svg>
+                                        </button>
+                                        <template x-ref="template">
+                                            <div class="w-40 rounded-md bg-white shadow-md">
+                                                <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
                                                     Payment
                                                 </a>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
                                                     Download
                                                 </a>
                                             </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </td>
                             </tr>
@@ -354,23 +358,28 @@
                                 </td>
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Yesterday</td>
                                 <td class="px-4 py-2">
-                                    <div x-data >
-                                        <div x-menu>
-                                            <button class="rounded-md bg-gray-100 hover:bg-gray-200 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
-                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                                </svg>
-                                            </button>
-                                            
-                                            <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
+                                    <div x-data="">
+                                        <button class="inline-flex rounded-md bg-gray-100 h-8 w-8 mx-auto items-center justify-center text-sm font-medium text-gray-900 focus:outline-none hover:bg-gray-200 hover:text-primary-700 focus:z-10 focus:ring-0" 
+                                        x-tooltip.placement.bottom-start="{
+                                            content: () => $refs.template.innerHTML,
+                                            allowHTML: true,
+                                            appendTo: $root,
+                                            interactive: true
+                                        }">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                        </svg>
+                                        </button>
+                                        <template x-ref="template">
+                                            <div class="w-40 rounded-md bg-white shadow-md">
+                                                <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
                                                     Payment
                                                 </a>
-                                                <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">
+                                                <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
                                                     Download
                                                 </a>
                                             </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </td>
                             </tr>
@@ -443,22 +452,27 @@
                                 <td class="font-medium text-xs text-gray-800 px-4 py-2">Mon 7, May 2023</td>
                                 <td class="px-4 py-2">
                                     <div x-data="">
-                                        <div class="relative" x-menu="">
-                                            <button class="rounded-md bg-gray-100 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button="" aria-haspopup="true" aria-labelledby="alpine-menu-label-2" id="alpine-menu-button-2" aria-expanded="true" type="button" aria-controls="alpine-menu-items-2">
-                                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                                </svg>
-                                            </button>
-                                            
-                                            <div class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none" x-ref="popover" x-menu:items="" x-transition.origin.top.right="" aria-orientation="vertical" role="menu" id="alpine-menu-items-2" aria-labelledby="alpine-menu-button-2" tabindex="0">
-                                                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-3" tabindex="-1" role="menuitem">                                                                      
+                                        <button class="inline-flex rounded-md bg-gray-100 h-8 w-8 mx-auto items-center justify-center text-sm font-medium text-gray-900 focus:outline-none hover:bg-gray-200 hover:text-primary-700 focus:z-10 focus:ring-0" 
+                                        x-tooltip.placement.bottom-start="{
+                                            content: () => $refs.template.innerHTML,
+                                            allowHTML: true,
+                                            appendTo: $root,
+                                            interactive: true
+                                        }">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                        </svg>
+                                        </button>
+                                        <template x-ref="template">
+                                            <div class="w-40 rounded-md bg-white shadow-md">
+                                                <a href="#a" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 hover:text-gray-900">     
                                                     Payment
                                                 </a>
-                                                <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-red-900'" class="flex items-center gap-2 text-red-500 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-4" tabindex="-1" role="menuitem">
+                                                <a href="#b" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500 text-red-500 hover:text-gray-900">
                                                     Download
                                                 </a>
                                             </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </td>
                             </tr>
