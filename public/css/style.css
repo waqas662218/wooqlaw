@@ -2916,6 +2916,10 @@ select {
     margin-top: 9rem;
   }
 
+  .md\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .md\:flex {
     display: flex;
   }
