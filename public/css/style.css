@@ -3547,6 +3547,11 @@ select {
     padding-bottom: 2rem;
   }
 
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .md\:pl-3 {
     padding-left: 0.75rem;
   }
