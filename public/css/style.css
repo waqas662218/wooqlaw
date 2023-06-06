@@ -3191,6 +3191,10 @@ select {
     height: 100%;
   }
 
+  .md\:h-screen {
+    height: 100vh;
+  }
+
   .md\:w-10 {
     width: 2.5rem;
   }
@@ -3626,34 +3630,6 @@ select {
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:mt-52 {
-    margin-top: 13rem;
-  }
-
-  .lg\:mt-60 {
-    margin-top: 15rem;
-  }
-
-  .lg\:mt-28 {
-    margin-top: 7rem;
-  }
-
-  .lg\:mt-48 {
-    margin-top: 12rem;
-  }
-
-  .lg\:mt-44 {
-    margin-top: 11rem;
-  }
-
-  .lg\:mt-40 {
-    margin-top: 10rem;
-  }
-
-  .lg\:mt-36 {
-    margin-top: 9rem;
-  }
 
   .lg\:w-2\/3 {
     width: 66.666667%;
