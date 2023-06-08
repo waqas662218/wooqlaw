@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+   
+    <!--alpine.js -->
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+
+</head>
+<body class="font-display md:p-4 bg-gray-100">
+    <div class="flex flex-col gap-5">
+        <arm-button class="w-full" color="primary" text="primary button" full="true"></arm-button>
+        <arm-button color="primary" text="Default button"></arm-button>
+        <arm-button color="primary" text="Dashed button"></arm-button>
+        <arm-button color="primary" text="Text button"></arm-button>
+        <arm-button color="primary" text="Link button"></arm-button>
+    </div> 
+    <script type="module"src="./button.js"></script>
+</body>
+</html>
