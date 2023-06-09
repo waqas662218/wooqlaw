@@ -21,120 +21,16 @@
     <section class="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
         <div class="mx-auto max-w-screen-2xl px-4 lg:px-12">
             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
-                <div class="border-b dark:border-gray-700 mx-4">
-                    <div class="flex flex-col-reverse md:flex-row items-center justify-between md:space-x-4 py-3">
-                        <div class="w-full lg:w-2/3 flex flex-col space-y-3 md:space-y-0 md:flex-row md:items-center"> 
-                            <div class="flex items-center space-x-4">
-                                <div>
-                                    <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" type="button" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" />
-                                        </svg>
-                                        Filter
-                                        <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                            <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                                        </svg>
-                                    </button>
-                                    <div id="filterDropdown" class="z-10 hidden p-3 bg-white rounded-lg shadow w-56 dark:bg-gray-700">
-                                        <h6 class="mb-2 text-sm font-medium text-gray-900 dark:text-white">By status</h6>
-                                        <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    In progress
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    In review
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    Completed
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    Canceled
-                                                </label>
-                                            </li>
-                                        </ul>
-                                        <h6 class="mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-white">By number of users</h6>
-                                        <ul class="space-y-2 text-sm" aria-labelledby="dropdownDefault">
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" checked="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    5-10 peoples
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    10+ peoples
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-md px-1.5 py-1 w-full">
-                                                    <input type="checkbox" value="" class="w-4 h-4 mr-2 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                                    More than 10 peoples
-                                                </label>
-                                            </li>
-                                        </ul>
-                                        <a href="#" class="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline mt-4 ml-1.5">Apply to all projects</a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button id="configurationDropdownButton" data-dropdown-toggle="configurationDropdown" type="button" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="h-4 w-4 mr-2 text-gray-400" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
-                                        </svg>
-                                        Configurations
-                                    </button>
-                                    <div id="configurationDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="configurationDropdownButton">
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">By Category</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">By Brand</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Reset</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full md:w-auto flex flex-col md:flex-row mb-3 md:mb-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                            <button type="button" class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                                <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                                </svg>
-                                Add new task
-                            </button>
-                        </div>
-                    </div>
-                </div> 
+                
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                            <tr>
-                                <th scope="col" class="p-4">
-                                    <div class="flex items-center">
-                                        <input id="checkbox-all" type="checkbox" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-all" class="sr-only">checkbox</label>
-                                    </div>
-                                </th>
-                                <th scope="col" class="px-4 py-3">Type</th>
+                            <tr> 
                                 <th scope="col" class="px-4 py-3">Details</th>
-                                <th scope="col" class="px-4 py-3">Info</th>
-                                <th scope="col" class="px-4 py-3 min-w-[14rem]">Attachment</th>
-                                <th scope="col" class="px-4 py-3">Due Date</th>
+                                <th scope="col" class="px-4 py-3">Notifications</th>
+                                <th scope="col" class="px-4 py-3">STATUS</th>
+                                <th scope="col" class="px-4 py-3 min-w-[14rem]">Court Hearing</th>
+                                <th scope="col" class="px-4 py-3">Next Events</th>
                                 <th scope="col" class="px-4 py-3">
                                     <span class="sr-only">Actions</span>
                                 </th>
@@ -142,59 +38,65 @@
                         </thead>
                         <tbody>
                             <tr class="border-b hover:bg-gray-100">
-                                <td class="px-4 py-2 w-4">
-                                    <div class="flex items-center">
-                                        <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                    </div>
-                                </td>
-                                <th scope="row" class="px-4 py-2 font-medium text-gray-900">
-                                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="32" height="32" rx="8" fill="#EDEBFE"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64428 10.3096C7.66797 11.2859 7.66797 12.8572 7.66797 15.9999C7.66797 19.1426 7.66797 20.714 8.64428 21.6903C9.62059 22.6666 11.1919 22.6666 14.3346 22.6666H17.668C20.8107 22.6666 22.382 22.6666 23.3583 21.6903C24.3346 20.714 24.3346 19.1426 24.3346 15.9999C24.3346 12.8572 24.3346 11.2859 23.3583 10.3096C22.382 9.33325 20.8107 9.33325 17.668 9.33325H14.3346C11.1919 9.33325 9.62059 9.33325 8.64428 10.3096ZM21.4814 12.2665C21.7024 12.5316 21.6666 12.9257 21.4014 13.1467L19.571 14.6721C18.8324 15.2876 18.2337 15.7865 17.7053 16.1264C17.1549 16.4804 16.6189 16.704 16.0013 16.704C15.3837 16.704 14.8477 16.4804 14.2973 16.1264C13.7689 15.7865 13.1702 15.2876 12.4316 14.6721L10.6012 13.1467C10.336 12.9257 10.3002 12.5316 10.5212 12.2665C10.7421 12.0013 11.1362 11.9655 11.4014 12.1864L13.2005 13.6857C13.978 14.3336 14.5177 14.7819 14.9735 15.075C15.4146 15.3587 15.7137 15.454 16.0013 15.454C16.2889 15.454 16.588 15.3587 17.0292 15.075C17.4849 14.7819 18.0246 14.3336 18.8021 13.6857L20.6012 12.1864C20.8664 11.9655 21.2605 12.0013 21.4814 12.2665Z" fill="#6D28D9"/>
-                                    <rect x="17" y="16" width="12" height="12" rx="6" fill="#EDE9FE"/>
-                                    <g clip-path="url(#clip0_182162_161131)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7513 18.6667C22.7513 18.5287 22.8632 18.4167 23.0013 18.4167C24.9803 18.4167 26.5846 20.0211 26.5846 22.0001C26.5846 23.9791 24.9803 25.5834 23.0013 25.5834C21.0223 25.5834 19.418 23.9791 19.418 22.0001C19.418 21.862 19.5299 21.7501 19.668 21.7501C19.806 21.7501 19.918 21.862 19.918 22.0001C19.918 23.703 21.2984 25.0834 23.0013 25.0834C24.7042 25.0834 26.0846 23.703 26.0846 22.0001C26.0846 20.2972 24.7042 18.9167 23.0013 18.9167C22.8632 18.9167 22.7513 18.8048 22.7513 18.6667ZM23.0013 20.7501C23.1394 20.7501 23.2513 20.862 23.2513 21.0001V22.0834H24.3346C24.4727 22.0834 24.5846 22.1953 24.5846 22.3334C24.5846 22.4715 24.4727 22.5834 24.3346 22.5834H23.0013C22.8632 22.5834 22.7513 22.4715 22.7513 22.3334V21.0001C22.7513 20.862 22.8632 20.7501 23.0013 20.7501Z" fill="#6D28D9"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0345 18.7993C22.0842 18.9281 22.0201 19.0728 21.8913 19.1225C21.8442 19.1407 21.7976 19.16 21.7516 19.1805C21.6254 19.2365 21.4777 19.1796 21.4216 19.0534C21.3656 18.9272 21.4225 18.7795 21.5487 18.7235C21.6022 18.6997 21.6564 18.6772 21.7112 18.6561C21.84 18.6063 21.9848 18.6705 22.0345 18.7993ZM20.8839 19.4135C20.9791 19.5135 20.9752 19.6717 20.8752 19.767C20.8387 19.8018 20.803 19.8375 20.7682 19.874C20.673 19.974 20.5147 19.9779 20.4147 19.8826C20.3147 19.7874 20.3109 19.6292 20.4061 19.5292C20.4465 19.4868 20.488 19.4453 20.5304 19.4049C20.6304 19.3097 20.7886 19.3135 20.8839 19.4135ZM20.0546 20.4204C20.1808 20.4764 20.2377 20.6242 20.1817 20.7503C20.1613 20.7963 20.1419 20.8429 20.1237 20.8901C20.074 21.0189 19.9293 21.083 19.8005 21.0333C19.6717 20.9836 19.6076 20.8388 19.6573 20.71C19.6785 20.6552 19.7009 20.601 19.7247 20.5475C19.7807 20.4213 19.9284 20.3644 20.0546 20.4204Z" fill="#6D28D9"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_182162_161131">
-                                    <rect width="8" height="8" fill="white" transform="translate(19 18)"/>
-                                    </clipPath>
-                                    </defs>
-                                    </svg>   
-                                </th>
-                                <td class="flex items-center gap-2 px-4 py-2 ">
+                                
+                                <th scope="row" class="flex px-2 py-1 gap-2 whitespace-nowrap">
+                                   <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                    TN
+                                   </span>
+                                   <div class="flex flex-col">
+                                    <span>
+                                        Immigration Case for UK
+                                    </span>
+                                    <span>
+                                        Tehmina Naz
+                                    </span>
+                                   </div>
+                                   <span>
 
-                                  <span>
-                                    <img src="images/Avatar 1.png" alt="">
-                                  </span>
-                                 <div class="flex flex-col">
-                                  <span class="font-medium text-base truncate w-80">
-                                    This will be subject of email: This will be body of email which will go only certain characters then.
-                                  </span>
-                                  <span class="font-medium text-base text-gray-600">
-                                    Tehmina Naz
-                                  </span>
+                                   </span>
+                                </th>
+                                <td class="px-4 py-2 gap-1 whitespace-nowrap">
+                                    <div class="flex justify-center items-center px-3 py-0.5 gap-1 w-14 h-6 rounded-md bg-purple-100">
+                                 <span>
+                                    <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.56786 12.9945C4.12859 13.7073 5.00946 14.1666 6 14.1666C6.99055 14.1666 7.87142 13.7073 8.43214 12.9945C6.81762 13.2132 5.18238 13.2132 3.56786 12.9945Z" fill="#5521B5"/>
+                                        <path d="M10.4994 5.49992V5.96932C10.4994 6.53265 10.6602 7.08337 10.9615 7.55208L11.6998 8.70069C12.3741 9.74982 11.8593 11.1759 10.6864 11.5076C7.61817 12.3755 4.38183 12.3755 1.31357 11.5076C0.140698 11.1759 -0.374118 9.74982 0.300239 8.70069L1.03853 7.55208C1.33981 7.08337 1.50058 6.53265 1.50058 5.96932V5.49992C1.50058 2.92259 3.51504 0.833252 6 0.833252C8.48496 0.833252 10.4994 2.92259 10.4994 5.49992Z" fill="#5521B5"/>
+                                        </svg>                                        
+                                 </span>
+                                 <span>
+                                    5
+                                 </span>
                                 </div>
                                 </td>
-                                <td class="px-4 py-2">
-                                  <a class="flex w-7 h-7 rounded-full justify-center items-center bg-sky-100" href=""> 
-                                    <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M10.1917 3.55309L8.46227 1.82199C7.28004 0.638605 6.68893 0.0469135 6.05405 0.18698C5.41917 0.327047 5.13132 1.11265 4.55562 2.68387L4.16598 3.74731C4.0125 4.16618 3.93576 4.37562 3.7977 4.53762C3.73575 4.61031 3.66526 4.67526 3.58777 4.73104C3.41506 4.85538 3.2002 4.91461 2.77048 5.03308C1.80193 5.3001 1.31765 5.43361 1.13516 5.75046C1.05627 5.88744 1.01521 6.04297 1.01621 6.20107C1.01852 6.5668 1.37371 6.92234 2.08408 7.6334L2.90926 8.45956L0.298315 11.073C0.12452 11.247 0.12452 11.529 0.298315 11.703C0.472109 11.8769 0.753885 11.8769 0.927679 11.703L3.53871 9.08946L4.39388 9.94547C5.10876 10.6611 5.46621 11.0188 5.8341 11.0194C5.98914 11.0196 6.14156 10.9793 6.27625 10.9025C6.59585 10.7201 6.73008 10.2322 6.99853 9.25656C7.11656 8.82759 7.17558 8.61311 7.29945 8.44047C7.35369 8.36489 7.41661 8.29595 7.48691 8.23507C7.64751 8.096 7.85559 8.01783 8.27176 7.86147L9.34742 7.45733C10.9013 6.87352 11.6783 6.58161 11.8152 5.94843C11.9521 5.31525 11.3653 4.72786 10.1917 3.55309Z" fill="#1D4ED8"/>
-                                      </svg>                                      
+                                <td class="px-4 py-2 whitespace-nowrap">
+                                  <a class="flex w-14 h-5 rounded-md justify-center items-center bg-green-100" href=""> 
+                                    open                                     
                                     </a> 
                                 </td>
-                                <td class="flex  gap-2 px-4 py-2 ">
-                                    <div class="flex items-center justify-center w-16 h-6 bg-red-100 rounded-md ">
-                                        <span class="text-xs font-medium text-red-800">Medical</span>
-                                    </div>
-                                    <div class="flex items-center justify-center w-20 h-6 bg-red-100 rounded-md ">
-                                      <span class="text-xs font-medium text-red-800">Conveyancing</span>
-                                  </div>
+                                <td class="flex items-center  gap-2 px-4 py-2 whitespace-nowrap">
+                                    <div class="flex font-medium text-sm">
+                                    <span>
+                                        Fri 5, Jan 2023 
+                                    </span>
+                                    <span>
+                                        10:00 am
+                                    </span>
+                                </div>
                                 </td>   
-                                <td class="px-4 py-2 font-medium text-gray-900 text-xs">23 Nov 2022</td>
-                                <td class="px-4 py-2">
+                                <td class="px-4 py-2 font-medium text-gray-900 text-xs whitespace-nowrap">
+                                    <div class="flex font-medium text-sm">
+                                        <span>
+                                            Fri 5, Jan 2023 
+                                        </span>
+                                        <span>
+                                            10:00 am
+                                        </span>
+                                    </div>
+                                    <span>
+                                        Meeting with Megan on Google Meet
+                                    </span>
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap">
                                     <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
                                         <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -215,272 +117,136 @@
                                     </div>
                                 </td>
                             </tr> 
-                            <tr class="border-b hover:bg-gray-100">
-                              <td class="px-4 py-2 w-4">
-                                  <div class="flex items-center">
-                                      <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                  </div>
-                              </td>
-                              <th scope="row" class="px-4 py-2 font-medium text-gray-900">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <rect width="32" height="32" rx="8" fill="#EDEBFE"/>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64428 10.3096C7.66797 11.2859 7.66797 12.8572 7.66797 15.9999C7.66797 19.1426 7.66797 20.714 8.64428 21.6903C9.62059 22.6666 11.1919 22.6666 14.3346 22.6666H17.668C20.8107 22.6666 22.382 22.6666 23.3583 21.6903C24.3346 20.714 24.3346 19.1426 24.3346 15.9999C24.3346 12.8572 24.3346 11.2859 23.3583 10.3096C22.382 9.33325 20.8107 9.33325 17.668 9.33325H14.3346C11.1919 9.33325 9.62059 9.33325 8.64428 10.3096ZM21.4814 12.2665C21.7024 12.5316 21.6666 12.9257 21.4014 13.1467L19.571 14.6721C18.8324 15.2876 18.2337 15.7865 17.7053 16.1264C17.1549 16.4804 16.6189 16.704 16.0013 16.704C15.3837 16.704 14.8477 16.4804 14.2973 16.1264C13.7689 15.7865 13.1702 15.2876 12.4316 14.6721L10.6012 13.1467C10.336 12.9257 10.3002 12.5316 10.5212 12.2665C10.7421 12.0013 11.1362 11.9655 11.4014 12.1864L13.2005 13.6857C13.978 14.3336 14.5177 14.7819 14.9735 15.075C15.4146 15.3587 15.7137 15.454 16.0013 15.454C16.2889 15.454 16.588 15.3587 17.0292 15.075C17.4849 14.7819 18.0246 14.3336 18.8021 13.6857L20.6012 12.1864C20.8664 11.9655 21.2605 12.0013 21.4814 12.2665Z" fill="#6D28D9"/>
-                                  <rect x="17" y="16" width="12" height="12" rx="6" fill="#EDE9FE"/>
-                                  <g clip-path="url(#clip0_182162_161131)">
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7513 18.6667C22.7513 18.5287 22.8632 18.4167 23.0013 18.4167C24.9803 18.4167 26.5846 20.0211 26.5846 22.0001C26.5846 23.9791 24.9803 25.5834 23.0013 25.5834C21.0223 25.5834 19.418 23.9791 19.418 22.0001C19.418 21.862 19.5299 21.7501 19.668 21.7501C19.806 21.7501 19.918 21.862 19.918 22.0001C19.918 23.703 21.2984 25.0834 23.0013 25.0834C24.7042 25.0834 26.0846 23.703 26.0846 22.0001C26.0846 20.2972 24.7042 18.9167 23.0013 18.9167C22.8632 18.9167 22.7513 18.8048 22.7513 18.6667ZM23.0013 20.7501C23.1394 20.7501 23.2513 20.862 23.2513 21.0001V22.0834H24.3346C24.4727 22.0834 24.5846 22.1953 24.5846 22.3334C24.5846 22.4715 24.4727 22.5834 24.3346 22.5834H23.0013C22.8632 22.5834 22.7513 22.4715 22.7513 22.3334V21.0001C22.7513 20.862 22.8632 20.7501 23.0013 20.7501Z" fill="#6D28D9"/>
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0345 18.7993C22.0842 18.9281 22.0201 19.0728 21.8913 19.1225C21.8442 19.1407 21.7976 19.16 21.7516 19.1805C21.6254 19.2365 21.4777 19.1796 21.4216 19.0534C21.3656 18.9272 21.4225 18.7795 21.5487 18.7235C21.6022 18.6997 21.6564 18.6772 21.7112 18.6561C21.84 18.6063 21.9848 18.6705 22.0345 18.7993ZM20.8839 19.4135C20.9791 19.5135 20.9752 19.6717 20.8752 19.767C20.8387 19.8018 20.803 19.8375 20.7682 19.874C20.673 19.974 20.5147 19.9779 20.4147 19.8826C20.3147 19.7874 20.3109 19.6292 20.4061 19.5292C20.4465 19.4868 20.488 19.4453 20.5304 19.4049C20.6304 19.3097 20.7886 19.3135 20.8839 19.4135ZM20.0546 20.4204C20.1808 20.4764 20.2377 20.6242 20.1817 20.7503C20.1613 20.7963 20.1419 20.8429 20.1237 20.8901C20.074 21.0189 19.9293 21.083 19.8005 21.0333C19.6717 20.9836 19.6076 20.8388 19.6573 20.71C19.6785 20.6552 19.7009 20.601 19.7247 20.5475C19.7807 20.4213 19.9284 20.3644 20.0546 20.4204Z" fill="#6D28D9"/>
-                                  </g>
-                                  <defs>
-                                  <clipPath id="clip0_182162_161131">
-                                  <rect width="8" height="8" fill="white" transform="translate(19 18)"/>
-                                  </clipPath>
-                                  </defs>
-                                  </svg>   
-                              </th>
-                              <td class="flex items-center gap-2 px-4 py-2 ">
-                                <span>
-                                  <img src="images/Avatar 1.png" alt="">
-                                </span>
-                               <div class="flex flex-col">
-                                <span class="font-medium text-base truncate w-80">
-                                  This will be subject of email: This will be body of email which will go only certain characters then.
-                                </span>
-                                <span class="font-medium text-base text-gray-600">
-                                  Tehmina Naz
-                                </span>
-                              </div>
-                              </td>
-                              <td class="px-4 py-2">
-                                <a class="flex w-7 h-7 rounded-full justify-center items-center bg-sky-100" href=""> 
-                                  <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.1917 3.55309L8.46227 1.82199C7.28004 0.638605 6.68893 0.0469135 6.05405 0.18698C5.41917 0.327047 5.13132 1.11265 4.55562 2.68387L4.16598 3.74731C4.0125 4.16618 3.93576 4.37562 3.7977 4.53762C3.73575 4.61031 3.66526 4.67526 3.58777 4.73104C3.41506 4.85538 3.2002 4.91461 2.77048 5.03308C1.80193 5.3001 1.31765 5.43361 1.13516 5.75046C1.05627 5.88744 1.01521 6.04297 1.01621 6.20107C1.01852 6.5668 1.37371 6.92234 2.08408 7.6334L2.90926 8.45956L0.298315 11.073C0.12452 11.247 0.12452 11.529 0.298315 11.703C0.472109 11.8769 0.753885 11.8769 0.927679 11.703L3.53871 9.08946L4.39388 9.94547C5.10876 10.6611 5.46621 11.0188 5.8341 11.0194C5.98914 11.0196 6.14156 10.9793 6.27625 10.9025C6.59585 10.7201 6.73008 10.2322 6.99853 9.25656C7.11656 8.82759 7.17558 8.61311 7.29945 8.44047C7.35369 8.36489 7.41661 8.29595 7.48691 8.23507C7.64751 8.096 7.85559 8.01783 8.27176 7.86147L9.34742 7.45733C10.9013 6.87352 11.6783 6.58161 11.8152 5.94843C11.9521 5.31525 11.3653 4.72786 10.1917 3.55309Z" fill="#1D4ED8"/>
-                                    </svg>                                      
-                                  </a> 
-                              </td>
-                              <td class="flex  gap-2 px-4 py-2 ">
-                                  <div class="flex items-center justify-center w-16 h-6 bg-red-100 rounded-md ">
-                                      <span class="text-xs font-medium text-red-800">Medical</span>
-                                  </div>
-                                  <div class="flex items-center justify-center w-20 h-6 bg-red-100 rounded-md ">
-                                    <span class="text-xs font-medium text-red-800">Conveyancing</span>
-                                </div>
-                              </td>   
-                              <td class="px-4 py-2 font-medium text-gray-900 text-xs">23 Nov 2022</td>
-                              <td class="px-4 py-2">
-                                  <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
-                                      <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                      </svg>
-                                  </button>
-                                  <div id="-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="-dropdown-button">
-                                          <li>
-                                              <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                          </li>
-                                          <li>
-                                              <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                          </li>
-                                      </ul>
-                                      <div class="py-1">
-                                          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                      </div>
-                                  </div>
-                              </td>
-                          </tr>
-                          <tr class="border-b hover:bg-gray-100">
-                            <td class="px-4 py-2 w-4">
-                                <div class="flex items-center">
-                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                </div>
-                            </td>
-                            <th scope="row" class="px-4 py-2 font-medium text-gray-900">
-                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="8" fill="#EDEBFE"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64428 10.3096C7.66797 11.2859 7.66797 12.8572 7.66797 15.9999C7.66797 19.1426 7.66797 20.714 8.64428 21.6903C9.62059 22.6666 11.1919 22.6666 14.3346 22.6666H17.668C20.8107 22.6666 22.382 22.6666 23.3583 21.6903C24.3346 20.714 24.3346 19.1426 24.3346 15.9999C24.3346 12.8572 24.3346 11.2859 23.3583 10.3096C22.382 9.33325 20.8107 9.33325 17.668 9.33325H14.3346C11.1919 9.33325 9.62059 9.33325 8.64428 10.3096ZM21.4814 12.2665C21.7024 12.5316 21.6666 12.9257 21.4014 13.1467L19.571 14.6721C18.8324 15.2876 18.2337 15.7865 17.7053 16.1264C17.1549 16.4804 16.6189 16.704 16.0013 16.704C15.3837 16.704 14.8477 16.4804 14.2973 16.1264C13.7689 15.7865 13.1702 15.2876 12.4316 14.6721L10.6012 13.1467C10.336 12.9257 10.3002 12.5316 10.5212 12.2665C10.7421 12.0013 11.1362 11.9655 11.4014 12.1864L13.2005 13.6857C13.978 14.3336 14.5177 14.7819 14.9735 15.075C15.4146 15.3587 15.7137 15.454 16.0013 15.454C16.2889 15.454 16.588 15.3587 17.0292 15.075C17.4849 14.7819 18.0246 14.3336 18.8021 13.6857L20.6012 12.1864C20.8664 11.9655 21.2605 12.0013 21.4814 12.2665Z" fill="#6D28D9"/>
-                                <rect x="17" y="16" width="12" height="12" rx="6" fill="#EDE9FE"/>
-                                <g clip-path="url(#clip0_182162_161131)">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7513 18.6667C22.7513 18.5287 22.8632 18.4167 23.0013 18.4167C24.9803 18.4167 26.5846 20.0211 26.5846 22.0001C26.5846 23.9791 24.9803 25.5834 23.0013 25.5834C21.0223 25.5834 19.418 23.9791 19.418 22.0001C19.418 21.862 19.5299 21.7501 19.668 21.7501C19.806 21.7501 19.918 21.862 19.918 22.0001C19.918 23.703 21.2984 25.0834 23.0013 25.0834C24.7042 25.0834 26.0846 23.703 26.0846 22.0001C26.0846 20.2972 24.7042 18.9167 23.0013 18.9167C22.8632 18.9167 22.7513 18.8048 22.7513 18.6667ZM23.0013 20.7501C23.1394 20.7501 23.2513 20.862 23.2513 21.0001V22.0834H24.3346C24.4727 22.0834 24.5846 22.1953 24.5846 22.3334C24.5846 22.4715 24.4727 22.5834 24.3346 22.5834H23.0013C22.8632 22.5834 22.7513 22.4715 22.7513 22.3334V21.0001C22.7513 20.862 22.8632 20.7501 23.0013 20.7501Z" fill="#6D28D9"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0345 18.7993C22.0842 18.9281 22.0201 19.0728 21.8913 19.1225C21.8442 19.1407 21.7976 19.16 21.7516 19.1805C21.6254 19.2365 21.4777 19.1796 21.4216 19.0534C21.3656 18.9272 21.4225 18.7795 21.5487 18.7235C21.6022 18.6997 21.6564 18.6772 21.7112 18.6561C21.84 18.6063 21.9848 18.6705 22.0345 18.7993ZM20.8839 19.4135C20.9791 19.5135 20.9752 19.6717 20.8752 19.767C20.8387 19.8018 20.803 19.8375 20.7682 19.874C20.673 19.974 20.5147 19.9779 20.4147 19.8826C20.3147 19.7874 20.3109 19.6292 20.4061 19.5292C20.4465 19.4868 20.488 19.4453 20.5304 19.4049C20.6304 19.3097 20.7886 19.3135 20.8839 19.4135ZM20.0546 20.4204C20.1808 20.4764 20.2377 20.6242 20.1817 20.7503C20.1613 20.7963 20.1419 20.8429 20.1237 20.8901C20.074 21.0189 19.9293 21.083 19.8005 21.0333C19.6717 20.9836 19.6076 20.8388 19.6573 20.71C19.6785 20.6552 19.7009 20.601 19.7247 20.5475C19.7807 20.4213 19.9284 20.3644 20.0546 20.4204Z" fill="#6D28D9"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_182162_161131">
-                                <rect width="8" height="8" fill="white" transform="translate(19 18)"/>
-                                </clipPath>
-                                </defs>
-                                </svg>   
-                            </th>
-                            <td class="flex items-center gap-2 px-4 py-2 ">
+                            <tr class="border-b hover:bg-gray-100">  
+                                <th scope="row" class="flex px-2 py-1 gap-2 whitespace-nowrap">
+                                   <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                   SK
+                                   </span>
+                                   <div class="flex flex-col">
+                                    <span>
+                                        Robbery case in bahria town phase 4
+                                    </span>
+                                    <span>
+                                        Tehmina Naz
+                                    </span>
+                                   </div>
+                                   <span>
 
-                              <span>
-                                <img src="images/Avatar 1.png" alt="">
-                              </span>
-                             <div class="flex flex-col">
-                              <span class="font-medium text-base truncate w-80">
-                                This will be subject of email: This will be body of email which will go only certain characters then.
-                              </span>
-                              <span class="font-medium text-base text-gray-600">
-                                Tehmina Naz
-                              </span>
-                            </div>
-                            </td>
-                            <td class="px-4 py-2">
-                              <a class="flex w-7 h-7 rounded-full justify-center items-center bg-sky-100" href=""> 
-                                <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.1917 3.55309L8.46227 1.82199C7.28004 0.638605 6.68893 0.0469135 6.05405 0.18698C5.41917 0.327047 5.13132 1.11265 4.55562 2.68387L4.16598 3.74731C4.0125 4.16618 3.93576 4.37562 3.7977 4.53762C3.73575 4.61031 3.66526 4.67526 3.58777 4.73104C3.41506 4.85538 3.2002 4.91461 2.77048 5.03308C1.80193 5.3001 1.31765 5.43361 1.13516 5.75046C1.05627 5.88744 1.01521 6.04297 1.01621 6.20107C1.01852 6.5668 1.37371 6.92234 2.08408 7.6334L2.90926 8.45956L0.298315 11.073C0.12452 11.247 0.12452 11.529 0.298315 11.703C0.472109 11.8769 0.753885 11.8769 0.927679 11.703L3.53871 9.08946L4.39388 9.94547C5.10876 10.6611 5.46621 11.0188 5.8341 11.0194C5.98914 11.0196 6.14156 10.9793 6.27625 10.9025C6.59585 10.7201 6.73008 10.2322 6.99853 9.25656C7.11656 8.82759 7.17558 8.61311 7.29945 8.44047C7.35369 8.36489 7.41661 8.29595 7.48691 8.23507C7.64751 8.096 7.85559 8.01783 8.27176 7.86147L9.34742 7.45733C10.9013 6.87352 11.6783 6.58161 11.8152 5.94843C11.9521 5.31525 11.3653 4.72786 10.1917 3.55309Z" fill="#1D4ED8"/>
-                                  </svg>                                      
-                                </a> 
-                            </td>
-                            <td class="flex  gap-2 px-4 py-2 ">
-                                <div class="flex items-center justify-center w-16 h-6 bg-red-100 rounded-md ">
-                                    <span class="text-xs font-medium text-red-800">Medical</span>
-                                </div>
-                                <div class="flex items-center justify-center w-20 h-6 bg-red-100 rounded-md ">
-                                  <span class="text-xs font-medium text-red-800">Conveyancing</span>
-                              </div>
-                            </td>   
-                            <td class="px-4 py-2 font-medium text-gray-900 text-xs">23 Nov 2022</td>
-                            <td class="px-4 py-2">
-                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
-                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                    </svg>
-                                </button>
-                                <div id="-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="-dropdown-button">
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                        </li>
-                                    </ul>
-                                  
-                                      <div class="py-1">
-                                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                   </span>
+                                </th>
+                                <td class="px-4 py-2 gap-1 whitespace-nowrap">
+                                   
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap">
+                                  <a class="flex w-14 h-5 rounded-md justify-center items-center bg-red-100" href=""> 
+                                    close                                     
+                                    </a> 
+                                </td>
+                                <td class="flex items-center  gap-2 px-4 py-2 whitespace-nowrap">
+                                   
+                                </td>   
+                                <td class="px-4 py-2 font-medium text-gray-900 text-xs whitespace-nowrap">
+                                    
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap">
+                                    <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </button>
+                                    <div id="-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="-dropdown-button">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                            </li>
+                                        </ul>
+                                        <div class="py-1">
+                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr> 
-                        <tr class="border-b hover:bg-gray-100">
-                          <td class="px-4 py-2 w-4">
-                              <div class="flex items-center">
-                                  <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                  <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                              </div>
-                          </td>
-                          <th scope="row" class="px-4 py-2 font-medium text-gray-900">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect width="32" height="32" rx="8" fill="#EDEBFE"/>
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64428 10.3096C7.66797 11.2859 7.66797 12.8572 7.66797 15.9999C7.66797 19.1426 7.66797 20.714 8.64428 21.6903C9.62059 22.6666 11.1919 22.6666 14.3346 22.6666H17.668C20.8107 22.6666 22.382 22.6666 23.3583 21.6903C24.3346 20.714 24.3346 19.1426 24.3346 15.9999C24.3346 12.8572 24.3346 11.2859 23.3583 10.3096C22.382 9.33325 20.8107 9.33325 17.668 9.33325H14.3346C11.1919 9.33325 9.62059 9.33325 8.64428 10.3096ZM21.4814 12.2665C21.7024 12.5316 21.6666 12.9257 21.4014 13.1467L19.571 14.6721C18.8324 15.2876 18.2337 15.7865 17.7053 16.1264C17.1549 16.4804 16.6189 16.704 16.0013 16.704C15.3837 16.704 14.8477 16.4804 14.2973 16.1264C13.7689 15.7865 13.1702 15.2876 12.4316 14.6721L10.6012 13.1467C10.336 12.9257 10.3002 12.5316 10.5212 12.2665C10.7421 12.0013 11.1362 11.9655 11.4014 12.1864L13.2005 13.6857C13.978 14.3336 14.5177 14.7819 14.9735 15.075C15.4146 15.3587 15.7137 15.454 16.0013 15.454C16.2889 15.454 16.588 15.3587 17.0292 15.075C17.4849 14.7819 18.0246 14.3336 18.8021 13.6857L20.6012 12.1864C20.8664 11.9655 21.2605 12.0013 21.4814 12.2665Z" fill="#6D28D9"/>
-                              <rect x="17" y="16" width="12" height="12" rx="6" fill="#EDE9FE"/>
-                              <g clip-path="url(#clip0_182162_161131)">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7513 18.6667C22.7513 18.5287 22.8632 18.4167 23.0013 18.4167C24.9803 18.4167 26.5846 20.0211 26.5846 22.0001C26.5846 23.9791 24.9803 25.5834 23.0013 25.5834C21.0223 25.5834 19.418 23.9791 19.418 22.0001C19.418 21.862 19.5299 21.7501 19.668 21.7501C19.806 21.7501 19.918 21.862 19.918 22.0001C19.918 23.703 21.2984 25.0834 23.0013 25.0834C24.7042 25.0834 26.0846 23.703 26.0846 22.0001C26.0846 20.2972 24.7042 18.9167 23.0013 18.9167C22.8632 18.9167 22.7513 18.8048 22.7513 18.6667ZM23.0013 20.7501C23.1394 20.7501 23.2513 20.862 23.2513 21.0001V22.0834H24.3346C24.4727 22.0834 24.5846 22.1953 24.5846 22.3334C24.5846 22.4715 24.4727 22.5834 24.3346 22.5834H23.0013C22.8632 22.5834 22.7513 22.4715 22.7513 22.3334V21.0001C22.7513 20.862 22.8632 20.7501 23.0013 20.7501Z" fill="#6D28D9"/>
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0345 18.7993C22.0842 18.9281 22.0201 19.0728 21.8913 19.1225C21.8442 19.1407 21.7976 19.16 21.7516 19.1805C21.6254 19.2365 21.4777 19.1796 21.4216 19.0534C21.3656 18.9272 21.4225 18.7795 21.5487 18.7235C21.6022 18.6997 21.6564 18.6772 21.7112 18.6561C21.84 18.6063 21.9848 18.6705 22.0345 18.7993ZM20.8839 19.4135C20.9791 19.5135 20.9752 19.6717 20.8752 19.767C20.8387 19.8018 20.803 19.8375 20.7682 19.874C20.673 19.974 20.5147 19.9779 20.4147 19.8826C20.3147 19.7874 20.3109 19.6292 20.4061 19.5292C20.4465 19.4868 20.488 19.4453 20.5304 19.4049C20.6304 19.3097 20.7886 19.3135 20.8839 19.4135ZM20.0546 20.4204C20.1808 20.4764 20.2377 20.6242 20.1817 20.7503C20.1613 20.7963 20.1419 20.8429 20.1237 20.8901C20.074 21.0189 19.9293 21.083 19.8005 21.0333C19.6717 20.9836 19.6076 20.8388 19.6573 20.71C19.6785 20.6552 19.7009 20.601 19.7247 20.5475C19.7807 20.4213 19.9284 20.3644 20.0546 20.4204Z" fill="#6D28D9"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_182162_161131">
-                              <rect width="8" height="8" fill="white" transform="translate(19 18)"/>
-                              </clipPath>
-                              </defs>
-                              </svg>   
-                          </th>
-                          <td class="flex items-center gap-2 px-4 py-2 ">
+                                </td>
+                            </tr> 
+                            <tr class="border-b hover:bg-gray-100">                             
+                                <th scope="row" class="flex px-2 py-1 gap-2 whitespace-nowrap">
+                                   <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                    PH
+                                   </span>
+                                   <div class="flex flex-col">
+                                    <span>
+                                        Consumer case for new car with fault in Suzuki Alto
+                                    </span>
+                                    <span>
+                                        Tehmina Naz
+                                    </span>
+                                   </div>
+                                   <span>
 
-                            <span>
-                              <img src="images/Avatar 1.png" alt="">
-                            </span>
-                           <div class="flex flex-col">
-                            <span class="font-medium text-base truncate w-80">
-                              This will be subject of email: This will be body of email which will go only certain characters then.
-                            </span>
-                            <span class="font-medium text-base text-gray-600">
-                              Tehmina Naz
-                            </span>
-                          </div>
-                          </td>
-                          <td class="px-4 py-2">
-                            <a class="flex w-7 h-7 rounded-full justify-center items-center bg-sky-100" href=""> 
-                              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.1917 3.55309L8.46227 1.82199C7.28004 0.638605 6.68893 0.0469135 6.05405 0.18698C5.41917 0.327047 5.13132 1.11265 4.55562 2.68387L4.16598 3.74731C4.0125 4.16618 3.93576 4.37562 3.7977 4.53762C3.73575 4.61031 3.66526 4.67526 3.58777 4.73104C3.41506 4.85538 3.2002 4.91461 2.77048 5.03308C1.80193 5.3001 1.31765 5.43361 1.13516 5.75046C1.05627 5.88744 1.01521 6.04297 1.01621 6.20107C1.01852 6.5668 1.37371 6.92234 2.08408 7.6334L2.90926 8.45956L0.298315 11.073C0.12452 11.247 0.12452 11.529 0.298315 11.703C0.472109 11.8769 0.753885 11.8769 0.927679 11.703L3.53871 9.08946L4.39388 9.94547C5.10876 10.6611 5.46621 11.0188 5.8341 11.0194C5.98914 11.0196 6.14156 10.9793 6.27625 10.9025C6.59585 10.7201 6.73008 10.2322 6.99853 9.25656C7.11656 8.82759 7.17558 8.61311 7.29945 8.44047C7.35369 8.36489 7.41661 8.29595 7.48691 8.23507C7.64751 8.096 7.85559 8.01783 8.27176 7.86147L9.34742 7.45733C10.9013 6.87352 11.6783 6.58161 11.8152 5.94843C11.9521 5.31525 11.3653 4.72786 10.1917 3.55309Z" fill="#1D4ED8"/>
-                                </svg>                                      
-                              </a> 
-                          </td>
-                          <td class="flex  gap-2 px-4 py-2 ">
-                              <div class="flex items-center justify-center w-16 h-6 bg-red-100 rounded-md ">
-                                  <span class="text-xs font-medium text-red-800">Medical</span>
-                              </div>
-                              <div class="flex items-center justify-center w-20 h-6 bg-red-100 rounded-md ">
-                                <span class="text-xs font-medium text-red-800">Conveyancing</span>
-                            </div>
-                          </td>   
-                          <td class="px-4 py-2 font-medium text-gray-900 text-xs">23 Nov 2022</td>
-                          <td class="px-4 py-2">
-                              <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
-                                  <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                  </svg>
-                              </button>
-                              <div id="-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="-dropdown-button">
-                                      <li>
-                                          <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
-                                      </li>
-                                      <li>
-                                          <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                                      </li>
-                                  </ul>
-                                  <div class="py-1">
-                                      <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
-                                  </div>
-                              </div>
-                          </td>
-                      </tr>
+                                   </span>
+                                </th>
+                                <td class="px-4 py-2 gap-1 whitespace-nowrap">
+                                    <div class="flex justify-center items-center px-3 py-0.5 gap-1 w-14 h-6 rounded-md bg-purple-100">
+                                 <span>
+                                    <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.56786 12.9945C4.12859 13.7073 5.00946 14.1666 6 14.1666C6.99055 14.1666 7.87142 13.7073 8.43214 12.9945C6.81762 13.2132 5.18238 13.2132 3.56786 12.9945Z" fill="#5521B5"/>
+                                        <path d="M10.4994 5.49992V5.96932C10.4994 6.53265 10.6602 7.08337 10.9615 7.55208L11.6998 8.70069C12.3741 9.74982 11.8593 11.1759 10.6864 11.5076C7.61817 12.3755 4.38183 12.3755 1.31357 11.5076C0.140698 11.1759 -0.374118 9.74982 0.300239 8.70069L1.03853 7.55208C1.33981 7.08337 1.50058 6.53265 1.50058 5.96932V5.49992C1.50058 2.92259 3.51504 0.833252 6 0.833252C8.48496 0.833252 10.4994 2.92259 10.4994 5.49992Z" fill="#5521B5"/>
+                                        </svg>                                        
+                                 </span>
+                                 <span>
+                                    5
+                                 </span>
+                                </div>
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap">
+                                  <a class="flex w-14 h-5 rounded-md justify-center items-center bg-green-100" href=""> 
+                                    open                                     
+                                    </a> 
+                                </td>
+                                <td class="flex items-center  gap-2 px-4 py-2 whitespace-nowrap">
+                                    <div class="flex font-medium text-sm text-red-500">
+                                        No Future Date
+                                </div>
+                                </td>   
+                                <td class="px-4 py-2 font-medium text-gray-900 text-xs whitespace-nowrap">
+                                    <div class="flex font-medium text-sm">
+                                        <span>
+                                            Fri 5, Jan 2023 
+                                        </span>
+                                        <span>
+                                            10:00 am
+                                        </span>
+                                    </div>
+                                    <span>
+                                        Zoom Meeting
+                                    </span>
+                                </td>
+                                <td class="px-4 py-2 whitespace-nowrap">
+                                    <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex items-center p-1 text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </button>
+                                    <div id="-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="-dropdown-button">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                            </li>
+                                        </ul>
+                                        <div class="py-1">
+                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr> 
                         </tbody>
                     </table>
                 </div>
-                <nav class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4" aria-label="Table navigation">
-                      <span class="text-sm font-normal text-gray-500">
-                          Showing
-                          <span class="font-semibold text-gray-900">1-10</span>
-                          of
-                          <span class="font-semibold text-gray-900">1000</span>
-                      </span>
-                    <ul class="inline-flex items-stretch -space-x-px">
-                        <li>
-                            <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ">
-                                <span class="sr-only">Previous</span>
-                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-current="page" class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                <span class="sr-only">Next</span>
-                                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                
             </div>
         </div>
     </section>
@@ -505,74 +271,4 @@
 
 
 
-          import { LitElement, html } from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
-import { unsafeHTML } from 'https://unpkg.com/lit-html@latest/directives/unsafe-html.js?module';
-import { classMap } from 'https://unpkg.com/lit-html@latest/directives/class-map.js';
-
-
-export class Button extends LitElement {
-    static get properties() {
-        return {
-            full: { type: Boolean },
-            color: { type: String },
-            customclass: { type: String },
-            textclass: { type: String },
-            text: { type: String },
-            svgleft: { type: String },
-
-        };
-    }
-
-    constructor() {
-        super();
-        this.color = "gray";
-        this.text = "button";
-        this.customclass = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none"
-        this.full = false;
-    }
-
-    // returnStringSvgLeft() {
-    // 	var frag = document.createRange().createContextualFragment(`${ this.svgleft }`);
-    //   return frag;
-    // }
-
-    // ${ this.returnStringSvgLeft() }
-
-    // <button class="icon flex w-fit items-center justify-center gap-2 rounded-full border bg-orange-500 py-1 pr-1 @xl:pr-2 pl-1">
-    //             <span class="flex items-center justify-center circle">
-    //                 <span class="icon">
-    //                     ${unsafeHTML(this.svgleft)}
-    //                 </span>
-    //             </span>
-    //             <span class="txt text-sm font-normal text-white hidden @xl:block">${this.text}</span>
-    //         </button>
-
-    // handleClick(event) {
-    //     this.dispatchEvent(new CustomEvent("event-fired", { detail: 1 }));
-    //     console.log( event.detail);
-    // }
-
-    render() {
-        const classes = {
-            "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300": this.color == "gray",
-            "bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 text-white": this.color == "primary",
-            "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none"
-            : this.customclass = !null,
-            "w-full block": this.full == true
-        };
-
-        return html`
-            <button type="button" class="${classMap(classes) && this.customclass}" aria-label="${this.text}">
-                ${
-                    unsafeHTML(this.svgleft) ?? nothing
-            }
-                <span class="${this.textclass}">${this.text}</span>
-            </button>
-        `;
-    }
-
-    createRenderRoot() {
-        return this;
-    }
-}
-customElements.define('arm-button', Button);
+          
