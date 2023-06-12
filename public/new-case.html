@@ -13,22 +13,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- alpine/tooltip v1.0 -->
     <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
 
     <!--alpine.js -->
+   
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
-
     <title>New-Case</title>
 </head>
 
 <body>
     <section>
-    <div class="flex flex-col max-w-2xl mx-auto bg-white shadow rounded-lg">
+        <div class="flex flex-col max-w-2xl mx-auto bg-white shadow rounded-lg">
             <div class="flex items-center justify-center px-3 md:px-6 py-2 md:py-4 w-full">
                 <div class="flex items-center font-semibold text-lg text-gray-900 w-full">
                     Create new case
@@ -53,7 +52,6 @@
                                     + Create New
                                 </a>
                             </div>
-
                             <select id="Contact"
                                 class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
                                 placeholder="" required>
@@ -112,19 +110,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white border rounded-lg w-full">
-                    <div id="accordion-collapse" data-accordion="collapse" data-active-classes="text-gray-900" data-inactive-classes="text-gray-500" >
-                        <h2 id="accordion-collapse-heading-1">
-                          <button type="button" class="flex  w-full bg-gray-100 border rounded-lg p-3 md:p-5 justify-between items-center text-left" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-                                <span>
-                                    Advance Options
+                <div x-data="{ open: false}" class="flex flex-col gap-2 w-full">
+                    <div class="flex w-full p-2.5 bg-gray-100 drop-shadow-md rounded-lg items-center justify-between">
+                        <div class="flex gap-2 md:gap-5 items-center">         
+                            <div class="flex flex-col gap-1">
+                                <span class="text-xs md:text-sm font-medium text-gray-900">
+                                    Advance Options                        
                                 </span>
-                           
-                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <button x-disclosure x-on:click="open = !open" type="button" class="flex w-8 h-8 p-2 text-gray-900 rounded-lg items-center justify-center" x-disclosure:button>
+                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
                         </button>
-                        </h2>
-                        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-                          <div class="flex flex-col items-start p-3 gap-10 w-full bg-white">
+                    </div>
+                    <div x-show="open" class="flex flex-col gap-2">
+                        <div class="flex flex-col items-start p-3 gap-10 w-full bg-white">
                             <div class="flex md:flex-row flex-col justify-center items-center gap-5 w-full">
                                 <div class="status flex flex-col gap-2 w-full h-16">
                                     <label for="status" class="block font-medium text-sm text-gray-900">Status
@@ -147,7 +148,8 @@
                                         <select id="Billing"
                                             class="flex flex-col items-start border border-gray-300 bg-gray-50 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
                                             placeholder="" required>
-                                            <option selected class="flex items-center font-normal text-xs md:text-sm ">
+                                            <option selected
+                                                class="flex items-center font-normal text-xs md:text-sm ">
                                                 Fixed Fee
                                             </option>
                                             <option value="1">10000</option>
@@ -162,57 +164,38 @@
                             <!-- date -->
                             <div class="flex md:flex-row flex-col items-start md:gap-6 gap-2 w-full">
                                 <div class="open-date flex flex-col items-start gap-2 w-full">
-                                  <label for="open-date" class="flex items-center font-normal text-sm">Open date</label>
-                                  <div class="relative w-full">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                      <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                          clip-rule="evenodd"></path>
-                                      </svg>
-                                    </div>
-                                    <input id="invoice-date" datepicker type="text"
-                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10"
-                                      placeholder="Open date">
-                                  </div>
+                                    <label for="open-date" class="flex items-center font-normal text-sm">Open
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10">
+        
                                 </div>
                                 <!-- Due-date -->
                                 <div class="close-date flex flex-col items-start gap-2 w-full">
-                                  <label for="close-date" class="flex items-center font-normal text-sm">Close date</label>
-                                  <div class="relative w-full">
-                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                      <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                          clip-rule="evenodd"></path>
-                                      </svg>
-                                    </div>
-                                    <input id="due-date" datepicker type="text"
-                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10"
-                                      placeholder="Close date">
-                                  </div>
+                                    <label for="close-date" class="flex items-center font-normal text-sm">Close
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10">
+        
+        
                                 </div>
-                              </div>
+                            </div>
                         </div>
-                        </div>
-                        </div> 
+                    </div>
                 </div>
             </div>
             <hr>
-       <!-- button -->
-       <div class="flex flex-col items-end h-24 w-full">
-        <div class="flex justify-end items-center p-6">
-            <button
-                class="flex justify-center items-center font-medium text-xs md:text-sm px-3 py-2 gap-2 w-28 h-9 bg-primary-700 text-white rounded-lg">
-                Create case
-            </button>
+            <!-- button -->
+            <div class="flex flex-col items-end h-24 w-full">
+                <div class="flex justify-end items-center p-6">
+                    <button
+                        class="flex justify-center items-center font-medium text-xs md:text-sm px-3 py-2 gap-2 w-28 h-9 bg-primary-700 text-white rounded-lg">
+                        Create case
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
 </body>
 
