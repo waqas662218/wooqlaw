@@ -18,16 +18,16 @@
     <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
 
     <!--alpine.js -->
-   
+
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
     <title>New-Case</title>
 </head>
 
-<body>
+<body class="mt-5">
     <section>
-        <div class="flex flex-col max-w-2xl mx-auto bg-white shadow rounded-lg">
+        <div class="flex flex-col max-w-2xl mx-auto bg-white drop-shadow-2xl rounded-lg">
             <div class="flex items-center justify-center px-3 md:px-6 py-2 md:py-4 w-full">
                 <div class="flex items-center font-semibold text-lg text-gray-900 w-full">
                     Create new case
@@ -110,16 +110,16 @@
                         </div>
                     </div>
                 </div>
-                <div x-data="{ open: false}" class="flex flex-col gap-2 w-full">
-                    <div class="flex w-full p-2.5 bg-gray-100 drop-shadow-md rounded-lg items-center justify-between">
-                        <div class="flex gap-2 md:gap-5 items-center">         
-                            <div class="flex flex-col gap-1">
-                                <span class="text-xs md:text-sm font-medium text-gray-900">
-                                    Advance Options                        
-                                </span>
+                <div x-data="{ open: false}" class="flex flex-col gap-2 justify-between border rounded-lg w-full">
+                    <div class="flex w-full p-2.5 bg-gray-100 rounded-lg items-center justify-between"> 
+                        <button x-disclosure x-on:click="open = !open" type="button" class="flex p-2 text-gray-900 rounded-lg items-center justify-center w-full" x-disclosure:button>
+                            <div class="flex gap-2 md:gap-5 justify-between items-center w-full">         
+                                <div class="flex  gap-1 w-full">
+                                    <span class="text-sm md:text-base font-medium text-gray-900">
+                                        Advance Options                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <button x-disclosure x-on:click="open = !open" type="button" class="flex w-8 h-8 p-2 text-gray-900 rounded-lg items-center justify-center" x-disclosure:button>
                             <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                             </svg>
                         </button>
@@ -196,7 +196,6 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-
 </body>
 
 </html>
