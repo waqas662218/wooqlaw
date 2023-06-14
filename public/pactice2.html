@@ -252,83 +252,75 @@
         </div>
     </section>
 
-    <section class="incomplete-profile">
-        <div x-data="{ open: false}" class="flex flex-col gap-2 max-w-screen-2xl mx-auto w-full">
-            <div class="flex w-full p-2.5 bg-gray-100 drop-shadow-md rounded-xl items-center justify-between">
-                <div class="flex gap-2 md:gap-5 items-center">
-                    
-                    <div class="flex flex-col gap-1">
-                        <span class="text-xs md:text-sm font-medium text-gray-900">
-                            Advance Options                        
-                        </span>
-                    </div>
-                </div>
-                <button x-disclosure x-on:click="open = !open" type="button" class="flex w-8 h-8 p-2 bg-gray-100 rounded-lg items-center justify-center" x-disclosure:button>
+    <div x-data class="">
+        <div x-disclosure class="rounded-lg bg-white border overflow-hidden ">
+            <button x-disclosure:button
+                class="flex w-full items-center justify-between px-5 py-3 text-xl bg-gray-100 font-bold">
+                <span>Advance Options</span>
+                <span>
                     <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
-                </button>
-            </div>
-            <div x-show="open" class="flex flex-col gap-2">
-                <div class="flex flex-col items-start p-3 gap-10 w-full bg-white">
-                    <div class="flex md:flex-row flex-col justify-center items-center gap-5 w-full">
-                        <div class="status flex flex-col gap-2 w-full h-16">
-                            <label for="status" class="block font-medium text-sm text-gray-900">Status
-                            </label>
-                            <select id="status"
-                                class="flex flex-col bg-gray-50 items-start border border-gray-300 text-gray-500-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9"
-                                placeholder="" required>
-                                <option selected class="flex items-center font-normal text-xs md:text-sm">
-                                    Open
-                                </option>
-                                <option value="Avalible">Avalible</option>
-                                <option value="not-avalible">Not Avalible</option>
-                            </select>
-                        </div>
-                        <div class="flex  justify-center gap-2 md:gap-5 items-end w-full">
-                            <div class="Billing flex flex-col gap-2 w-full h-16">
-                                <label for="Billing" class="block font-medium text-sm text-gray-900">
-                                    Billing Rate
-                                </label>
-                                <select id="Billing"
-                                    class="flex flex-col items-start border border-gray-300 bg-gray-50 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
-                                    placeholder="" required>
-                                    <option selected
-                                        class="flex items-center font-normal text-xs md:text-sm ">
-                                        Fixed Fee
-                                    </option>
-                                    <option value="1">10000</option>
-                                    <option value="2">20000</option>
-                                </select>
+                </span>
+            </button>
+     
+            <div x-disclosure:panel x-collapse>
+                 <div class="flex flex-col items-start p-3 gap-10 w-full bg-white">
+                            <div class="flex md:flex-row flex-col justify-center items-center gap-5 w-full">
+                                <div class="status flex flex-col gap-2 w-full h-16">
+                                    <label for="status" class="block font-medium text-sm text-gray-900">Status
+                                    </label>
+                                    <select id="status"
+                                        class="flex flex-col bg-gray-50 items-start border border-gray-300 text-gray-500-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9"
+                                        placeholder="" required>
+                                        <option selected class="flex items-center font-normal text-xs md:text-sm"á>
+                                            Open
+                                        </option>
+                                        <option value="Avalible">Avalible</option>
+                                        <option value="not-avalible">Not Avalible</option>
+                                    </select>
+                                </div>
+                                <div class="flex  justify-center gap-2 md:gap-5 items-end w-full">
+                                    <div class="Billing flex flex-col gap-2 w-full h-16">
+                                        <label for="Billing" class="block font-medium text-sm text-gray-900">
+                                            Billing Rate
+                                        </label>
+                                        <select id="Billing"
+                                            class="flex flex-col items-start border border-gray-300 bg-gray-50 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
+                                            placeholder="" required>
+                                            <option selected
+                                                class="flex items-center font-normal text-xs md:text-sm ">
+                                                Fixed Fee
+                                            </option>
+                                            <option value="1">10000</option>
+                                            <option value="2">20000</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" id="first_name"
+                                        class="flex items-start bg-gray-50 border border-gray-300 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-32 px-2.5 py-2 h-9"
+                                        placeholder="" required>
+                                </div>
                             </div>
-                            <input type="text" id="first_name"
-                                class="flex items-start bg-gray-50 border border-gray-300 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-32 px-2.5 py-2 h-9"
-                                placeholder="" required>
+                            <!-- date -->
+                            <div class="flex md:flex-row flex-col items-start md:gap-6 gap-2 w-full">
+                                <div class="open-date flex flex-col items-start gap-2 w-full">
+                                    <label for="open-date" class="flex items-center font-normal text-sm">Open
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-10">
+        
+                                </div>
+                                <!-- Due-date -->
+                                <div class="close-date flex flex-col items-start gap-2 w-full">
+                                    <label for="close-date" class="flex items-center font-normal text-sm">Close
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-10">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- date -->
-                    <div class="flex md:flex-row flex-col items-start md:gap-6 gap-2 w-full">
-                        <div class="open-date flex flex-col items-start gap-2 w-full">
-                            <label for="open-date" class="flex items-center font-normal text-sm">Open
-                                date</label>
-                            <input type="date" id="start" name="trip-start"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10">
-
-                        </div>
-                        <!-- Due-date -->
-                        <div class="close-date flex flex-col items-start gap-2 w-full">
-                            <label for="close-date" class="flex items-center font-normal text-sm">Close
-                                date</label>
-                            <input type="date" id="start" name="trip-start"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 h-10">
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-
+    </div>
+</div>
        
 
 
