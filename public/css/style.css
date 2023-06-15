@@ -941,18 +941,6 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
-.mt-40 {
-  margin-top: 10rem;
-}
-.mt-48 {
-  margin-top: 12rem;
-}
-.mt-60 {
-  margin-top: 15rem;
-}
-.mt-80 {
-  margin-top: 20rem;
-}
 .block {
   display: block;
 }
@@ -1063,13 +1051,6 @@ select {
 }
 .h-screen {
   height: 100vh;
-}
-.max-h-screen {
-  max-height: 100vh;
-}
-.max-h-fit {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
 }
 .w-1\/2 {
   width: 50%;
@@ -2081,10 +2062,6 @@ select {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2104,10 +2081,6 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -3050,10 +3023,6 @@ select {
     margin-top: 4rem;
   }
 
-  .md\:mt-20 {
-    margin-top: 5rem;
-  }
-
   .md\:mt-24 {
     margin-top: 6rem;
   }
@@ -3070,24 +3039,20 @@ select {
     margin-top: 1.25rem;
   }
 
-  .md\:mt-80 {
-    margin-top: 20rem;
-  }
-
   .md\:mt-72 {
     margin-top: 18rem;
   }
 
-  .md\:mt-40 {
-    margin-top: 10rem;
+  .md\:mt-8 {
+    margin-top: 2rem;
   }
 
-  .md\:mt-52 {
-    margin-top: 13rem;
+  .md\:mt-4 {
+    margin-top: 1rem;
   }
 
-  .md\:mt-60 {
-    margin-top: 15rem;
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:flex {
