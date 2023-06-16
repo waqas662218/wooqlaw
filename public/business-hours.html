@@ -62,10 +62,8 @@
                     </div>
                     <div class="flex md:flex-row flex-col gap-5 w-full">
                         <div class="flex flex-col gap-2 w-full">
-                            <div class="flex justify-between items-center gap-2">
                                 <label for="assignee" class="block font-medium text-sm text-gray-900">Duration
-                                </label>
-                            </div>
+                                </label>       
                             <select id="assignee"
                                 class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
                                 placeholder="" required>
@@ -102,7 +100,7 @@
                         Consultation Modes*
                     </span>
                     <!-- Phone -->
-                    <div x-data class="">
+                    <div x-data class="Phone">
                         <div x-disclosure class="rounded-lg  border border-gray-200 overflow-hidden ">
                             <div class="flex flex-col items-start gap-2 w-full ">
                                 <button x-disclosure:button
@@ -119,7 +117,7 @@
                                         <span>Phone</span>
                                     </div>
                                     <div class="flex gap-5 ">
-                                        <span>
+                                        <span class="flex items-center justify-center">
                                             <label class="relative inline-flex items-center cursor-pointer">
                                                 <input type="checkbox" value="" class="sr-only peer">
                                                 <div
@@ -153,7 +151,7 @@
                         </div>
                     </div>
                     <!-- video-->
-                    <div x-data class="">
+                    <div x-data class="video">
                         <div x-disclosure class="rounded-lg  border border-gray-200 overflow-hidden ">
                             <div class="flex flex-col items-start gap-2 w-full ">
                                 <button x-disclosure:button
@@ -170,7 +168,7 @@
                                         <span>Video</span>
                                     </div>
                                     <div class="flex gap-5 ">
-                                        <span>
+                                        <span class="flex items-center justify-center">
                                             <label class="relative inline-flex items-center cursor-pointer">
                                                 <input type="checkbox" value="" class="sr-only peer">
                                                 <div
@@ -241,7 +239,7 @@
                         </div>
                     </div>
                     <!-- At Office-->
-                    <div x-data class="">
+                    <div x-data class="At-Office">
                         <div x-disclosure class="rounded-lg  border border-gray-200 overflow-hidden">
                             <div class="flex flex-col items-start gap-2 w-full ">
                                 <button x-disclosure:button
@@ -258,7 +256,7 @@
                                         <span>At-Office</span>
                                     </div>
                                     <div class="flex gap-5 ">
-                                        <span>
+                                        <span class="flex items-center justify-center">
                                             <label class="relative inline-flex items-center cursor-pointer">
                                                 <input type="checkbox" value="" class="sr-only peer">
                                                 <div
@@ -292,12 +290,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col items-start gap-6 w-full">
+                <div class="flex flex-col gap-6 w-full">
                     <span class="font-medium text-base text-gray-900">
                         Do you want to replicate this schedule?
                     </span>
-                    <div class="flex gap-5 w-full">
-                        <div class="flex flex-col items-start gap-5 w-48">
+                    <div class="grid md:grid-cols-3 gap-5">
+                        <div class="flex col-span-1">
                             <span>
                                 <label class="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" class="sr-only peer">
@@ -320,7 +318,7 @@
                                   </label>
                             </span>
                         </div>
-                        <div class="flex flex-col items-start gap-5 w-48">
+                        <div class="col-span-1 ">
                             <span>
                                 <label class="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" class="sr-only peer">
@@ -343,7 +341,7 @@
                                   </label>
                             </span>
                         </div>
-                        <div class="flex flex-col items-start gap-5 w-48">
+                        <div class="col-span-1">
                             <span>
                                 <label class="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" class="sr-only peer">
@@ -354,8 +352,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>   
             <hr>
             <!-- button -->
             <div class="flex flex-col items-end h-24 w-full">
