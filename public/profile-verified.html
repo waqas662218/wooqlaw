@@ -26,7 +26,7 @@
 <body>
     <div class="flex flex-col items-start max-w-4xl mx-auto bg-white border rounded-lg">
     <div class="flex items-center p-2 md:p-6 w-full">
-        <div class="flex items-center font-semibold text-lg text-gray-900 w-full">
+        <div class="flex items-center font-semibold text-base md:text-lg text-gray-900 w-full">
             Profile details
         </div>
         <a class="flex items-center justify-center w-5 h-5" href="">
@@ -96,75 +96,59 @@
                     </div>
                 </div>   
             </div>
-           <div class="flex flex-col justify-between items-start gap-2 md:gap-5 w-full rounded-lg"> 
+           <div class="flex flex-col justify-between items-start gap-5 w-full rounded-lg"> 
             <span class="font-medium text-base">
                 Step 1
             </span>
             <div class="flex flex-col items-center py-3 gap-3 bg-gray-100 rounded-lg w-full">
-               <span class="font-medium text-base">
-                Verify your email
+               <span class="flex w-12 h-12 justify-center items-center bg-purple-100 rounded-lg">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72885 7.14541C3.16675 8.70751 3.16675 11.2217 3.16675 16.25C3.16675 21.2783 3.16675 23.7925 4.72885 25.3545C6.29094 26.9166 8.8051 26.9166 13.8334 26.9166H19.1667C24.1951 26.9166 26.7092 26.9166 28.2713 25.3545C29.8334 23.7925 29.8334 21.2783 29.8334 16.25C29.8334 11.2217 29.8334 8.70751 28.2713 7.14541C26.7092 5.58331 24.1951 5.58331 19.1667 5.58331H13.8334C8.8051 5.58331 6.29094 5.58331 4.72885 7.14541ZM25.2683 10.2765C25.6219 10.7007 25.5645 11.3313 25.1403 11.6849L22.2116 14.1254C21.0298 15.1103 20.0719 15.9085 19.2265 16.4523C18.3458 17.0187 17.4882 17.3765 16.5001 17.3765C15.512 17.3765 14.6543 17.0187 13.7737 16.4523C12.9282 15.9085 11.9704 15.1103 10.7886 14.1254L7.8599 11.6849C7.43562 11.3313 7.3783 10.7007 7.73186 10.2765C8.08542 9.85218 8.71599 9.79486 9.14027 10.1484L12.0188 12.5472C13.2627 13.5838 14.1264 14.3012 14.8555 14.7701C15.5613 15.2241 16.04 15.3765 16.5001 15.3765C16.9602 15.3765 17.4388 15.2241 18.1446 14.7701C18.8738 14.3012 19.7374 13.5838 20.9814 12.5472L23.8599 10.1484C24.2842 9.79486 24.9147 9.85218 25.2683 10.2765Z" fill="#7E3AF2"/>
+                    </svg>                    
                </span>
-               <div class="flex flex-col items-center w-64 md:w-96">
+               <div class="flex flex-col items-center gap-2 w-44">
                 <span class="font-medium text-base text-primary-700">
-                    username@ email.com
+                    username@email.com
                 </span>
-                <span class="flex text-center font-medium text-xs text-gray-600">
-                    We have sent you email on the above address, Kindly verify by the link we sent you through email.
-                </span>
+                <div class="flex justify-center items-center px-3 py-0.5 gap-1">
+                    <span>
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5396 7.74965C10.7236 7.54367 10.7057 7.22759 10.4997 7.04368C10.2937 6.85976 9.97761 6.87765 9.7937 7.08364L7.78571 9.33258L7.2063 8.68364C7.02239 8.47765 6.70631 8.45976 6.50033 8.64368C6.29434 8.82759 6.27645 9.14367 6.46036 9.34965L7.41275 10.4163C7.50761 10.5226 7.64328 10.5833 7.78571 10.5833C7.92815 10.5833 8.06382 10.5226 8.15868 10.4163L10.5396 7.74965Z" fill="#03543F"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1.58331C7.87498 1.58331 7.27821 1.7877 6.31559 2.11739L5.83063 2.2834C4.84308 2.62145 4.08094 2.88233 3.53535 3.10397C3.26052 3.21562 3.02424 3.32376 2.83399 3.43425C2.6509 3.54058 2.46721 3.67321 2.34242 3.85101C2.21907 4.02675 2.15529 4.24281 2.11521 4.45079C2.07354 4.66702 2.04842 4.9264 2.0322 5.22422C2 5.81556 2 6.62565 2 7.6764V8.74422C2 12.8116 5.07202 14.7617 6.89889 15.5597L6.91695 15.5676C7.14348 15.6666 7.35641 15.7596 7.60107 15.8222C7.85938 15.8884 8.13383 15.9166 8.5 15.9166C8.86617 15.9166 9.14062 15.8884 9.39893 15.8222C9.64358 15.7596 9.8565 15.6666 10.083 15.5676L10.1011 15.5597C11.928 14.7617 15 12.8116 15 8.74422V7.67652C15 6.62572 15 5.81558 14.9678 5.22422C14.9516 4.9264 14.9265 4.66702 14.8848 4.45079C14.8447 4.24281 14.7809 4.02675 14.6576 3.85101C14.5328 3.67321 14.3491 3.54058 14.166 3.43425C13.9758 3.32376 13.7395 3.21562 13.4646 3.10397C12.9191 2.88233 12.1569 2.62144 11.1694 2.2834L10.6844 2.11739C9.72179 1.7877 9.12502 1.58331 8.5 1.58331ZM6.55374 3.09284C7.6301 2.7244 8.06151 2.58331 8.5 2.58331C8.93849 2.58331 9.3699 2.7244 10.4463 3.09284L10.8281 3.22356C11.8365 3.56874 12.5719 3.82068 13.0883 4.03044C13.346 4.13514 13.5327 4.22288 13.6638 4.299C13.7285 4.33658 13.7731 4.36759 13.8029 4.3918C13.8281 4.4123 13.8377 4.42392 13.8391 4.42563C13.8404 4.42771 13.8487 4.44156 13.8604 4.47434C13.8737 4.51174 13.8885 4.56537 13.9029 4.64002C13.932 4.79111 13.954 4.99866 13.9693 5.27859C13.9998 5.83939 14 6.6222 14 7.69442V8.74422C14 12.1943 11.4201 13.8923 9.70081 14.6433C9.45316 14.7515 9.31014 14.8127 9.15093 14.8535C8.99888 14.8924 8.81333 14.9166 8.5 14.9166C8.18667 14.9166 8.00112 14.8924 7.84907 14.8535C7.68986 14.8127 7.54684 14.7515 7.29919 14.6433C5.57993 13.8923 3 12.1943 3 8.74422V7.69442C3 6.6222 3.00018 5.83939 3.03072 5.27859C3.04596 4.99866 3.06803 4.79111 3.09714 4.64002C3.11153 4.56537 3.1263 4.51174 3.13962 4.47434C3.15129 4.44158 3.15957 4.42773 3.16086 4.42564C3.16224 4.42394 3.17186 4.41232 3.19711 4.3918C3.22689 4.36759 3.27148 4.33658 3.33619 4.299C3.46727 4.22288 3.654 4.13514 3.91173 4.03044C4.42806 3.82068 5.16347 3.56874 6.17187 3.22356L6.55374 3.09284Z" fill="#03543F"/>
+                            </svg>                            
+                    </span>
+                    <span class="font-medium text-sm text-green-800">
+                        Verified
+                    </span>
+                </div>
                </div>
                </div>
                <span class="font-medium text-base">
                 Step 2
             </span>
-            <div class="flex flex-col justify-center items-center p-3 gap-3 md:gap-6 w-full bg-gray-100 rounded-lg">
-               <div class="flex md:flex-row flex-col items-start gap-3 md:gap-4 w-full">
-                <div class="fle flex-col gap-2 w-full">
-                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Verify your mobile no</label>
-                    <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-4" placeholder="Enter mobile no" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+            <div class="flex flex-col items-center py-3 gap-3 bg-gray-100 rounded-lg w-full">
+                <span class="flex w-12 h-12 justify-center items-center bg-purple-100 rounded-lg">
+                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.72885 7.14541C3.16675 8.70751 3.16675 11.2217 3.16675 16.25C3.16675 21.2783 3.16675 23.7925 4.72885 25.3545C6.29094 26.9166 8.8051 26.9166 13.8334 26.9166H19.1667C24.1951 26.9166 26.7092 26.9166 28.2713 25.3545C29.8334 23.7925 29.8334 21.2783 29.8334 16.25C29.8334 11.2217 29.8334 8.70751 28.2713 7.14541C26.7092 5.58331 24.1951 5.58331 19.1667 5.58331H13.8334C8.8051 5.58331 6.29094 5.58331 4.72885 7.14541ZM25.2683 10.2765C25.6219 10.7007 25.5645 11.3313 25.1403 11.6849L22.2116 14.1254C21.0298 15.1103 20.0719 15.9085 19.2265 16.4523C18.3458 17.0187 17.4882 17.3765 16.5001 17.3765C15.512 17.3765 14.6543 17.0187 13.7737 16.4523C12.9282 15.9085 11.9704 15.1103 10.7886 14.1254L7.8599 11.6849C7.43562 11.3313 7.3783 10.7007 7.73186 10.2765C8.08542 9.85218 8.71599 9.79486 9.14027 10.1484L12.0188 12.5472C13.2627 13.5838 14.1264 14.3012 14.8555 14.7701C15.5613 15.2241 16.04 15.3765 16.5001 15.3765C16.9602 15.3765 17.4388 15.2241 18.1446 14.7701C18.8738 14.3012 19.7374 13.5838 20.9814 12.5472L23.8599 10.1484C24.2842 9.79486 24.9147 9.85218 25.2683 10.2765Z" fill="#7E3AF2"/>
+                     </svg>                    
+                </span>
+                <div class="flex flex-col items-center gap-2 w-44">
+                 <span class="font-medium text-base text-primary-700">
+                    +92 333 1234567
+                 </span>
+                 <div class="flex justify-center items-center px-3 py-0.5 gap-1">
+                     <span>
+                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M10.5396 7.74965C10.7236 7.54367 10.7057 7.22759 10.4997 7.04368C10.2937 6.85976 9.97761 6.87765 9.7937 7.08364L7.78571 9.33258L7.2063 8.68364C7.02239 8.47765 6.70631 8.45976 6.50033 8.64368C6.29434 8.82759 6.27645 9.14367 6.46036 9.34965L7.41275 10.4163C7.50761 10.5226 7.64328 10.5833 7.78571 10.5833C7.92815 10.5833 8.06382 10.5226 8.15868 10.4163L10.5396 7.74965Z" fill="#03543F"/>
+                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1.58331C7.87498 1.58331 7.27821 1.7877 6.31559 2.11739L5.83063 2.2834C4.84308 2.62145 4.08094 2.88233 3.53535 3.10397C3.26052 3.21562 3.02424 3.32376 2.83399 3.43425C2.6509 3.54058 2.46721 3.67321 2.34242 3.85101C2.21907 4.02675 2.15529 4.24281 2.11521 4.45079C2.07354 4.66702 2.04842 4.9264 2.0322 5.22422C2 5.81556 2 6.62565 2 7.6764V8.74422C2 12.8116 5.07202 14.7617 6.89889 15.5597L6.91695 15.5676C7.14348 15.6666 7.35641 15.7596 7.60107 15.8222C7.85938 15.8884 8.13383 15.9166 8.5 15.9166C8.86617 15.9166 9.14062 15.8884 9.39893 15.8222C9.64358 15.7596 9.8565 15.6666 10.083 15.5676L10.1011 15.5597C11.928 14.7617 15 12.8116 15 8.74422V7.67652C15 6.62572 15 5.81558 14.9678 5.22422C14.9516 4.9264 14.9265 4.66702 14.8848 4.45079C14.8447 4.24281 14.7809 4.02675 14.6576 3.85101C14.5328 3.67321 14.3491 3.54058 14.166 3.43425C13.9758 3.32376 13.7395 3.21562 13.4646 3.10397C12.9191 2.88233 12.1569 2.62144 11.1694 2.2834L10.6844 2.11739C9.72179 1.7877 9.12502 1.58331 8.5 1.58331ZM6.55374 3.09284C7.6301 2.7244 8.06151 2.58331 8.5 2.58331C8.93849 2.58331 9.3699 2.7244 10.4463 3.09284L10.8281 3.22356C11.8365 3.56874 12.5719 3.82068 13.0883 4.03044C13.346 4.13514 13.5327 4.22288 13.6638 4.299C13.7285 4.33658 13.7731 4.36759 13.8029 4.3918C13.8281 4.4123 13.8377 4.42392 13.8391 4.42563C13.8404 4.42771 13.8487 4.44156 13.8604 4.47434C13.8737 4.51174 13.8885 4.56537 13.9029 4.64002C13.932 4.79111 13.954 4.99866 13.9693 5.27859C13.9998 5.83939 14 6.6222 14 7.69442V8.74422C14 12.1943 11.4201 13.8923 9.70081 14.6433C9.45316 14.7515 9.31014 14.8127 9.15093 14.8535C8.99888 14.8924 8.81333 14.9166 8.5 14.9166C8.18667 14.9166 8.00112 14.8924 7.84907 14.8535C7.68986 14.8127 7.54684 14.7515 7.29919 14.6433C5.57993 13.8923 3 12.1943 3 8.74422V7.69442C3 6.6222 3.00018 5.83939 3.03072 5.27859C3.04596 4.99866 3.06803 4.79111 3.09714 4.64002C3.11153 4.56537 3.1263 4.51174 3.13962 4.47434C3.15129 4.44158 3.15957 4.42773 3.16086 4.42564C3.16224 4.42394 3.17186 4.41232 3.19711 4.3918C3.22689 4.36759 3.27148 4.33658 3.33619 4.299C3.46727 4.22288 3.654 4.13514 3.91173 4.03044C4.42806 3.82068 5.16347 3.56874 6.17187 3.22356L6.55374 3.09284Z" fill="#03543F"/>
+                             </svg>                            
+                     </span>
+                     <span class="font-medium text-sm text-green-800">
+                         Verified
+                     </span>
+                 </div>
                 </div>
-                <button class="flex justify-center items-center md:mt-8 font-medium text-xs md:text-sm px-3 py-5 gap-2 w-full md:w-80 h-10 bg-primary-700 text-white rounded-lg">
-                    Send Verification Code
-                </button>
-               </div>
-                    <div class="flex flex-col gap-3 items-center">
-                        <form action="#">
-                               <div class="flex my-4 space-x-2 sm:space-x-4 md:my-6  border-violet-900">
-                                   <div>
-                                       <label for="code-1" class="sr-only">First code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-2')" id="code-1" class="block w-10 md:w-12 h-10 md:h-12 py-1 md:py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                                   <div>
-                                       <label for="code-2" class="sr-only">Second code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-1', 'code-3')" id="code-2" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                                   <div>
-                                       <label for="code-3" class="sr-only">Third code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-2', 'code-4')" id="code-3" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700  sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                                   <div>
-                                       <label for="code-4" class="sr-only">Fourth code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-3', 'code-5')" id="code-4" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                                   <div>
-                                       <label for="code-5" class="sr-only">Fivth code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-4', 'code-6')" id="code-5" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                                   <div>
-                                       <label for="code-6" class="sr-only">Sixth code</label>
-                                       <input type="text" maxlength="1" onkeyup="focusNextInput(this, 'code-5', 'code-6')" id="code-6" class="block w-10 md:w-12 h-10 md:h-12 py-3 text-2xl font-extrabold text-center text-gray-900 bg-transparent border-0 border-b-2 border-violet-700 sm:py-4 sm:text-4xl sm:w-16 sm:h-16 focus:ring-0 focus:border-primary-500" required>
-                                   </div>
-                               </div>     
-                           </form>
-                           <button class="flex flex-col justify-center font-medium text-sm items-center w-60 md:w-96 h-10 rounded-lg bg-primary-700 text-white">
-                            Verify OTP
-                           </button>
-                   <div class="flex flex-col font-medium text-sm text-center">
-                   <span>
-                    OTP Code will expire in 3:00
-                   </span>
-               </div>
-                   </div> 
-            </div>
+                </div>
                <div class="flex justify-between items-start w-full">
                 <button class="flex justify-center items-center px-3 py-2 gap-2 w-20 h-9 bg-gray-200 border rounded-lg">
                     <span>
@@ -176,15 +160,14 @@
                         Back
                     </span>
                 </button>
-                <button class="flex justify-center items-center px-3 py-2 gap-2 w-28 h-9 bg-gray-200 border rounded-lg">
-                    <span class="font-medium text-sm text-gray-800">
+                <button class="flex justify-center items-center px-3 py-2 gap-2 w-28 h-9 bg-primary-700 border rounded-lg">
+                    <span class="font-medium text-sm text-white">
                         Continue
                     </span>
                     <span>
-                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.97986 4.14645C9.17512 3.95118 9.49171 3.95118 9.68697 4.14645L13.687 8.14645C13.8822 8.34171 13.8822 8.65829 13.687 8.85355L9.68697 12.8536C9.49171 13.0488 9.17512 13.0488 8.97986 12.8536C8.7846 12.6583 8.7846 12.3417 8.97986 12.1464L12.1263 9H2.66675C2.39061 9 2.16675 8.77614 2.16675 8.5C2.16675 8.22386 2.39061 8 2.66675 8H12.1263L8.97986 4.85355C8.7846 4.65829 8.7846 4.34171 8.97986 4.14645Z" fill="#9CA3AF"/>
-                            </svg>
-                            
+                        <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.97986 0.146447C7.17512 -0.0488155 7.49171 -0.0488155 7.68697 0.146447L11.687 4.14645C11.8822 4.34171 11.8822 4.65829 11.687 4.85355L7.68697 8.85355C7.49171 9.04882 7.17512 9.04882 6.97986 8.85355C6.7846 8.65829 6.7846 8.34171 6.97986 8.14645L10.1263 5H0.666748C0.390606 5 0.166748 4.77614 0.166748 4.5C0.166748 4.22386 0.390606 4 0.666748 4H10.1263L6.97986 0.853553C6.7846 0.658291 6.7846 0.341709 6.97986 0.146447Z" fill="white"/>
+                            </svg>                            
                     </span>
                 </button>
                </div>
@@ -192,14 +175,5 @@
         </div>
     </div>
 </div>
-<script>
-    function focusNextInput(el, prevId, nextId) {
-if (el.value.length === 0) {
-    document.getElementById(prevId).focus();
-} else {
-    document.getElementById(nextId).focus();
-}
-}
-</script>
 </body>
 </html>
