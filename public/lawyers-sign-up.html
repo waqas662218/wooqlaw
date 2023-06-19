@@ -15,12 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- alpine/tooltip v1.0 -->
-    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
 
     <!--alpine.js -->
-
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
@@ -197,14 +197,15 @@
                                 </span>
                             </a>
                         </button>
-                        <div class="flex font-medium text-sm gap-1">
+                        <span class="flex font-medium text-sm gap-1">
                             <span class="text-gray-600">
                              Already have account? 
                             </span>
-                            <a x-data x-on:click="location.href='lawyers-sign-in.html';" class="text-primary-700" href="">
+                            <a x-data x-on:click="location.href='lawyers-sign-in.html';" 
+                            class="text-primary-700" href="#">
                              Login here
                             </a>
-                            </div>
+                        </span>
                     </div>   
                 </form>
             </div>  
