@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Request-a-Recommendation</title>
+</head>
+<body class="bg-gray-200 mt-4">
+    <div class="flex flex-col items-end h-screen max-w-2xl mx-auto bg-white">
+        <div class="flex flex-col items-start w-full">
+            <div class="flex flex-col items-start w-full">
+                <div class="flex items-center px-6 py-4 w-full">
+                    <span class="font-medium text-lg text-gray-900 w-full">
+                        Request Recommendation
+                    </span>
+                    <a href="">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29303 4.79308C4.48056 4.60561 4.73487 4.50029 5.00003 4.50029C5.26519 4.50029 5.5195 4.60561 5.70703 4.79308L10 9.08608L14.293 4.79308C14.3853 4.69757 14.4956 4.62139 14.6176 4.56898C14.7396 4.51657 14.8709 4.48898 15.0036 4.48783C15.1364 4.48668 15.2681 4.51198 15.391 4.56226C15.5139 4.61254 15.6255 4.68679 15.7194 4.78069C15.8133 4.87458 15.8876 4.98623 15.9379 5.10913C15.9881 5.23202 16.0134 5.3637 16.0123 5.49648C16.0111 5.62926 15.9835 5.76048 15.9311 5.88249C15.8787 6.00449 15.8025 6.11483 15.707 6.20708L11.414 10.5001L15.707 14.7931C15.8892 14.9817 15.99 15.2343 15.9877 15.4965C15.9854 15.7587 15.8803 16.0095 15.6948 16.1949C15.5094 16.3803 15.2586 16.4855 14.9964 16.4878C14.7342 16.49 14.4816 16.3892 14.293 16.2071L10 11.9141L5.70703 16.2071C5.51843 16.3892 5.26583 16.49 5.00363 16.4878C4.74143 16.4855 4.49062 16.3803 4.30521 16.1949C4.1198 16.0095 4.01463 15.7587 4.01236 15.4965C4.01008 15.2343 4.11087 14.9817 4.29303 14.7931L8.58603 10.5001L4.29303 6.20708C4.10556 6.01955 4.00024 5.76525 4.00024 5.50008C4.00024 5.23492 4.10556 4.98061 4.29303 4.79308Z" fill="#111928"/>
+                            </svg>   
+                    </a>
+                </div>
+                <hr class="bg-gray-50 w-full">
+                <div class="flex flex-col p-6 gap-8 w-full">
+                    <div class="flex flex-col gap-5">
+                        <div class="flex flex-col gap-2">
+                        <label for="Client Email" class="block text-xs md:text-sm font-medium text-gray-900 ">Client Email</label>
+                        <input type="email" id="Client Email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10" placeholder="Email" required>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="subject" class="block text-xs md:text-sm font-medium text-gray-900 ">Subject</label>
+                        <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10" placeholder="Your Subject" required>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <label for="comment" class="block text-xs md:text-sm font-medium text-gray-900 ">Description</label>
+                        <textarea id="comment" rows="4" class="w-full bg-gray-50 border border-gray-300 rounded-lg text-xs md:text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500 px-5 py-3" placeholder="Write a description..." required></textarea>                    
+                    
+                   <span class="font-normal text-xs text-gray-500"> 
+                    Max 2000 characters
+                   </span>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-gray-50 w-full">
+        <div class="flex justify-end items-center p-6">
+        <button class="flex justify-center items-center px-3 py-2 w-28 h-9 font-medium text-sm rounded-lg bg-primary-700 hover:bg-primary-800 text-white">
+            Send Request
+        </button>
+    </div>
+    </div>
+</body>
+</html>
