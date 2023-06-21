@@ -1910,10 +1910,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -3185,10 +3181,6 @@ select {
     flex-direction: row;
   }
 
-  .sm\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -3539,10 +3531,6 @@ select {
     justify-content: space-between;
   }
 
-  .md\:gap-0 {
-    gap: 0px;
-  }
-
   .md\:gap-1 {
     gap: 0.25rem;
   }
@@ -3662,10 +3650,6 @@ select {
     padding: 1.75rem;
   }
 
-  .md\:p-0 {
-    padding: 0px;
-  }
-
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3674,11 +3658,6 @@ select {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .md\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .md\:px-4 {
