@@ -1910,6 +1910,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -3165,10 +3169,6 @@ select {
 
 @media (min-width: 640px) {
 
-  .sm\:flex {
-    display: flex;
-  }
-
   .sm\:h-16 {
     height: 4rem;
   }
@@ -3183,6 +3183,10 @@ select {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:gap-5 {
+    gap: 1.25rem;
   }
 
   .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -3656,6 +3660,10 @@ select {
 
   .md\:p-7 {
     padding: 1.75rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-12 {
