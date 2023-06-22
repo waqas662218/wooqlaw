@@ -53,7 +53,7 @@
                 </div>
             </div>
             <a onclick="requestrecommendationmodal.showModal()" href="javascript:;"
-                class="hidden md:flex justify-center items-center py-2.5 px-4 gap-2 w-96 bg-primary-700 rounded-lg">
+                class="hidden md:flex justify-center items-center py-2.5 px-4 gap-2 w-96 bg-primary-700 hover:bg-primary-800 rounded-lg">
                 <span>
                     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <a onclick="requestrecommendationmodal.showModal()" href="javascript:;"
-                class="md:hidden flex justify-center items-center py-2.5 px-4 gap-2 w-full md:w-80 bg-primary-700 rounded-lg">
+                class="md:hidden flex justify-center items-center py-2.5 px-4 gap-2 w-full md:w-80 bg-primary-700 hover:bg-primary-800 rounded-lg">
                 <span>
                     <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -136,7 +136,7 @@
                                     </label>
                                 </div>
                                 <a onclick="deletebtnmodal.showModal()" href="javascript:;"
-                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100" href="">
+                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100 hover:bg-red-200" href="">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -218,7 +218,7 @@
                             <img class="md:w-12 md:h-12" src="images/Komal-Riaz.png" alt="Komal-Riaz">
                             <div class="flex items-center p-1 gap-3 bg-gray-50 rounded-lg w-full">
                                 <textarea id="message" rows="1"
-                                    class="block py-1 md:py-2.5 px-1 md:px-4 w-full text-xs md:text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    class="block py-1 md:py-2.5 px-1 md:px-4 w-full text-xs md:text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     placeholder="Write your thoughts here..."></textarea>
                                 <a href="">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -260,7 +260,7 @@
                                     </label>
                                 </div>
                                 <a onclick="deletebtnmodal.showModal()" href="javascript:;"
-                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100" href="">
+                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100 hover:bg-red-200" href="">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -359,7 +359,7 @@
                                     </label>
                                 </div>
                                 <a onclick="deletebtnmodal.showModal()" href="javascript:;"
-                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100" href="">
+                                    class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100 hover:bg-red-200" href="">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -437,22 +437,41 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 w-full">
+                        <div class="flex items-start gap-2 w-full">
                             <img class="md:w-12 md:h-12" src="images/Komal-Riaz.png" alt="Komal-Riaz">
-                            <div class="flex items-center p-1 gap-3 bg-gray-50 rounded-lg w-full">
-                                <span>
+                            <div class="flex p-1 bg-gray-50 rounded-lg w-full">
+                                <span class="font-normal text-xs md:text-sm">
                                     Megan answered all my questions and was very friendly and understanding. Definitely
                                     would recommend to others and would be happy to use her for any future or further
                                     legal matters.
                                 </span>
-                                <a href="">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M20.9364 13.0728C21.1355 12.973 21.3029 12.8199 21.4198 12.6304C21.5368 12.4409 21.5988 12.2227 21.5988 12C21.5988 11.7773 21.5368 11.5591 21.4198 11.3696C21.3029 11.1802 21.1355 11.027 20.9364 10.9272L4.13643 2.5272C3.92813 2.42297 3.69399 2.38162 3.46259 2.40819C3.23118 2.43476 3.01251 2.5281 2.83325 2.67683C2.65399 2.82556 2.52189 3.02324 2.45306 3.24577C2.38423 3.46829 2.38165 3.70604 2.44563 3.93L4.16043 9.93C4.23216 10.1808 4.38364 10.4013 4.59194 10.5583C4.80024 10.7153 5.05401 10.8001 5.31483 10.8H10.8C11.1183 10.8 11.4235 10.9264 11.6486 11.1515C11.8736 11.3765 12 11.6817 12 12C12 12.3183 11.8736 12.6235 11.6486 12.8485C11.4235 13.0736 11.1183 13.2 10.8 13.2H5.31483C5.05401 13.1999 4.80024 13.2847 4.59194 13.4417C4.38364 13.5987 4.23216 13.8192 4.16043 14.07L2.44683 20.07C2.38272 20.2939 2.38515 20.5316 2.45381 20.7541C2.52248 20.9767 2.65442 21.1744 2.83354 21.3233C3.01266 21.4721 3.23122 21.5656 3.46257 21.5924C3.69392 21.6192 3.92806 21.578 4.13643 21.474L20.9364 13.074V13.0728Z"
-                                            fill="#6D28D9" />
-                                    </svg>
-                                </a>
+                                <div class="flex gap-2">
+                                    <a class="flex items-center justify-center w-8 h-8 rounded-lg bg-gray-200 hover:bg-gray-300" href="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.95214 1.04166L11.25 1.04166C11.5951 1.04166 11.875 1.32149 11.875 1.66666C11.875 2.01184 11.5951 2.29166 11.25 2.29166H9.99996C8.01811 2.29166 6.59459 2.29299 5.51127 2.43864C4.44594 2.58187 3.80367 2.85428 3.32896 3.32899C2.85424 3.80371 2.58183 4.44598 2.4386 5.51131C2.29295 6.59463 2.29163 8.01814 2.29163 10C2.29163 11.9819 2.29295 13.4054 2.4386 14.4887C2.58183 15.554 2.85424 16.1963 3.32896 16.671C3.80367 17.1457 4.44594 17.4181 5.51127 17.5614C6.59459 17.707 8.01811 17.7083 9.99996 17.7083C11.9818 17.7083 13.4053 17.707 14.4886 17.5614C15.554 17.4181 16.1962 17.1457 16.671 16.671C17.1457 16.1963 17.4181 15.554 17.5613 14.4887C17.707 13.4054 17.7083 11.9819 17.7083 10V8.75C17.7083 8.40482 17.9881 8.125 18.3333 8.125C18.6785 8.125 18.9583 8.40482 18.9583 8.75V10.0478C18.9583 11.9715 18.9583 13.479 18.8002 14.6552C18.6383 15.8592 18.3005 16.8092 17.5548 17.5549C16.8092 18.3006 15.8592 18.6383 14.6552 18.8002C13.479 18.9583 11.9714 18.9583 10.0478 18.9583H9.95215C8.02849 18.9583 6.52095 18.9583 5.34471 18.8002C4.14077 18.6383 3.19075 18.3006 2.44507 17.5549C1.6994 16.8092 1.36161 15.8592 1.19975 14.6552C1.04161 13.479 1.04162 11.9715 1.04163 10.0478V9.95218C1.04162 8.02852 1.04161 6.52099 1.19975 5.34475C1.36161 4.14081 1.6994 3.19079 2.44507 2.44511C3.19075 1.69944 4.14077 1.36165 5.34471 1.19979C6.52095 1.04165 8.02848 1.04165 9.95214 1.04166ZM13.9754 1.89659C15.1153 0.756688 16.9635 0.756688 18.1034 1.89659C19.2433 3.0365 19.2433 4.88465 18.1034 6.02456L12.5633 11.5646C12.2539 11.8741 12.0601 12.0679 11.8438 12.2366C11.589 12.4353 11.3134 12.6057 11.0217 12.7447C10.7741 12.8627 10.5141 12.9493 10.0989 13.0877L7.67851 13.8945C7.23164 14.0435 6.73896 13.9271 6.40589 13.5941C6.07281 13.261 5.9565 12.7683 6.10546 12.3214L6.91227 9.90102C7.05062 9.48588 7.13728 9.22582 7.25529 8.97821C7.39428 8.68656 7.56463 8.41093 7.76333 8.15618C7.93203 7.93989 8.12588 7.74607 8.43533 7.43666L13.9754 1.89659ZM17.2195 2.78048C16.5677 2.12873 15.511 2.12873 14.8593 2.78048L14.5454 3.09433C14.5644 3.17421 14.5908 3.26939 14.6277 3.37555C14.7471 3.71977 14.9731 4.17309 15.4 4.59999C15.8269 5.02689 16.2802 5.25288 16.6244 5.37231C16.7306 5.40914 16.8257 5.4356 16.9056 5.45452L17.2195 5.14067C17.8712 4.48892 17.8712 3.43223 17.2195 2.78048ZM15.9209 6.43924C15.4909 6.25433 14.9901 5.95788 14.5161 5.48388C14.0421 5.00987 13.7456 4.50902 13.5607 4.07904L9.34788 8.29188C9.00079 8.63897 8.86466 8.77663 8.74897 8.92496C8.60611 9.10811 8.48363 9.30629 8.38369 9.51598C8.30276 9.6858 8.24052 9.86911 8.0853 10.3348L7.72538 11.4145L8.58543 12.2746L9.66517 11.9147C10.1308 11.7594 10.3142 11.6972 10.484 11.6163C10.6937 11.5163 10.8918 11.3938 11.075 11.251C11.2233 11.1353 11.361 10.9992 11.7081 10.6521L15.9209 6.43924Z"
+                                                fill="#6B7280" />
+                                        </svg>
+                                    </a>
+                                    <a onclick="deletebtnmodal.showModal()" href="javascript:;" class="flex justify-center items-center w-8 h-8 rounded-lg bg-red-100 hover:bg-red-200" href="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.59109 1.87499H11.409C11.5893 1.87487 11.7464 1.87477 11.8947 1.89846C12.4808 1.99205 12.988 2.35759 13.2621 2.884C13.3315 3.01724 13.3811 3.16631 13.438 3.33742L13.531 3.6165C13.5468 3.66374 13.5513 3.67712 13.5551 3.68765C13.701 4.09108 14.0794 4.3638 14.5082 4.37467C14.5195 4.37495 14.5333 4.375 14.5834 4.375H17.0834C17.4285 4.375 17.7084 4.65482 17.7084 5C17.7084 5.34518 17.4285 5.625 17.0834 5.625H2.91663C2.57145 5.625 2.29163 5.34518 2.29163 5C2.29163 4.65482 2.57145 4.375 2.91663 4.375H5.4167C5.46673 4.375 5.48054 4.37495 5.49182 4.37467C5.9207 4.3638 6.29905 4.0911 6.44498 3.68767C6.44882 3.67706 6.45323 3.66398 6.46905 3.6165L6.56206 3.33744C6.61897 3.16634 6.66856 3.01725 6.73795 2.884C7.01207 2.35759 7.51923 1.99205 8.10531 1.89846C8.25367 1.87477 8.41077 1.87487 8.59109 1.87499ZM7.50675 4.375C7.54968 4.29082 7.58771 4.20334 7.62044 4.11287C7.63038 4.0854 7.64012 4.05615 7.65264 4.01858L7.73581 3.76907C7.81179 3.54115 7.82928 3.49466 7.84663 3.46134C7.93801 3.28587 8.10706 3.16402 8.30242 3.13282C8.33953 3.1269 8.38915 3.125 8.62941 3.125H11.3706C11.6109 3.125 11.6605 3.1269 11.6976 3.13282C11.893 3.16402 12.062 3.28587 12.1534 3.46133C12.1708 3.49466 12.1883 3.54114 12.2642 3.76907L12.3474 4.01843L12.3796 4.11289C12.4123 4.20335 12.4504 4.29082 12.4933 4.375H7.50675Z"
+                                                fill="#E02424" />
+                                            <path
+                                                d="M4.9292 7.04176C4.90624 6.69735 4.60842 6.43676 4.26401 6.45972C3.9196 6.48268 3.65901 6.7805 3.68197 7.12491L4.06818 12.918C4.13942 13.987 4.19697 14.8504 4.33195 15.528C4.47228 16.2324 4.71097 16.8208 5.20396 17.282C5.69696 17.7432 6.29991 17.9423 7.01212 18.0354C7.69714 18.125 8.5625 18.125 9.63379 18.125H10.3662C11.4375 18.125 12.3029 18.125 12.9879 18.0354C13.7001 17.9423 14.3031 17.7432 14.7961 17.282C15.2891 16.8208 15.5278 16.2324 15.6681 15.528C15.8031 14.8504 15.8606 13.987 15.9319 12.918L16.3181 7.12491C16.341 6.7805 16.0805 6.48268 15.736 6.45972C15.3916 6.43676 15.0938 6.69735 15.0709 7.04176L14.6876 12.791C14.6127 13.9142 14.5593 14.6958 14.4422 15.2838C14.3286 15.8541 14.17 16.1561 13.9421 16.3692C13.7143 16.5824 13.4025 16.7205 12.8258 16.796C12.2313 16.8737 11.448 16.875 10.3223 16.875H9.67779C8.55209 16.875 7.76875 16.8737 7.17425 16.796C6.59758 16.7205 6.28579 16.5824 6.05794 16.3692C5.8301 16.1561 5.67149 15.8541 5.55786 15.2838C5.44072 14.6957 5.38736 13.9142 5.31248 12.791L4.9292 7.04176Z"
+                                                fill="#E02424" />
+                                            <path
+                                                d="M7.85451 8.54477C8.19798 8.51042 8.50425 8.76101 8.5386 9.10448L8.95527 13.2711C8.98961 13.6146 8.73902 13.9209 8.39556 13.9552C8.05209 13.9896 7.74582 13.739 7.71147 13.3955L7.2948 9.22886C7.26046 8.88539 7.51105 8.57912 7.85451 8.54477Z"
+                                                fill="#E02424" />
+                                            <path
+                                                d="M12.1456 8.54477C12.489 8.57912 12.7396 8.88539 12.7053 9.22886L12.2886 13.3955C12.2543 13.739 11.948 13.9896 11.6045 13.9552C11.261 13.9209 11.0105 13.6146 11.0448 13.2711L11.4615 9.10448C11.4958 8.76101 11.8021 8.51042 12.1456 8.54477Z"
+                                                fill="#E02424" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -465,8 +484,8 @@
         class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
         <form method="dialog">
             <!-- Modal header -->
-            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
-                <h3 class="text-xl font-semibold text-gray-900">
+            <div class="sticky top-0 flex items-center justify-center p-2 md:p-4 bg-white border-b rounded-t">
+                <h3 class="text-sm md:text-base font-medium text-gray-900">
                     Request Recommendation
                 </h3>
                 <button onclick="requestrecommendationmodal.close()" type="button"
@@ -485,27 +504,27 @@
                 <section class="request-recommendation">
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-col gap-2">
-                            <label for="Client Email" class="block text-xs md:text-sm font-medium text-gray-900 ">Client
+                            <label for="Client Email" class="block text-xs md:text-base font-medium text-gray-900 ">Client
                                 Email</label>
                             <input type="email" id="Client Email"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10"
+                                class="bg-gray-50 border text-xs md:text-base font-medium border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10"
                                 placeholder="Email">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="subject"
-                                class="block text-xs md:text-sm font-medium text-gray-900 ">Subject</label>
+                                class="block text-xs md:text-base font-medium text-gray-900 ">Subject</label>
                             <input type="text" id="subject"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10"
+                                class="bg-gray-50 border text-xs md:text-base font-medium border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 py-3 h-10"
                                 placeholder="Your Subject">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="comment"
-                                class="block text-xs md:text-sm font-medium text-gray-900 ">Description</label>
+                                class="block text-xs md:text-base font-medium text-gray-900 ">Description</label>
                             <textarea id="comment" rows="4"
-                                class="w-full bg-gray-50 border border-gray-300 rounded-lg text-xs md:text-sm text-gray-900 focus:ring-blue-500 focus:border-blue-500 px-4 py-3"
+                                class="w-full bg-gray-50 text-xs md:text-base font-medium border border-gray-300 rounded-lg text-gray-900 focus:ring-blue-500 focus:border-blue-500 px-4 py-3"
                                 placeholder="Write a description..."></textarea>
 
-                            <span class="font-normal text-xs text-gray-500">
+                            <span class="text-xs md:text-base font-medium text-gray-500">
                                 Max 2000 characters
                             </span>
                         </div>
@@ -513,10 +532,9 @@
                 </section>
             </div>
             <!-- Modal footer -->
-            <div
-                class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
                 <button type="submit"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:w-fit w-full rounded-lg text-sm px-5 py-2.5 text-center">
                     Send Request
                 </button>
             </div>
@@ -526,8 +544,8 @@
     <dialog id="deletebtnmodal" class="relative right-0 w-full max-w-md p-0 bg-white shadow">
         <form method="dialog">
             <!-- Modal header -->
-            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
-                <h3 class="text-xl font-semibold text-gray-900">
+            <div class="sticky top-0 flex items-center justify-center p-2 md:p-4 bg-white border-b rounded-t">
+                <h3 class="text-xs md:text-base font-medium text-gray-900">
                     Are you sure you want to delete? </h3>
                 <button onclick="deletebtnmodal.close()" type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
@@ -550,21 +568,20 @@
                     </svg>
                 </span>
                 <div class="fled flex-col text-center gap-2 w-full">
-                    <span class="font-normal text-sm md:text-base text-gray-500">
+                    <span class="text-xs md:text-sm font-medium text-gray-500">
                         Recommendation
                     </span>
-                    <span class="font-semibold text-xs md:text-sm text-gray-900">
+                    <span class="text-xs md:text-sm font-medium text-gray-900">
                         Rifat Muneer
                     </span>
-                    <span class="font-normal text-xs md:text-sm text-gray-900">
+                    <span class="text-xs md:text-sm font-medium text-gray-900">
                         Megan answered all my questions and was very friendly and understanding. Definitely would
                         recommend to others and would be happy to use her for any future or further legal matters.
                     </span>
                 </div>
             </div>
             <!-- Modal footer -->
-            <div
-                class="sticky bottom-0 flex items-center justify-center py-4 bg-white border-t border-gray-200 rounded-b gap-4">
+            <div class="sticky bottom-0 flex items-center justify-center py-4 bg-white border-t border-gray-200 rounded-b gap-4">
                 <button
                     class="flex justify-center items-center px-3 py-2 gap-2 bg-red-700 hover:bg-red-800 text-white rounded-lg">
                     Yes, I’m sure
