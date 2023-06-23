@@ -1255,6 +1255,9 @@ select {
 .max-w-xs {
   max-width: 20rem;
 }
+.max-w-6xl {
+  max-width: 72rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2244,9 +2247,6 @@ select {
 }
 .pr-2 {
   padding-right: 0.5rem;
-}
-.pr-20 {
-  padding-right: 5rem;
 }
 .pr-3 {
   padding-right: 0.75rem;
