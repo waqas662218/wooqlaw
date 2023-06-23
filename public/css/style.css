@@ -2285,9 +2285,6 @@ select {
 .text-right {
   text-align: right;
 }
-.text-justify {
-  text-align: justify;
-}
 .text-start {
   text-align: start;
 }
@@ -3206,10 +3203,6 @@ select {
     flex-direction: row;
   }
 
-  .sm\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -3696,11 +3689,6 @@ select {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .md\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .md\:px-4 {
