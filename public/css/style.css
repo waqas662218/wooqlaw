@@ -763,6 +763,9 @@ select {
 .-z-10 {
   z-index: -10;
 }
+.z-0 {
+  z-index: 0;
+}
 .z-10 {
   z-index: 10;
 }
@@ -796,6 +799,10 @@ select {
 .-mx-1 {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
+}
+.-my-14 {
+  margin-top: -3.5rem;
+  margin-bottom: -3.5rem;
 }
 .mx-2 {
   margin-left: 0.5rem;
@@ -2196,6 +2203,10 @@ select {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2314,9 +2325,6 @@ select {
 .pt-3 {
   padding-top: 0.75rem;
 }
-.pt-32 {
-  padding-top: 8rem;
-}
 .pt-4 {
   padding-top: 1rem;
 }
@@ -2325,9 +2333,6 @@ select {
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pt-20 {
-  padding-top: 5rem;
 }
 .text-left {
   text-align: left;
@@ -3626,10 +3631,6 @@ select {
     max-width: 28rem;
   }
 
-  .md\:max-w-sm {
-    max-width: 24rem;
-  }
-
   .md\:max-w-xl {
     max-width: 36rem;
   }
@@ -3991,28 +3992,16 @@ select {
     padding-top: 5rem;
   }
 
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
   .md\:pt-4 {
     padding-top: 1rem;
   }
 
   .md\:pt-40 {
     padding-top: 10rem;
-  }
-
-  .md\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .md\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .md\:pt-32 {
-    padding-top: 8rem;
-  }
-
-  .md\:pt-10 {
-    padding-top: 2.5rem;
   }
 
   .md\:text-left {
@@ -4104,6 +4093,10 @@ select {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
   }
 
   .lg\:p-7 {
