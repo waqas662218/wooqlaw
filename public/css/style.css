@@ -3430,10 +3430,6 @@ select {
     margin-top: 7rem;
   }
 
-  .md\:mt-32 {
-    margin-top: 8rem;
-  }
-
   .md\:mt-36 {
     margin-top: 9rem;
   }
@@ -3637,10 +3633,6 @@ select {
 
   .md\:max-w-xs {
     max-width: 20rem;
-  }
-
-  .md\:max-w-full {
-    max-width: 100%;
   }
 
   .md\:grow {
