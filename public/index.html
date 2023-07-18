@@ -18,7 +18,38 @@
 </head>
 
 <body>
-    <h1>Welcome to Tailwind</h1>
+    <div class="get-started md:w-10/12 w-full flex flex-col items-center bg-violet-700 rounded-lg md:mt-36 mt-20 pt-8">
+        <div class="get-started flex flex-col items-center">
+            <a href="javascript:;">
+                <h2 class="font-semibold md:text-2xl text-lg  text-white hover:text-slate-200 text-center">To Get
+                    Strated
+                </h2>
+            </a>
+            <div class="wooqlaw flex justify-center md:max-w-lg">
+                <a href="javascript:;" class="text-center text-white md:text-base text-xs">
+                    click into search box and select law area
+                </a>
+            </div>
+        </div>
+
+        <div class="search-input flex md:w-full w-60 md:px-32 py-8">
+            <div class="relative w-full">
+                <input type="text" id="search-dropdown"
+                    class="block py-2.5 pl-5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-full border-l-2 border border-gray-300"
+                    placeholder="Search by Law area" required>
+                <button type="submit"
+                    class="search absolute top-0 right-0 pr-5 pt-2.5 text-sm font-medium text-purple-700 hover:text-gray-80+0 focus:outline-none focus:ring-white">
+                    <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>4
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
