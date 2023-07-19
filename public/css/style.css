@@ -1271,9 +1271,6 @@ select {
 .max-w-xs {
   max-width: 20rem;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -3413,6 +3410,10 @@ select {
     margin-top: 0px;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-16 {
     margin-top: 4rem;
   }
@@ -3443,14 +3444,6 @@ select {
 
   .md\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .md\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .md\:mt-6 {
-    margin-top: 1.5rem;
   }
 
   .md\:flex {
@@ -3640,14 +3633,6 @@ select {
 
   .md\:max-w-xs {
     max-width: 20rem;
-  }
-
-  .md\:max-w-6xl {
-    max-width: 72rem;
-  }
-
-  .md\:max-w-5xl {
-    max-width: 64rem;
   }
 
   .md\:grow {
@@ -4008,6 +3993,10 @@ select {
     padding-top: 5rem;
   }
 
+  .md\:pt-28 {
+    padding-top: 7rem;
+  }
+
   .md\:pt-32 {
     padding-top: 8rem;
   }
@@ -4107,16 +4096,16 @@ select {
     height: 100vh;
   }
 
-  .lg\:max-w-7xl {
-    max-width: 80rem;
+  .lg\:max-w-4xl {
+    max-width: 56rem;
   }
 
   .lg\:max-w-5xl {
     max-width: 64rem;
   }
 
-  .lg\:max-w-4xl {
-    max-width: 56rem;
+  .lg\:max-w-7xl {
+    max-width: 80rem;
   }
 
   .lg\:grid-cols-2 {
