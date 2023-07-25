@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>lawyers sign-in</title>
+</head>
+
+<body>
+    <section class="bg-white">
+        <div class="grid md:grid-cols-2 h-screen">
+            <div class="flex bg-cover h-80 md:h-auto w-full" style="background-image: url(../public/images/update-sign-in.png);">
+            <div class="flex md:flex-col flex-col-reverse p-3 md:p-10 justify-between content-between w-full">
+                <div class="flex flex-col items-start gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-4 bg-white rounded-lg w-full">
+            <span class="flex font-bold text-base sm:text-lg md:text-2xl lg:text-3xl bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
+                It's Simple, Confidential and Free!
+            </span>
+            <span class="flex font-medium text-xs md:text-xl lg:text-2xl">
+                Find a lawyer that is just right for you.
+            </span>
+                </div>
+            <a class="flex items-end" href="">
+            <img class="w-32 md:w-44 h-16 md:h-20" src="images/wooqlaw-bg.png" alt="">
+            </a>
+            </div>
+            
+        </div>
+            <div class="flex justify-center items-center py-2 md:py-7 md:px-4">
+                <form class="flex max-w-md xl:max-w-xl" action="#">
+                    <div class="flex items-start lg:p-7 gap-2.5">
+                        <div class="flex flex-col  items-start gap-4 md:gap-20">
+                            <div class="flex flex-col gap-8">
+                                <div class="flex flex-col ">
+                                    <span class="font-semibold text-2xl md:text-5xl">Welcome Back!</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="Your email Or mobile number"
+                                        class="text-xs md:text-sm font-medium text-gray-900">
+                                        Your email Or mobile number
+                                    </label>
+                                    <input type="text" id="Your email Or mobile number"
+                                        class="border border-gray-300 text-gray-900 bg-gray-50 text-xs md:text-sm rounded-lg
+                                             focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-80 py-3 px-4 h-10" placeholder="" required>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="Password" class="block text-sm font-medium text-gray-900">
+                                        Password*</label>
+                                    <input type="password" name="password" id="Password" placeholder=""
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-72 md:w-80 py-3 px-4 h-10 "
+                                        required="">
+                                </div>
+                                <button class="flex text-white bg-violet-700 items-center rounded-lg w-28 h-10 justify-center">
+                                    <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Sign in
+                                        <span>
+                                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.3051 0.681488L15.7861 5.16245C15.8825 5.25892 15.9323 5.3865 15.9323 5.48608C15.9323 5.58565 15.8837 5.74087 15.7864 5.83802L11.3055 10.319C11.111 10.5135 10.7958 10.5135 10.6016 10.319C10.4074 10.1245 10.4071 9.80927 10.6016 9.6151L14.233 5.98365H0.497885C0.222679 5.98365 0 5.76097 0 5.51377C0 5.23857 0.222679 5.01589 0.497885 5.01589H14.2333L10.6018 1.38444C10.4073 1.18995 10.4073 0.87473 10.6018 0.680555C10.7963 0.48638 11.1122 0.486691 11.3051 0.681488Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="flex flex-col font-medium text-sm gap-4">
+                                <div class="flex">
+                                <a class="text-sky-500" href="">
+                                    Forgot password?
+                                </a>
+                                </div>
+                                <div class="flex font-medium text-sm gap-1">
+                                    <span class="">
+                                        Don't have an account? 
+                                    </span>
+                                <a class="text-primary-700 hover:text-primary-800" href="">
+                                    Sign up now!
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
