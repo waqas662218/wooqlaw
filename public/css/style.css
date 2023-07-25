@@ -2204,6 +2204,10 @@ select {
   padding-left: 15rem;
   padding-right: 15rem;
 }
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2267,10 +2271,6 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -4203,10 +4203,6 @@ select {
     margin-top: 10rem;
   }
 
-  .lg\:hidden {
-    display: none;
-  }
-
   .lg\:h-screen {
     height: 100vh;
   }
@@ -4280,9 +4276,5 @@ select {
 
   .xl\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .xl\:max-w-2xl {
-    max-width: 42rem;
   }
 }
