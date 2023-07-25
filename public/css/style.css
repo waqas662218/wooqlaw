@@ -1363,6 +1363,9 @@ select {
 .content-center {
   align-content: center;
 }
+.content-end {
+  align-content: flex-end;
+}
 .content-between {
   align-content: space-between;
 }
@@ -1464,6 +1467,24 @@ select {
 }
 .gap-px {
   gap: 1px;
+}
+.gap-28 {
+  gap: 7rem;
+}
+.gap-96 {
+  gap: 24rem;
+}
+.gap-24 {
+  gap: 6rem;
+}
+.gap-40 {
+  gap: 10rem;
+}
+.gap-44 {
+  gap: 11rem;
+}
+.gap-48 {
+  gap: 12rem;
 }
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
@@ -3856,6 +3877,10 @@ select {
 
   .md\:gap-9 {
     gap: 2.25rem;
+  }
+
+  .md\:gap-96 {
+    gap: 24rem;
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
