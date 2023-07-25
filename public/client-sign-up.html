@@ -23,7 +23,7 @@
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
-    <title>lawyers sign-up</title>
+    <title>client sign-up</title>
 </head>
 
 <body>
@@ -32,10 +32,10 @@
             <div class="flex bg-cover h-80 md:h-auto w-full" style="background-image: url(../public/images/update-sign-in.png);">
             <div class="flex md:flex-col flex-col-reverse p-3 md:p-10 justify-between content-between w-full">
                 <div class="flex flex-col items-start gap-2 md:gap-3 px-3 md:px-5 py-2 md:py-4 bg-white rounded-lg w-full">
-            <span class="flex font-bold text-lg md:text-xl lg:text-3xl bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
+            <span class="flex font-bold text-lg md:text-3xl bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
                 It's Simple, Confidential and Free!
             </span>
-            <span class="flex font-medium text-xs md:text-xl lg:text-2xl">
+            <span class="flex font-medium text-xs md:text-xl lg:text-3xl text-gray-900">
                 Join as a Client today to find a lawyer that is just right for you.
             </span>
                 </div>
@@ -44,13 +44,13 @@
             </a>
             </div>   
         </div>
-            <div class="flex justify-center items-center py-2 md:py-7 px-2 md:px-4">
+            <div class="flex justify-center items-center py-2 md:py-7 px-8">
                 <form class="space-y-4 max-w-md md:space-y-6 xl:max-w-xl" action="#">
                     <div class="flex flex-col gap-8">
                         <div class="flex flex-col gap-8">
                             <div class="flex flex-col gap-1">
-                                <span class="font-semibold text-4xl md:text-5xl">Sign up!</span>
-                                <span class="font-medium text-base text-gray-900">Let’s get started with a few simple
+                                <span class="font-semibold text-2xl md:text-5xl">Sign up!</span>
+                                <span class="font-medium text-xs md:text-base text-gray-900">Let’s get started with a few simple
                                     steps</span>
                             </div>
                             <div class="flex flex-col gap-5 md:gap-8">
@@ -61,7 +61,7 @@
                                 </label>
                                 <input type="text" id="Full Name*"
                                     class="border border-gray-300 text-gray-900 bg-gray-50 text-xs md:text-sm rounded-lg
-                                             focus:ring-blue-500 focus:border-blue-500 block md:w-96 py-3 px-4 h-10" placeholder="Your formal name" required>
+                                             focus:ring-blue-500 focus:border-blue-500 block md:w-96 py-3 px-4 h-10" placeholder="" required>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="Email Or mobile number*"
@@ -73,14 +73,14 @@
                                              focus:ring-blue-500 focus:border-blue-500 block md:w-96 py-3 px-4 h-10" placeholder="" required>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label for="password" class="block text-sm font-medium text-gray-900">
+                                <label for="password" class="block text-xs md:text-sm font-medium text-gray-900">
                                     Password*</label>
                                 <input type="password" name="password" id="password" placeholder=""
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block md:w-96 py-3 px-4 h-10 "
                                     required="">
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label for="Confirm Password" class="block text-sm font-medium text-gray-900">
+                                <label for="Confirm Password" class="block text-xs md:text-sm font-medium text-gray-900">
                                     Confirm Password*</label>
                                 <input type="password" name="password" id="Confirm Password" placeholder=""
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block md:w-96 py-3 px-4 h-10 "
@@ -89,7 +89,7 @@
                         </div>
                         </div>
                         <button class="flex px-5 py-2.5 md:w-fit text-white bg-violet-700 items-center rounded-lg h-10 justify-center">
-                            <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Sign up
+                            <a class="flex items-center gap-2 text-sm font-normal" href="#">Sign up
                                 <span>
                                     <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -100,8 +100,8 @@
                                 </span>
                             </a>
                         </button>
-                        <div class="flex flex-col gap-11">
-                        <span class="flex font-medium text-sm gap-1">
+                        <div class="flex flex-col gap-11 items-center md:items-start">
+                        <span class="flex font-medium text-sm md:text-base gap-1">
                             <span class="text-gray-600">
                                 Already have account?
                             </span>
@@ -111,7 +111,7 @@
                             </a>
                         </span>
                         <div class="flex font-medium text-sm gap-1 max-w-sm">
-                            <span class="text-gray-600">
+                            <span class="text-gray-600"> 
                                 By clicking the button above, you agree to our
                             
                             <a x-data x-on:click="location.href='lawyers-sign-in.html';" class="text-primary-700"
