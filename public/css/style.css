@@ -1369,6 +1369,9 @@ select {
 .content-center {
   align-content: center;
 }
+.content-end {
+  align-content: flex-end;
+}
 .content-between {
   align-content: space-between;
 }
@@ -3963,6 +3966,10 @@ select {
 
   .md\:gap-9 {
     gap: 2.25rem;
+  }
+
+  .md\:gap-96 {
+    gap: 24rem;
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
