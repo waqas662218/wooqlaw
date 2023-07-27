@@ -179,8 +179,8 @@
                             <div class="py-5 border-b border-gray-200">
                                 <div class="time flex flex-col md:flex-row gap-5 p-5 border-gray-200">
                                     <!-- morning -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 19C4.75 18.5858 5.08579 18.25 5.5 18.25H19.5C19.9142 18.25 20.25 18.5858 20.25 19C20.25 19.4142 19.9142 19.75 19.5 19.75H5.5C5.08579 19.75 4.75 19.4142 4.75 19ZM7.75 22C7.75 21.5858 8.08579 21.25 8.5 21.25H16.5C16.9142 21.25 17.25 21.5858 17.25 22C17.25 22.4142 16.9142 22.75 16.5 22.75H8.5C8.08579 22.75 7.75 22.4142 7.75 22Z" fill="#1C274C"/>
@@ -265,8 +265,8 @@
                                         </div>
                                     </div>
                                     <!-- afternoon -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17.5 12C17.5 14.7614 15.2614 17 12.5 17C9.73858 17 7.5 14.7614 7.5 12C7.5 9.23858 9.73858 7 12.5 7C15.2614 7 17.5 9.23858 17.5 12Z" fill="#1C274C"/>
@@ -340,8 +340,8 @@
                                         </div>
                                     </div>
                                     <!-- evening -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19ZM7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z" fill="#111827"/>
@@ -353,9 +353,15 @@
                                                 Evening
                                             </h2>
                                         </div>
-                                        <div
-                                            class="flex flex-col items-center p-4 gap-2 bg-gray-100 rounded-lg border">
-                                            <span class="font-medium text-base text-gray-400">No slot Available</span>
+                                        <div class="item-2">
+                                            <input type="radio" id="no-slot-1" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="no-slot-1"
+                                                class="group inline-flex w-full items-center justify-between border rounded-lg p-2.5 bg-gray-100">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base text-gray-400">No Slot Avalible</span>
+                                                </div>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -385,12 +391,12 @@
                                 </svg>
                             </button>
                         </h2>
-                        <div id="appointment-date-body-2" class="hidden" aria-labelledby="appointment-date-heading-2">
+                        <div id="appointment-date-body-2" class="hidden" aria-labelledby="appointment-date-heading-2 w-full">
                             <div class="py-5 border-b border-gray-200">
                                 <div class="time flex flex-col md:flex-row gap-5 p-5 border-gray-200 ">
                                     <!-- morning -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 19C4.75 18.5858 5.08579 18.25 5.5 18.25H19.5C19.9142 18.25 20.25 18.5858 20.25 19C20.25 19.4142 19.9142 19.75 19.5 19.75H5.5C5.08579 19.75 4.75 19.4142 4.75 19ZM7.75 22C7.75 21.5858 8.08579 21.25 8.5 21.25H16.5C16.9142 21.25 17.25 21.5858 17.25 22C17.25 22.4142 16.9142 22.75 16.5 22.75H8.5C8.08579 22.75 7.75 22.4142 7.75 22Z" fill="#1C274C"/>
@@ -475,8 +481,8 @@
                                         </div>
                                     </div>
                                     <!-- afternoon -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17.5 12C17.5 14.7614 15.2614 17 12.5 17C9.73858 17 7.5 14.7614 7.5 12C7.5 9.23858 9.73858 7 12.5 7C15.2614 7 17.5 9.23858 17.5 12Z" fill="#1C274C"/>
@@ -550,8 +556,8 @@
                                         </div>
                                     </div>
                                     <!-- evening -->
-                                    <div class="flex flex-col gap-6 p-3 justify-center items-center">
-                                        <div class="morning flex gap-2 justify-center items-center">
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19ZM7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z" fill="#111827"/>
@@ -563,10 +569,22 @@
                                                 Evening
                                             </h2>
                                         </div>
-                                        <div
+                                        <div class="item-2">
+                                            <input type="radio" id="no-slot" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="no-slot"
+                                                class="group inline-flex w-full items-center justify-between border rounded-lg p-2.5 bg-gray-100">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base text-gray-400">No Slot Avalible</span>
+                                                </div>
+                                            </label>
+                                        </div>
+
+
+                                        <!-- <div
                                             class="flex flex-col items-center p-4 gap-2 bg-gray-100 rounded-lg border">
                                             <span class="font-medium text-base text-gray-400">No slot Available</span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 
@@ -714,13 +732,13 @@
                                 <div class="flex flex-col items-center gap-4">
                                     <span class="">
                                         <svg width="106" height="125" viewBox="0 0 106 125" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="7" width="105" height="93" rx="6" fill="url(#paint0_linear_180539_144653)"/>
-                                            <rect x="16.5" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint1_linear_180539_144653)"/>
-                                            <rect x="56.8633" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint2_linear_180539_144653)"/>
-                                            <rect x="29.9541" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint3_linear_180539_144653)"/>
-                                            <rect x="70.3184" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint4_linear_180539_144653)"/>
-                                            <rect x="43.4092" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint5_linear_180539_144653)"/>
-                                            <rect x="83.7725" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint6_linear_180539_144653)"/>
+                                            <rect x="0.5" y="7" width="105" height="93" rx="6" fill="url(#paint0_linear_1056_60078)"/>
+                                            <rect x="16.5" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint1_linear_1056_60078)"/>
+                                            <rect x="56.8633" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint2_linear_1056_60078)"/>
+                                            <rect x="29.9551" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint3_linear_1056_60078)"/>
+                                            <rect x="70.3184" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint4_linear_1056_60078)"/>
+                                            <rect x="43.4082" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint5_linear_1056_60078)"/>
+                                            <rect x="83.7734" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint6_linear_1056_60078)"/>
                                             <rect x="12.5" y="23" width="13" height="13" fill="#E4E4E7"/>
                                             <rect x="12.5" y="40" width="13" height="13" fill="#E4E4E7"/>
                                             <rect x="12.5" y="57" width="13" height="13" fill="#E4E4E7"/>
@@ -734,51 +752,52 @@
                                             <rect x="63" y="40" width="13" height="13" fill="#E4E4E7"/>
                                             <rect x="80" y="23" width="13" height="13" fill="#E4E4E7"/>
                                             <rect x="80" y="40" width="13" height="13" fill="#E4E4E7"/>
-                                            <g filter="url(#filter0_d_180539_144653)">
+                                            <g filter="url(#filter0_d_1056_60078)">
                                             <circle cx="53" cy="95.5" r="21.5" fill="#D9D9D9"/>
                                             </g>
                                             <path d="M56.2 81L55.55 104.508H49.4502L48.7836 81H56.2ZM52.5001 115C51.4001 115 50.4557 114.617 49.6669 113.852C48.878 113.077 48.4891 112.148 48.5002 111.066C48.4891 109.995 48.878 109.077 49.6669 108.311C50.4557 107.546 51.4001 107.164 52.5001 107.164C53.5556 107.164 54.4834 107.546 55.2834 108.311C56.0833 109.077 56.4889 109.995 56.5 111.066C56.4889 111.787 56.2944 112.448 55.9167 113.049C55.55 113.639 55.0667 114.115 54.4667 114.475C53.8667 114.825 53.2112 115 52.5001 115Z" fill="white"/>
                                             <defs>
-                                            <filter id="filter0_d_180539_144653" x="27.5" y="74" width="51" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <filter id="filter0_d_1056_60078" x="27.5" y="74" width="51" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                                             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                                             <feOffset dy="4"/>
                                             <feGaussianBlur stdDeviation="2"/>
                                             <feComposite in2="hardAlpha" operator="out"/>
                                             <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_180539_144653"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_180539_144653" result="shape"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1056_60078"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1056_60078" result="shape"/>
                                             </filter>
-                                            <linearGradient id="paint0_linear_180539_144653" x1="53" y1="7" x2="53" y2="100" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint0_linear_1056_60078" x1="53" y1="7" x2="53" y2="100" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F9F9F9"/>
                                             <stop offset="1" stop-color="#F0F0F0"/>
                                             </linearGradient>
-                                            <linearGradient id="paint1_linear_180539_144653" x1="19.1429" y1="0" x2="19.1429" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint1_linear_1056_60078" x1="19.1429" y1="0" x2="19.1429" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
-                                            <linearGradient id="paint2_linear_180539_144653" x1="59.5061" y1="0" x2="59.5061" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint2_linear_1056_60078" x1="59.5061" y1="0" x2="59.5061" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
-                                            <linearGradient id="paint3_linear_180539_144653" x1="32.597" y1="0" x2="32.597" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint3_linear_1056_60078" x1="32.5979" y1="0" x2="32.5979" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
-                                            <linearGradient id="paint4_linear_180539_144653" x1="72.9612" y1="0" x2="72.9612" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint4_linear_1056_60078" x1="72.9612" y1="0" x2="72.9612" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
-                                            <linearGradient id="paint5_linear_180539_144653" x1="46.052" y1="0" x2="46.052" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint5_linear_1056_60078" x1="46.0511" y1="0" x2="46.0511" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
-                                            <linearGradient id="paint6_linear_180539_144653" x1="86.4153" y1="0" x2="86.4153" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <linearGradient id="paint6_linear_1056_60078" x1="86.4163" y1="0" x2="86.4163" y2="12.974" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#F3F3F3"/>
                                             <stop offset="1" stop-color="#D5D5D5"/>
                                             </linearGradient>
                                             </defs>
-                                            </svg>               
+                                            </svg>
+                                                        
                                     </span>
                                     <span class="flex flex-col items-center">            
                                         <h2 class="text items-center font-normal text-sm">There is no appointment slot available on your
