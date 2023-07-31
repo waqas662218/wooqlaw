@@ -3479,6 +3479,10 @@ select {
     width: 24rem;
   }
 
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
   .sm\:max-w-xl {
     max-width: 36rem;
   }
