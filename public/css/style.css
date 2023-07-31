@@ -1329,6 +1329,9 @@ select {
 .cursor-pointer {
   cursor: pointer;
 }
+.list-\[lower-alpha\] {
+  list-style-type: lower-alpha;
+}
 .list-\[lower-roman\] {
   list-style-type: lower-roman;
 }
@@ -1337,15 +1340,6 @@ select {
 }
 .list-\[\] {
   list-style-type: ;
-}
-.list-\[low\] {
-  list-style-type: low;
-}
-.list-\[lower\] {
-  list-style-type: lower;
-}
-.list-\[lower-alpha\] {
-  list-style-type: lower-alpha;
 }
 .columns-md {
   -moz-columns: 28rem;
@@ -2509,6 +2503,9 @@ select {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
 }
 .leading-3 {
   line-height: .75rem;
