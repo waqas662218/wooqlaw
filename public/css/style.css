@@ -1338,9 +1338,6 @@ select {
 .list-disc {
   list-style-type: disc;
 }
-.list-\[\] {
-  list-style-type: ;
-}
 .columns-md {
   -moz-columns: 28rem;
        columns: 28rem;
@@ -2503,9 +2500,6 @@ select {
 }
 .uppercase {
   text-transform: uppercase;
-}
-.italic {
-  font-style: italic;
 }
 .leading-3 {
   line-height: .75rem;
