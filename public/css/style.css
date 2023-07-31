@@ -903,8 +903,8 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
-.ml-8 {
-  margin-left: 2rem;
+.ml-5 {
+  margin-left: 1.25rem;
 }
 .ml-auto {
   margin-left: auto;
@@ -974,12 +974,6 @@ select {
 }
 .mt-9 {
   margin-top: 2.25rem;
-}
-.ml-6 {
-  margin-left: 1.5rem;
-}
-.ml-5 {
-  margin-left: 1.25rem;
 }
 .block {
   display: block;
@@ -1335,8 +1329,23 @@ select {
 .cursor-pointer {
   cursor: pointer;
 }
+.list-\[lower-roman\] {
+  list-style-type: lower-roman;
+}
 .list-disc {
   list-style-type: disc;
+}
+.list-\[\] {
+  list-style-type: ;
+}
+.list-\[low\] {
+  list-style-type: low;
+}
+.list-\[lower\] {
+  list-style-type: lower;
+}
+.list-\[lower-alpha\] {
+  list-style-type: lower-alpha;
 }
 .columns-md {
   -moz-columns: 28rem;
