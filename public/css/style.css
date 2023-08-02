@@ -772,12 +772,6 @@ select {
 .z-20 {
   z-index: 20;
 }
-.order-1 {
-  order: 1;
-}
-.order-2 {
-  order: 2;
-}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -3479,10 +3473,6 @@ select {
     width: 24rem;
   }
 
-  .sm\:w-80 {
-    width: 20rem;
-  }
-
   .sm\:max-w-xl {
     max-width: 36rem;
   }
@@ -3560,14 +3550,6 @@ select {
 
   .md\:left-0 {
     left: 0px;
-  }
-
-  .md\:order-1 {
-    order: 1;
-  }
-
-  .md\:order-2 {
-    order: 2;
   }
 
   .md\:col-span-1 {
