@@ -1480,6 +1480,9 @@ select {
 .gap-px {
   gap: 1px;
 }
+.gap-44 {
+  gap: 11rem;
+}
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -3798,6 +3801,10 @@ select {
     width: 100%;
   }
 
+  .md\:w-72 {
+    width: 18rem;
+  }
+
   .md\:max-w-2xl {
     max-width: 42rem;
   }
@@ -3956,6 +3963,18 @@ select {
 
   .md\:gap-96 {
     gap: 24rem;
+  }
+
+  .md\:gap-44 {
+    gap: 11rem;
+  }
+
+  .md\:gap-28 {
+    gap: 7rem;
+  }
+
+  .md\:gap-36 {
+    gap: 9rem;
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
