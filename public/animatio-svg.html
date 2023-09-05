@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Tailwind.css -->
+        <link href="./css/style.css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- alpine/tooltip v1.0 -->
+        <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+    
+        <!--alpine.js -->
+    
+        <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+        <title>tabs</title>
+
+        <style>
+            .tab-btn {
+              cursor: pointer;
+            }
+          
+            .tab-underline {
+              width: 0;
+            }
+          
+            .tab-btn:hover .tab-underline {
+              width: 100%;
+            }
+          </style>
+          
+          
+        
+</head>
+<body>
+   
+    
+    <div class="flex space-x-4">
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab1">
+          <span class="block relative">OverView</span>
+          <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
+        </button>
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab2">
+          <span class="block relative">Experience</span>
+          <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
+        </button>
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3">
+          <span class="block relative">Services</span>
+          <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
+        </button>
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3">
+            <span class="block relative">Appointment Booking</span>
+            <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
+          </button>
+      </div>
+      
+      <script>
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContent = document.querySelectorAll('.tab-content');
+      
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            // Remove the "active" class from all tab buttons
+            tabButtons.forEach((btn) => btn.classList.remove('active'));
+      
+            // Add the "active" class to the clicked tab button
+            e.target.classList.add('active');
+      
+            // Hide all tab content
+            tabContent.forEach((content) => {
+              content.style.display = 'none';
+            });
+      
+            // Show the selected tab content
+            const tabId = e.target.getAttribute('data-tab');
+            const selectedTab = document.getElementById(tabId);
+            selectedTab.style.display = 'block';
+          });
+        });
+      </script>
+       
+</body>
+</html>

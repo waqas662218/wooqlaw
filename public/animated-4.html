@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Tailwind.css -->
+        <link href="./css/style.css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- alpine/tooltip v1.0 -->
+        <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+    
+        <!--alpine.js -->
+    
+        <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+      <nav class="bg-gray-900 text-white p-4">
+        <ul class="flex space-x-4">
+            <li class="group text-pink-500 transition-all duration-300 ease-out">
+                <a href="#" class="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out group:border-transparent" data-index="0">Home</a></li>
+            <li class="group text-pink-500 transition-all duration-300 ease-out">
+                <a href="#" class="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" data-index="1">About</a></li>
+            <li class="group text-pink-500 transition-all duration-300 ease-out">
+                <a href="#" class="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" data-index="2">Services</a></li>
+            <li class="group text-pink-500 transition-all duration-300 ease-out">
+                <a href="#" class="bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out" data-index="3">Contact</a></li>
+        </ul>
+        <div class="underline"></div>
+    </nav>
+    
+    <style>
+        /* Navbar Link Styles */
+        .nav-link {
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease-in; /* Ease-in-out animation for color change */
+        }
+    
+        /* Hover Effect */
+        .nav-link:hover {
+            color: #007BFF;
+             /* Customize the hover color as needed */
+        }
+    
+        /* Selected Link Styles */
+        .nav-link.selected {
+            color: #007BFF; /* Customize the selected color as needed */
+        }
+    
+        /* Underline Styles */
+        .underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; /* Adjust the underline thickness as needed */
+            background-color: #007BFF; /* Customize the underline color as needed */
+            transition: width 0.3s ease-in-out; /* Ease-in-out animation for width change */
+        }
+    
+        /* Selected Underline Styles */
+        .underline.selected {
+            width: 100%;
+        }
+    
+    </style>
+    
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const underline = document.querySelector('.underline');
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectedIndex = e.target.getAttribute('data-index');
+    
+                // Remove the .selected class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('selected');
+                });
+    
+                // Add the .selected class to the clicked link
+                e.target.classList.add('selected');
+    
+                // Calculate the width for the underline
+                const linkWidth = e.target.offsetWidth;
+                const linkOffset = e.target.offsetLeft;
+                underline.style.width = `${linkWidth}px`;
+                underline.style.transform = `translateX(${linkOffset}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tab-btn {
+          cursor: pointer;
+        }
+      
+        .tab-underline {
+          transform: scaleX(0);
+        }
+      
+        .tab-btn:hover .tab-underline {
+          transform: scaleX(1);
+        }
+      </style>
+
+
+</head>
+<body>
+    <div class="flex space-x-4">
+        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab1">
+          <span class="block relative">Tab 1</span>
+          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
+        </button>
+        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab2">
+          <span class="block relative">Tab 2</span>
+          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
+        </button>
+        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab3">
+          <span class="block relative">Tab 3</span>
+          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
+        </button>
+      </div>
+      
+      <script>
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContent = document.querySelectorAll('.tab-content');
+      
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            // Remove the "active" class from all tab buttons
+            tabButtons.forEach((btn) => btn.classList.remove('active'));
+      
+            // Add the "active" class to the clicked tab button
+            e.target.classList.add('active');
+      
+            // Hide all tab content
+            tabContent.forEach((content) => {
+              content.style.display = 'none';
+            });
+      
+            // Show the selected tab content
+            const tabId = e.target.getAttribute('data-tab');
+            const selectedTab = document.getElementById(tabId);
+            selectedTab.style.display = 'block';
+          });
+        });
+      </script>
+      
+</body>
+</html>
