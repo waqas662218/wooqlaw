@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind.css -->
+  <link href="./css/style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- alpine/tooltip v1.0 -->
+  <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+  <!--alpine.js -->
+
+  <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
     <title>Document</title>
 
-    <style>
+
+      <style>
+        .tab-link::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: transparent; /* Initial state - no underline */
+          transform: translateX(-50%);
+          transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
         .tab-btn {
-          cursor: pointer;
-        }
+              cursor: pointer;
+            }
+          
+            .tab-underline {
+              width: 0;
+            }
+          
+            .tab-btn:hover .tab-underline {
+              width: 100%;
+            }
+      </style>
       
-        .tab-underline {
-          transform: scaleX(0);
-        }
-      
-        .tab-btn:hover .tab-underline {
-          transform: scaleX(1);
+      <style>
+        .tab-link.active-tab::before {
+          width: 100%;
+          background-color: #333; /* Change to your desired color */
         }
       </style>
-
-
+      
 </head>
 <body>
-    <div class="flex space-x-4">
-        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab1">
-          <span class="block relative">Tab 1</span>
-          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
-        </button>
-        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab2">
-          <span class="block relative">Tab 2</span>
-          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
-        </button>
-        <button class="tab-btn relative overflow-hidden focus:outline-none" data-tab="tab3">
-          <span class="block relative">Tab 3</span>
-          <div class="tab-underline absolute bottom-0 left-0 w-0 h-1 bg-blue-500 transition-transform transform origin-left"></div>
-        </button>
+   
+      
+      <div class="flex">
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 1</a>
+        </div>
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 2</a>
+        </div>
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 3</a>
+        </div>
       </div>
       
       <script>
-        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabLinks = document.querySelectorAll('.tab-link');
         const tabContent = document.querySelectorAll('.tab-content');
       
-        tabButtons.forEach((button) => {
-          button.addEventListener('click', (e) => {
-            // Remove the "active" class from all tab buttons
-            tabButtons.forEach((btn) => btn.classList.remove('active'));
+        tabLinks.forEach((tabLink) => {
+          tabLink.addEventListener('click', (e) => {
+            e.preventDefault();
       
-            // Add the "active" class to the clicked tab button
-            e.target.classList.add('active');
-      
-            // Hide all tab content
-            tabContent.forEach((content) => {
-              content.style.display = 'none';
+            // Remove the underline effect from all tab links
+            tabLinks.forEach((link) => {
+              link.classList.remove('active-tab');
             });
       
-            // Show the selected tab content
-            const tabId = e.target.getAttribute('data-tab');
-            const selectedTab = document.getElementById(tabId);
-            selectedTab.style.display = 'block';
+            // Apply the underline effect to the clicked tab link
+            tabLink.classList.add('active-tab');
           });
         });
       </script>
-      
 </body>
 </html>
+
+
+

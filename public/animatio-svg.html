@@ -35,33 +35,60 @@
             .tab-btn:hover .tab-underline {
               width: 100%;
             }
+            .tab-link.active-tab::before {
+          width: 100%;
+          background-color: #333; /* Change to your desired color */
+        }
           </style>
           
           
         
 </head>
-<body class="bg-gray-200 p-10">
+<body class="font-display p-4 bg-gray-200">
    
-    
-    <div class="flex space-x-4 p-10 mx-auto w-full rounded-xl shadow bg-white justify-center font-semibold text-lg ">
-        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab1">
+    <section class="profile-tabs w-full mx-auto rounded-xl shadow p-10 bg-white">
+
+    <ul class="flex flex-nowrap py-4 overflow-x-auto text-base  font-semibold text-gray-500 text-center px-5 pt-3 gap-5" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+      <li class="flex grow-0 shrink-0 basis-auto" role="presentation">  
+      <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" id="overview-tab" data-tabs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="false">
           <span class="block relative">OverView</span>
           <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
         </button>
-        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab2">
+        </li>
+        <li class="flex grow-0 shrink-0 basis-auto" role="presentation">
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab2" id="experience" role="tabpanel" aria-labelledby="experience-tab">
           <span class="block relative">Experience</span>
           <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
         </button>
-        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3">
+      </li>
+      <li class="flex grow-0 shrink-0 basis-auto" role="presentation">
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3" id="services" role="tabpanel" aria-labelledby="services-tab">
           <span class="block relative">Services</span>
           <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
         </button>
-        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3">
+        </li>
+        <li class="flex grow-0 shrink-0 basis-auto" role="presentation">
+        <button class="tab-btn relative overflow-hidden focus:outline-none hover:text-blue-500" data-tab="tab3" id="appointment" role="tabpanel" aria-labelledby="appointment-tab">
             <span class="block relative">Appointment Booking</span>
             <div class="tab-underline absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transform -translate-x-1/2 transition-width duration-300"></div>
           </button>
-      </div>
+          </li>
+    </ul>
       
+      <div id="myTabContent flex justify-between">
+        <div class="hidden" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+            <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Overview tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        </div>
+        <div class="hidden" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+            <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Experience tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        </div>
+        <div class="hidden" id="services" role="tabpanel" aria-labelledby="services-tab">
+            <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Services tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        </div>
+        <div class="hidden" id="appointment" role="tabpanel" aria-labelledby="appointment-tab">
+            <p class="text-sm text-gray-500">This is some placeholder content the <strong class="font-medium text-gray-800">Appointment tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        </div>
+      </section>
       <script>
         const tabButtons = document.querySelectorAll('.tab-btn');
         const tabContent = document.querySelectorAll('.tab-content');
