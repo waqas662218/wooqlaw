@@ -1664,6 +1664,9 @@ select {
 .overflow-x-auto {
   overflow-x: auto;
 }
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2361,10 +2364,6 @@ select {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
 }
 .py-0 {
   padding-top: 0px;
@@ -3912,6 +3911,10 @@ select {
     height: 100vh;
   }
 
+  .md\:h-80 {
+    height: 20rem;
+  }
+
   .md\:w-10 {
     width: 2.5rem;
   }
@@ -4280,6 +4283,11 @@ select {
     padding-right: 1.5rem;
   }
 
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -4355,9 +4363,9 @@ select {
     padding-bottom: 2rem;
   }
 
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .md\:pb-10 {

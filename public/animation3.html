@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!--alpine.js -->
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+    
+    <style>
+        .rotating-element {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+    </style>
+    
+</head>
+<body>
+    <div x-data="rotation()" x-init="init()">
+    <div class="grid col-span-1 md:grid-cols-6 justify-center items-center max-w-7xl mx-auto shadow-lg bg-gray-200 rounded-3xl" @mousemove="updateRotation"> 
+        <div class="flex flex-col col-span-1 md:col-span-3 py-10 px-5 w-full">
+            <div class="flex flex-col gap-7 w-full">
+                <h2 class="font-medium text-3xl md:text-6xl w-full">Building innovation together every minute
+                </h2>
+                <span  class="font-normal text-sm md:text-xl">
+                <p>Kartoa Technologies is a multinational software technology company that provides a wide range of IT solutions and services, such as Web Development, App Development, Cloud computing and CRM software development.
+                </p>
+                </span>
+                <div class="flex">
+                    <a href="#" class="flex items-center px-6 md:px-8 py-2.5 md:py-6 bg-black rounded-lg transition-transform transform hover:-translate-y-1">
+                        <span class="flex font-bold text-xs md:text-lg text-white">Chat with Us!</span>                            
+                    </a>   
+                    </div>    
+                </div>
+            </div>  
+        <div class="rotating-element flex col-span-1 md:col-span-3 p-10 justify-center items-center w-full"  x-bind:style="'transform: rotateX(' + rotationX + 'deg) rotateY(' + rotationY + 'deg)'">
+            <img class="rotating-image" src="images/animation.png" alt="Rotating Image">
+        </div>
+    </div>
+</div>
+    <script>
+        function smoothRotate(start, end, duration, callback) {
+            const startTime = performance.now();
+            const updateRotation = () => {
+                const currentTime = performance.now();
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const rotation = start + (end - start) * progress;
+                callback(rotation);
+                if (progress < 1) {
+                    requestAnimationFrame(updateRotation);
+                }
+            };
+            requestAnimationFrame(updateRotation);
+        }
+
+        Alpine.data('rotation', () => ({
+            rotationX: 0,
+            rotationY: 0,
+            init() {
+                // Initialization logic (if needed)
+            },
+            updateRotation(event) {
+                const spin = event.target;
+                const x = spin.offsetLeft + spin.offsetWidth / 2;
+                const y = spin.offsetTop + spin.offsetHeight / 2;
+                const rad = Math.atan2(event.clientX - x, event.clientY - y);
+                const rotX = ((rad * (180 / Math.PI) * -1) + 180).toFixed(2);
+                const rotY = ((rad * (180 / Math.PI) * -1) + 180).toFixed(2); // Adjust as needed
+                smoothRotate(this.rotationX, rotX, 100, (rotation) => {
+                    this.rotationX = rotation;
+                });
+                smoothRotate(this.rotationY, rotY, 100, (rotation) => {
+                    this.rotationY = rotation;
+                });
+            },
+        }));
+    </script>
+</body>
+</html>
