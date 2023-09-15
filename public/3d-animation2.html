@@ -28,9 +28,19 @@
 
     <title>Smooth 3D Donut Rotation</title>
    
+    <style>
+        /* Add styling for the rotating image if needed */
+        .rotating-image {
+            width: 200px; /* Set the width of your image */
+            height: 200px; /* Set the height of your image */
+            border: 2px solid #000; /* Add a border for better visualization */
+            transition: transform 0.2s ease; /* Smooth transition for rotation */
+        }
+    </style>
+    
 </head>
 <body>
-    <div class="grid col-span-1 md:grid-cols-6 justify-center items-center max-w-7xl mx-auto shadow-lg bg-gray-200 rounded-3xl"> 
+    <!-- <div class="grid col-span-1 md:grid-cols-6 justify-center items-center max-w-7xl mx-auto shadow-lg bg-gray-200 rounded-3xl"> 
         <div class="flex flex-col col-span-1 md:col-span-3 py-10 px-5 w-full">
             <div class="flex flex-col gap-7 w-full">
                 <h2 class="font-medium text-3xl md:text-6xl w-full">Building innovation together every minute
@@ -103,7 +113,7 @@
             </svg>
             </div>
         </div>
-    </div>
+    </div> -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.451/build/spline-viewer.js"></script>
     <spline-viewer url="https://prod.spline.design/t4GSPXgyb0VJRTs2/scene.splinecode"></spline-viewer>
 </body>
@@ -112,7 +122,7 @@
 
 
 
-<script>
+<!-- <script>
     function smoothRotate(start, end, duration, callback) {
         const startTime = performance.now();
         const updateRotation = () => {
@@ -146,7 +156,7 @@
             });
         },
     }));
-</script>
+</script> -->
 
 
 
@@ -156,34 +166,3 @@
 
 
 <!-- d -->
-<!-- <script>
-        function imageRotation() {
-          return {
-            angle: 0,
-            init() {
-              const img = document.querySelector('.rotating-image');
-              img.addEventListener('mousemove', this.rotateImage.bind(this, img));
-            },
-            rotateImage(img, event) {
-              const boundingBox = img.getBoundingClientRect();
-              const centerX = boundingBox.left + boundingBox.width / 2;
-              const centerY = boundingBox.top + boundingBox.height / 2;
-              const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (180 / Math.PI);
-              this.angle = angle;
-    
-              // Calculate the distance from the cursor to the center of the image
-              const distance = Math.sqrt(Math.pow(event.clientX - centerX, 2) + Math.pow(event.clientY - centerY, 2));
-    
-              // Set a fixed transition duration for smoother rotation
-              const fixedTransitionDuration = '0.2s'; // Adjust as needed
-              img.style.transitionDuration = fixedTransitionDuration;
-    
-              img.style.transform = `rotate(${angle}deg)`;
-            },
-          };
-        }
-    
-        // Initialize the image rotation
-        const imageRotator = imageRotation();
-        imageRotator.init();
-      </script> -->
