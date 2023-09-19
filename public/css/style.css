@@ -826,6 +826,10 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1663,9 +1667,6 @@ select {
 }
 .overflow-x-auto {
   overflow-x: auto;
-}
-.overflow-x-hidden {
-  overflow-x: hidden;
 }
 .truncate {
   overflow: hidden;
@@ -3891,6 +3892,10 @@ select {
     height: 1.75rem;
   }
 
+  .md\:h-72 {
+    height: 18rem;
+  }
+
   .md\:h-8 {
     height: 2rem;
   }
@@ -3911,10 +3916,6 @@ select {
     height: 100vh;
   }
 
-  .md\:h-80 {
-    height: 20rem;
-  }
-
   .md\:w-10 {
     width: 2.5rem;
   }
@@ -3925,6 +3926,10 @@ select {
 
   .md\:w-12 {
     width: 3rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:w-20 {
@@ -4363,13 +4368,12 @@ select {
     padding-bottom: 2rem;
   }
 
-  .md\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .md\:pb-10 {
     padding-bottom: 2.5rem;
+  }
+
+  .md\:pb-3 {
+    padding-bottom: 0.75rem;
   }
 
   .md\:pl-10 {
