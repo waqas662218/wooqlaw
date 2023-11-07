@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>jQuery Show/Hide Image on Scroll Down or Up</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop()>600){
+        $('.myimgDiv').hide(700);
+     }
+    else{
+      $('.myimgDiv').show(1000);
+     }
+ });
+</script>
+</head>
+<body>
+<h2>jQuery Show/Hide Image on Scroll Down or Up</h2>
+<div>Please scroll down slowly to see effect.</div>
+<div style="margin-top:380px;">Please scroll down slowly to see effect.</div>
+<div style="margin-top:380px;">Please scroll down slowly to see effect.</div>
+<div class="myimgDiv">
+	<img src="images/istock-3.jpg" alt="Manager" class="img-responsive img-thumbnail"/>
+</div>
+<div style="margin-top:300px;">Please scroll up slowly to see effect.</div>
+<div style="margin-top:300px;">Please scroll up slowly to see effect.</div>
+
+</body>
+</html>              
+

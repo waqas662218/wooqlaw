@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Image on Scroll with Zoom</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Style for the image */
+        #scroll-image {
+            width: 200px;
+            opacity: 0; /* Initially hide the image */
+            transform: scale(0.8); /* Initial scale (zoomed out) */
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll-container" class="h-screen">
+        <p class="mt-20 text-center">Scroll down to reveal the image</p>
+    </div>
+    <div id="scroll-image" class="flex md:flex-row flex-col gap-6 mx-auto mt-10">
+    <img src="images/istock-4.jpg" alt="Image">
+    <img src="images/istock-2.jpg" alt="Image">
+</div>
+        <p>
+        A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.
+  
+  Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.
+  A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.
+  
+  Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.
+  A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.
+  
+  Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.
+  A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.
+  
+    Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events; compare or contrast two or more things; classify items into categories; or describe causes and effects. Regardless of the kind of information they contain, all paragraphs share certain characteristics. One of the most important of these is a topic sentence.
+      </p>
+      </span>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollImage = document.getElementById("scroll-image");
+            const scrollContainer = document.getElementById("scroll-container");
+            const triggerPoint = 200; // Adjust this value based on when you want the image to appear
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > triggerPoint) {
+                    scrollImage.style.opacity = "1"; // Show the image
+                    scrollImage.style.transform = "scale(1.0)"; // Zoom in
+                } else {
+                    scrollImage.style.opacity = "0"; // Hide the image
+                    scrollImage.style.transform = "scale(0.8)"; // Zoom out
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <div x-data class="mx-auto max-w-3xl min-h-[16rem] w-full space-y-4">
+    <div x-disclosure class="rounded-lg bg-white shadow">
+        <button
+            x-disclosure:button
+            class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+        >
+            <span>Question #1</span>
+ 
+            <span x-show="$disclosure.isOpen" x-cloak aria-hidden="true" class="ml-4">&minus;</span>
+            <span x-show="! $disclosure.isOpen" aria-hidden="true" class="ml-4">&plus;</span>
+        </button>
+ 
+        <div x-disclosure:panel x-collapse>
+            <div class="px-6 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
+        </div>
+    </div>
+ 
+    <div x-disclosure class="rounded-lg bg-white shadow">
+        <button
+            x-disclosure:button
+            class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+        >
+            <span>Question #2</span>
+ 
+            <span x-show="$disclosure.isOpen" x-cloak aria-hidden="true" class="ml-4">&minus;</span>
+            <span x-show="! $disclosure.isOpen" aria-hidden="true" class="ml-4">&plus;</span>
+        </button>
+ 
+        <div x-disclosure:panel x-collapse>
+            <div class="px-6 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
+        </div>
+    </div>
+</div>
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--alpine.js -->
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+
+:root{
+
+  --height: 188px;
+
+}
+
+.aos-animate .image-animate {
+
+  width: 100%;
+
+  animation: scale-up 1s ease-in-out, parallax 1s ease-in-out;
+
+}
+
+ 
+
+@media (max-width: 479px){
+
+:root{
+
+  --height: 140px;
+
+  }
+
+}
+
+ 
+
+ 
+
+@keyframes scale-up {
+
+  0% {
+
+    height: 0;
+
+  }
+
+  100% {
+
+    height: var(--height);
+
+  }
+
+}
+
+ 
+
+@keyframes parallax {
+
+  0% {
+
+    background-position: center;
+
+  }
+
+  100% {
+
+    background-position: bottom;
+
+  }
+
+}
+    </style>
+
+    <title>kartoa-animation</title>
+</head>
+<body class="">
+    <div class="spacer mb-20"></div>
+    <div id="scroll-image" class="grow-element flex max-w-7xl mx-auto gap-2 md:gap-6 items-center">
+        <div class="flex flex-col">
+        <div class="flex flex-col max-w-md p-2 border border-gray-200 rounded-lg w-96 h-72" style="background-image: url(../public/images/B2C.png);">
+           
+        </div>
+        <div class="flex flex-col gap-3 max-w-md">
+            <h2 class="font-medium text-base md:text-3xl">B2C</h2>
+            <span class="font-normal text-sm md:text-xl">
+                We take pride in our B2C department, with numerous products in development, 'Kartoa's Own' aims to aid the average consumer.
+            </span>
+           </div>
+           </div>
+           <div class="flex flex-col">
+            <div class="flex flex-col max-w-md p-2 border border-gray-200 rounded-lg mt-20 w-80 h-48" style="background-image: url(../public/images/B2B.png);">
+               
+            </div>
+            <div class=" flex flex-col gap-3 max-w-md">
+                <h2 class="font-medium text-base md:text-3xl">B2C</h2>
+                <span class="font-normal text-sm md:text-xl">
+                    We take pride in our B2C department, with numerous products in development, 'Kartoa's Own' aims to aid the average consumer.
+                </span>
+               </div>
+               </div>
+               </div>
+        <!-- <script>
+            // JavaScript for triggering animation on scroll
+            const image = document.getElementById("scroll-image");
+    
+            window.addEventListener("scroll", () => {
+                const scrollY = window.scrollY || window.pageYOffset;
+                const imageOffset = image.offsetTop;
+    
+                if (scrollY >= imageOffset) {
+                    image.classList.add("animated");
+                } else {
+                    image.classList.remove("animated");
+                }
+            });
+        </script> -->
+</body>
+</html>
