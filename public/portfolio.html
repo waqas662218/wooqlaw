@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- alpine/tooltip v1.0 -->
+
+    <!--alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>portfolio</title>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Muhammad Waqas</a>
+            <div class="space-x-4">
+                <a href="#home" class="nav-link scrollto active hover:text-gray-300">Home</a>
+                <a href="#projects" class="nav-link scrollto hover:text-gray-300">Projects</a>
+                <a href="#skills" class="nav-link scrollto hover:text-gray-300">Skills</a>
+                <a href="#contact" class="nav-link scrollto hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-indigo-500 text-white h-screen flex items-center">
+        <div class="container mx-auto text-center">
+            <h1 class="text-lg md:text-4xl font-bold mb-4">Welcome to My Advanced Portfolio</h1>
+            <p class="text-sm md:text-lg">I am a passionate web designer creating amazing and responsive websites.</p>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">My Projects</h2>
+            <!-- Add your project cards here -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold mb-4">Project 1</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-violet-300">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">My Skills</h2>
+            <!-- Add your skills with progress bars -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-20 w-full">
+                <!-- Skill 1 -->
+                <div class="grid col-span-1 gap-3">
+                    <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-semibold">HTML</h3>
+                    <div class="relative">
+                        <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%"> 90%</div>
+                          </div>
+                    </div>
+                </div>
+                    <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-semibold">CSS</h3>
+                    <div class="relative">
+                        <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%"> 90%</div>
+                          </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="grid  gap-3">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold">JAVASCRIPT</h3>
+                        <div class="relative">
+                            <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 60%"> 60%</div>
+                              </div>
+                        </div>
+                    </div>
+                        <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold">TAILWIND CSS</h3>
+                        <div class="relative">
+                            <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 80%"> 80%</div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="flex mx-auto bg-blue-200 w-full py-16">
+        <div class="flex max-w-6xl mx-auto bg-white p-4 rounded-lg">
+            <div class="grid col-span-1 md:grid-cols-2 gap-4 md:gap-20 w-full">
+                <div class="grid col-span-1 p-4">
+            <h2 class="text-3xl font-bold">Contact Me</h2>
+            <p class="text-gray-600">Feel free to reach out to me for any inquiries or collaborations.</p>
+            
+            <!-- Contact Form -->
+            <form action="#" method="post" class="mt-8 w-full">
+                <div class="flex flex-col gap-2 md:gap-4">
+                    <div class="mb-2">
+                        <label for="name" class="block text-sm font-medium text-gray-600">Your Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md focus:ring-violet-800 focus:border-violet-800">
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="block text-sm font-medium text-gray-600">Your Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md focus:ring-violet-800 focus:border-violet-800">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-600">Your Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full border rounded-md focus:ring-violet-800 focus:border-violet-800"></textarea>
+                    </div>
+                    <div class="flex justify-end">
+                    <button type="submit" class="flex w-fit justify-end bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-lg md:rounded-full font-medium">Send Message</button>
+                </div>
+                </div>
+                
+            </form>
+        </div>
+        <div class="grid p-4 w-full">
+            <div class="flex flex-col gap-4 md:gap-16">
+                <div class="title-box-2 ">
+                  <h5 class="title-left text-3xl font-bold mb-2">
+                    Get in Touch
+                  </h5>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                <div class="more-info flex flex-col gap-6 mx-auto">
+                  <ul class="list-disc flex-col gap-3 text-lg font-medium text-gray-500">
+                    <li>
+                        Creating and applying design planning
+                    </li>
+                    <li>
+                        Designing new applications and websites
+                    </li>
+                    <li>
+                        Working on coding assignments and code reviews for functionality and accuracy
+                    </li>
+                    <li>
+                        Training team members and mentoring junior developers with delegated tasks
+                    </li>
+                  </ul>
+                  <ul class="list-ico flex flex-col font-medium text-base text-gray-700 gap-4">
+                    <li><span class="bi bi-geo-alt"></span>Satellite Town, D Block Rawalpindi</li>
+                    <li><span class="bi bi-phone"></span>+923335755550</li>
+                    <li><span class="bi bi-envelope"></span>m.waqas@kartoa.com</li>
+                  </ul>
+                </div>
+                <div class="socials">
+                  <ul>
+                    <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
+                    <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                    <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
+                    <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                  </ul>
+                </div>
+            </div>
+              </div> 
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
