@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Document</title>
+  <style>
+    /* Custom styles for the underline animation */
+    .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: #3490dc;
+        transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+</style>
+
+</head>
+<body>
+  <nav class="bg-gray-900 text-white py-4">
+    <ul class="flex justify-center space-x-4">
+        <li>
+            <a href="#home" class="nav-link" data-aos="fade-up">Home</a>
+        </li>
+        <li>
+            <a href="#our-products" class="nav-link" data-aos="fade-up">Our Products</a>
+        </li>
+        <li>
+            <a href="#it-argumentation" class="nav-link" data-aos="fade-up">IT Argumentation</a>
+        </li>
+        <li>
+            <a href="#services" class="nav-link" data-aos="fade-up">Services</a>
+        </li>
+        <li>
+            <a href="#contact-us" class="nav-link" data-aos="fade-up">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Include AOS library script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init();
+</script>
+</body>
+</html>

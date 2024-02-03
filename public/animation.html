@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100">
+  
+  <div x-data="{ open: false}" class="flex"  :class="open ? '' : ' '"
+    x-transition:enter="transition ease-out duration-1000" 
+    x-transition:enter-start="opacity-0 transform scale-90 -translate-x-full" 
+    x-transition:enter-end="opacity-100 transform scale-100 " 
+    x-transition:leave="transition ease-in duration-1000" 
+    x-transition:leave-start="opacity-100 transform scale-100 " 
+    x-transition:leave-end="opacity-0 transform scale-90 -translate-x-full">
+    <!-- Card View (hidden by default) -->
+    <div class="flex justify-center items-center w-64 h-64 bg-red-600 p-6 rounded-lg shadow-lg  duration-2000 text-white  opacity-0 transition-transform-[full] animate-pulse" id="card">
+        <!-- Card Content -->
+        <h1 class="text-2xl font-semibold">Card View</h1>
+        <img src="images/Australia.svg" alt="">
+        <!-- Add your card content here -->
+    </div>
+    
+    <!-- Main Content -->
+    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+ 
+      <script src="script.js">
+        // script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to show the card view with a 2-second duration
+    function showCardView() {
+        const card = document.getElementById('card');
+        card.classList.remove('translate-x-[-64]');
+    }
+
+    // Simulate content loading for 2 seconds (you can replace this with your actual loading logic)
+    setTimeout(() => {
+        showCardView();
+    }, 2000);
+});
+      </script>
+</body>
+</html>

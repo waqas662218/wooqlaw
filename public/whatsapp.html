@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>WhatsApp Button</title>
+</head>
+
+<body class="bg-gray-100">
+    <!-- WhatsApp Button -->
+    <button id="whatsapp-button" class="fixed bottom-5 left-5 bg-green-500 text-white w-12 h-12 p-2 rounded-full shadow-md">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+
+    <!-- WhatsApp Popup -->
+    <div id="whatsapp-popup" class="fixed bottom-20 left-5 bg-white rounded-t-lg shadow-md hidden">
+        <div class="flex justify-between p-4 bg-red-500 rounded-t-xl items-center w-full">
+            <h2 class="text-xl mb-2">WhatsApp Chat</h2>
+            <a class="flex w-9 h-9" href="">
+                <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                    <path d="M14 14L34 34" stroke="#333" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14 34L34 14" stroke="#333" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+<div class="flex flex-col p-4">
+        <p class="mb-4 font-normal text-sm">Please enter your message below:</p>
+        <textarea id="whatsapp-message" class="w-full h-24 font-medium text-sm rounded-md border p-2"
+            placeholder="Your message">How can I help you?</textarea>
+        <button id="send-whatsapp" class="mt-4 bg-green-500 text-white p-2 rounded-md">Send</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('whatsapp-button').addEventListener('click', function () {
+            // Show the WhatsApp popup when the button is clicked.
+            document.getElementById('whatsapp-popup').classList.remove('hidden');
+        });
+
+        document.getElementById('send-whatsapp').addEventListener('click', function () {
+            // Replace 'RECIPIENT_PHONE_NUMBER' with the recipient's actual phone number.
+            const recipientPhoneNumber = '923335788550';
+
+            // Get the message from the textarea.
+            const message = encodeURIComponent(document.getElementById('whatsapp-message').value);
+
+            // Generate the WhatsApp link.
+            const whatsappLink = `https://wa.me/${recipientPhoneNumber}?text=${message}`;
+
+            // Open the WhatsApp chat in a new tab.
+            window.open(whatsappLink);
+            // Close the WhatsApp popup.
+            document.getElementById('whatsapp-popup').classList.add('hidden');
+        });
+
+    </script>
+</body>
+
+</html>

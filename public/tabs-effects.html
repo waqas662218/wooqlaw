@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Tailwind.css -->
+        <link href="./css/style.css" rel="stylesheet">
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- alpine/tooltip v1.0 -->
+        <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+    
+        <!--alpine.js -->
+    
+        <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+      <div class="flex">
+        <button class="tab-btn" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+      </div>
+      
+      <div class="tab-underline">
+        
+      </div>
+      <style>
+        .tab-btn {
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+      
+        .tab-underline {
+          height: 2px;
+          background-color: blue;
+          width: 0;
+          margin: 0 auto;
+          transition: width 0.3s ease, margin 0.3s ease;
+        }
+      </style>
+      
+      
+      <script>
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabUnderline = document.querySelector('.tab-underline');
+      
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            // Remove the "active" class from all tab buttons
+            tabButtons.forEach((btn) => btn.classList.remove('active'));
+      
+            // Add the "active" class to the clicked tab button
+            e.target.classList.add('active');
+      
+            // Calculate the width and margin for the underline
+            const buttonWidth = e.target.offsetWidth;
+            const buttonOffsetLeft = e.target.offsetLeft;
+            const containerOffsetLeft = e.target.parentElement.offsetLeft;
+            const translateX = buttonOffsetLeft - containerOffsetLeft;
+            const underlineWidth = buttonWidth;
+      
+            // Apply the calculated styles to the underline
+            tabUnderline.style.width = `${underlineWidth}px`;
+            tabUnderline.style.marginLeft = `${translateX}px`;
+          });
+        });
+      </script>
+      
+      
+</body>
+</html>
+
+
+

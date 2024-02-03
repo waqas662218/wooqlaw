@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&dis">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
@@ -26,8 +28,8 @@
             <div class="flex flex-col gap-5 md:gap-10 px-2 md:px-0 max-w-5xl mx-auto">
             <!-- Notable clients -->
             <div class="flex flex-col gap-4">
-                <div class="font-medium text-base md:text-xl py-2 text-gray-600"> Notable clients</div>
-                <div class="grid grid-cols-2 md:flex md:flex-row gap-2 md:gap-7 justify-center md:justify-start p-2 md:p-3 bg-white border border-gray-300 rounded-xl">
+                <div class="font-medium text-base md:text-xl py-2 text-gray-600" data-aos="fade-right" data-aos-delay="50"> Notable clients</div>
+                <div class="grid grid-cols-2 md:flex md:flex-row gap-2 md:gap-7 justify-center md:justify-start p-2 md:p-3 bg-white border border-gray-300 rounded-xl" data-aos="fade-up" data-aos-delay="50">
                     <div class="add-1 flex flex-col items-center gap-2 md:gap-3">
                         <div class="w-36 h-36 flex justify-center items-center bg-gray-50 rounded-xl relative">
                             <span>
@@ -100,9 +102,9 @@
             <!-- Certifications & Awards -->
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col gap-2 md:gap-0">
-                 <div class="font-medium text-base md:text-xl py-2 text-gray-600">Certifications & Awards</div> 
+                 <div class="font-medium text-base md:text-xl py-2 text-gray-600" data-aos="fade-right" data-aos-delay="100">Certifications & Awards</div> 
                 </div>
-                <div class="flex flex-col gap-3 md:gap-7 items-start p-3 bg-white border border-gray-300 rounded-xl">
+                <div class="flex flex-col gap-3 md:gap-7 items-start p-3 bg-white border border-gray-300 rounded-xl" data-aos="fade-up" data-aos-delay="100">
                     <!-- Add -->
                     <div class="flex items-start md:items-center justify-between w-full">
                         <div class="add-2 flex md:flex-row flex-col gap-3 md:items-center">
@@ -190,10 +192,10 @@
                 </div>
             </div>
             <!-- Reported Cases -->
-            <div class="flex flex-col gap-4">
-                <div class="font-medium text-base md:text-xl py-2 text-gray-600">Reported Cases</div>
+            <div class="flex flex-col gap-4" >
+                <div class="font-medium text-base md:text-xl py-2 text-gray-600" data-aos="fade-right" data-aos-delay="150">Reported Cases</div>
 
-                <div class="flex flex-col p-2 md:p-3 gap-3 bg-white border border-gray-300 rounded-xl">
+                <div class="flex flex-col p-2 md:p-3 gap-3 bg-white border border-gray-300 rounded-xl" data-aos="fade-up" data-aos-delay="150">
                     <!-- Add -->
                     <div class="flex flex-row justify-between gap-7 p-3 bg-gray-100 rounded-t-lg w-full">
                         <div class="flex flex-col gap-3 md:gap-7 w-full">
@@ -244,6 +246,10 @@
             </div>
         </div>
         </section>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
 </body>
 
 </html>

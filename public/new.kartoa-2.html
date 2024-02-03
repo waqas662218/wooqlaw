@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staggered Image Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-image {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img class="animated-image" src="images/istock-1.jpg" alt="Image 1">
+        <img class="animated-image" src="images/istock-2.jpg" alt="Image 2">
+        <img class="animated-image" src="images/istock-3.jpg" alt="Image 3">
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const animatedImages = document.querySelectorAll(".animated-image");
+
+    // Function to trigger the animation for each image
+    function animateImages() {
+        animatedImages.forEach((image, index) => {
+            setTimeout(() => {
+                image.style.opacity = 1;
+                image.style.transform = "translateY(0)";
+            }, index * 300); // Adjust the delay (in milliseconds) for the staggered effect
+        });
+    }
+
+    // Trigger the animation when the page is loaded
+    animateImages();
+});
+
+    </script>
+</body>
+</html>

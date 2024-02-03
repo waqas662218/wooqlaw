@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <!-- alpine/tooltip v1.0 -->
+    <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!--alpine.js -->
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    
+    <title>Image Rotation</title>
+    <style>
+        /* Add styling for the rotating image if needed */
+        .rotating-image {
+            width: 200px; /* Set the width of your image */
+            height: 200px; /* Set the height of your image */
+            border: 2px solid #000; /* Add a border for better visualization */
+            transition: transform 0.2s ease; /* Smooth transition for rotation */
+        }
+    </style>
+</head>
+<body class="overflow-hidden">
+    <div class="rotating-image flex justify-center items-center max-w-full mx-auto h-96 bg-gray-200"alt="Rotating Image">
+    <img src="images/animation.png">
+    </div>
+    
+    <script>
+        function imageRotation() {
+            return {
+                angle: 0,
+                init() {
+                    const img = document.querySelector('.rotating-image');
+                    img.addEventListener('mousemove', this.rotateImage.bind(this, img));
+                },
+                rotateImage(img, event) {
+                    const boundingBox = img.getBoundingClientRect();
+                    const centerX = boundingBox.left + boundingBox.width / 2;
+                    const centerY = boundingBox.top + boundingBox.height / 2;
+                    const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX) * (360 / Math.PI);
+                    this.angle = angle;
+
+                    // Calculate the distance from the cursor to the center of the image
+                    const distance = Math.sqrt(Math.pow(event.clientX - centerX, 2) + Math.pow(event.clientY - centerY, 2));
+
+                    // Set a fixed transition duration for smoother rotation
+                    const fixedTransitionDuration = '0.2s'; // Adjust as needed
+                    img.style.transitionDuration = fixedTransitionDuration;
+
+                    img.style.transform = `rotate(${angle}deg)`;
+                },
+            };
+        }
+
+        // Initialize the image rotation
+        const imageRotator = imageRotation();
+        imageRotator.init();
+    </script>
+</body>
+</html>
+
+
+
+
+

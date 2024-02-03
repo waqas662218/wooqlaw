@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind.css -->
+  <link href="./css/style.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- alpine/tooltip v1.0 -->
+  <script defer="" src="https://abdurrehmanltl.github.io/wooqlaw-public-html/public/js/alpinetooltip.min.js"></script>
+
+  <!--alpine.js -->
+
+  <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+
+
+      <style>
+        .tab-link::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: transparent; /* Initial state - no underline */
+          transform: translateX(-50%);
+          transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+        .tab-btn {
+              cursor: pointer;
+            }
+          
+            .tab-underline {
+              width: 0;
+            }
+          
+            .tab-btn:hover .tab-underline {
+              width: 100%;
+            }
+      </style>
+      
+      <style>
+        .tab-link.active-tab::before {
+          width: 100%;
+          background-color: #333; /* Change to your desired color */
+        }
+      </style>
+      
+</head>
+<body>
+   
+      
+      <div class="flex">
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 1</a>
+        </div>
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 2</a>
+        </div>
+        <div class="flex-1 text-center">
+          <a href="#" class="relative tab-link">Tab 3</a>
+        </div>
+      </div>
+      
+      <script>
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContent = document.querySelectorAll('.tab-content');
+      
+        tabLinks.forEach((tabLink) => {
+          tabLink.addEventListener('click', (e) => {
+            e.preventDefault();
+      
+            // Remove the underline effect from all tab links
+            tabLinks.forEach((link) => {
+              link.classList.remove('active-tab');
+            });
+      
+            // Apply the underline effect to the clicked tab link
+            tabLink.classList.add('active-tab');
+          });
+        });
+      </script>
+</body>
+</html>
+
+
+

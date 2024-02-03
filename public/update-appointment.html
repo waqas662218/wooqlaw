@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+
+    
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+    <div class="flex flex-col gap-5 max-w-3xl mx-auto py-4 md:py-8">
+        <div class="flex flex-col gap-2">
+                <div class="flex gap-2 items-center">
+                    <span class="box flex rounded-lg w-7 h-7 bg-gray-100 items-center justify-center">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3253 13.6132C18.3624 13.6515 18.381 13.6707 18.3983 13.6897C18.6658 13.9835 18.8196 14.3632 18.8319 14.7604C18.8327 14.7861 18.8327 14.8128 18.8327 14.8661C18.8327 14.9904 18.8327 15.0526 18.8294 15.1051C18.7764 15.9428 18.1088 16.6104 17.2711 16.6633C17.2186 16.6667 17.1564 16.6667 17.0321 16.6667H3.96658C3.84225 16.6667 3.78008 16.6667 3.72759 16.6633C2.88989 16.6104 2.22226 15.9428 2.16933 15.1051C2.16602 15.0526 2.16602 14.9904 2.16602 14.8661C2.16602 14.8128 2.16602 14.7861 2.16681 14.7604C2.17909 14.3632 2.33287 13.9835 2.60041 13.6897C2.61775 13.6707 2.63629 13.6515 2.67337 13.6132L3.75194 12.5H17.2468L18.3253 13.6132ZM7.79102 15C7.79102 14.6548 8.07084 14.375 8.41602 14.375H12.5827C12.9279 14.375 13.2077 14.6548 13.2077 15C13.2077 15.3452 12.9279 15.625 12.5827 15.625H8.41602C8.07084 15.625 7.79102 15.3452 7.79102 15Z" fill="#6B7280"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.1268 5.83334C4.1268 4.26199 4.1268 3.47631 4.61496 2.98816C5.10311 2.5 5.88879 2.5 7.46013 2.5H13.5386C15.1099 2.5 15.8956 2.5 16.3837 2.98816C16.8719 3.47631 16.8719 4.26198 16.8719 5.83333V11.6667H4.1268V5.83334ZM10.4993 5.41667C10.8445 5.41667 11.1243 5.13684 11.1243 4.79167C11.1243 4.44649 10.8445 4.16667 10.4993 4.16667C10.1542 4.16667 9.87435 4.44649 9.87435 4.79167C9.87435 5.13684 10.1542 5.41667 10.4993 5.41667Z" fill="#6B7280"/>
+                            </svg>                            
+                    </span>
+                    <h2 class="date_time font-medium text-base">Select Date & Time</h2>
+                </div>            
+                <div class="flex gap-1 justify-center items-center">
+                    <span class="">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 15L1.5 8L8.5 1" stroke="#111928" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <ul class="flex flex-nowrap overflow-x-auto gap-1 p-1" id="appointment-date-tab" data-tabs-toggle="#appointment-date" role="tablist">
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="friday-tab" data-tabs-target="#friday" type="button" role="tab" aria-controls="friday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt-11" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt-11" class="time_date flex flex-col gap-1 cursor-pointer w-24 h-20 border rounded-lg items-center justify-center bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                                        <h2 class="font-semibold text-base items-center ">Fri</h2>
+                                        <h2 class="font-medium text-sm">01 May</h2>
+                                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                                    </label>
+                                </div>      
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="saturday-tab" data-tabs-target="#saturday" type="button" role="tab" aria-controls="saturday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt-12" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt-12"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                                        <h2 class="font-semibold text-base items-center ">Sat</h2>
+                                        <h2 class="font-medium text-sm">02 May</h2>
+                                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                                    </label>
+                                </div>  
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="sunday-tab" data-tabs-target="#sunday" type="button" role="tab" aria-controls="sunday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt-13" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt-13"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-50 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                
+                                        <h2 class="font-semibold text-base items-center ">Sun</h2>
+                                        <h2 class="font-medium text-sm">03 May</h2>
+                                        <span class="flex rounded bg-red-500 w-2 h-2"></span>
+                
+                                    </label>
+                                </div>      
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="monday-tab" data-tabs-target="#monday" type="button" role="tab" aria-controls="monday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt_14" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt_14"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                                        <h2 class="font-semibold text-base items-center text-center">Mon</h2>
+                                        <h2 class="font-medium text-sm">04 May</h2>
+                                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                                </div>        
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="tuesday-tab" data-tabs-target="#tuesday" type="button" role="tab" aria-controls="tuesday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt_15" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt_15"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                
+                                        <h2 class="font-semibold text-base items-center text-center">Tue</h2>
+                                        <h2 class="font-medium text-sm">05 May</h2>
+                                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                                </div>      
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="wednesday-tab" data-tabs-target="#wednesday" type="button" role="tab" aria-controls="wednesday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt_16" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt_16"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-50 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                                        <h2 class="font-semibold text-base items-center text-center">Wed</h2>
+                                        <h2 class="font-medium text-sm">06 May</h2>
+                                        <span class="flex rounded bg-red-500 w-2 h-2"></span>
+                                </div>      
+                            </button>
+                        </li>
+                        <li class="flex grow-0 shrink-0 basic-auto" role="presentation">
+                            <button id="thursday-tab" data-tabs-target="#thursday" type="button" role="tab" aria-controls="thursday" aria-selected="false">
+                                <div class="item-1">
+                                    <input type="radio" id="opt_17" value="" class="peer hidden" required="" name="appointment" />
+                                    <label for="opt_17"
+                                        class="time_date flex flex-col cursor-pointer w-24 h-20 gap-1 border rounded-lg items-center justify-center bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white peer-checked:group:text-white text-gray-600">
+                                        <h2 class="font-semibold text-base items-center text-center">Thu</h2>
+                                        <h2 class="font-medium text-sm">07 May</h2>
+                                        <span class="flex rounded bg-green-500 w-2 h-2"></span>
+                                </div>     
+                            </button>
+                        </li> 
+                    </ul>
+                    <span class="">
+                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L8.5 8L1.5 15" stroke="#111928" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+            </div>
+                </div>
+
+                <!-- online/virtual -->
+                <div class="flex flex-col item-start w-full mx-auto gap-5">
+                    <div id="appointment-date" data-accordion="collapse" data-active-classes="bg-white text-gray-900"
+                        data-inactive-classes="text-gray-500"
+                        class="flex flex-col justify-center gap-2 border rounded-lg p-4">
+                        <h2 id="appointment-date-heading-1">
+                            <button type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#appointment-date-body-1" aria-expanded="false"
+                                aria-controls="appointment-date-body-1">
+                                <div class="flex items-center gap-2">
+                                    <div class="box flex rounded-lg w-7 h-7 shrink-0 bg-gray-100 items-center justify-center">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3253 13.6132C18.3624 13.6515 18.381 13.6707 18.3983 13.6897C18.6658 13.9835 18.8196 14.3632 18.8319 14.7604C18.8327 14.7861 18.8327 14.8128 18.8327 14.8661C18.8327 14.9904 18.8327 15.0526 18.8294 15.1051C18.7764 15.9428 18.1088 16.6104 17.2711 16.6633C17.2186 16.6667 17.1564 16.6667 17.0321 16.6667H3.96658C3.84225 16.6667 3.78008 16.6667 3.72759 16.6633C2.88989 16.6104 2.22226 15.9428 2.16933 15.1051C2.16602 15.0526 2.16602 14.9904 2.16602 14.8661C2.16602 14.8128 2.16602 14.7861 2.16681 14.7604C2.17909 14.3632 2.33287 13.9835 2.60041 13.6897C2.61775 13.6707 2.63629 13.6515 2.67337 13.6132L3.75194 12.5H17.2468L18.3253 13.6132ZM7.79102 15C7.79102 14.6548 8.07084 14.375 8.41602 14.375H12.5827C12.9279 14.375 13.2077 14.6548 13.2077 15C13.2077 15.3452 12.9279 15.625 12.5827 15.625H8.41602C8.07084 15.625 7.79102 15.3452 7.79102 15Z" fill="#111827"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.1268 5.83334C4.1268 4.26199 4.1268 3.47631 4.61496 2.98816C5.10311 2.5 5.88879 2.5 7.46013 2.5H13.5386C15.1099 2.5 15.8956 2.5 16.3837 2.98816C16.8719 3.47631 16.8719 4.26198 16.8719 5.83333V11.6667H4.1268V5.83334ZM10.4993 5.41667C10.8445 5.41667 11.1243 5.13684 11.1243 4.79167C11.1243 4.44649 10.8445 4.16667 10.4993 4.16667C10.1542 4.16667 9.87435 4.44649 9.87435 4.79167C9.87435 5.13684 10.1542 5.41667 10.4993 5.41667Z" fill="#111827"/>
+                                            </svg>
+                                            
+                                    </div>
+                                    <h2 class="font-medium text-base text-gray-900 max-w-2xl w-full">
+                                        Online/Virtual
+                                    </h2>
+                                </div>
+                                <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="appointment-date-body-1" class="hidden"
+                            aria-labelledby="appointment-date-heading-1 w-full">
+                            <div class="py-5 border-b border-gray-200">
+                                <div class="time flex flex-col md:flex-row gap-5 p-5 border-gray-200">
+                                    <!-- morning -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 19C4.75 18.5858 5.08579 18.25 5.5 18.25H19.5C19.9142 18.25 20.25 18.5858 20.25 19C20.25 19.4142 19.9142 19.75 19.5 19.75H5.5C5.08579 19.75 4.75 19.4142 4.75 19ZM7.75 22C7.75 21.5858 8.08579 21.25 8.5 21.25H16.5C16.9142 21.25 17.25 21.5858 17.25 22C17.25 22.4142 16.9142 22.75 16.5 22.75H8.5C8.08579 22.75 7.75 22.4142 7.75 22Z" fill="#1C274C"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25C12.9142 1.25 13.25 1.58579 13.25 2V3C13.25 3.41421 12.9142 3.75 12.5 3.75C12.0858 3.75 11.75 3.41421 11.75 3V2C11.75 1.58579 12.0858 1.25 12.5 1.25ZM4.89861 4.39861C5.1915 4.10572 5.66638 4.10572 5.95927 4.39861L6.35211 4.79145C6.645 5.08434 6.645 5.55921 6.35211 5.85211C6.05921 6.145 5.58434 6.145 5.29145 5.85211L4.89861 5.45927C4.60572 5.16638 4.60572 4.6915 4.89861 4.39861ZM20.1011 4.39887C20.394 4.69176 20.394 5.16664 20.1011 5.45953L19.7083 5.85237C19.4154 6.14526 18.9405 6.14526 18.6476 5.85237C18.3547 5.55947 18.3547 5.0846 18.6476 4.79171L19.0405 4.39887C19.3334 4.10598 19.8082 4.10598 20.1011 4.39887ZM1.75 12C1.75 11.5858 2.08579 11.25 2.5 11.25H3.5C3.91421 11.25 4.25 11.5858 4.25 12C4.25 12.4142 3.91421 12.75 3.5 12.75H2.5C2.08579 12.75 1.75 12.4142 1.75 12ZM20.75 12C20.75 11.5858 21.0858 11.25 21.5 11.25H22.5C22.9142 11.25 23.25 11.5858 23.25 12C23.25 12.4142 22.9142 12.75 22.5 12.75H21.5C21.0858 12.75 20.75 12.4142 20.75 12Z" fill="#1C274C"/>
+                                                    <path d="M5.75 12C5.75 13.1778 6.0521 14.2858 6.58267 15.25H2.5C2.08579 15.25 1.75 15.5858 1.75 16C1.75 16.4142 2.08579 16.75 2.5 16.75H11.75V11.8107L11.0303 12.5303C10.7374 12.8232 10.2626 12.8232 9.96967 12.5303C9.67678 12.2374 9.67678 11.7626 9.96967 11.4697L11.9697 9.46967C12.2626 9.17678 12.7374 9.17678 13.0303 9.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303C14.7374 12.8232 14.2626 12.8232 13.9697 12.5303L13.25 11.8107V16.75H22.5C22.9142 16.75 23.25 16.4142 23.25 16C23.25 15.5858 22.9142 15.25 22.5 15.25H18.4173C18.9479 14.2858 19.25 13.1778 19.25 12C19.25 8.27208 16.2279 5.25 12.5 5.25C8.77208 5.25 5.75 8.27208 5.75 12Z" fill="#111827"/>
+                                                    </svg>
+                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Morning
+                                            </h2>
+                                        </div>
+                                        <div class="item-1">
+                                            <input type="radio" id="opt3a" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3a"
+                                                class="group inline-flex w-full cursor-pointer justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700  peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex p-2 gap-2">
+                                                    <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt3b" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3b"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-3">
+                                            <input type="radio" id="opt3c" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3c"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-4">
+                                            <input type="radio" id="opt3d" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3d"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-5">
+                                            <input type="radio" id="opt3e" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3e"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-6">
+                                            <input type="radio" id="opt3f" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt3f"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-7">
+                                            <input type="radio" id="opt3g" class="peer hidden" required=""
+                                                name="appointment">
+                                            <label for="opt3g"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- afternoon -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.5 12C17.5 14.7614 15.2614 17 12.5 17C9.73858 17 7.5 14.7614 7.5 12C7.5 9.23858 9.73858 7 12.5 7C15.2614 7 17.5 9.23858 17.5 12Z" fill="#1C274C"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25C12.9142 1.25 13.25 1.58579 13.25 2V4C13.25 4.41421 12.9142 4.75 12.5 4.75C12.0858 4.75 11.75 4.41421 11.75 4V2C11.75 1.58579 12.0858 1.25 12.5 1.25ZM4.16865 3.71609C4.44815 3.41039 4.92255 3.38915 5.22825 3.66865L7.45026 5.70024C7.75596 5.97974 7.7772 6.45413 7.4977 6.75983C7.2182 7.06553 6.7438 7.08677 6.4381 6.80727L4.21609 4.77569C3.91039 4.49619 3.88915 4.02179 4.16865 3.71609ZM20.8314 3.71609C21.1109 4.02179 21.0896 4.49619 20.7839 4.77569L18.5619 6.80727C18.2562 7.08677 17.7818 7.06553 17.5023 6.75983C17.2228 6.45413 17.244 5.97974 17.5497 5.70024L19.7718 3.66865C20.0775 3.38915 20.5518 3.41039 20.8314 3.71609ZM1.75 12C1.75 11.5858 2.08579 11.25 2.5 11.25H4.5C4.91421 11.25 5.25 11.5858 5.25 12C5.25 12.4142 4.91421 12.75 4.5 12.75H2.5C2.08579 12.75 1.75 12.4142 1.75 12ZM19.75 12C19.75 11.5858 20.0858 11.25 20.5 11.25H22.5C22.9142 11.25 23.25 11.5858 23.25 12C23.25 12.4142 22.9142 12.75 22.5 12.75H20.5C20.0858 12.75 19.75 12.4142 19.75 12ZM17.5255 17.0252C17.8184 16.7323 18.2933 16.7323 18.5862 17.0252L20.8082 19.2475C21.1011 19.5404 21.101 20.0153 20.8081 20.3082C20.5152 20.6011 20.0403 20.601 19.7475 20.3081L17.5255 18.0858C17.2326 17.7929 17.2326 17.3181 17.5255 17.0252ZM7.47467 17.0253C7.76756 17.3182 7.76756 17.7931 7.47467 18.086L5.25244 20.3082C4.95955 20.6011 4.48468 20.6011 4.19178 20.3082C3.89889 20.0153 3.89889 19.5404 4.19178 19.2476L6.41401 17.0253C6.7069 16.7324 7.18177 16.7324 7.47467 17.0253ZM12.5 19.25C12.9142 19.25 13.25 19.5858 13.25 20V22C13.25 22.4142 12.9142 22.75 12.5 22.75C12.0858 22.75 11.75 22.4142 11.75 22V20C11.75 19.5858 12.0858 19.25 12.5 19.25Z" fill="#111827"/>
+                                                    </svg>
+                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Afternoon
+                                            </h2>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4a" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4a"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4b" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4b"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4c" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4c"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4d" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4d"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4e" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4e"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt4f" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt4f"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- evening -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19ZM7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z" fill="#111827"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V3C12.75 3.41421 12.4142 3.75 12 3.75C11.5858 3.75 11.25 3.41421 11.25 3V2C11.25 1.58579 11.5858 1.25 12 1.25ZM4.39861 4.39861C4.6915 4.10572 5.16638 4.10572 5.45927 4.39861L5.85211 4.79145C6.145 5.08434 6.145 5.55921 5.85211 5.85211C5.55921 6.145 5.08434 6.145 4.79145 5.85211L4.39861 5.45927C4.10572 5.16638 4.10572 4.6915 4.39861 4.39861ZM19.6011 4.39887C19.894 4.69176 19.894 5.16664 19.6011 5.45953L19.2083 5.85237C18.9154 6.14526 18.4405 6.14526 18.1476 5.85237C17.8547 5.55947 17.8547 5.0846 18.1476 4.79171L18.5405 4.39887C18.8334 4.10598 19.3082 4.10598 19.6011 4.39887ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H3C3.41421 11.25 3.75 11.5858 3.75 12C3.75 12.4142 3.41421 12.75 3 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM20.25 12C20.25 11.5858 20.5858 11.25 21 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H21C20.5858 12.75 20.25 12.4142 20.25 12Z" fill="#111827"/>
+                                                    <path d="M5.25 12C5.25 13.1778 5.5521 14.2858 6.08267 15.25H2C1.58579 15.25 1.25 15.5858 1.25 16C1.25 16.4142 1.58579 16.75 2 16.75H22C22.4142 16.75 22.75 16.4142 22.75 16C22.75 15.5858 22.4142 15.25 22 15.25H17.9173C18.4479 14.2858 18.75 13.1778 18.75 12C18.75 8.52558 16.125 5.66428 12.75 5.2912V9.18923L13.4697 8.46956C13.7626 8.17666 14.2374 8.17666 14.5303 8.46956C14.8232 8.76245 14.8232 9.23732 14.5303 9.53022L12.5303 11.5302C12.2374 11.8231 11.7626 11.8231 11.4697 11.5302L9.46967 9.53022C9.17678 9.23732 9.17678 8.76245 9.46967 8.46956C9.76256 8.17666 10.2374 8.17666 10.5303 8.46956L11.25 9.18923V5.2912C7.87504 5.66428 5.25 8.52558 5.25 12Z" fill="#111827"/>
+                                                    </svg>                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Evening
+                                            </h2>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="no-slot-1" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="no-slot-1"
+                                                class="group inline-flex w-full items-center justify-between border rounded-lg p-2.5 bg-gray-100">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base text-gray-400">No Slot Avalible</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 id="appointment-date-heading-2">
+                            <button type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#appointment-date-body-2" aria-expanded="false"
+                                aria-controls="appointment-date-body-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="box flex rounded-lg w-7 h-7 shrink-0 bg-gray-100 items-center justify-center">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3253 13.6132C18.3624 13.6515 18.381 13.6707 18.3983 13.6897C18.6658 13.9835 18.8196 14.3632 18.8319 14.7604C18.8327 14.7861 18.8327 14.8128 18.8327 14.8661C18.8327 14.9904 18.8327 15.0526 18.8294 15.1051C18.7764 15.9428 18.1088 16.6104 17.2711 16.6633C17.2186 16.6667 17.1564 16.6667 17.0321 16.6667H3.96658C3.84225 16.6667 3.78008 16.6667 3.72759 16.6633C2.88989 16.6104 2.22226 15.9428 2.16933 15.1051C2.16602 15.0526 2.16602 14.9904 2.16602 14.8661C2.16602 14.8128 2.16602 14.7861 2.16681 14.7604C2.17909 14.3632 2.33287 13.9835 2.60041 13.6897C2.61775 13.6707 2.63629 13.6515 2.67337 13.6132L3.75194 12.5H17.2468L18.3253 13.6132ZM7.79102 15C7.79102 14.6548 8.07084 14.375 8.41602 14.375H12.5827C12.9279 14.375 13.2077 14.6548 13.2077 15C13.2077 15.3452 12.9279 15.625 12.5827 15.625H8.41602C8.07084 15.625 7.79102 15.3452 7.79102 15Z" fill="#111827"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.1268 5.83334C4.1268 4.26199 4.1268 3.47631 4.61496 2.98816C5.10311 2.5 5.88879 2.5 7.46013 2.5H13.5386C15.1099 2.5 15.8956 2.5 16.3837 2.98816C16.8719 3.47631 16.8719 4.26198 16.8719 5.83333V11.6667H4.1268V5.83334ZM10.4993 5.41667C10.8445 5.41667 11.1243 5.13684 11.1243 4.79167C11.1243 4.44649 10.8445 4.16667 10.4993 4.16667C10.1542 4.16667 9.87435 4.44649 9.87435 4.79167C9.87435 5.13684 10.1542 5.41667 10.4993 5.41667Z" fill="#111827"/>
+                                            </svg>                                            
+                                    </div>
+                                    <h2 class="font-medium text-base text-gray-900 max-w-2xl w-full">
+                                        Online/Virtual
+                                    </h2>
+                                </div>
+                                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="appointment-date-body-2" class="hidden" aria-labelledby="appointment-date-heading-2 w-full">
+                            <div class="py-5 border-b border-gray-200">
+                                <div class="time flex flex-col md:flex-row gap-5 p-5 border-gray-200 ">
+                                    <!-- morning -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 19C4.75 18.5858 5.08579 18.25 5.5 18.25H19.5C19.9142 18.25 20.25 18.5858 20.25 19C20.25 19.4142 19.9142 19.75 19.5 19.75H5.5C5.08579 19.75 4.75 19.4142 4.75 19ZM7.75 22C7.75 21.5858 8.08579 21.25 8.5 21.25H16.5C16.9142 21.25 17.25 21.5858 17.25 22C17.25 22.4142 16.9142 22.75 16.5 22.75H8.5C8.08579 22.75 7.75 22.4142 7.75 22Z" fill="#1C274C"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25C12.9142 1.25 13.25 1.58579 13.25 2V3C13.25 3.41421 12.9142 3.75 12.5 3.75C12.0858 3.75 11.75 3.41421 11.75 3V2C11.75 1.58579 12.0858 1.25 12.5 1.25ZM4.89861 4.39861C5.1915 4.10572 5.66638 4.10572 5.95927 4.39861L6.35211 4.79145C6.645 5.08434 6.645 5.55921 6.35211 5.85211C6.05921 6.145 5.58434 6.145 5.29145 5.85211L4.89861 5.45927C4.60572 5.16638 4.60572 4.6915 4.89861 4.39861ZM20.1011 4.39887C20.394 4.69176 20.394 5.16664 20.1011 5.45953L19.7083 5.85237C19.4154 6.14526 18.9405 6.14526 18.6476 5.85237C18.3547 5.55947 18.3547 5.0846 18.6476 4.79171L19.0405 4.39887C19.3334 4.10598 19.8082 4.10598 20.1011 4.39887ZM1.75 12C1.75 11.5858 2.08579 11.25 2.5 11.25H3.5C3.91421 11.25 4.25 11.5858 4.25 12C4.25 12.4142 3.91421 12.75 3.5 12.75H2.5C2.08579 12.75 1.75 12.4142 1.75 12ZM20.75 12C20.75 11.5858 21.0858 11.25 21.5 11.25H22.5C22.9142 11.25 23.25 11.5858 23.25 12C23.25 12.4142 22.9142 12.75 22.5 12.75H21.5C21.0858 12.75 20.75 12.4142 20.75 12Z" fill="#1C274C"/>
+                                                    <path d="M5.75 12C5.75 13.1778 6.0521 14.2858 6.58267 15.25H2.5C2.08579 15.25 1.75 15.5858 1.75 16C1.75 16.4142 2.08579 16.75 2.5 16.75H11.75V11.8107L11.0303 12.5303C10.7374 12.8232 10.2626 12.8232 9.96967 12.5303C9.67678 12.2374 9.67678 11.7626 9.96967 11.4697L11.9697 9.46967C12.2626 9.17678 12.7374 9.17678 13.0303 9.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303C14.7374 12.8232 14.2626 12.8232 13.9697 12.5303L13.25 11.8107V16.75H22.5C22.9142 16.75 23.25 16.4142 23.25 16C23.25 15.5858 22.9142 15.25 22.5 15.25H18.4173C18.9479 14.2858 19.25 13.1778 19.25 12C19.25 8.27208 16.2279 5.25 12.5 5.25C8.77208 5.25 5.75 8.27208 5.75 12Z" fill="#111827"/>
+                                                    </svg>
+                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Morning
+                                            </h2>
+                                        </div>
+                                        <div class="item-1">
+                                            <input type="radio" id="opt1a" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1a"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700  peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-center md:items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt1b" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1b"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-3">
+                                            <input type="radio" id="opt1c" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1c"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-4">
+                                            <input type="radio" id="opt1d" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1d"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-5">
+                                            <input type="radio" id="opt1e" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1e"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-6">
+                                            <input type="radio" id="opt1f" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt1f"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-7">
+                                            <input type="radio" id="opt1g" class="peer hidden" required=""
+                                                name="appointment">
+                                            <label for="opt1g"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg bg-gray-100 p-2.5 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2">
+                                                    <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- afternoon -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.5 12C17.5 14.7614 15.2614 17 12.5 17C9.73858 17 7.5 14.7614 7.5 12C7.5 9.23858 9.73858 7 12.5 7C15.2614 7 17.5 9.23858 17.5 12Z" fill="#1C274C"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25C12.9142 1.25 13.25 1.58579 13.25 2V4C13.25 4.41421 12.9142 4.75 12.5 4.75C12.0858 4.75 11.75 4.41421 11.75 4V2C11.75 1.58579 12.0858 1.25 12.5 1.25ZM4.16865 3.71609C4.44815 3.41039 4.92255 3.38915 5.22825 3.66865L7.45026 5.70024C7.75596 5.97974 7.7772 6.45413 7.4977 6.75983C7.2182 7.06553 6.7438 7.08677 6.4381 6.80727L4.21609 4.77569C3.91039 4.49619 3.88915 4.02179 4.16865 3.71609ZM20.8314 3.71609C21.1109 4.02179 21.0896 4.49619 20.7839 4.77569L18.5619 6.80727C18.2562 7.08677 17.7818 7.06553 17.5023 6.75983C17.2228 6.45413 17.244 5.97974 17.5497 5.70024L19.7718 3.66865C20.0775 3.38915 20.5518 3.41039 20.8314 3.71609ZM1.75 12C1.75 11.5858 2.08579 11.25 2.5 11.25H4.5C4.91421 11.25 5.25 11.5858 5.25 12C5.25 12.4142 4.91421 12.75 4.5 12.75H2.5C2.08579 12.75 1.75 12.4142 1.75 12ZM19.75 12C19.75 11.5858 20.0858 11.25 20.5 11.25H22.5C22.9142 11.25 23.25 11.5858 23.25 12C23.25 12.4142 22.9142 12.75 22.5 12.75H20.5C20.0858 12.75 19.75 12.4142 19.75 12ZM17.5255 17.0252C17.8184 16.7323 18.2933 16.7323 18.5862 17.0252L20.8082 19.2475C21.1011 19.5404 21.101 20.0153 20.8081 20.3082C20.5152 20.6011 20.0403 20.601 19.7475 20.3081L17.5255 18.0858C17.2326 17.7929 17.2326 17.3181 17.5255 17.0252ZM7.47467 17.0253C7.76756 17.3182 7.76756 17.7931 7.47467 18.086L5.25244 20.3082C4.95955 20.6011 4.48468 20.6011 4.19178 20.3082C3.89889 20.0153 3.89889 19.5404 4.19178 19.2476L6.41401 17.0253C6.7069 16.7324 7.18177 16.7324 7.47467 17.0253ZM12.5 19.25C12.9142 19.25 13.25 19.5858 13.25 20V22C13.25 22.4142 12.9142 22.75 12.5 22.75C12.0858 22.75 11.75 22.4142 11.75 22V20C11.75 19.5858 12.0858 19.25 12.5 19.25Z" fill="#111827"/>
+                                                    </svg>
+                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Afternoon
+                                            </h2>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2a" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2a"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">08:00 AM - 08:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2b" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2b"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">08:30 AM - 09:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2c" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2c"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">09:30 AM - 10:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2d" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2d"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">10:30 AM - 11:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2e" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2e"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">11:00 AM - 11:30 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="opt2f" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="opt2f"
+                                                class="group inline-flex w-full cursor-pointer items-center justify-between border rounded-lg p-2.5 bg-gray-100 hover:bg-primary-100 hover:border-primary-700 peer-checked:bg-primary-700 peer-checked:text-white">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base">11:30 AM - 12:00 AM</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- evening -->
+                                    <div class="flex flex-col gap-6 p-3 items-center">
+                                        <div class="morning flex gap-2 items-center">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19ZM7.25 22C7.25 21.5858 7.58579 21.25 8 21.25H16C16.4142 21.25 16.75 21.5858 16.75 22C16.75 22.4142 16.4142 22.75 16 22.75H8C7.58579 22.75 7.25 22.4142 7.25 22Z" fill="#111827"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V3C12.75 3.41421 12.4142 3.75 12 3.75C11.5858 3.75 11.25 3.41421 11.25 3V2C11.25 1.58579 11.5858 1.25 12 1.25ZM4.39861 4.39861C4.6915 4.10572 5.16638 4.10572 5.45927 4.39861L5.85211 4.79145C6.145 5.08434 6.145 5.55921 5.85211 5.85211C5.55921 6.145 5.08434 6.145 4.79145 5.85211L4.39861 5.45927C4.10572 5.16638 4.10572 4.6915 4.39861 4.39861ZM19.6011 4.39887C19.894 4.69176 19.894 5.16664 19.6011 5.45953L19.2083 5.85237C18.9154 6.14526 18.4405 6.14526 18.1476 5.85237C17.8547 5.55947 17.8547 5.0846 18.1476 4.79171L18.5405 4.39887C18.8334 4.10598 19.3082 4.10598 19.6011 4.39887ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H3C3.41421 11.25 3.75 11.5858 3.75 12C3.75 12.4142 3.41421 12.75 3 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM20.25 12C20.25 11.5858 20.5858 11.25 21 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H21C20.5858 12.75 20.25 12.4142 20.25 12Z" fill="#111827"/>
+                                                    <path d="M5.25 12C5.25 13.1778 5.5521 14.2858 6.08267 15.25H2C1.58579 15.25 1.25 15.5858 1.25 16C1.25 16.4142 1.58579 16.75 2 16.75H22C22.4142 16.75 22.75 16.4142 22.75 16C22.75 15.5858 22.4142 15.25 22 15.25H17.9173C18.4479 14.2858 18.75 13.1778 18.75 12C18.75 8.52558 16.125 5.66428 12.75 5.2912V9.18923L13.4697 8.46956C13.7626 8.17666 14.2374 8.17666 14.5303 8.46956C14.8232 8.76245 14.8232 9.23732 14.5303 9.53022L12.5303 11.5302C12.2374 11.8231 11.7626 11.8231 11.4697 11.5302L9.46967 9.53022C9.17678 9.23732 9.17678 8.76245 9.46967 8.46956C9.76256 8.17666 10.2374 8.17666 10.5303 8.46956L11.25 9.18923V5.2912C7.87504 5.66428 5.25 8.52558 5.25 12Z" fill="#111827"/>
+                                                    </svg>                                                    
+                                            </span>
+                                            <h2 class="font-medium text-base">
+                                                Evening
+                                            </h2>
+                                        </div>
+                                        <div class="item-2">
+                                            <input type="radio" id="no-slot" value="" class="peer hidden" required=""
+                                                name="appointment" />
+                                            <label for="no-slot"
+                                                class="group inline-flex w-full items-center justify-between border rounded-lg p-2.5 bg-gray-100">
+                                                <div class="flex flex-col items-start p-2 gap-2 rounded-2xl">
+                                                    <span class="font-medium text-base text-gray-400">No Slot Avalible</span>
+                                                </div>
+                                            </label>
+                                        </div>
+
+
+                                        <!-- <div
+                                            class="flex flex-col items-center p-4 gap-2 bg-gray-100 rounded-lg border">
+                                            <span class="font-medium text-base text-gray-400">No slot Available</span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!--  -->
+                         
+                        <h2 id="appointment-date-heading-3">
+                            <button type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#appointment-date-body-3" aria-expanded="false"
+                                aria-controls="appointment-date-body-3">
+                                <div class="flex items-center gap-2">
+                                    <div class="box flex rounded-lg w-7 h-7 shrink-0 bg-gray-100 items-center justify-center">
+                                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" width="32" height="32" rx="8" fill="#F3F4F6"/>
+                                            <path d="M16.4993 24.3338C21.1017 24.3338 24.8327 22.6548 24.8327 20.5838C24.8327 19.5282 23.8636 18.5745 22.3039 17.8931C21.3521 19.6396 19.9008 21.145 18.0573 21.9328C17.0664 22.3563 15.9323 22.3563 14.9414 21.9328C13.0979 21.145 11.6466 19.6396 10.6948 17.8931C9.13514 18.5745 8.16602 19.5282 8.16602 20.5838C8.16602 22.6548 11.897 24.3338 16.4993 24.3338Z" fill="#6B7280"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.666 13.0954C10.666 10.0971 13.2777 7.6665 16.4993 7.6665C19.721 7.6665 22.3327 10.0971 22.3327 13.0954C22.3327 16.0701 20.4709 19.5414 17.5661 20.7828C16.8889 21.0722 16.1098 21.0722 15.4326 20.7828C12.5278 19.5414 10.666 16.0701 10.666 13.0954ZM16.4993 15.1665C17.4198 15.1665 18.166 14.4203 18.166 13.4998C18.166 12.5794 17.4198 11.8332 16.4993 11.8332C15.5789 11.8332 14.8327 12.5794 14.8327 13.4998C14.8327 14.4203 15.5789 15.1665 16.4993 15.1665Z" fill="#6B7280"/>
+                                            </svg>                                            
+                                               
+                                    </div>
+                                    <h2 class="font-medium text-base text-gray-900 max-w-2xl w-full">
+                                       Blue Area
+                                    </h2>
+                                </div>
+                                <svg data-accordion-icon class="w-6 h-6" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="appointment-date-body-3" class="hidden" aria-labelledby="appointment-date-heading-3">
+                            <div class="py-5 border-b border-gray-200">
+                                <div class="flex flex-col items-center gap-4">
+                                    <span class="">
+                                        <svg width="106" height="125" viewBox="0 0 106 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" y="7" width="105" height="93" rx="6" fill="url(#paint0_linear_180539_144653)"/>
+                                            <rect x="16.5" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint1_linear_180539_144653)"/>
+                                            <rect x="56.8633" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint2_linear_180539_144653)"/>
+                                            <rect x="29.9541" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint3_linear_180539_144653)"/>
+                                            <rect x="70.3184" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint4_linear_180539_144653)"/>
+                                            <rect x="43.4092" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint5_linear_180539_144653)"/>
+                                            <rect x="83.7725" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint6_linear_180539_144653)"/>
+                                            <rect x="12.5" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="12.5" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="12.5" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="63" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="63" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="80" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="80" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <g filter="url(#filter0_d_180539_144653)">
+                                            <circle cx="53" cy="95.5" r="21.5" fill="#D9D9D9"/>
+                                            </g>
+                                            <path d="M56.2 81L55.55 104.508H49.4502L48.7836 81H56.2ZM52.5001 115C51.4001 115 50.4557 114.617 49.6669 113.852C48.878 113.077 48.4891 112.148 48.5002 111.066C48.4891 109.995 48.878 109.077 49.6669 108.311C50.4557 107.546 51.4001 107.164 52.5001 107.164C53.5556 107.164 54.4834 107.546 55.2834 108.311C56.0833 109.077 56.4889 109.995 56.5 111.066C56.4889 111.787 56.2944 112.448 55.9167 113.049C55.55 113.639 55.0667 114.115 54.4667 114.475C53.8667 114.825 53.2112 115 52.5001 115Z" fill="white"/>
+                                            <defs>
+                                            <filter id="filter0_d_180539_144653" x="27.5" y="74" width="51" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feComposite in2="hardAlpha" operator="out"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_180539_144653"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_180539_144653" result="shape"/>
+                                            </filter>
+                                            <linearGradient id="paint0_linear_180539_144653" x1="53" y1="7" x2="53" y2="100" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F9F9F9"/>
+                                            <stop offset="1" stop-color="#F0F0F0"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint1_linear_180539_144653" x1="19.1429" y1="0" x2="19.1429" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint2_linear_180539_144653" x1="59.5061" y1="0" x2="59.5061" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint3_linear_180539_144653" x1="32.597" y1="0" x2="32.597" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint4_linear_180539_144653" x1="72.9612" y1="0" x2="72.9612" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint5_linear_180539_144653" x1="46.052" y1="0" x2="46.052" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint6_linear_180539_144653" x1="86.4153" y1="0" x2="86.4153" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            </defs>
+                                            </svg>               
+                                    </span>
+                                    <span class="flex flex-col items-center">            
+                                        <h2 class="text items-center font-normal text-sm">There is no appointment slot available on your
+                                        </h2>
+                                        <h2 class="text items-center font-normal text-sm">
+                                            selected date <span class="font-medium text-sm"> Monday 04 December</span>
+                                        </h2>
+                                    </span> 
+                                </div>
+                                </div>
+                            </div>
+                       
+                        <!-- Gulburg-green -->
+                        <h2 id="appointment-date-heading-4">
+                            <button type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-gray-200"
+                                data-accordion-target="#appointment-date-body-4" aria-expanded="false"
+                                aria-controls="appointment-date-body-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="box flex rounded-lg w-7 h-7 shrink-0 bg-gray-100 items-center justify-center">
+                                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" width="32" height="32" rx="8" fill="#F3F4F6"/>
+                                            <path d="M16.4993 24.3338C21.1017 24.3338 24.8327 22.6548 24.8327 20.5838C24.8327 19.5282 23.8636 18.5745 22.3039 17.8931C21.3521 19.6396 19.9008 21.145 18.0573 21.9328C17.0664 22.3563 15.9323 22.3563 14.9414 21.9328C13.0979 21.145 11.6466 19.6396 10.6948 17.8931C9.13514 18.5745 8.16602 19.5282 8.16602 20.5838C8.16602 22.6548 11.897 24.3338 16.4993 24.3338Z" fill="#6B7280"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.666 13.0954C10.666 10.0971 13.2777 7.6665 16.4993 7.6665C19.721 7.6665 22.3327 10.0971 22.3327 13.0954C22.3327 16.0701 20.4709 19.5414 17.5661 20.7828C16.8889 21.0722 16.1098 21.0722 15.4326 20.7828C12.5278 19.5414 10.666 16.0701 10.666 13.0954ZM16.4993 15.1665C17.4198 15.1665 18.166 14.4203 18.166 13.4998C18.166 12.5794 17.4198 11.8332 16.4993 11.8332C15.5789 11.8332 14.8327 12.5794 14.8327 13.4998C14.8327 14.4203 15.5789 15.1665 16.4993 15.1665Z" fill="#6B7280"/>
+                                            </svg>
+                                                                                         
+                                    </div>
+                                    <h2 class="font-medium text-base text-gray-900 max-w-2xl w-full">
+                                       Gulberg Greens
+                                    </h2>
+                                </div>
+                                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="appointment-date-body-4" class="hidden" aria-labelledby="appointment-date-heading-4">
+                            <div class="py-5 border-t border-gray-200">
+                                <div class="flex flex-col items-center gap-4">
+                                    <span class="">
+                                        <svg width="106" height="125" viewBox="0 0 106 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" y="7" width="105" height="93" rx="6" fill="url(#paint0_linear_1056_60078)"/>
+                                            <rect x="16.5" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint1_linear_1056_60078)"/>
+                                            <rect x="56.8633" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint2_linear_1056_60078)"/>
+                                            <rect x="29.9551" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint3_linear_1056_60078)"/>
+                                            <rect x="70.3184" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint4_linear_1056_60078)"/>
+                                            <rect x="43.4082" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint5_linear_1056_60078)"/>
+                                            <rect x="83.7734" width="5.28571" height="12.974" rx="2.64286" fill="url(#paint6_linear_1056_60078)"/>
+                                            <rect x="12.5" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="12.5" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="12.5" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="29" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="46" y="57" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="63" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="63" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="80" y="23" width="13" height="13" fill="#E4E4E7"/>
+                                            <rect x="80" y="40" width="13" height="13" fill="#E4E4E7"/>
+                                            <g filter="url(#filter0_d_1056_60078)">
+                                            <circle cx="53" cy="95.5" r="21.5" fill="#D9D9D9"/>
+                                            </g>
+                                            <path d="M56.2 81L55.55 104.508H49.4502L48.7836 81H56.2ZM52.5001 115C51.4001 115 50.4557 114.617 49.6669 113.852C48.878 113.077 48.4891 112.148 48.5002 111.066C48.4891 109.995 48.878 109.077 49.6669 108.311C50.4557 107.546 51.4001 107.164 52.5001 107.164C53.5556 107.164 54.4834 107.546 55.2834 108.311C56.0833 109.077 56.4889 109.995 56.5 111.066C56.4889 111.787 56.2944 112.448 55.9167 113.049C55.55 113.639 55.0667 114.115 54.4667 114.475C53.8667 114.825 53.2112 115 52.5001 115Z" fill="white"/>
+                                            <defs>
+                                            <filter id="filter0_d_1056_60078" x="27.5" y="74" width="51" height="51" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feComposite in2="hardAlpha" operator="out"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1056_60078"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1056_60078" result="shape"/>
+                                            </filter>
+                                            <linearGradient id="paint0_linear_1056_60078" x1="53" y1="7" x2="53" y2="100" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F9F9F9"/>
+                                            <stop offset="1" stop-color="#F0F0F0"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint1_linear_1056_60078" x1="19.1429" y1="0" x2="19.1429" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint2_linear_1056_60078" x1="59.5061" y1="0" x2="59.5061" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint3_linear_1056_60078" x1="32.5979" y1="0" x2="32.5979" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint4_linear_1056_60078" x1="72.9612" y1="0" x2="72.9612" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint5_linear_1056_60078" x1="46.0511" y1="0" x2="46.0511" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            <linearGradient id="paint6_linear_1056_60078" x1="86.4163" y1="0" x2="86.4163" y2="12.974" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F3F3F3"/>
+                                            <stop offset="1" stop-color="#D5D5D5"/>
+                                            </linearGradient>
+                                            </defs>
+                                            </svg>
+                                                        
+                                    </span>
+                                    <span class="flex flex-col items-center">            
+                                        <h2 class="text items-center font-normal text-sm">There is no appointment slot available on your
+                                        </h2>
+                                        <h2 class="text items-center font-normal text-sm">
+                                            selected date <span class="font-medium text-sm"> Monday 04 December</span>
+                                        </h2>
+                                    </span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- continue -->
+                    <a href="#"
+                        class="flex px-20 py-2.5 bg-primary-700 hover:bg-primary-800 rounded-lg items-center justify-center mx-auto">
+                        <button class="font-medium text-sm text-white">Continue</button>
+                </a>
+                </div> 
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+ </body>
+
+</html>
