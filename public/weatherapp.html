@@ -70,13 +70,16 @@
            if (data.weather[0].main == "Clouds"){
                weatherIcon.src ="images/clouds.png";
            }
-           else if (data.weather[0].main == "partly-cloudy"){
+           else if (data.weather[0].main == "Clear"){
+               weatherIcon.src ="images/sun.png";
+           }
+           else if (data.weather[0].main == "Drizzle"){
                weatherIcon.src ="images/partly-cloudy.png";
            }
            else if (data.weather[0].main == "cloudy"){
                weatherIcon.src ="images/cloudy.png";
            }
-           else if (data.weather[0].main == "strom"){
+           else if (data.weather[0].main == "Mist"){
                weatherIcon.src ="images/strom.png";
            }
            document.querySelector(".weather").style.display = "block";
