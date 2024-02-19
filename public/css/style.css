@@ -757,6 +757,9 @@ select {
 .bottom-8 {
   bottom: 2rem;
 }
+.end-0 {
+  inset-inline-end: 0px;
+}
 .left-0 {
   left: 0px;
 }
@@ -3253,6 +3256,9 @@ select {
 }
 .underline {
   text-decoration-line: underline;
+}
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 .opacity-0 {
   opacity: 0;
