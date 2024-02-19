@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <header class="sticky top-0 z-10 text-gray-400 bg-gray-900 body-font">
+    <header class="sticky top-0 z-10 text-gray-400 bg-gray-900 body-font transition-all">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -26,18 +26,33 @@
             </svg>
             <span class="ml-3 text-xl">Institute of Supply Management</span>
           </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" aria-label="Breadcrumb">
+          <nav class="hidden md:flex md:ml-auto flex flex-wrap items-center text-base justify-center" aria-label="Breadcrumb">
             <a href="#Home" class="mr-3 hover:text-white">Home</a>
             <a href="#About" class="mr-3 hover:text-white">About</a>
             <a href="#Our Teams" class="mr-3 hover:text-white">Our Teams</a>
             <a href="#Pricing" class="mr-3 hover:text-white">Pricing</a>
             <a href="#Contact" class="mr-3 hover:text-white">Contact</a>
+            <button class="inline-flex items-center bg-red-800 border-0 py-1 px-3 focus:outline-none hover:bg-red-900 rounded-md text-white">Log In
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
           </nav>
-          <button class="inline-flex items-center bg-red-800 border-0 py-1 px-3 focus:outline-none hover:bg-red-900 rounded-md text-white">Log In
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white text-2xl">
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
+          
+          <div id="mobile-menu" class="md:hidden">
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Home</a>
+            <a href="#About" class="text-violet-400 hover:text-gray-500">About</a>
+            <a href="#OurTerms" class="text-violet-400 hover:text-gray-500">Our Terms</a>
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Pricing</a>
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Contact</a>
+            <a href="#Login" class="text-violet-400 hover:text-gray-500">Log In</a>
+
+          </div>
         </div>
       </header>
       <section id="Home" class="text-gray-400 bg-gray-900 body-font">

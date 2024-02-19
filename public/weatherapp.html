@@ -79,8 +79,11 @@
            else if (data.weather[0].main == "cloudy"){
                weatherIcon.src ="images/cloudy.png";
            }
-           else if (data.weather[0].main == "Mist"){
+           else if (data.weather[0].main == "rain"){
                weatherIcon.src ="images/strom.png";
+           }
+           else if (data.weather[0].main == "Night"){
+               weatherIcon.src ="images/moon.png";
            }
            document.querySelector(".weather").style.display = "block";
            document.querySelector(".error").style.display = "none";
@@ -92,8 +95,6 @@
             checkWeather(searchBox.value);
         })
         
-        
     </script>
-
 </body>
 </html>
