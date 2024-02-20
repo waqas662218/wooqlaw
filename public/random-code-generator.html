@@ -22,17 +22,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="flex flex-col shadow rounded-md bg-purple-100 gap-2 px-3 py-4 max-w-md mx-auto">
-        <h1 class="flex flex-col items-start font-medium text-base">
+        <div class="flex flex-col shadow rounded-md bg-gradient-to-r from-cyan-700 to-blue-500 gap-2 px-3 py-4 max-w-md mx-auto">
+        <h1 class="flex flex-col items-start font-medium text-sm md:text-base">
             <span>
                 Generate a
             </span>
-            <span class="text-green-400 underline underline-offset-4 font-medium">
+            <span class="text-red-700 underline underline-offset-4 font-medium">
                 Random Password
             </span>
         </h1>
         <!-- w -->
-        <div class="flex flex-col">
+        <div class="flex flex-col gap-2">
         <div class="relative flex flex-col">
             <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="Password" required />
             <button onclick="copyPassword()" type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
@@ -42,11 +42,11 @@
                     </svg>
             </button> 
         </div>
-        <div class="flex items-center gap-4 ml-4">
+        <div class="flex items-center gap-2 md:gap-4 ml-2">
             <input onclick="myFunction()" id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500">
-        <button onclick="createPassword()" class="flex items-center gap-2 w-fit bg-green-600 text-white mt-3 px-3 py-1 rounded-md">
-            <span>
-                <svg class="w-8 h-8 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <button onclick="createPassword()" class="flex items-center gap-2 w-fit bg-gradient-to-r from-red-500 to-purple-700 hover:from-pink-500 hover:to-orange-500 text-white shadow font-medium text-xs md:text-base px-2 md:px-3 py-1 md:py-2 rounded-md">
+            <span class="flex items-center justify-center">
+                <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M4 9.5a.5.5 0 00-.5.5 6.5 6.5 0 0012.13 3.25.5.5 0 00-.866-.5A5.5 5.5 0 014.5 10a.5.5 0 00-.5-.5z" clip-rule="evenodd"/>
                     <path fill-rule="evenodd" d="M4.354 9.146a.5.5 0 00-.708 0l-2 2a.5.5 0 00.708.708L4 10.207l1.646 1.647a.5.5 0 00.708-.708l-2-2zM15.947 10.5a.5.5 0 00.5-.5 6.5 6.5 0 00-12.13-3.25.5.5 0 10.866.5A5.5 5.5 0 0115.448 10a.5.5 0 00.5.5z" clip-rule="evenodd"/>
                     <path fill-rule="evenodd" d="M18.354 8.146a.5.5 0 00-.708 0L16 9.793l-1.646-1.647a.5.5 0 00-.708.708l2 2a.5.5 0 00.708 0l2-2a.5.5 0 000-.708z" clip-rule="evenodd"/>
@@ -58,8 +58,6 @@
     </div>
     </div>
     </div>
-
-   
 
     <script>
         const passwordBox = document.getElementById("password");
