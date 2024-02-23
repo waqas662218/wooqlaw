@@ -30,21 +30,21 @@
         </div>
         </div>
         
-        <div class="grid grid-cols-4 py-4 gap-8 justify-center items-center">
+        <div class="col grid grid-cols-4 py-4 gap-8 justify-center items-center">
             <div class="flex flex-col items-center gap-2">
-                <input class="flex flex-col w-20 h-12 text-center text-sm md:text-base font-medium bg-white rounded-md" type="text" readonly value="00">
+                <input class="flex flex-col w-20 h-12 text-center text-sm md:text-base font-medium bg-white rounded-md" type="text" readonly value="0">
                 <span class="text-white">Days</span>
             </div>  
             <div class="flex flex-col items-center gap-2">
-                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="00">                
+                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="0">                
                 <span class="text-white">Hours</span>
             </div>
             <div class="flex flex-col items-center gap-2">
-                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="00">                
+                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="0">                
                 <span class="text-white">Minutes</span>
             </div>
             <div class="flex flex-col items-center gap-2">
-                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="00">
+                <input class="flex flex-col w-20 h-12 bg-white text-sm md:text-base font-medium text-center rounded-md" type="text" readonly value="0">
                 <span class="text-white">Seconds</span>
             </div>
         </div>
@@ -52,21 +52,33 @@
     </div>
 
     <script>
-        const endDate = "21 February 2024 11:00 AM";
+        const endDate = "23 February 2024 1:00 PM";
         document.getElementById("end-date").innerText = endDate;
-        const input = document.querySelectorAll("input");
+        const inputs = document.querySelectorAll("input");
          
         function clock() {
-            const end = new Date(endDate).getTime()
+            const end = new Date(endDate)
             const now = new Date()
-            const diff = end-now;
-            console.log(diff);  
+            const diff = (end - now) / 1000;
+           
+            if(diff < 0) return;
             inputs[0].value = Math.floor(diff / 3600 / 24);
-            // conver into days
-             
-        }
+            inputs[1].value = Math.floor(diff / 3600) % 24;
+            inputs[2].value = Math.floor(diff / 60) % 60;
+            inputs[3].value = Math.floor(diff) % 60;
 
+            // conver into days
+              
+        }
+    
         clock()
+        setInterval(
+           () => {
+            clock()
+           },
+           1000
+        )
+
     </script>
 
     
