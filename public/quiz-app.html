@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCQ Cards</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
 
-<div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg p-6 mt-8">
-  <!-- MCQ Cards -->
-  <div class="mcq-cards">
-    <!-- MCQ Card 1 -->
-    <div class="mcq-card" id="mcqCard1">
-      <div class="text-xl font-semibold mb-4">MCQ Card 1</div>
-      <form id="form1">
-        <div class="space-y-2">
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option1" value="A">
-            <span class="ml-2">Option A</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option1" value="B">
-            <span class="ml-2">Option B</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option1" value="C">
-            <span class="ml-2">Option C</span>
-          </label>
+<nav class="bg-gray-800">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div>
+                <a class="text-white text-xl font-semibold" href="#">Logo</a>
+            </div>
+
+            <!-- Responsive Navigation Toggle -->
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex lg:items-center lg:w-auto">
+                <ul class="flex justify-center lg:flex-grow">
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </form>
     </div>
-    
-    <!-- MCQ Card 2 -->
-    <div class="mcq-card hidden" id="mcqCard2">
-      <div class="text-xl font-semibold mb-4">which Card 2</div>
-      <form id="form2">
-        <div class="space-y-2">
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option2" value="A">
-            <span class="ml-2">Option A</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option2" value="B">
-            <span class="ml-2">Option B</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option2" value="C">
-            <span class="ml-2">Option C</span>
-          </label>
-        </div>
-      </form>
+
+    <!-- Responsive Navigation Menu -->
+    <div class="hidden lg:hidden" id="mobile-menu">
+        <ul class="bg-gray-800">
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Home</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">About</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Services</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Contact</a>
+            </li>
+        </ul>
     </div>
-    
-    <!-- MCQ Card 3 -->
-    <div class="mcq-card hidden" id="mcqCard3">
-      <div class="text-xl font-semibold mb-4">MCQ Card 3</div>
-      <form id="form3">
-        <div class="space-y-2">
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option3" value="A">
-            <span class="ml-2">Option A</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option3" value="B">
-            <span class="ml-2">Option B</span>
-          </label>
-          <label class="flex items-center">
-            <input type="radio" class="form-radio" name="option3" value="C">
-            <span class="ml-2">Option C</span>
-          </label>
-        </div>
-      </form>
-    </div>
-  </div>
-  
-  <!-- Submit Button -->
-  <button id="submitBtn" class="flex items-center justify-center w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mt-4">Next</button>
-</div>
+</nav>
 
 <script>
-  const submitBtn = document.getElementById('submitBtn');
-  const mcqCards = document.querySelectorAll('.mcq-card');
-  let currentCardIndex = 0;
-
-  submitBtn.addEventListener('click', () => {
-    mcqCards[currentCardIndex].classList.add('hidden');
-    currentCardIndex = (currentCardIndex + 1) % mcqCards.length;
-    mcqCards[currentCardIndex].classList.remove('hidden');
-  });
+    // Toggle responsive navigation
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+        var nav = document.getElementById('mobile-menu');
+        nav.classList.toggle('hidden');
+    });
 </script>
 
 </body>
