@@ -237,8 +237,16 @@ navbarOpen: false,
                   class="flex w-full text-left faq-btn"
                   @click="openFaq1 = !openFaq1"
                   >
+                  
+                  <div class="w-full mr-5">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
                   <div
-                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     class="bg-primary/5 dark:bg-white/5 text-primary  flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
                      >
                      <svg
                         :class="openFaq1 && 'rotate-180'"
@@ -254,15 +262,8 @@ navbarOpen: false,
                            />
                      </svg>
                   </div>
-                  <div class="w-full">
-                     <h4
-                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
-                        >
-                        How long we deliver your first blog post?
-                     </h4>
-                  </div>
                </button>
-               <div x-show="openFaq1" class="faq-content pl-[62px]">
+               <div x-show="openFaq1" class="faq-content">
                   <p
                      class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
                      >

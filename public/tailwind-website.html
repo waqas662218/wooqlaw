@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <header class="sticky top-0 text-gray-400 bg-gray-900 body-font">
+    <header class="sticky top-0 z-10 text-gray-400 bg-gray-900 body-font transition-all">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -26,18 +26,33 @@
             </svg>
             <span class="ml-3 text-xl">Institute of Supply Management</span>
           </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <nav class="hidden md:flex md:ml-auto flex flex-wrap items-center text-base justify-center" aria-label="Breadcrumb">
             <a href="#Home" class="mr-3 hover:text-white">Home</a>
             <a href="#About" class="mr-3 hover:text-white">About</a>
             <a href="#Our Teams" class="mr-3 hover:text-white">Our Teams</a>
             <a href="#Pricing" class="mr-3 hover:text-white">Pricing</a>
             <a href="#Contact" class="mr-3 hover:text-white">Contact</a>
+            <button class="inline-flex items-center bg-red-800 border-0 py-1 px-3 focus:outline-none hover:bg-red-900 rounded-md text-white">Log In
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
           </nav>
-          <button class="inline-flex items-center bg-red-800 border-0 py-1 px-3 focus:outline-none hover:bg-red-900 rounded-md text-white">Log In
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white text-2xl">
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
+          
+          <div id="mobile-menu" class="md:hidden">
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Home</a>
+            <a href="#About" class="text-violet-400 hover:text-gray-500">About</a>
+            <a href="#OurTerms" class="text-violet-400 hover:text-gray-500">Our Terms</a>
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Pricing</a>
+            <a href="#Home" class="text-violet-400 hover:text-gray-500">Contact</a>
+            <a href="#Login" class="text-violet-400 hover:text-gray-500">Log In</a>
+
+          </div>
         </div>
       </header>
       <section id="Home" class="text-gray-400 bg-gray-900 body-font">
@@ -250,7 +265,7 @@
             </table>
           </div>
           <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-            <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+            <a href="#" class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
@@ -262,11 +277,11 @@
       <section id="Contact" class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto flex md:flex-row flex-col sm:flex-nowrap">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13283.13568162148!2d73.04682738927129!3d33.66276033256156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df956c19656535%3A0x2848b9beff8b844d!2sI-9%2F3%20I%209%2F3%20I-9%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1706602568925!5m2!1sen!2s" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
             <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
               <div class="lg:w-1/2 px-6">
                 <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-                <p class="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+                <p class="mt-1">Street no. 5, Plot no. 360 lower ground, Sector, I-9/3 Islamabad, Islamabad Capital Territory 44000, Pakistan</p>
               </div>
               <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
@@ -385,7 +400,7 @@
         <div class="bg-gray-100">
           <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p class="text-gray-500 text-sm text-center sm:text-left">© 2024 Institute of Supply Management —
-              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@ISM</a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a href="#" class="text-gray-500">

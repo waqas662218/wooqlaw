@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>random-code-generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div
+            class="flex flex-col shadow rounded-md bg-gradient-to-r from-cyan-700 to-blue-500 gap-2 px-3 py-4 max-w-md mx-auto">
+            <h1 class="flex flex-col items-start font-medium text-sm md:text-lg">
+                <span>
+                    Generate a
+                </span>
+                <span class="text-red-800 text-xl underline underline-offset-4 font-medium">
+                    Random Password
+                </span>
+            </h1>
+            <!-- w -->
+            <div class="flex flex-col gap-2">
+                <div class="relative flex flex-col">
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5"
+                        placeholder="Password" required />
+                    <button onclick="copyPassword()" type="button"
+                        class="absolute inset-y-0 end-0 flex items-center pe-3">
+                        <svg width="28" height="15" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.7179 17.1488C16.7179 14.5119 18.8197 12.3743 21.4125 12.3743C24.0053 12.3743 26.1072 14.5119 26.1072 17.1488C26.1072 19.7857 24.0053 21.9233 21.4125 21.9233C18.8197 21.9233 16.7179 19.7857 16.7179 17.1488Z"
+                                fill="#6B7280" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.547363 17.1488C0.547363 20.6275 1.43406 21.7991 3.20745 24.1422C6.74842 28.8207 12.687 34.1247 21.4125 34.1247C30.1381 34.1247 36.0767 28.8207 39.6176 24.1422C41.391 21.7991 42.2777 20.6275 42.2777 17.1488C42.2777 13.67 41.391 12.4985 39.6176 10.1554C36.0767 5.47689 30.1381 0.172852 21.4125 0.172852C12.687 0.172852 6.74842 5.47689 3.20745 10.1554C1.43406 12.4985 0.547363 13.67 0.547363 17.1488ZM21.4125 9.19131C17.0912 9.19131 13.5881 12.754 13.5881 17.1488C13.5881 21.5436 17.0912 25.1062 21.4125 25.1062C25.7339 25.1062 29.237 21.5436 29.237 17.1488C29.237 12.754 25.7339 9.19131 21.4125 9.19131Z"
+                                fill="#6B7280" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center gap-2 md:gap-4 ml-2">
+                    <input onclick="myFunction()" id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500">
+                    <button onclick="createPassword()"
+                        class="flex items-center gap-2 w-fit bg-gradient-to-r from-red-500 to-purple-700 hover:from-pink-500 hover:to-orange-500 text-white shadow font-medium text-xs md:text-base px-2 md:px-3 py-1 md:py-2 rounded-md">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M4 9.5a.5.5 0 00-.5.5 6.5 6.5 0 0012.13 3.25.5.5 0 00-.866-.5A5.5 5.5 0 014.5 10a.5.5 0 00-.5-.5z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="M4.354 9.146a.5.5 0 00-.708 0l-2 2a.5.5 0 00.708.708L4 10.207l1.646 1.647a.5.5 0 00.708-.708l-2-2zM15.947 10.5a.5.5 0 00.5-.5 6.5 6.5 0 00-12.13-3.25.5.5 0 10.866.5A5.5 5.5 0 0115.448 10a.5.5 0 00.5.5z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="M18.354 8.146a.5.5 0 00-.708 0L16 9.793l-1.646-1.647a.5.5 0 00-.708.708l2 2a.5.5 0 00.708 0l2-2a.5.5 0 000-.708z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        Generate Password
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const passwordBox = document.getElementById("password");
+        const length = 12;
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        const number = "0123456789";
+        const symbol = "~`!@#$%^&*()_-+={[}]|\:;'<,>.?/";
+
+        const allChars = upperCase + lowerCase + number + symbol;
+        function createPassword() {
+            let password = "";
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += number[Math.floor(Math.random() * number.length)];
+            password += symbol[Math.floor(Math.random() * symbol.length)];
+
+            while (length > password.length) {
+                password += allChars[Math.floor(Math.random() * allChars.length)];
+
+            }
+            passwordBox.value = password;
+        }
+
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function copyPassword() {
+            passwordBox.select();
+            document.execCommand("copy");
+        }
+    </script>
+
+</body>
+</html>

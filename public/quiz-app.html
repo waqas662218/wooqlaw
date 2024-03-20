@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<nav class="bg-gray-800">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div>
+                <a class="text-white text-xl font-semibold" href="#">Logo</a>
+            </div>
+
+            <!-- Responsive Navigation Toggle -->
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex lg:items-center lg:w-auto">
+                <ul class="flex justify-center lg:flex-grow">
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white px-4 py-2 block hover:bg-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div class="hidden lg:hidden" id="mobile-menu">
+        <ul class="bg-gray-800">
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Home</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">About</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Services</a>
+            </li>
+            <li>
+                <a href="#" class="block text-white px-4 py-2">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Toggle responsive navigation
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+        var nav = document.getElementById('mobile-menu');
+        nav.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

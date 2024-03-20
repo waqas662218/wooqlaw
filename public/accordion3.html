@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion with Tailwind CSS and Alpine.js</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    
+<div x-data="{ active: 1 }" class="mx-auto max-w-3xl w-full min-h-[16rem] space-y-4">
+    <div x-data="{
+        id: 1,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }" role="region" class="rounded-lg bg-white shadow">
+        <h2>
+            <button
+                x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+            >
+                <span>Question #1</span>
+                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+            </button>
+        </h2>
+
+        <div x-show="expanded" x-collapse>
+            <div class="px-6 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
+        </div>
+    </div>
+
+    <div x-data="{
+        id: 2,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+    }" role="region" class="rounded-lg bg-white shadow">
+        <h2>
+            <button
+                x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="flex w-full items-center justify-between px-6 py-4 text-xl font-bold"
+            >
+                <span>Question #2</span>
+                <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+            </button>
+        </h2>
+
+        <div x-show="expanded" x-collapse>
+            <div class="px-6 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

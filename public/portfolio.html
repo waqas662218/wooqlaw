@@ -30,14 +30,21 @@
     <nav id="navbar" class="navbar bg-gray-800 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">Muhammad Waqas</a>
-            <div class="space-x-4">
+            <div class="space-x-4 hidden md:block">
                 <a href="#home" class="nav-link scrollto active hover:text-gray-300">Home</a>
                 <a href="#projects" class="nav-link scrollto hover:text-gray-300">Projects</a>
                 <a href="#skills" class="nav-link scrollto hover:text-gray-300">Skills</a>
                 <a href="#contact" class="nav-link scrollto hover:text-gray-300">Contact</a>
             </div>
         </div>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle md:hidden block">
+            <div class="">
+                <a href="#home" class="nav-link scrollto active hover:text-gray-300">Home</a>
+                <a href="#projects" class="nav-link scrollto hover:text-gray-300">Projects</a>
+                <a href="#skills" class="nav-link scrollto hover:text-gray-300">Skills</a>
+                <a href="#contact" class="nav-link scrollto hover:text-gray-300">Contact</a>
+            </div>
+        </i>
     </nav>
 
     <!-- Hero Section -->
@@ -74,7 +81,7 @@
                     <div class="flex flex-col gap-2">
                     <h3 class="text-lg font-semibold">HTML</h3>
                     <div class="relative">
-                        <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="md:w-96 bg-gray-200 rounded-full">
                             <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%"> 90%</div>
                           </div>
                     </div>
@@ -82,8 +89,8 @@
                     <div class="flex flex-col gap-2">
                     <h3 class="text-lg font-semibold">CSS</h3>
                     <div class="relative">
-                        <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
-                            <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%"> 90%</div>
+                        <div class="md:w-96 bg-gray-200 rounded-full">
+                            <div class="bg-blue-600 text-xs font-medium text-white text-center p-0.5 leading-none rounded-full" style="width: 90%"> 90%</div>
                           </div>
                     </div>
                 </div>
@@ -93,7 +100,7 @@
                     <div class="flex flex-col gap-2">
                         <h3 class="text-lg font-semibold">JAVASCRIPT</h3>
                         <div class="relative">
-                            <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                            <div class="md:w-96 bg-gray-200 rounded-full">
                                 <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 60%"> 60%</div>
                               </div>
                         </div>
@@ -101,7 +108,7 @@
                         <div class="flex flex-col gap-2">
                         <h3 class="text-lg font-semibold">TAILWIND CSS</h3>
                         <div class="relative">
-                            <div class="md:w-96 bg-gray-200 rounded-full dark:bg-gray-700">
+                            <div class="md:w-96 bg-gray-200 rounded-full">
                                 <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 80%"> 80%</div>
                               </div>
                         </div>
@@ -139,7 +146,7 @@
                     <button type="submit" class="flex w-fit justify-end bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-lg md:rounded-full font-medium">Send Message</button>
                 </div>
                 </div>
-                
+         
             </form>
         </div>
         <div class="grid p-4 w-full">
