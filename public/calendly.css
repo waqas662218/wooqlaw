@@ -1,3 +1,4 @@
+
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -31,8 +32,9 @@
    
 }
 .meeting{ 
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
+    justify-items: center;
     border: none;
     width: 300px;
     height: 120px;
@@ -58,16 +60,16 @@
     font-weight: 600;
     text-align: center;
     align-items: center;
+    border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .icon{
-    display: block;
-    text-align: center;
-    align-items: start;
+    width: 20px;
+    height: 20px;
     color: black;
 }
 .cookies{
     display: flex;
-    margin-top: 270px;
-    color: lightskyblue;
+    margin-top: 240px;
+    color: #0069FF;
 }
