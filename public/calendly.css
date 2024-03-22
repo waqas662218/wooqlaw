@@ -1,6 +1,8 @@
 
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    padding: 1%;
 }
 .container
 {
@@ -8,10 +10,7 @@
     height: 600px;
     box-shadow: 0 0 2px;
     border: 1px groove;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 8% auto 0;
-   
+    border-radius: 8px;  
 }  
 .text{
    display: block;
@@ -40,7 +39,6 @@
     height: 120px;
     background-color: white;
     border-top: 1px solid gray;
-    padding: 12px;
     margin-left: 60px;
     margin-top: 50px;
 }
@@ -48,7 +46,7 @@
     background-color: lightgray;
 }
 .circle{
-    
+
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -56,12 +54,14 @@
     display: inline-block;
 }
 .meeting-time{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
-    text-align: center;
-    align-items: center;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.main{
+    text-align: center;
+
 }
 .icon{
     width: 20px;

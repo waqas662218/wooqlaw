@@ -1,15 +1,18 @@
+
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    padding: 1%;
 }
 .container
 {
     display: flex;
-    width: 900px;
+    width: 940px;
     height: 600px;
     box-shadow: 0 0 1px;
     border: 1px groove;
     border-radius: 8px;
-    margin: 8% auto 0;
+
 }  
 .left{
    width: auto;
@@ -92,7 +95,7 @@
 }
 .vl{
     border-left: 1px groove;
-    height: 640px;
+    height: 600px;
   }
   .date-time{
 color: #1A1A1A;
@@ -100,7 +103,7 @@ color: #1A1A1A;
 
 
   .calendar {
-    width: 300px;
+    width: 350px;
     background-color: #fff;
     border-radius: 5px;
   }
@@ -111,7 +114,7 @@ color: #1A1A1A;
     font-weight: bold;
   }
 
-  .calendar-days {
+  #showCommandBtn {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
   }
@@ -120,6 +123,7 @@ color: #1A1A1A;
     padding: 10px;
     text-align: center;
     justify-content: center;
+    transition: padding 0.2s ease;
   }
   .calendar-day:hover{
     width: 20px;
@@ -137,7 +141,32 @@ color: #1A1A1A;
     font-size: 16px;
     font-weight: 500;
   }
-  .meeting-btn{
+  .time-zone{
+    display: block;
+    margin-top: 150px;
+  }
+  .time-1{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .pak{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  .icon{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 6px;
+  }
+  .pak:hover{
+    background-color: #E5E5E5;
+    border-radius: 30px;
+  }
+  #hiddenCommand{
     display: block;
     margin-top: 40px;
     margin-left: 50px;
@@ -158,5 +187,4 @@ color: #1A1A1A;
   .btn-1:hover{
     border: #0060D4;
     border: 2px solid;
-    font-weight: 600;
   }
