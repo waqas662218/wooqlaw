@@ -1,0 +1,190 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    padding: 1%;
+}
+.container
+{
+    display: flex;
+    width: 940px;
+    height: 600px;
+    box-shadow: 0 0 1px;
+    border: 1px groove;
+    border-radius: 8px;
+
+}  
+.left{
+   width: auto;
+   padding: 20px;
+   flex-grow: 1;
+   border: none;
+}
+.right{
+    padding: 15px;
+    flex-grow: 2;
+}
+.back-icon{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px groove;
+    cursor: pointer;
+}
+.back-icon:hover{
+    background-color: lightblue;
+}
+.text{
+   display: block;
+    width: 300px;
+} 
+.text .name{
+    font-size: 14px;
+    color: #737373;
+}
+
+.text .par{
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: -12px;
+}
+.meeting-timer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.min{
+    font-size: 16px;
+    font-weight: 500;
+    color: #737373;
+    margin-left: 8px;
+}
+.btn-cookies{
+    display: flex;
+    margin-top: 380px;
+    justify-content: space-between;
+    width: auto;
+}
+.cookies{
+    display: flex;
+    color: #0069FF;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.cookies:hover{
+    text-decoration: underline;
+}
+.report{
+    display: flex;
+    color: #1A1A1A;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.report:hover{
+    text-decoration: underline;
+}
+.vl{
+    border-left: 1px groove;
+    height: 600px;
+  }
+  .date-time{
+color: #1A1A1A;
+  }
+
+
+  .calendar {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  .calendar-header {
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #showCommandBtn {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .calendar-day {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    transition: padding 0.2s ease;
+  }
+  .calendar-day:hover{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #0060D4;
+    background-color: #D9E9FF;
+  }
+
+  .calendar-day:last-child {
+    border-right: none;
+  }
+  .years-days{
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .time-zone{
+    display: block;
+    margin-top: 150px;
+  }
+  .time-1{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .pak{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  .icon{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 6px;
+  }
+  .pak:hover{
+    background-color: #E5E5E5;
+    border-radius: 30px;
+  }
+  #hiddenCommand{
+    display: block;
+    margin-top: 40px;
+    margin-left: 50px;
+    flex-grow: 3;
+  }
+  .btn-1{
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    border-color: #0060D4;
+    color: #0060D4;
+  }
+  .btn-1:hover{
+    border: #0060D4;
+    border: 2px solid;
+  }
