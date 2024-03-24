@@ -4,7 +4,7 @@
 .container
 {
     width: 800px;
-    height: 600px;
+    height: 500px;
     box-shadow: 0 0 2px;
     border: 1px groove;
     padding: 20px;
@@ -68,6 +68,6 @@
 }
 .cookies{
     display: flex;
-    margin-top: 270px;
+    margin-top: 180px;
     color: lightskyblue;
 }
