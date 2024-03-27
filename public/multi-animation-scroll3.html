@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Scroller on Cards with Tailwind CSS Animation</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  /* Custom styles */
+  .card {
+    width: 300px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+  }
+  .move-up {
+    transform: translateY(-20px); /* Move the card up by 20px */
+  }
+  .move-down {
+    transform: translateY(20px); /* Move the card down by 20px */
+  }
+</style>
+</head>
+<body class="bg-gray-200">
+
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">Vertical Scroller on Cards</h1>
+  <div class="flex flex-col overflow-y-auto gap-20 max-h-screen">
+    <div class="flex justify-center">
+      <!-- Card 1 -->
+      <div class="card bg-blue-500 mr-4 move-up" onclick="scrollToCard(1)">
+        <div class="p-4">
+          <h2 class="text-white text-xl font-bold">Card 1</h2>
+          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card bg-green-500 mr-4" onclick="scrollToCard(2)">
+        <div class="p-4">
+          <h2 class="text-white text-xl font-bold">Card 2</h2>
+          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card bg-yellow-500 move-up" onclick="scrollToCard(3)">
+        <div class="p-4">
+          <h2 class="text-white text-xl font-bold">Card 3</h2>
+          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+        <!-- Card 1 -->
+        <div class="card bg-blue-500 mr-4 move-up" onclick="scrollToCard(1)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 1</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card bg-green-500 mr-4" onclick="scrollToCard(2)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 2</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card bg-yellow-500 move-up" onclick="scrollToCard(3)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 3</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <!-- Card 1 -->
+        <div class="card bg-blue-500 mr-4 move-up" onclick="scrollToCard(1)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 1</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card bg-green-500 mr-4" onclick="scrollToCard(2)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 2</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card bg-yellow-500 move-up" onclick="scrollToCard(3)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 3</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <!-- Card 1 -->
+        <div class="card bg-blue-500 mr-4 move-up" onclick="scrollToCard(1)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 1</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card bg-green-500 mr-4" onclick="scrollToCard(2)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 2</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card bg-yellow-500 move-up" onclick="scrollToCard(3)">
+          <div class="p-4">
+            <h2 class="text-white text-xl font-bold">Card 3</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  function scrollToCard(cardNumber) {
+    const card = document.querySelector(`.card:nth-child(${cardNumber})`);
+    card.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: auto;
@@ -10,7 +9,8 @@
     height: 600px;
     box-shadow: 0 0 2px;
     border: 1px groove;
-    border-radius: 8px;  
+    border-radius: 8px;
+   
 }  
 .text{
    display: block;
@@ -33,12 +33,12 @@
 .meeting{ 
     display: inline-flex;
     justify-content: space-between;
-    justify-items: center;
     border: none;
     width: 300px;
     height: 120px;
     background-color: white;
     border-top: 1px solid gray;
+    padding: 12px;
     margin-left: 60px;
     margin-top: 50px;
 }
@@ -46,7 +46,7 @@
     background-color: lightgray;
 }
 .circle{
-
+    
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -54,22 +54,22 @@
     display: inline-block;
 }
 .meeting-time{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
-    border: none;
+    text-align: center;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-.main{
-    text-align: center;
-
-}
 .icon{
-    width: 20px;
-    height: 20px;
+    display: block;
+    text-align: center;
+    align-items: start;
     color: black;
+    width: 30px;
+    height: 30px;
 }
 .cookies{
     display: flex;
-    margin-top: 240px;
-    color: #0069FF;
+    margin-top: 250px;
+    color: lightskyblue;
 }

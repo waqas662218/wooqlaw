@@ -1,4 +1,3 @@
-
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
@@ -7,7 +6,7 @@
 .container
 {
     display: flex;
-    width: 940px;
+    width: 1040px;
     height: 600px;
     box-shadow: 0 0 1px;
     border: 1px groove;
@@ -16,7 +15,7 @@
 }  
 .left{
    width: auto;
-   padding: 20px;
+   padding: 15px;
    flex-grow: 1;
    border: none;
 }
@@ -25,11 +24,12 @@
     flex-grow: 2;
 }
 .back-icon{
-    display: flex;
+    display: inline-flex;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     align-items: center;
+    justify-content: center;
     border: 1px groove;
     cursor: pointer;
 }
@@ -39,6 +39,7 @@
 .text{
    display: block;
     width: 300px;
+    margin-top: 15px;
 } 
 .text .name{
     font-size: 14px;
@@ -49,12 +50,12 @@
     color: #1A1A1A;
     font-size: 24px;
     font-weight: 600;
-    margin-top: -12px;
 }
 .meeting-timer{
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-items: center;
+    width: 100px;
+    margin-top: 20px;
 }
 .min{
     font-size: 16px;
@@ -64,7 +65,7 @@
 }
 .btn-cookies{
     display: flex;
-    margin-top: 380px;
+    margin-top: 360px;
     justify-content: space-between;
     width: auto;
 }
@@ -141,7 +142,7 @@ color: #1A1A1A;
     font-weight: 500;
   }
   .time-zone{
-    display: block;
+    display: inline-block;
     margin-top: 150px;
   }
   .time-1{
@@ -149,7 +150,7 @@ color: #1A1A1A;
     font-weight: 600;
   }
   .pak{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     width: 300px;
     margin-top: 4px;
@@ -187,3 +188,22 @@ color: #1A1A1A;
     border: #0060D4;
     border: 2px solid;
   }
+  .btn-2{
+    display: inline-block;
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    border-color: #0060D4;
+    color: #0060D4;
+  }
+  .btn-2:hover{
+    border: #0060D4;
+    border: 2px solid;
+  }
+
+  
