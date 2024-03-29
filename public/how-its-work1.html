@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col max-w-full justify-center items-center gap-4 md:gap-24 px-2 md:px-5 py-4 md:py-16 w-full">
+        <div class="flex flex-col justify-center items-center gap-2 md:gap-7 max-w-3xl">
+            <div class="flex gap-2 items-center justify-center">
+                @*<span class="w-24 h-7 md:w-44 md:h-11">
+                    <svg w-24 h-7 md:w-44 md:h-11 viewBox="0 0 161 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1008_53974)">
+                            <path d="M17.1229 44.6165H17.0493C12.853 44.6165 9.44251 41.1936 9.44251 36.9895V20.4282C9.44251 19.4157 8.61996 18.591 7.61018 18.591C6.60039 18.591 5.77785 19.4157 5.77785 20.4282V30.6298H0V20.4282C0 16.2208 3.41388 12.8012 7.60683 12.8012C11.7998 12.8012 15.217 16.2241 15.217 20.4282V36.9895C15.217 38.002 16.0396 38.8267 17.0493 38.8267H17.1229C18.1327 38.8267 18.9552 38.002 18.9552 36.9895V20.4282C18.9552 16.2208 22.3691 12.8012 26.5621 12.8012H26.7092C30.9055 12.8012 34.316 16.2241 34.316 20.4282V36.4732H28.5382V20.4282C28.5382 19.4157 27.7156 18.591 26.7058 18.591H26.5587C25.5489 18.591 24.7264 19.4157 24.7264 20.4282V36.9895C24.7264 41.1969 21.3125 44.6165 17.1196 44.6165H17.1229Z" fill="url(#paint0_linear_1008_53974)" />
+                            <path d="M26.5123 10.2483C29.2287 10.2483 31.4308 8.04036 31.4308 5.31675C31.4308 2.59314 29.2287 0.385223 26.5123 0.385223C23.7959 0.385223 21.5938 2.59314 21.5938 5.31675C21.5938 8.04036 23.7959 10.2483 26.5123 10.2483Z" fill="#7413FF" />
+                            <path d="M7.45426 10.2466C9.25844 10.2466 10.721 8.78011 10.721 6.97116C10.721 5.16221 9.25844 3.69577 7.45426 3.69577C5.65008 3.69577 4.1875 5.16221 4.1875 6.97116C4.1875 8.78011 5.65008 10.2466 7.45426 10.2466Z" fill="#FF7244" />
+                        </g>
+                        <g clip-path="url(#clip1_1008_53974)">
+                            <path d="M155.785 12.9312C156.307 12.3817 156.94 12.1069 157.68 12.1069C158.419 12.1069 159.052 12.3817 159.574 12.9312C160.096 13.4808 160.357 14.1469 160.357 14.9254C160.357 15.704 160.096 16.3701 159.574 16.9197C159.052 17.4692 158.419 17.744 157.68 17.744C156.94 17.744 156.307 17.4692 155.785 16.9197C155.263 16.3701 155.002 15.704 155.002 14.9254C155.002 14.1469 155.263 13.4808 155.785 12.9312ZM157.68 17.5109C158.348 17.5109 158.925 17.2611 159.4 16.7573C159.875 16.2535 160.112 15.6415 160.112 14.9254C160.112 14.2094 159.875 13.5973 159.4 13.0936C158.925 12.5898 158.348 12.34 157.68 12.34C157.011 12.34 156.426 12.5898 155.951 13.0936C155.477 13.5973 155.235 14.2094 155.235 14.9254C155.235 15.6415 155.473 16.2535 155.951 16.7573C156.426 17.2611 157.003 17.5109 157.68 17.5109ZM158.767 14.4175C158.767 14.8214 158.613 15.1045 158.301 15.2668L158.87 16.366H158.249L157.767 15.3917H157.367V16.366H156.798V13.4849H157.723C158.043 13.4849 158.297 13.5765 158.486 13.7555C158.676 13.9346 158.767 14.1552 158.767 14.4217V14.4175ZM157.367 14.0428V14.8463H157.723C157.869 14.8463 157.988 14.8089 158.071 14.7381C158.154 14.6632 158.198 14.5674 158.198 14.4508C158.198 14.1802 158.04 14.047 157.723 14.047H157.367V14.0428Z" fill="#1F2937" />
+                            <path d="M76.1785 31.355C74.6618 32.8795 72.806 33.6435 70.6183 33.6435C68.4306 33.6435 66.5818 32.8795 65.0756 31.355C63.5693 29.8306 62.8145 27.9595 62.8145 25.7453C62.8145 23.5311 63.5693 21.66 65.0756 20.1356C66.5853 18.6111 68.4306 17.8471 70.6183 17.8471C72.806 17.8471 74.6583 18.6111 76.1785 20.1356C77.6952 21.66 78.4536 23.5311 78.4536 25.7453C78.4536 27.9595 77.6952 29.8306 76.1785 31.355ZM67.7666 28.7058C68.5249 29.4839 69.4755 29.873 70.6183 29.873C71.7611 29.873 72.7187 29.4839 73.4875 28.7058C74.2564 27.9276 74.6408 26.9408 74.6408 25.7418C74.6408 24.5427 74.2564 23.5559 73.4875 22.7777C72.7187 21.9996 71.7611 21.6105 70.6183 21.6105C69.4755 21.6105 68.5249 21.9996 67.7666 22.7777C67.0082 23.5559 66.6273 24.5427 66.6273 25.7418C66.6273 26.9408 67.0047 27.9276 67.7666 28.7058Z" fill="#1F2937" />
+                            <path d="M92.3816 31.355C90.8649 32.8795 89.0126 33.6435 86.8214 33.6435C84.6302 33.6435 82.785 32.8795 81.2787 31.355C79.7725 29.8306 79.0176 27.9595 79.0176 25.7453C79.0176 23.5311 79.7725 21.66 81.2787 20.1356C82.785 18.6111 84.6337 17.8471 86.8214 17.8471C89.0092 17.8471 90.8614 18.6111 92.3816 20.1356C93.8984 21.66 94.6567 23.5311 94.6567 25.7453C94.6567 27.9595 93.8984 29.8306 92.3816 31.355ZM83.9697 28.7058C84.728 29.4839 85.6786 29.873 86.8214 29.873C87.9642 29.873 88.9218 29.4839 89.6906 28.7058C90.4595 27.9276 90.8439 26.9408 90.8439 25.7418C90.8439 24.5427 90.4595 23.5559 89.6906 22.7777C88.9218 21.9996 87.9642 21.6105 86.8214 21.6105C85.6786 21.6105 84.728 21.9996 83.9697 22.7777C83.2113 23.5559 82.8304 24.5427 82.8304 25.7418C82.8304 26.9408 83.2113 27.9276 83.9697 28.7058Z" fill="#1F2937" />
+                            <path d="M112.135 33.2265V12.1069H116.171V33.2265H112.135Z" fill="#1F2937" />
+                            <path d="M107.266 18.2645V18.9294C106.081 18.2114 104.743 17.8471 103.243 17.8471C101.056 17.8471 99.2068 18.6111 97.7006 20.1356C96.1943 21.66 95.4395 23.5311 95.4395 25.7453C95.4395 27.9595 96.1943 29.8306 97.7006 31.355C99.2068 32.8795 101.056 33.6435 103.243 33.6435C104.743 33.6435 106.081 33.2756 107.266 32.5611V39.1683H111.079V18.2645H107.266ZM106.113 28.7093C105.344 29.4875 104.386 29.8765 103.243 29.8765C102.101 29.8765 101.15 29.4875 100.392 28.7093C99.6332 27.9312 99.2523 26.9443 99.2523 25.7453C99.2523 24.5462 99.6332 23.5594 100.392 22.7813C101.15 22.0031 102.101 21.614 103.243 21.614C104.386 21.614 105.344 22.0031 106.113 22.7813C106.881 23.5594 107.266 24.5462 107.266 25.7453C107.266 26.9443 106.881 27.9312 106.113 28.7093Z" fill="#1F2937" />
+                            <path d="M128.758 18.1819V18.9353C127.573 18.2173 126.235 17.853 124.735 17.853C122.548 17.853 120.699 18.617 119.193 20.1414C117.687 21.6659 116.932 23.537 116.932 25.7512C116.932 27.9653 117.687 29.8364 119.193 31.3609C120.699 32.8853 122.548 33.6493 124.735 33.6493C126.235 33.6493 127.573 33.2815 128.758 32.567V33.3204H132.641V18.1819H128.758ZM127.605 28.7152C126.836 29.4933 125.878 29.8824 124.735 29.8824C123.593 29.8824 122.642 29.4933 121.884 28.7152C121.125 27.937 120.744 26.9502 120.744 25.7512C120.744 24.5521 121.125 23.5653 121.884 22.7871C122.642 22.009 123.593 21.6199 124.735 21.6199C125.878 21.6199 126.836 22.009 127.605 22.7871C128.374 23.5653 128.758 24.5521 128.758 25.7512C128.758 26.9502 128.374 27.937 127.605 28.7152Z" fill="#1F2937" />
+                            <path d="M57.5947 27.4154C57.5947 28.6675 56.5882 29.6897 55.3511 29.6897C54.1139 29.6897 53.1074 28.671 53.1074 27.4154V18.2651H49.001V27.4189C49.001 28.671 47.9945 29.6932 46.7539 29.6932C45.5133 29.6932 44.5103 28.6745 44.5103 27.4189V18.2651H40.4004V27.4189C40.4004 30.963 43.2486 33.8492 46.7539 33.8492C48.4139 33.8492 49.9202 33.1984 51.0525 32.1408C52.1848 33.1984 53.691 33.8492 55.3511 33.8492C58.8528 33.8492 61.7046 30.9665 61.7046 27.4189V18.2651H57.5982V27.4189L57.5947 27.4154Z" fill="#1F2937" />
+                            <path d="M151.115 18.2651V27.4189C151.115 28.671 150.108 29.6932 148.871 29.6932C147.634 29.6932 146.627 28.6745 146.627 27.4189V18.2651H142.521V27.4189C142.521 28.671 141.514 29.6932 140.274 29.6932C139.033 29.6932 138.03 28.6745 138.03 27.4189V18.2651H133.924V27.4189C133.924 30.963 136.772 33.8492 140.277 33.8492C141.937 33.8492 143.444 33.1984 144.576 32.1408C145.708 33.1984 147.214 33.8492 148.875 33.8492C152.376 33.8492 155.228 30.9665 155.228 27.4189V18.2651H151.122H151.115Z" fill="#1F2937" />
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_1008_53974" x1="-0.0735607" y1="29.7984" x2="34.8992" y2="26.7469" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FDD62C" />
+                                <stop offset="0.27" stop-color="#FF7244" />
+                                <stop offset="0.63" stop-color="#CC38FF" />
+                                <stop offset="1" stop-color="#7413FF" />
+                            </linearGradient>
+                            <clipPath id="clip0_1008_53974">
+                                <rect width="34.316" height="44.2295" fill="white" transform="translate(0 0.385223)" />
+                            </clipPath>
+                            <clipPath id="clip1_1008_53974">
+                                <rect width="119.958" height="27.0583" fill="white" transform="translate(40.3926 12.1069)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </span>*@
+                <h2 class="font-bold text-xl md:text-5xl text-primary-600">
+                    Digital Case File (DCF)
+                </h2>
+            </div>
+            <span class="font-semibold text-sm md:text-xl text-center text-gray-900">
+                Most Advanced Digital Case File (DCF) for lawyers with real-time connectivity to your profile on the wooqlaw® marketplace.
+  
+            </span>
+            <span class="flex font-normal text-xs md:text-base text-center text-gray-600">
+                Introducing wooqlaw® Digital Case File (DCF), your legal assistant anywhere, anytime. This isn't just a digital case file; it's the most advanced, intuitive, feature-laden, and highly customizable platform. Connecting in real-time to your profile on the WooqLaw® marketplace, it manages your online profile, website, and cases seamlessly. It's not just a digital case file; it's an essential legal research tool for judgments and law. Tailored to support individual lawyers, law firms, and corporate clients, wooqlaw® Digital Case File (DCF) takes care of everything—from managing contacts, cases, appointments, documents, billing, and intake forms to voice notes, video calling, SMS, email, reminders, and even client and office expense management. This is the best legal case management software for lawyers of any size.
+            </span>
+        </div>
+        <div class="flex container md:px-4 w-full">
+            <!-- Desktop -->
+            <div class="grid-cols-1 md:grid-cols-3 gap-5 justify-center w-full hidden md:grid" x-data x-tabs>
+                <div class="flex flex-col mx-auto gap-4 p-2" x-tabs:list>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Manage your contacts
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Create & manage your cases
+                    </button> 
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Digital Case Diary / Cause List
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Book & manage your appointments
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Create appointments and set reminders
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Communicate with your clients
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Manage your diary with your calendar
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 font-medium text-sm md:text-lg">
+                        Timeline to keep an eye on your stream
+                    </button>
+                </div>
+                <div class="flex flex-col col-span-2 gap-1 w-full" x-tabs:panels>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/manage-your-contacts-new.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/create-and-manage-your-cases.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/digital-case-diary.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/book-and-manage-your-appointment.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/create-appointment-&-set-reminders.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/communicate-with-your-clients.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/manage-your-diary-with-your-calendar.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/timeline_to_keep_an_eye_on_your_stream.png" alt="">
+                    </div>     
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="flex flex-col gap-3 md:hidden w-full">
+                <div x-disclosure default-open class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Manage your contacts</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/manage-your-contacts-new.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Create & manage your cases</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/create-and-manage-your-cases.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Digital Case Diary / Cause List</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/digital-case-diary.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Book & manage your appointments</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/book-and-manage-your-appointment.png" alt="">
+                    </div>
+                </div> 
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Communicate with your clients</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/create-appointment-&-set-reminders.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Communicate with your clients</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/communicate-with-your-clients.png" alt="">
+                    </div>
+                </div>
+               
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Manage your diary with your calendar</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/manage-your-diary-with-your-calendar.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Timeline to keep an eye on your stream</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/timeline_to_keep_an_eye_on_your_stream.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LRE -->
+    <div class="flex items-center justify-center bg-lime-50 w-full">
+        <div class="flex flex-col justify-center items-center gap-4 md:gap-24 px-2 md:px-5 py-4 md:py-16">
+            <div class="flex flex-col justify-center items-center gap-2 md:gap-7 max-w-3xl">
+                <div class="flex gap-2 items-center justify-center">
+                    @*<span class="w-24 h-7 md:w-44 md:h-11">
+                        <svg w-24 h-7 md:w-44 md:h-11 viewBox="0 0 161 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1008_53974)">
+                                <path d="M17.1229 44.6165H17.0493C12.853 44.6165 9.44251 41.1936 9.44251 36.9895V20.4282C9.44251 19.4157 8.61996 18.591 7.61018 18.591C6.60039 18.591 5.77785 19.4157 5.77785 20.4282V30.6298H0V20.4282C0 16.2208 3.41388 12.8012 7.60683 12.8012C11.7998 12.8012 15.217 16.2241 15.217 20.4282V36.9895C15.217 38.002 16.0396 38.8267 17.0493 38.8267H17.1229C18.1327 38.8267 18.9552 38.002 18.9552 36.9895V20.4282C18.9552 16.2208 22.3691 12.8012 26.5621 12.8012H26.7092C30.9055 12.8012 34.316 16.2241 34.316 20.4282V36.4732H28.5382V20.4282C28.5382 19.4157 27.7156 18.591 26.7058 18.591H26.5587C25.5489 18.591 24.7264 19.4157 24.7264 20.4282V36.9895C24.7264 41.1969 21.3125 44.6165 17.1196 44.6165H17.1229Z" fill="url(#paint0_linear_1008_53974)" />
+                                <path d="M26.5123 10.2483C29.2287 10.2483 31.4308 8.04036 31.4308 5.31675C31.4308 2.59314 29.2287 0.385223 26.5123 0.385223C23.7959 0.385223 21.5938 2.59314 21.5938 5.31675C21.5938 8.04036 23.7959 10.2483 26.5123 10.2483Z" fill="#7413FF" />
+                                <path d="M7.45426 10.2466C9.25844 10.2466 10.721 8.78011 10.721 6.97116C10.721 5.16221 9.25844 3.69577 7.45426 3.69577C5.65008 3.69577 4.1875 5.16221 4.1875 6.97116C4.1875 8.78011 5.65008 10.2466 7.45426 10.2466Z" fill="#FF7244" />
+                            </g>
+                            <g clip-path="url(#clip1_1008_53974)">
+                                <path d="M155.785 12.9312C156.307 12.3817 156.94 12.1069 157.68 12.1069C158.419 12.1069 159.052 12.3817 159.574 12.9312C160.096 13.4808 160.357 14.1469 160.357 14.9254C160.357 15.704 160.096 16.3701 159.574 16.9197C159.052 17.4692 158.419 17.744 157.68 17.744C156.94 17.744 156.307 17.4692 155.785 16.9197C155.263 16.3701 155.002 15.704 155.002 14.9254C155.002 14.1469 155.263 13.4808 155.785 12.9312ZM157.68 17.5109C158.348 17.5109 158.925 17.2611 159.4 16.7573C159.875 16.2535 160.112 15.6415 160.112 14.9254C160.112 14.2094 159.875 13.5973 159.4 13.0936C158.925 12.5898 158.348 12.34 157.68 12.34C157.011 12.34 156.426 12.5898 155.951 13.0936C155.477 13.5973 155.235 14.2094 155.235 14.9254C155.235 15.6415 155.473 16.2535 155.951 16.7573C156.426 17.2611 157.003 17.5109 157.68 17.5109ZM158.767 14.4175C158.767 14.8214 158.613 15.1045 158.301 15.2668L158.87 16.366H158.249L157.767 15.3917H157.367V16.366H156.798V13.4849H157.723C158.043 13.4849 158.297 13.5765 158.486 13.7555C158.676 13.9346 158.767 14.1552 158.767 14.4217V14.4175ZM157.367 14.0428V14.8463H157.723C157.869 14.8463 157.988 14.8089 158.071 14.7381C158.154 14.6632 158.198 14.5674 158.198 14.4508C158.198 14.1802 158.04 14.047 157.723 14.047H157.367V14.0428Z" fill="#1F2937" />
+                                <path d="M76.1785 31.355C74.6618 32.8795 72.806 33.6435 70.6183 33.6435C68.4306 33.6435 66.5818 32.8795 65.0756 31.355C63.5693 29.8306 62.8145 27.9595 62.8145 25.7453C62.8145 23.5311 63.5693 21.66 65.0756 20.1356C66.5853 18.6111 68.4306 17.8471 70.6183 17.8471C72.806 17.8471 74.6583 18.6111 76.1785 20.1356C77.6952 21.66 78.4536 23.5311 78.4536 25.7453C78.4536 27.9595 77.6952 29.8306 76.1785 31.355ZM67.7666 28.7058C68.5249 29.4839 69.4755 29.873 70.6183 29.873C71.7611 29.873 72.7187 29.4839 73.4875 28.7058C74.2564 27.9276 74.6408 26.9408 74.6408 25.7418C74.6408 24.5427 74.2564 23.5559 73.4875 22.7777C72.7187 21.9996 71.7611 21.6105 70.6183 21.6105C69.4755 21.6105 68.5249 21.9996 67.7666 22.7777C67.0082 23.5559 66.6273 24.5427 66.6273 25.7418C66.6273 26.9408 67.0047 27.9276 67.7666 28.7058Z" fill="#1F2937" />
+                                <path d="M92.3816 31.355C90.8649 32.8795 89.0126 33.6435 86.8214 33.6435C84.6302 33.6435 82.785 32.8795 81.2787 31.355C79.7725 29.8306 79.0176 27.9595 79.0176 25.7453C79.0176 23.5311 79.7725 21.66 81.2787 20.1356C82.785 18.6111 84.6337 17.8471 86.8214 17.8471C89.0092 17.8471 90.8614 18.6111 92.3816 20.1356C93.8984 21.66 94.6567 23.5311 94.6567 25.7453C94.6567 27.9595 93.8984 29.8306 92.3816 31.355ZM83.9697 28.7058C84.728 29.4839 85.6786 29.873 86.8214 29.873C87.9642 29.873 88.9218 29.4839 89.6906 28.7058C90.4595 27.9276 90.8439 26.9408 90.8439 25.7418C90.8439 24.5427 90.4595 23.5559 89.6906 22.7777C88.9218 21.9996 87.9642 21.6105 86.8214 21.6105C85.6786 21.6105 84.728 21.9996 83.9697 22.7777C83.2113 23.5559 82.8304 24.5427 82.8304 25.7418C82.8304 26.9408 83.2113 27.9276 83.9697 28.7058Z" fill="#1F2937" />
+                                <path d="M112.135 33.2265V12.1069H116.171V33.2265H112.135Z" fill="#1F2937" />
+                                <path d="M107.266 18.2645V18.9294C106.081 18.2114 104.743 17.8471 103.243 17.8471C101.056 17.8471 99.2068 18.6111 97.7006 20.1356C96.1943 21.66 95.4395 23.5311 95.4395 25.7453C95.4395 27.9595 96.1943 29.8306 97.7006 31.355C99.2068 32.8795 101.056 33.6435 103.243 33.6435C104.743 33.6435 106.081 33.2756 107.266 32.5611V39.1683H111.079V18.2645H107.266ZM106.113 28.7093C105.344 29.4875 104.386 29.8765 103.243 29.8765C102.101 29.8765 101.15 29.4875 100.392 28.7093C99.6332 27.9312 99.2523 26.9443 99.2523 25.7453C99.2523 24.5462 99.6332 23.5594 100.392 22.7813C101.15 22.0031 102.101 21.614 103.243 21.614C104.386 21.614 105.344 22.0031 106.113 22.7813C106.881 23.5594 107.266 24.5462 107.266 25.7453C107.266 26.9443 106.881 27.9312 106.113 28.7093Z" fill="#1F2937" />
+                                <path d="M128.758 18.1819V18.9353C127.573 18.2173 126.235 17.853 124.735 17.853C122.548 17.853 120.699 18.617 119.193 20.1414C117.687 21.6659 116.932 23.537 116.932 25.7512C116.932 27.9653 117.687 29.8364 119.193 31.3609C120.699 32.8853 122.548 33.6493 124.735 33.6493C126.235 33.6493 127.573 33.2815 128.758 32.567V33.3204H132.641V18.1819H128.758ZM127.605 28.7152C126.836 29.4933 125.878 29.8824 124.735 29.8824C123.593 29.8824 122.642 29.4933 121.884 28.7152C121.125 27.937 120.744 26.9502 120.744 25.7512C120.744 24.5521 121.125 23.5653 121.884 22.7871C122.642 22.009 123.593 21.6199 124.735 21.6199C125.878 21.6199 126.836 22.009 127.605 22.7871C128.374 23.5653 128.758 24.5521 128.758 25.7512C128.758 26.9502 128.374 27.937 127.605 28.7152Z" fill="#1F2937" />
+                                <path d="M57.5947 27.4154C57.5947 28.6675 56.5882 29.6897 55.3511 29.6897C54.1139 29.6897 53.1074 28.671 53.1074 27.4154V18.2651H49.001V27.4189C49.001 28.671 47.9945 29.6932 46.7539 29.6932C45.5133 29.6932 44.5103 28.6745 44.5103 27.4189V18.2651H40.4004V27.4189C40.4004 30.963 43.2486 33.8492 46.7539 33.8492C48.4139 33.8492 49.9202 33.1984 51.0525 32.1408C52.1848 33.1984 53.691 33.8492 55.3511 33.8492C58.8528 33.8492 61.7046 30.9665 61.7046 27.4189V18.2651H57.5982V27.4189L57.5947 27.4154Z" fill="#1F2937" />
+                                <path d="M151.115 18.2651V27.4189C151.115 28.671 150.108 29.6932 148.871 29.6932C147.634 29.6932 146.627 28.6745 146.627 27.4189V18.2651H142.521V27.4189C142.521 28.671 141.514 29.6932 140.274 29.6932C139.033 29.6932 138.03 28.6745 138.03 27.4189V18.2651H133.924V27.4189C133.924 30.963 136.772 33.8492 140.277 33.8492C141.937 33.8492 143.444 33.1984 144.576 32.1408C145.708 33.1984 147.214 33.8492 148.875 33.8492C152.376 33.8492 155.228 30.9665 155.228 27.4189V18.2651H151.122H151.115Z" fill="#1F2937" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_1008_53974" x1="-0.0735607" y1="29.7984" x2="34.8992" y2="26.7469" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FDD62C" />
+                                    <stop offset="0.27" stop-color="#FF7244" />
+                                    <stop offset="0.63" stop-color="#CC38FF" />
+                                    <stop offset="1" stop-color="#7413FF" />
+                                </linearGradient>
+                                <clipPath id="clip0_1008_53974">
+                                    <rect width="34.316" height="44.2295" fill="white" transform="translate(0 0.385223)" />
+                                </clipPath>
+                                <clipPath id="clip1_1008_53974">
+                                    <rect width="119.958" height="27.0583" fill="white" transform="translate(40.3926 12.1069)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>*@
+                    <h2 class="font-bold text-xl md:text-5xl text-lime-600">
+                        Case Law Search (CLS)
+                    </h2>
+                </div>
+                <span class="font-semibold text-sm md:text-lg text-center text-gray-900">
+                    Search for laws, judgements or citation. Prepare documents, copy, paste, download & print with the wooqlaw® Case Law Search (CLS)
+                </span>
+                <span class="flex font-normal text-xs md:text-base text-center text-gray-600">
+                    The wooqlaw® Case Law Search (CLS) stands as one of the most comprehensive research software in Pakistan's legal history. It's not just an online Case Law Search (CLS); it's your indispensable tool for everyday case and law research. From preparing case/judgment references and citations to studying past precedents, the Case Law Search (CLS), simplifies it all through a simple search engine. Search for laws, acts, statutes, ordinances, judgments, and relevant citations effortlessly. With the Case Law Search (CLS), experience phrases and AI-powered search options, narrow your search with available filters, and create documents seamlessly linked to your cases in the Digital Case File (DCF). Copy, paste, download, and print—wooqlaw® Case Law Search (CLS) transforms legal research into a streamlined, efficient process.
+                </span>
+            </div>
+             <div class="flex container md:px-4 w-full">
+            <!-- Desktop -->
+            <div class="grid-cols-1 md:grid-cols-3 gap-5 justify-center w-full hidden md:grid" x-data x-tabs>
+                <div class="flex flex-col col-span-2 gap-1 w-full" x-tabs:panels>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/search-for-laws-acts-statutes-or-ordinances1.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/search-for-past-judgements-of-higher-courts.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/search-for-laws-acts-statutes-or-ordinances-new.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/search-statute-for-a-specific-multiple-acts-and-regions.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/create-documents-linked-to-your-cases-in-cms.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/copy-and-paste-content-from-your-searches.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/download-and-print-option.png" alt="">
+                    </div>
+                    <div x-tabs:panel class="h-full flex items-center justify-center">
+                        <img class="w-auto" src="images/ai-search.png" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col mx-auto gap-4 p-2" x-tabs:list>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Search for laws, acts, statutes, or ordinances
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Search for past judgements of higher courts
+                    </button> 
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Search judgement for relevant citation
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Search Statute for a Specific/Multiple Acts and Regions
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                            Create documents linked to your cases in Digital Case File (DCF)
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Copy and paste content from your searches
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        Download and print relevant laws or judgments for personal use
+                    </button>
+                    <button x-tabs:tab :class="$tab.isSelected ? 'border-primary-700 text-primary-600':'border-gray-300 text-gray-900'" class="flex items-center border-l-2 pl-4 py-2 text-left font-medium text-sm md:text-lg">
+                        AI-Powered search box for natural language search
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="flex flex-col gap-3 md:hidden w-full">
+                <div x-disclosure default-open class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Search for laws, acts, statutes, or ordinances</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/search-for-laws-acts-statutes-or-ordinances1.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Search for past judgements of higher courts</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/search-for-past-judgements-of-higher-courts.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Search citation for relevant judgement and mentions</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/search-for-laws-acts-statutes-or-ordinances-new.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Search Statute for a Specific/Multiple Acts and Regions</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/search-statute-for-a-specific-multiple-acts-and-regions.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                            <span>Create documents linked to your cases in Digital Case File (DCF)</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/create-documents-linked-to-your-cases-in-cms.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Copy and paste content from your searches</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/copy-and-paste-content-from-your-searches.png" alt="">
+                    </div>
+                </div>
+                 <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>Download and print relevant laws or judgments for personal use</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/download-and-print-option.png" alt="">
+                    </div>
+                </div>
+                <div x-disclosure class=" flex-col gap-3 items-center">
+                    <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700 rounded-b-0' : 'text-gray-500 border-white'" class="flex rounded font-medium text-left text-sm items-center justify-between w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button type="button">
+                        <span>AI-Powered search box for natural language search</span>
+                        <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-tabs:panel x-disclosure:panel class=" flex items-center py-2">
+                        <img class="w-full object-cover" src="images/ai-search.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
