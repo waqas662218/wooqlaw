@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="scrolltrigger.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="page">
+		<main class="grid grid-cols-1 md:grid-cols-3 justify-center items-start max-w-7xl mx-auto gap-6">
+			<section class="gradient-green grid col-span-1 justify-start items-center gap-4">
+				<div class="flex flex-col p-9 bg-violet-200 shadow border border-gray-200 justify-start items-center gap-3.5">
+					<div class="flex flex-col justify-center items-center gap-1">
+						<img class="w-16 h-16" src="images/Avatar3.png" />
+						<div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+					</div>
+					<div class="flex justify-start items-start gap-1">
+						<img src="images/rating-stars.png" alt="">
+					</div>
+					<div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few
+						time my business are based in London and both of my cases wasn’t easy,complicated and messy,but
+						Mr Nasar Ali went trough with me step by step and managed to sort it.Very professional,quick
+						response and cares about customer.</div>
+				</div>
+				
+			</section>
+			<section class="gradient-purple grid col-span-1 justify-start items-center gap-4">
+				<div class="flex flex-col p-9 bg-green-200 shadow border border-gray-200 justify-start items-center gap-3.5">
+					<div class="flex flex-col justify-center items-center gap-1">
+						<img class="w-16 h-16" src="images/Avatar3.png" />
+						<div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+					</div>
+					<div class="flex justify-start items-start gap-1">
+						<img src="images/rating-stars.png" alt="">
+					</div>
+					<div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few
+						time my business are based in London and both of my cases wasn’t easy,complicated and messy,but
+						Mr Nasar Ali went trough with me step by step and managed to sort it.Very professional,quick
+						response and cares about customer.</div>
+				</div>
+				
+			</section>
+			<section class="gradient-blue grid col-span-1 justify-start items-center gap-4">
+				<div class="flex flex-col p-9 bg-red-200 shadow border border-gray-200 justify-start items-center gap-3.5">
+					<div class="flex flex-col justify-center items-center gap-1">
+						<img class="w-16 h-16" src="images/Avatar3.png" />
+						<div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+					</div>
+					<div class="flex justify-start items-start gap-1">
+						<img src="images/rating-stars.png" alt="">
+					</div>
+					<div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few
+						time my business are based in London and both of my cases wasn’t easy,complicated and messy,but
+						Mr Nasar Ali went trough with me step by step and managed to sort it.Very professional,quick
+						response and cares about customer.</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script>
+		gsap.registerPlugin(ScrollTrigger)
+
+const Scroll = new function() {
+	let sections
+	let page
+	let main
+	let scrollTrigger
+	let tl
+	let win
+	
+	// Init
+	this.init = () => {
+		sections = document.querySelectorAll('section')
+		page = document.querySelector('#page')
+		main = document.querySelector('main')
+		win = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+		
+		this.setupTimeline()
+		this.setupScrollTrigger()
+		window.addEventListener('resize', this.onResize)
+	}
+	
+	// Setup ScrollTrigger
+	this.setupScrollTrigger = () => {
+		page.style.height = (this.getTotalScroll() + win.h) + 'px'
+		
+		scrollTrigger = ScrollTrigger.create({
+			id: 'mainScroll',
+			trigger: 'main',
+			animation: tl,
+			pin: true,
+			scrub: true,
+			snap: {
+				snapTo: (value) => {
+					
+					let labels = Object.values(tl.labels)
+					
+					const snapPoints = labels.map(x => x / tl.totalDuration());
+					const proximity = 0.1
+					
+					console.log(tl.labels , tl.totalDuration(), labels, snapPoints)
+					
+					for (let i = 0; i < snapPoints.length; i++) {
+						if (value > snapPoints[i] - proximity && value < snapPoints[i] + proximity) {
+							return snapPoints[i]
+						}
+					}
+				},
+				duration: { min: 0.2, max: 0.6 },
+			},
+			start: 'top top',
+			end: '+=' + this.getTotalScroll(),
+		})
+	}
+	
+	// Setup timeline
+	this.setupTimeline = () => {
+		tl = gsap.timeline()
+		tl.addLabel("label-initial")
+		
+		sections.forEach((section, index) => {
+			const nextSection = sections[index+1]
+			if (!nextSection) return
+
+			tl.to(nextSection, {
+				y: -1 * nextSection.offsetHeight,
+				duration: nextSection.offsetHeight,
+				ease: 'linear',
+			})
+			.addLabel(`label${index}`)
+		})
+	}
+	
+	// On resize
+	this.onResize = () => {
+		win = {
+			w: window.innerWidth,
+			h: window.innerHeight
+		}
+		
+		this.reset()
+	}
+	
+	// Reset
+	this.reset = () => {
+		if (typeof ScrollTrigger.getById('mainScroll') === 'object') {
+			ScrollTrigger.getById('mainScroll').kill()
+		}
+		
+		if (typeof tl === 'object') {
+			tl.kill()
+			tl.seek(0)
+		}
+		
+		document.body.scrollTop = document.documentElement.scrollTop = 0
+		this.init()
+	}
+	
+	// Get total scroll
+	this.getTotalScroll = () => {
+		let totalScroll = 0
+		sections.forEach(section => {
+			totalScroll += section.offsetHeight
+		})
+		totalScroll -= win.h
+		return totalScroll
+	}
+}
+
+Scroll.init()
+
+//add GSAP logo
+logo("dark")
+	</script>
+</body>
+
+</html>
