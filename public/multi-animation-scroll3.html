@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tailwind.css -->
   <link href="./css/style.css" rel="stylesheet">
@@ -172,24 +170,29 @@
 </div>
 
 <script>
-    // Initialize ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
+    // Wait for the DOM content to be loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all elements with the class "active"
+  const elements = document.querySelectorAll('.active');
   
-    // Define the animation for the card elements
-    gsap.utils.toArray('.card').forEach(card => {
-      gsap.to(card, {
-        opacity: 0, // Fade in the card
-        y: 0, // Move the card up to its original position
-        duration: 1, // Animation duration
-        scrollTrigger: {
-          trigger: card, // Trigger the animation when the card comes into view
-          start: 'top top', // Start the animation when the top of the card is 80% in view
-          end: 'bottom top', // End the animation when the top of the card reaches the top of the viewport
-          scrub: true // Smoothly animates the card while scrolling
-        }
-      });
+  // Loop through each element
+  elements.forEach(function(element) {
+    // Add event listener for mouseenter event
+    element.addEventListener('mouseenter', function() {
+      // Add a class to the element to trigger an animation
+      element.classList.add('animate');
     });
-  </script>
+    
+    // Add event listener for mouseleave event
+    element.addEventListener('mouseleave', function() {
+      // Remove the class after a delay to reverse the animation
+      setTimeout(function() {
+        element.classList.remove('animate');
+      }, 1000); // Adjust the delay as needed
+    });
+  });
+});
 
+</script>
 </body>
 </html>

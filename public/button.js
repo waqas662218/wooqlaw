@@ -22,7 +22,6 @@ export class Button extends LitElement {
         this.customclass = "flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center rounded-lg focus:ring-4 focus:outline-none"
     
     }
-
     // returnStringSvgLeft() {
     // 	var frag = document.createRange().createContextualFragment(`${ this.svgleft }`);
     //   return frag;

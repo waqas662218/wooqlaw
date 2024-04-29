@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    
+    <link rel="stylesheet" href="oposing-section.css">
+   
+   
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="column left">
+          <div class="element green">
+            <h1>LEFT COLUMN ONE</h1>
+          </div>
+          <div class="element tomato">
+            <h1>LEFT COLUMN TWO</h1>
+          </div>
+          <div class="element teal">
+            <h1>LEFT COLUMN THREE</h1>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="element fuchsia">
+            <h1>RIGHT COLUMN ONE</h1>
+          </div>
+          <div class="element gray">
+            <h1>RIGHT COLUMN TWO</h1>
+          </div>
+          <div class="element blue">
+            <h1>RIGHT COLUMN THREE</h1>
+          </div>
+        </div>
+      </div>
+     
+      <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      
+      <script>
+console.clear();
+
+let isTweening = false;
+let currentSection = 0;
+let amount = 0;
+let base = 0;
+const columns = gsap.utils.toArray(".column");
+
+columns.forEach((col, i) => {
+  const els = gsap.utils.toArray(".element", col);
+  amount = els.length;
+  base = 100 * (amount - 1);
+  if (i) {
+    gsap.set(col, {
+      yPercent: -base
+    });
+  }
+});
+
+const goToSection = (e) => {
+  console.log(e.deltaY, isTweening);
+  if (isTweening) return;
+  let value;
+  if (e.deltaY > 0 && currentSection < amount - 1) {
+    isTweening = true;
+    currentSection++;
+    value = 100 * currentSection;
+    gsap.to(columns, {
+      yPercent: (i) => (i < 1 ? -value : value - base),
+      duration: 1,
+      onComplete: () => (isTweening = false)
+    });
+  } else if (e.deltaY < 0 && currentSection > 0) {
+    isTweening = true;
+    currentSection--;
+    value = 100 * currentSection;
+    gsap.to(columns, {
+      yPercent: (i) => (i < 1 ? -value : value - base),
+      duration: 1,
+      onComplete: () => (isTweening = false)
+    });
+  }
+};
+
+Observer.create({
+  target: window,
+  type: "wheel",
+  onChangeY: goToSection
+});
+      </script>
+
+</body>
+</html>
