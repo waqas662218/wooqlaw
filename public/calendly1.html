@@ -103,9 +103,11 @@
     <div class="years-days">
         Friday, March, 22
     </div>
-    <button class="btn-1">
-        4:45pm
-    </button>
+        <button id="firstButton" class="btn-2"  onclick="showNextButton()">
+            4:45pm
+        </button>
+        <button id="secondButton" class="btn-2" style="display: none;" onclick="showForm()">Next</button>
+    
     <button class="btn-1">
         5:00pm
     </button>
@@ -128,6 +130,12 @@
         6:30pm
     </button>
 </div>
+<form id="myForm" style="display: none;">
+    <!-- Your form fields go here -->
+    <input type="text" placeholder="Enter your name">
+    <input type="email" placeholder="Enter your email">
+    <button type="submit">Submit</button>
+  </form>
     </div>
     <script>
         document.getElementById("showCommandBtn").addEventListener("click", function() {
@@ -139,5 +147,31 @@
   }
 });
     </script>
+<script>
+    function showNextButton() {
+  var firstButton = document.getElementById("firstButton");
+  var secondButton = document.getElementById("secondButton");
+
+  // Hide first button and show second button
+  firstButton.style.width = "90px"; // Adjust width as needed
+  firstButton.innerHTML = "4:45pm"; // Optionally clear text
+  secondButton.style.display = "inline-block";
+  secondButton.style.width = "120px";
+  secondButton.style.backgroundColor ="black";
+  secondButton.style.color ="white";
+  
+}
+
+function showForm() {
+  var secondButton = document.getElementById("secondButton");
+  var form = document.getElementById("myForm");
+
+  // Hide second button and show form
+  firstButton.style.display = "none";
+  secondButton.style.display = "none";
+  form.style.display = "block";
+}
+
+  </script>
 </body>
 </html>

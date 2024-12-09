@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--alpine.js -->
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .move-up {
+          transition: transform 2s ease;
+          transform: translateY(-360px);
+        }
+        
+        .move-down {
+          transition: transform 2s ease;
+          transform: translateY(360px);
+        }
+        </style>
+ 
+        <div class="sticky"> 
+        <div id="page_cont" class="grid grid-cols-3 gap-4 justify-center items-center max-w-7xl mx-auto">
+        <!-- Card 1 -->
+        <div class="grid col-span-1 bg-white shadow-md rounded-lg p-4">
+          <!-- Card content here -->
+          <div class="flex flex-col p-9 bg-white shadow border border-gray-200 justify-start items-center gap-3.5 move-up">
+            <div class="flex flex-col justify-center items-center gap-1">
+              <img class="w-16 h-16" src="images/Avatar3.png" />
+              <div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+            </div>
+            <div class="flex justify-start items-start gap-1">
+              <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few time my business are based in London and both of my cases wasn’t easy,complicated and messy,but Mr Nasar Ali  went trough with me step by step and managed to sort it.Very professional,quick response and cares about customer.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar3.png" />
+              <div class="text-black text-lg font-semibold">Will Bradshaw</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">Excellent experience setting up our Wills with Farida. She was very patient with us helpful at explaining the steps of making a will. I would highly recommend DV Solicitors</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar3.png" />
+              <div class="text-black text-lg font-semibold">Dianna Moylan</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar2.png" />
+              <div class="text-black text-lg font-semibold">Mrs M F</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+        </div>
+      
+        <!-- Card 2 -->
+        <div class="grid col-span-1 card bg-white shadow-md rounded-lg p-4">
+          <!-- Card content here -->
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-down">
+            <div class="flex-col justify-center items-center gap-1 flex">
+              <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Dianna Moylan</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-down">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few time my business are based in London and both of my cases wasn’t easy,complicated and messy,but Mr Nasar Ali  went trough with me step by step and managed to sort it.Very professional,quick response and cares about customer.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-down">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Will Bradshaw</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">Excellent experience setting up our Wills with Farida. She was very patient with us helpful at explaining the steps of making a will. I would highly recommend DV Solicitors</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-down">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Mrs M F</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+        </div>
+      
+        <!-- Card 3 -->
+        <div class="grid col-span-1 card bg-white shadow-md rounded-lg p-4 ">
+          <!-- Card content here -->
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Will Bradshaw</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">Excellent experience setting up our Wills with Farida. She was very patient with us helpful at explaining the steps of making a will. I would highly recommend DV Solicitors</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Dianna Moylan</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Sinta Livalvi</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">I have used Deo Volent Solicitors for few time my business are based in London and both of my cases wasn’t easy,complicated and messy,but Mr Nasar Ali  went trough with me step by step and managed to sort it.Very professional,quick response and cares about customer.</div>
+          </div>
+          <div class="p-9 bg-white shadow border border-gray-200 flex-col justify-start items-center gap-3.5 flex move-up">
+            <div class="flex-col justify-center items-center gap-1 flex">
+                <img class="w-16 h-16" src="images/Avatar 1.png" />
+              <div class="text-black text-lg font-semibold">Mrs M F</div>
+            </div>
+            <div class="justify-start items-start gap-1 flex">
+                <img src="images/rating-stars.png" alt="">
+            </div>
+            <div class="w-64 text-neutral-500 text-sm font-normal">We met on Zoom and the process was simple and painless. Unlike other past experiences with others, I was delighted that Farida noted the spellings of my names and got them right first time.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <script>
+        window.addEventListener('scroll', function() {
+          var cardElements = document.querySelectorAll('.card');
+          cardElements.forEach(function(card) {
+            var scrollPosition = window.scrollY;
+            var cardTop = card.getBoundingClientRect().top + window.scrollY;
+            var windowHeight = window.innerHeight;
+        
+            // Move cards based on scroll position
+            if (cardTop < scrollPosition + (windowHeight / 8)) {
+              card.classList.add('move-down');
+              card.classList.remove('move-up');
+            } else {
+              card.classList.add('move-up');
+              card.classList.remove('move-down');
+            }
+          });
+        });
+        </script>
+        
+        
+        
+        
+        
+</body>
+</html>

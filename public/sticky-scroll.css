@@ -1,0 +1,19 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  position: sticky;
+  top: 20px; /* Adjust as needed */
+  z-index: 1;
+}
+.card-container1 {
+  position: sticky;
+  bottom: 20px; /* Adjust as needed */
+  z-index: 1;
+}
+.card {
+  padding: 20px; /* Example padding */
+  margin-bottom: 20px; /* Adjust as needed */
+}

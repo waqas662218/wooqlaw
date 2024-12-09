@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!-- Tailwind.css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script> 
+    
+    <title>js</title>
+</head>
+<body>
+    <form name="selectForm">
+        <label for="musicTypes"
+          >Choose some music types, then click the button below:</label
+        >
+        <select id="musicTypes" name="musicTypes" multiple>
+          <option selected>R&B</option>
+          <option>Jazz</option>
+          <option>Blues</option>
+          <option>New Age</option>
+          <option>Classical</option>
+          <option>Opera</option>
+        </select>
+        <button id="btn" type="button">How many are selected?</button>
+      </form>
+      
+</body>
+</html>
