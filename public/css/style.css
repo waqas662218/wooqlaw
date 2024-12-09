@@ -914,6 +914,9 @@ select {
 .z-30 {
   z-index: 30;
 }
+.z-40 {
+  z-index: 40;
+}
 .z-50 {
   z-index: 50;
 }
@@ -1203,6 +1206,9 @@ select {
 }
 .mt-9 {
   margin-top: 2.25rem;
+}
+.mt-auto {
+  margin-top: auto;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -3454,6 +3460,9 @@ select {
 }
 .underline {
   text-decoration-line: underline;
+}
+.line-through {
+  text-decoration-line: line-through;
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
